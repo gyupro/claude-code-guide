@@ -26,11 +26,11 @@ export default function Community() {
         {/* Hero Section */}
         <div className="text-center mb-8 sm:mb-16">
           <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 dark:text-white mb-4">
-            Claude Code 커뮤니티
+            Claude Code 학습 커뮤니티
           </h1>
           <p className="text-base sm:text-lg lg:text-xl text-slate-600 dark:text-slate-300 max-w-4xl mx-auto leading-relaxed">
-            Claude Code를 함께 학습하고 공유하는 한국 커뮤니티입니다. 
-            유용한 콘텐츠, 오픈소스 프로젝트, 그리고 다양한 학습 자료를 만나보세요.
+            개발자들이 함께 Claude Code를 배우고 경험을 나누는 공간입니다. 
+            유튜브 강의, 오픈소스 프로젝트, 실전 활용 팁을 공유합니다.
           </p>
         </div>
 
@@ -42,7 +42,7 @@ export default function Community() {
                 <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
               </svg>
             </div>
-            <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-slate-900 dark:text-white">YouTube 학습 콘텐츠</h2>
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-slate-900 dark:text-white">학습 동영상 콘텐츠</h2>
           </div>
 
           <div className="grid lg:grid-cols-1 gap-6 sm:gap-8 mb-6 sm:mb-8">
@@ -59,11 +59,11 @@ export default function Community() {
               </div>
               <div className="p-4 sm:p-6">
                 <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white mb-2">
-                  Claude Code 에 대한 대화 (한글자막)
+                  Claude Code 활용법 완전 가이드
                 </h3>
                 <p className="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed">
-                  Claude Code의 기본 개념과 활용법에 대한 심층적인 대화를 통해 
-                  AI 기반 코딩 도구의 현재와 미래를 탐구합니다.
+                  실제 개발 현장에서 Claude Code를 어떻게 활용하는지, 
+                  생산성을 높이는 핵심 기법들을 상세히 설명합니다.
                 </p>
               </div>
             </div>
@@ -83,11 +83,11 @@ export default function Community() {
               </div>
               <div className="p-4 sm:p-6">
                 <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">
-                  30분 만에 클로드 코드 마스터하기 (한글자막)
+                  Claude Code 빠른 시작 튜토리얼
                 </h3>
                 <p className="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed">
-                  짧은 시간 안에 Claude Code의 핵심 기능들을 빠르게 습득할 수 있는 
-                  실전 중심의 튜토리얼입니다.
+                  처음 사용하는 분들을 위한 기본 설정부터 첫 번째 프로젝트까지 
+                  단계별로 안내하는 입문자용 튜토리얼입니다.
                 </p>
               </div>
             </div>
@@ -105,11 +105,11 @@ export default function Community() {
               </div>
               <div className="p-4 sm:p-6">
                 <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">
-                  Claude Code 팟캐스트 (한글자막)
+                  고급 기능 심화 강의
                 </h3>
                 <p className="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed">
-                  전문가들이 논하는 Claude Code의 실무 활용 사례와 
-                  개발자 커뮤니티의 다양한 인사이트를 공유합니다.
+                  MCP 연동, 자동화 스크립트, 복잡한 프로젝트 관리 등 
+                  Claude Code의 고급 기능들을 실무 중심으로 다룹니다.
                 </p>
               </div>
             </div>
@@ -124,7 +124,7 @@ export default function Community() {
                 <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
               </svg>
             </div>
-            <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-slate-900 dark:text-white">GitHub 오픈소스</h2>
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-slate-900 dark:text-white">오픈소스 프로젝트</h2>
           </div>
 
           <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
@@ -155,8 +155,8 @@ export default function Community() {
               </div>
               
               <p className="text-slate-600 dark:text-slate-300 mb-4 text-xs sm:text-sm leading-relaxed">
-                Claude Code의 공식 메인 저장소입니다. 설치 가이드, 문서, 이슈 트래킹, 
-                그리고 최신 릴리스 정보를 확인할 수 있습니다.
+                Claude Code의 공식 저장소로, 최신 버전 다운로드와 문서를 제공합니다. 
+                버그 리포트나 기능 제안도 이곳에서 할 수 있습니다.
               </p>
 
               <div className="space-y-3">
@@ -208,8 +208,8 @@ export default function Community() {
               </div>
               
               <p className="text-slate-600 dark:text-slate-300 mb-4 text-xs sm:text-sm leading-relaxed">
-                GitHub Actions와 Claude Code를 통합하는 공식 액션입니다. 
-                CI/CD 파이프라인에서 Claude의 AI 기능을 활용할 수 있습니다.
+                GitHub Actions 워크플로우에서 Claude Code를 사용할 수 있게 해주는 액션입니다. 
+                자동화된 코드 리뷰와 이슈 처리가 가능합니다.
               </p>
 
               <div className="space-y-3">
@@ -239,7 +239,7 @@ export default function Community() {
         {/* Community Guidelines */}
         <section className="mb-8 sm:mb-16">
           <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-xl border border-blue-200 dark:border-blue-800 p-4 sm:p-6 lg:p-8">
-            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-slate-900 dark:text-white mb-6">커뮤니티 참여 가이드</h2>
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-slate-900 dark:text-white mb-6">효과적인 학습 방법</h2>
             
             <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
               <div>
@@ -247,14 +247,14 @@ export default function Community() {
                   <svg className="w-5 h-5 text-green-600 dark:text-green-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
-                  추천 활동
+                  학습 단계별 접근
                 </h3>
                 <ul className="space-y-2 text-slate-600 dark:text-slate-300 text-xs sm:text-sm">
-                  <li>• 사용 경험과 팁 공유</li>
-                  <li>• 버그 리포트 및 기능 제안</li>
-                  <li>• 튜토리얼 제작 및 번역</li>
-                  <li>• 오픈소스 기여</li>
-                  <li>• 질문과 답변 참여</li>
+                  <li>• 기본 명령어부터 차근차근 익히기</li>
+                  <li>• 실제 프로젝트에 적용해보기</li>
+                  <li>• 동영상 강의로 심화 학습</li>
+                  <li>• 다른 개발자들의 활용 사례 참고</li>
+                  <li>• 꾸준한 실습으로 숙련도 향상</li>
                 </ul>
               </div>
               
@@ -263,14 +263,14 @@ export default function Community() {
                   <svg className="w-5 h-5 text-blue-600 dark:text-blue-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
-                  도움받는 방법
+                  문제 해결 방법
                 </h3>
                 <ul className="space-y-2 text-slate-600 dark:text-slate-300 text-xs sm:text-sm">
-                  <li>• GitHub Issues에서 문제 검색</li>
-                  <li>• 공식 문서 및 튜토리얼 확인</li>
-                  <li>• YouTube 학습 콘텐츠 활용</li>
-                  <li>• 커뮤니티 활용 사례 참고</li>
-                  <li>• 구체적인 질문으로 도움 요청</li>
+                  <li>• 공식 문서에서 답변 찾기</li>
+                  <li>• GitHub Issues 검색해보기</li>
+                  <li>• 에러 메시지로 구체적 검색</li>
+                  <li>• 커뮤니티 가이드 참고하기</li>
+                  <li>• 단계별로 차근차근 디버깅</li>
                 </ul>
               </div>
             </div>
@@ -281,11 +281,11 @@ export default function Community() {
         <section className="text-center">
           <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-4 sm:p-6 lg:p-8">
             <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-slate-900 dark:text-white mb-4">
-              함께 성장하는 Claude Code 커뮤니티
+              Claude Code와 함께 더 나은 개발자로
             </h2>
             <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 mb-6 max-w-2xl mx-auto leading-relaxed">
-              Claude Code를 더 잘 활용하고 싶으신가요? 
-              커뮤니티에서 다른 사용자들과 경험을 나누고, 함께 학습해보세요.
+              AI 코딩 도구의 힘을 활용해 개발 생산성을 높이고, 
+              더 창의적이고 의미 있는 코딩에 집중해보세요.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
@@ -297,18 +297,16 @@ export default function Community() {
                 <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                 </svg>
-                GitHub 참여하기
+                오픈소스 기여하기
               </a>
               <a 
-                href="https://www.youtube.com/watch?v=ufS60JsMpFg" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="border border-red-300 dark:border-red-600 text-red-600 dark:text-red-400 px-8 py-3 rounded-lg font-medium hover:bg-red-50 dark:hover:bg-red-900/20 transition-colors inline-flex items-center justify-center"
+                href="/getting-started" 
+                className="border border-blue-300 dark:border-blue-600 text-blue-600 dark:text-blue-400 px-8 py-3 rounded-lg font-medium hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors inline-flex items-center justify-center"
               >
-                <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
-                YouTube 구독하기
+                지금 시작하기
               </a>
             </div>
           </div>

@@ -32,12 +32,12 @@ export default function Home() {
               {/* Left: Text Content */}
               <div className="text-center lg:text-left order-2 lg:order-1">
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 dark:text-white mb-4 lg:mb-6 leading-tight">
-                  AI와 함께하는<br />
-                  <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">스마트한 개발</span>
+                  터미널에서 만나는<br />
+                  <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">AI 코딩 어시스턴트</span>
                 </h1>
                 <p className="text-base sm:text-lg lg:text-xl text-slate-600 dark:text-slate-300 mb-6 lg:mb-8 leading-relaxed">
-                  Claude Code는 터미널에서 동작하는 AI 코딩 도구입니다. 
-                  자연어 명령으로 코드를 편집하고, 버그를 수정하며, 프로젝트를 이해할 수 있습니다.
+                  Claude Code로 개발 워크플로우를 혁신하세요. 
+                  자연어로 코드를 편집하고, 프로젝트를 분석하며, 복잡한 개발 작업을 자동화할 수 있습니다.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
                   <Link href="/getting-started" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 sm:px-8 py-3 rounded-lg font-medium hover:shadow-lg transition-all text-center text-sm sm:text-base">
@@ -70,7 +70,7 @@ export default function Home() {
         <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-800">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-slate-900 dark:text-white mb-8 sm:mb-12">
-              Claude Code의 주요 기능
+              개발자를 위한 핵심 기능
             </h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
               <div className="p-4 sm:p-6 rounded-xl border border-slate-200 dark:border-slate-700 hover:shadow-lg transition-shadow">
@@ -79,8 +79,8 @@ export default function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                   </svg>
                 </div>
-                <h3 className="text-lg sm:text-xl font-semibold text-slate-900 dark:text-white mb-2">스마트 코드 편집</h3>
-                <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">자연어로 코드 편집 요청하고, AI가 전체 코드베이스를 이해하여 정확한 수정을 수행합니다.</p>
+                <h3 className="text-lg sm:text-xl font-semibold text-slate-900 dark:text-white mb-2">코드 이해 & 편집</h3>
+                <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">프로젝트 전체를 분석하고 컨텍스트를 이해한 후, 자연어 명령으로 정확한 코드 수정을 실행합니다.</p>
               </div>
               <div className="p-4 sm:p-6 rounded-xl border border-slate-200 dark:border-slate-700 hover:shadow-lg transition-shadow">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 bg-cyan-100 dark:bg-cyan-900 rounded-lg flex items-center justify-center mb-3 sm:mb-4">
@@ -88,8 +88,8 @@ export default function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
                   </svg>
                 </div>
-                <h3 className="text-lg sm:text-xl font-semibold text-slate-900 dark:text-white mb-2">MCP 프로토콜</h3>
-                <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">Model Context Protocol을 통해 GitHub, Slack, 데이터베이스 등 외부 도구와 안전하게 연결됩니다.</p>
+                <h3 className="text-lg sm:text-xl font-semibold text-slate-900 dark:text-white mb-2">외부 도구 연동</h3>
+                <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">MCP를 통해 GitHub, Slack, PostgreSQL 등 개발 도구들과 안전하게 연결하여 통합 워크플로우를 구현합니다.</p>
               </div>
               <div className="p-4 sm:p-6 rounded-xl border border-slate-200 dark:border-slate-700 hover:shadow-lg transition-shadow">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 bg-green-100 dark:bg-green-900 rounded-lg flex items-center justify-center mb-3 sm:mb-4">
@@ -97,8 +97,8 @@ export default function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <h3 className="text-lg sm:text-xl font-semibold text-slate-900 dark:text-white mb-2">Git 자동화</h3>
-                <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">커밋 생성, PR 작성, 머지 충돌 해결 등 Git 작업을 자연어 명령으로 자동화할 수 있습니다.</p>
+                <h3 className="text-lg sm:text-xl font-semibold text-slate-900 dark:text-white mb-2">개발 워크플로우</h3>
+                <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">커밋 메시지 생성, PR 작성, 테스트 실행, 디버깅 등 일상적인 개발 작업을 자동화합니다.</p>
               </div>
             </div>
             
@@ -111,8 +111,8 @@ export default function Home() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
                   </div>
-                  <h3 className="text-lg sm:text-xl font-semibold text-slate-900 dark:text-white mb-2">테스트 & 디버깅</h3>
-                  <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">테스트 실행, 실패한 테스트 분석 및 수정, 보안 취약점 발견 등을 자동으로 처리합니다.</p>
+                  <h3 className="text-lg sm:text-xl font-semibold text-slate-900 dark:text-white mb-2">자동 테스팅</h3>
+                  <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">테스트 케이스 생성, 실행 결과 분석, 실패한 테스트 자동 수정 등 품질 관리 업무를 효율화합니다.</p>
                 </div>
                 <div className="p-4 sm:p-6 rounded-xl border border-slate-200 dark:border-slate-700 hover:shadow-lg transition-shadow">
                   <div className="w-10 h-10 sm:w-12 sm:h-12 bg-orange-100 dark:bg-orange-900 rounded-lg flex items-center justify-center mb-3 sm:mb-4">
@@ -120,8 +120,8 @@ export default function Home() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
                     </svg>
                   </div>
-                  <h3 className="text-lg sm:text-xl font-semibold text-slate-900 dark:text-white mb-2">워크플로우 통합</h3>
-                  <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">GitHub Actions, Docker, CI/CD 파이프라인과 통합하여 전체 개발 과정을 자동화합니다.</p>
+                  <h3 className="text-lg sm:text-xl font-semibold text-slate-900 dark:text-white mb-2">CI/CD 통합</h3>
+                  <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">GitHub Actions, Docker 컨테이너, 배포 파이프라인과 연동하여 개발부터 운영까지 자동화합니다.</p>
                 </div>
               </div>
             </div>
@@ -132,11 +132,11 @@ export default function Home() {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-8">
-              5분 만에 시작하기
+              지금 바로 시작해보세요
             </h2>
             <div className="bg-slate-900 dark:bg-slate-800 rounded-lg p-6 text-left">
               <div className="flex items-center justify-between mb-4">
-                <span className="text-slate-400 text-sm">터미널</span>
+                <span className="text-slate-400 text-sm">설치 명령어</span>
                 <button className="text-slate-400 hover:text-white transition-colors">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
@@ -148,7 +148,7 @@ export default function Home() {
               </code>
             </div>
             <p className="text-slate-600 dark:text-slate-300 mt-4">
-              설치 후 <code className="bg-slate-200 dark:bg-slate-700 px-2 py-1 rounded text-sm">claude</code> 명령어로 바로 시작할 수 있습니다.
+              설치 완료 후 터미널에서 <code className="bg-slate-200 dark:bg-slate-700 px-2 py-1 rounded text-sm">claude</code> 명령어로 AI 코딩 어시스턴트를 실행하세요.
             </p>
           </div>
         </section>
@@ -168,7 +168,7 @@ export default function Home() {
                 </div>
               </div>
               <p className="text-slate-600 dark:text-slate-300 text-sm">
-                한국 개발자를 위한 Claude Code 사용자 모임
+                개발자를 위한 Claude Code 가이드
               </p>
             </div>
             <div>
@@ -199,9 +199,9 @@ export default function Home() {
             </div>
           </div>
           <div className="border-t border-slate-200 dark:border-slate-700 mt-8 pt-8 text-center text-sm text-slate-600 dark:text-slate-300">
-            <p>© 2025 robin.hwang@kakaocorp.com. All rights reserved.</p>
+            <p>© 2025 gyupro89@gmail.com. All rights reserved.</p>
             <p className="mt-2 text-xs">
-              컨텐츠 무단 복제 및 상업적 재배포 금지 | 소스 코드는 MIT 라이선스
+              MIT 라이선스 | 자유롭게 사용, 수정, 배포 가능
             </p>
           </div>
         </div>
