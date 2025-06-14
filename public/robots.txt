@@ -116,4 +116,4 @@ Disallow: /admin/
 Disallow: /private/
 
 # Sitemap location
-Sitemap: https://hellovibe.io/sitemap.xml
+Sitemap: https://gyupro.github.io/claude-code-guide/sitemap.xml
