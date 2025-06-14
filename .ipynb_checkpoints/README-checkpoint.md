@@ -2,9 +2,9 @@
 
 한국 개발자를 위한 Claude Code 사용법 가이드 웹사이트입니다. AI 코딩 도구 Claude Code의 활용법과 실전 팁을 제공합니다.
 
-🌐 **Website**: [https://claude.develop-on.co.kr/](https://claude.develop-on.co.kr/)  
+🌐 **Website**: [https://gyupro.github.io/claude-code-guide/](https://gyupro.github.io/claude-code-guide/)  
 📧 **Contact**: gyupro89@gmail.com  
-📚 **GitHub**: [https://github.com/gyupro/claude-code-guide](https://github.com/gyupro/claude-code-guide)
+📚 **GitHub**: [gyupro/claude-code-guide](https://github.com/gyupro/claude-code-guide)
 
 ## 🚀 프로젝트 개요
 
@@ -146,8 +146,8 @@ pnpm export
 ## 📞 연락처
 
 - **메인테이너**: gyupro89@gmail.com
-- **GitHub**: [https://github.com/gyupro/claude-code-guide](https://github.com/gyupro/claude-code-guide)
-- **웹사이트**: [https://claude.develop-on.co.kr/](https://claude.develop-on.co.kr/)
+- **GitHub**: [gyupro/claude-code-guide](https://github.com/gyupro/claude-code-guide)
+- **웹사이트**: [https://gyupro.github.io/claude-code-guide/](https://gyupro.github.io/claude-code-guide/)
 
 ---
 

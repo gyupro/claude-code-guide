@@ -18,7 +18,7 @@ export const NAVIGATION_ITEMS: NavigationItem[] = [
 
 export const EXTERNAL_LINKS = {
   github: {
-    href: 'https://github.com/revfactory/claude-code-guide',
+    href: 'https://github.com/gyupro/claude-code-guide',
     label: 'GitHub',
     external: true,
   },

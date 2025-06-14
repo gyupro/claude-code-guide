@@ -22,70 +22,70 @@ export default function Tutorials() {
         />
       </NavigationHeader>
 
-      <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         {/* Hero Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-slate-900 dark:text-white mb-4">
+        <div className="text-center mb-8 sm:mb-16">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 dark:text-white mb-4">
             Claude Code 실전 튜토리얼
           </h1>
-          <p className="text-xl text-slate-600 dark:text-slate-300 max-w-4xl mx-auto">
+          <p className="text-base sm:text-lg lg:text-xl text-slate-600 dark:text-slate-300 max-w-4xl mx-auto leading-relaxed">
             단계별 가이드와 실제 예제를 통해 Claude Code의 강력한 기능들을 마스터해보세요. 
             일상 워크플로우부터 고급 자동화까지 체계적으로 학습할 수 있습니다.
           </p>
         </div>
 
         {/* Quick Start Tutorials */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-8">빠른 시작 튜토리얼</h2>
-          <div className="grid lg:grid-cols-2 gap-8">
+        <section className="mb-8 sm:mb-16">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-slate-900 dark:text-white mb-6 sm:mb-8">빠른 시작 튜토리얼</h2>
+          <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
             
             {/* Resume Conversations */}
-            <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-8 hover:shadow-lg transition-shadow">
+            <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-4 sm:p-6 lg:p-8 hover:shadow-lg transition-shadow">
               <div className="flex items-center mb-6">
                 <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center mr-4">
                   <svg className="w-6 h-6 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white">이전 대화 이어서 하기</h3>
+                <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">이전 대화 이어서 하기</h3>
               </div>
               
-              <p className="text-slate-600 dark:text-slate-300 mb-6">
+              <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
                 작업을 중단했다가 나중에 이어서 계속할 수 있는 방법을 학습합니다.
               </p>
 
               <div className="space-y-4">
                 <div className="bg-slate-50 dark:bg-slate-700 rounded-lg p-4">
-                  <h4 className="font-medium text-slate-900 dark:text-white mb-2">가장 최근 대화 계속하기</h4>
+                  <h4 className="text-sm sm:text-base font-medium text-slate-900 dark:text-white mb-2">가장 최근 대화 계속하기</h4>
                   <div className="bg-slate-900 dark:bg-slate-800 rounded p-2">
                     <code className="text-green-400 font-mono text-sm">claude --continue</code>
                   </div>
                 </div>
                 
                 <div className="bg-slate-50 dark:bg-slate-700 rounded-lg p-4">
-                  <h4 className="font-medium text-slate-900 dark:text-white mb-2">대화 선택기 사용</h4>
+                  <h4 className="text-sm sm:text-base font-medium text-slate-900 dark:text-white mb-2">대화 선택기 사용</h4>
                   <div className="bg-slate-900 dark:bg-slate-800 rounded p-2">
                     <code className="text-green-400 font-mono text-sm">claude --resume</code>
                   </div>
                 </div>
               </div>
 
-              <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg">
-                <p className="text-blue-800 dark:text-blue-200 text-sm">
+              <div className="mt-6 p-3 sm:p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg">
+                <p className="text-blue-800 dark:text-blue-200 text-xs sm:text-sm">
                   <strong>💡 팁:</strong> 모든 대화는 로컬에 자동 저장되며, 컨텍스트와 도구 사용 기록이 모두 보존됩니다.
                 </p>
               </div>
             </div>
 
             {/* Understanding Codebases */}
-            <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-8 hover:shadow-lg transition-shadow">
+            <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-4 sm:p-6 lg:p-8 hover:shadow-lg transition-shadow">
               <div className="flex items-center mb-6">
                 <div className="w-12 h-12 bg-green-100 dark:bg-green-900 rounded-lg flex items-center justify-center mr-4">
                   <svg className="w-6 h-6 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white">새로운 코드베이스 이해하기</h3>
+                <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">새로운 코드베이스 이해하기</h3>
               </div>
               
               <p className="text-slate-600 dark:text-slate-300 mb-6">
@@ -118,19 +118,19 @@ export default function Tutorials() {
         </section>
 
         {/* Core Workflow Tutorials */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-8">핵심 워크플로우 튜토리얼</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <section className="mb-8 sm:mb-16">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-slate-900 dark:text-white mb-6 sm:mb-8">핵심 워크플로우 튜토리얼</h2>
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             
             {/* Bug Fixing */}
-            <div className="bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 p-6">
+            <div className="bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 p-4 sm:p-6">
               <div className="w-10 h-10 bg-red-100 dark:bg-red-900 rounded-lg flex items-center justify-center mb-4">
                 <svg className="w-5 h-5 text-red-600 dark:text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 15.5c-.77.833.192 2.5 1.732 2.5z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-3">효율적인 버그 수정</h3>
-              <p className="text-slate-600 dark:text-slate-300 text-sm mb-4">
+              <h3 className="text-base sm:text-lg font-semibold text-slate-900 dark:text-white mb-3">효율적인 버그 수정</h3>
+              <p className="text-slate-600 dark:text-slate-300 text-xs sm:text-sm mb-4 leading-relaxed">
                 에러 메시지 분석부터 근본 원인 찾기, 수정 사항 적용까지의 전체 과정
               </p>
               <div className="space-y-2">
@@ -144,7 +144,7 @@ export default function Tutorials() {
             </div>
 
             {/* Code Refactoring */}
-            <div className="bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 p-6">
+            <div className="bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 p-4 sm:p-6">
               <div className="w-10 h-10 bg-purple-100 dark:bg-purple-900 rounded-lg flex items-center justify-center mb-4">
                 <svg className="w-5 h-5 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
@@ -165,7 +165,7 @@ export default function Tutorials() {
             </div>
 
             {/* Testing */}
-            <div className="bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 p-6">
+            <div className="bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 p-4 sm:p-6">
               <div className="w-10 h-10 bg-orange-100 dark:bg-orange-900 rounded-lg flex items-center justify-center mb-4">
                 <svg className="w-5 h-5 text-orange-600 dark:text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -186,7 +186,7 @@ export default function Tutorials() {
             </div>
 
             {/* PR Creation */}
-            <div className="bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 p-6">
+            <div className="bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 p-4 sm:p-6">
               <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center mb-4">
                 <svg className="w-5 h-5 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" />
@@ -207,7 +207,7 @@ export default function Tutorials() {
             </div>
 
             {/* Documentation */}
-            <div className="bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 p-6">
+            <div className="bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 p-4 sm:p-6">
               <div className="w-10 h-10 bg-green-100 dark:bg-green-900 rounded-lg flex items-center justify-center mb-4">
                 <svg className="w-5 h-5 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
@@ -228,7 +228,7 @@ export default function Tutorials() {
             </div>
 
             {/* Images */}
-            <div className="bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 p-6">
+            <div className="bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 p-4 sm:p-6">
               <div className="w-10 h-10 bg-indigo-100 dark:bg-indigo-900 rounded-lg flex items-center justify-center mb-4">
                 <svg className="w-5 h-5 text-indigo-600 dark:text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -251,22 +251,22 @@ export default function Tutorials() {
         </section>
 
         {/* Advanced Tutorials */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-8">고급 튜토리얼</h2>
-          <div className="grid lg:grid-cols-2 gap-8">
+        <section className="mb-8 sm:mb-16">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-slate-900 dark:text-white mb-6 sm:mb-8">고급 튜토리얼</h2>
+          <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
             
             {/* Extended Thinking */}
-            <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-8">
+            <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-4 sm:p-6 lg:p-8">
               <div className="flex items-center mb-6">
                 <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-lg flex items-center justify-center mr-4">
                   <svg className="w-6 h-6 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900 dark:text-white">확장된 사고 활용법</h3>
+                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-slate-900 dark:text-white">확장된 사고 활용법</h3>
               </div>
               
-              <p className="text-slate-600 dark:text-slate-300 mb-6">
+              <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
                 복잡한 아키텍처 결정이나 어려운 버그 해결을 위해 Claude Opus 4의 깊은 사고를 유도하는 방법
               </p>
 
@@ -354,9 +354,9 @@ export default function Tutorials() {
         </section>
 
         {/* MCP Tutorials */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-8">MCP 프로토콜 튜토리얼</h2>
-          <div className="grid lg:grid-cols-2 gap-8">
+        <section className="mb-8 sm:mb-16">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-slate-900 dark:text-white mb-6 sm:mb-8">MCP 프로토콜 튜토리얼</h2>
+          <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
             
             {/* Supabase MCP Tutorial */}
             <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-8">
@@ -366,10 +366,10 @@ export default function Tutorials() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4" />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900 dark:text-white">Supabase MCP 완전 정복</h3>
+                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-slate-900 dark:text-white">Supabase MCP 완전 정복</h3>
               </div>
               
-              <p className="text-slate-600 dark:text-slate-300 mb-6">
+              <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
                 가장 인기 있는 MCP 서버인 Supabase를 Claude Code에 연결하여 백엔드 개발을 완전 자동화해보세요.
               </p>
 
@@ -420,15 +420,15 @@ export default function Tutorials() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900 dark:text-white">완전 자동화 워크플로우</h3>
+                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-slate-900 dark:text-white">완전 자동화 워크플로우</h3>
               </div>
               
-              <p className="text-slate-600 dark:text-slate-300 mb-6">
+              <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
                 GitHub + Supabase + Slack을 연결하여 "이슈 접수 → 코드 수정 → 배포 → 팀 알림"까지 한 번에!
               </p>
 
               <div className="space-y-6">
-                <div className="grid md:grid-cols-3 gap-4">
+                <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-4">
                   <div className="bg-gradient-to-br from-gray-50 to-slate-50 dark:from-gray-900/20 dark:to-slate-900/20 p-4 rounded-lg border border-gray-200 dark:border-gray-800">
                     <div className="flex items-center mb-2">
                       <span className="w-6 h-6 bg-gray-800 text-white rounded-full flex items-center justify-center text-xs font-bold mr-2">1</span>
@@ -484,9 +484,9 @@ export default function Tutorials() {
         </section>
 
         {/* Automation Tutorials */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-8">자동화 튜토리얼</h2>
-          <div className="grid md:grid-cols-2 gap-8">
+        <section className="mb-8 sm:mb-16">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-slate-900 dark:text-white mb-6 sm:mb-8">자동화 튜토리얼</h2>
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
             
             {/* GitHub Actions */}
             <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-8">
@@ -496,10 +496,10 @@ export default function Tutorials() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
                   </svg>
                 </div>
-                <a href="/tutorials/github-actions" className="text-xl font-bold text-slate-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors">GitHub Actions 통합</a>
+                <a href="/tutorials/github-actions" className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors">GitHub Actions 통합</a>
               </div>
               
-              <p className="text-slate-600 dark:text-slate-300 mb-6">
+              <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
                 GitHub 워크플로우에 Claude Code를 통합하여 PR 관리, 이슈 처리, 코드 리뷰를 자동화합니다.
               </p>
 
@@ -591,19 +591,19 @@ export default function Tutorials() {
         </section>
 
         {/* Advanced Features */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-8">고급 기능 활용</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <section className="mb-8 sm:mb-16">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-slate-900 dark:text-white mb-6 sm:mb-8">고급 기능 활용</h2>
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             
             {/* Custom Slash Commands */}
-            <div className="bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 p-6">
+            <div className="bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 p-4 sm:p-6">
               <div className="w-10 h-10 bg-indigo-100 dark:bg-indigo-900 rounded-lg flex items-center justify-center mb-4">
                 <svg className="w-5 h-5 text-indigo-600 dark:text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a1.994 1.994 0 01-1.414.586H7a4 4 0 01-4-4V7a4 4 0 014-4z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-3">커스텀 슬래시 명령어</h3>
-              <p className="text-slate-600 dark:text-slate-300 text-sm mb-4">
+              <h3 className="text-base sm:text-lg font-semibold text-slate-900 dark:text-white mb-3">커스텀 슬래시 명령어</h3>
+              <p className="text-slate-600 dark:text-slate-300 text-xs sm:text-sm mb-4 leading-relaxed">
                 프로젝트별 또는 개인용 슬래시 명령어를 생성하여 반복 작업을 자동화
               </p>
               <div className="space-y-2">
@@ -617,14 +617,14 @@ export default function Tutorials() {
             </div>
 
             {/* MCP Integration */}
-            <div className="bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 p-6">
+            <div className="bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 p-4 sm:p-6">
               <div className="w-10 h-10 bg-cyan-100 dark:bg-cyan-900 rounded-lg flex items-center justify-center mb-4">
                 <svg className="w-5 h-5 text-cyan-600 dark:text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
                 </svg>
               </div>
-              <a href="/mcp" className="text-lg font-semibold text-slate-900 dark:text-white hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors mb-3 block">MCP 서버 연결</a>
-              <p className="text-slate-600 dark:text-slate-300 text-sm mb-4">
+              <a href="/mcp" className="text-base sm:text-lg font-semibold text-slate-900 dark:text-white hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors mb-3 block">MCP 서버 연결</a>
+              <p className="text-slate-600 dark:text-slate-300 text-xs sm:text-sm mb-4 leading-relaxed">
                 Model Context Protocol을 통해 외부 도구와 데이터 소스에 연결
               </p>
               <div className="space-y-2">
@@ -638,14 +638,14 @@ export default function Tutorials() {
             </div>
 
             {/* Git Worktrees */}
-            <div className="bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 p-6">
+            <div className="bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 p-4 sm:p-6">
               <div className="w-10 h-10 bg-green-100 dark:bg-green-900 rounded-lg flex items-center justify-center mb-4">
                 <svg className="w-5 h-5 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-3">Git Worktrees 병렬 작업</h3>
-              <p className="text-slate-600 dark:text-slate-300 text-sm mb-4">
+              <h3 className="text-base sm:text-lg font-semibold text-slate-900 dark:text-white mb-3">Git Worktrees 병렬 작업</h3>
+              <p className="text-slate-600 dark:text-slate-300 text-xs sm:text-sm mb-4 leading-relaxed">
                 여러 브랜치에서 동시에 Claude Code 세션을 실행하여 독립적인 작업 환경 구성
               </p>
               <div className="space-y-2">
@@ -661,11 +661,11 @@ export default function Tutorials() {
         </section>
 
         {/* Getting Started CTA */}
-        <section className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-xl border border-blue-200 dark:border-blue-800 p-8 text-center">
-          <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">
+        <section className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-xl border border-blue-200 dark:border-blue-800 p-4 sm:p-6 lg:p-8 text-center">
+          <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-slate-900 dark:text-white mb-4">
             지금 바로 튜토리얼을 시작해보세요
           </h2>
-          <p className="text-slate-600 dark:text-slate-300 mb-6 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 mb-6 max-w-2xl mx-auto leading-relaxed">
             단계별 가이드를 따라하며 Claude Code의 강력한 기능들을 하나씩 익혀보세요. 
             기본 명령어부터 고급 자동화까지, 실무에 바로 적용할 수 있는 실전 지식을 습득할 수 있습니다.
           </p>

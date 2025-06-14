@@ -22,13 +22,13 @@ export default function MobileMenu({
   return (
     <div 
       ref={menuRef}
-      className={`md:hidden relative z-40 transition-all duration-300 ease-in-out overflow-hidden ${
+      className={`md:hidden fixed left-0 right-0 top-16 z-40 transition-all duration-300 ease-in-out bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm border-b border-slate-200 dark:border-slate-700 ${
         isOpen 
-          ? 'max-h-96 opacity-100' 
+          ? 'max-h-screen opacity-100' 
           : 'max-h-0 opacity-0'
       }`}
     >
-      <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-slate-200 dark:border-slate-700">
+      <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-slate-200 dark:border-slate-700 max-h-[calc(100vh-4rem)] overflow-y-auto">
         {NAVIGATION_ITEMS.map((item) => (
           <Link 
             key={item.href}

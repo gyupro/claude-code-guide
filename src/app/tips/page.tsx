@@ -23,19 +23,19 @@ export default function Tips() {
         />
       </NavigationHeader>
 
-      <main className="py-16 px-4 sm:px-6 lg:px-8">
+      <main className="py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-slate-900 dark:text-white mb-4">
+          <div className="text-center mb-8 sm:mb-12">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 dark:text-white mb-4">
               Claude Code 실전 팁
             </h1>
-            <p className="text-xl text-slate-600 dark:text-slate-300">
+            <p className="text-base sm:text-lg lg:text-xl text-slate-600 dark:text-slate-300 leading-relaxed">
               대규모 프로젝트에서 검증된 Claude Code 활용법
             </p>
           </div>
 
           {/* 인트로 섹션 */}
-          <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-6 mb-8">
+          <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 sm:p-6 mb-8">
             <div className="flex items-start space-x-3">
               <div className="flex-shrink-0">
                 <div className="w-8 h-8 bg-blue-100 dark:bg-blue-800 rounded-full flex items-center justify-center">
@@ -45,11 +45,11 @@ export default function Tips() {
                 </div>
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-blue-900 dark:text-blue-100 mb-2">
+                <h3 className="text-base sm:text-lg font-semibold text-blue-900 dark:text-blue-100 mb-2">
                   실제 프로덕션 환경에서 검증된 팁들
                 </h3>
-                <p className="text-blue-800 dark:text-blue-200">
-                  Claude Pro MAX 구독으로 일주일간 하루 12시간씩 대규모 웹앱 개편 프로젝트에서 
+                <p className="text-sm sm:text-base text-blue-800 dark:text-blue-200 leading-relaxed">
+                  Claude Pro MAX 구독으로 일주일간 하루 12시간씨 대규모 웹앱 개편 프로젝트에서 
                   직접 검증된 생산성 향상 팁들을 공유합니다.
                 </p>
               </div>
@@ -60,7 +60,7 @@ export default function Tips() {
           <div className="space-y-8">
             
             {/* 팁 1: 계획 세우기 */}
-            <div className="bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 p-8">
+            <div className="bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 p-4 sm:p-6 lg:p-8">
               <div className="flex items-start space-x-4">
                 <div className="flex-shrink-0">
                   <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg flex items-center justify-center">
@@ -68,18 +68,18 @@ export default function Tips() {
                   </div>
                 </div>
                 <div className="flex-1">
-                  <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">
+                  <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-slate-900 dark:text-white mb-4">
                     계획, 계획, 그리고 또 계획
                   </h2>
                   <div className="prose dark:prose-invert max-w-none">
-                    <p className="text-slate-600 dark:text-slate-300 mb-4">
+                    <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
                       대규모 기능이나 변경사항을 구현할 때는 바로 코딩을 시작하지 마세요. 
                       Claude가 기존 코드나 문서를 분석하고 마크다운 파일로 계획을 작성하도록 하세요.
                     </p>
                     
-                    <div className="bg-slate-50 dark:bg-slate-900 rounded-lg p-4 mb-4">
-                      <h4 className="font-semibold text-slate-900 dark:text-white mb-2">실전 활용법:</h4>
-                      <ul className="text-sm text-slate-600 dark:text-slate-300 space-y-1">
+                    <div className="bg-slate-50 dark:bg-slate-900 rounded-lg p-3 sm:p-4 mb-4">
+                      <h4 className="text-sm sm:text-base font-semibold text-slate-900 dark:text-white mb-2">실전 활용법:</h4>
+                      <ul className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 space-y-1">
                         <li>• 기존 코드베이스 구조 분석 요청</li>
                         <li>• 단계별 구현 계획 마크다운 작성</li>
                         <li>• OpenAI o3 모델과 병행하여 계획 단계에서 뉘앙스 파악</li>
@@ -87,7 +87,7 @@ export default function Tips() {
                       </ul>
                     </div>
 
-                    <blockquote className="border-l-4 border-green-500 pl-4 italic text-slate-600 dark:text-slate-300">
+                    <blockquote className="border-l-4 border-green-500 pl-4 italic text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">
                       "계획 단계에 투자한 시간은 구현 과정에서 10배로 돌아옵니다. 
                       구조화된 계획이 있을 때와 없을 때의 결과물 품질은 확연히 다릅니다."
                     </blockquote>
@@ -97,7 +97,7 @@ export default function Tips() {
             </div>
 
             {/* 팁 2: 규칙 설정 */}
-            <div className="bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 p-8">
+            <div className="bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 p-4 sm:p-6 lg:p-8">
               <div className="flex items-start space-x-4">
                 <div className="flex-shrink-0">
                   <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center">
@@ -105,7 +105,7 @@ export default function Tips() {
                   </div>
                 </div>
                 <div className="flex-1">
-                  <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">
+                  <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-slate-900 dark:text-white mb-4">
                     규칙은 당신의 가장 좋은 친구
                   </h2>
                   <div className="prose dark:prose-invert max-w-none">
@@ -138,7 +138,7 @@ export default function Tips() {
             </div>
 
             {/* 팁 3: /compact 활용 */}
-            <div className="bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 p-8">
+            <div className="bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 p-4 sm:p-6 lg:p-8">
               <div className="flex items-start space-x-4">
                 <div className="flex-shrink-0">
                   <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg flex items-center justify-center">
@@ -146,7 +146,7 @@ export default function Tips() {
                   </div>
                 </div>
                 <div className="flex-1">
-                  <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">
+                  <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-slate-900 dark:text-white mb-4">
                     /compact를 자주, 일찍 사용하세요
                   </h2>
                   <div className="prose dark:prose-invert max-w-none">
@@ -155,19 +155,19 @@ export default function Tips() {
                       중요한 컨텍스트를 잃고 통제 불능 상태가 될 수 있습니다.
                     </p>
 
-                    <div className="grid md:grid-cols-2 gap-4 mb-4">
-                      <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-4">
-                        <h4 className="font-semibold text-red-900 dark:text-red-100 mb-2">❌ 잘못된 방법</h4>
-                        <ul className="text-sm text-red-800 dark:text-red-200 space-y-1">
+                    <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                      <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-3 sm:p-4">
+                        <h4 className="text-sm sm:text-base font-semibold text-red-900 dark:text-red-100 mb-2">❌ 잘못된 방법</h4>
+                        <ul className="text-xs sm:text-sm text-red-800 dark:text-red-200 space-y-1">
                           <li>• 자동 컴팩트까지 기다리기</li>
                           <li>• 컨텍스트 손실 후 재작업</li>
                           <li>• 이미 완료된 파일 재생성</li>
                         </ul>
                       </div>
 
-                      <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4">
-                        <h4 className="font-semibold text-green-900 dark:text-green-100 mb-2">✅ 올바른 방법</h4>
-                        <ul className="text-sm text-green-800 dark:text-green-200 space-y-1">
+                      <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-3 sm:p-4">
+                        <h4 className="text-sm sm:text-base font-semibold text-green-900 dark:text-green-100 mb-2">✅ 올바른 방법</h4>
+                        <ul className="text-xs sm:text-sm text-green-800 dark:text-green-200 space-y-1">
                           <li>• 수동으로 미리 /compact 실행</li>
                           <li>• 다음 목표 명확히 지시</li>
                           <li>• 일관된 작업 흐름 유지</li>
@@ -186,7 +186,7 @@ export default function Tips() {
 
 
             {/* 팁 4: 프로젝트 리플렉션 */}
-            <div className="bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 p-8">
+            <div className="bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 p-4 sm:p-6 lg:p-8">
               <div className="flex items-start space-x-4">
                 <div className="flex-shrink-0">
                   <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-600 rounded-lg flex items-center justify-center">
@@ -194,7 +194,7 @@ export default function Tips() {
                   </div>
                 </div>
                 <div className="flex-1">
-                  <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">
+                  <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-slate-900 dark:text-white mb-4">
                     프로젝트 리플렉션으로 CLAUDE.md 최적화
                   </h2>
                   <div className="prose dark:prose-invert max-w-none">
@@ -350,35 +350,35 @@ Remember, your goal is to enhance Claude's performance and consistency while mai
             </div>
 
             {/* 추가 실전 팁들 */}
-            <div className="bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 p-8">
-              <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">
+            <div className="bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 p-4 sm:p-6 lg:p-8">
+              <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-slate-900 dark:text-white mb-6">
                 추가 실전 팁들
               </h2>
               
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                 <div className="space-y-4">
-                  <div className="p-4 bg-slate-50 dark:bg-slate-900 rounded-lg">
-                    <h3 className="font-semibold text-slate-900 dark:text-white mb-2">🎯 명확한 지시</h3>
-                    <p className="text-sm text-slate-600 dark:text-slate-300">
+                  <div className="p-3 sm:p-4 bg-slate-50 dark:bg-slate-900 rounded-lg">
+                    <h3 className="text-sm sm:text-base font-semibold text-slate-900 dark:text-white mb-2">🎯 명확한 지시</h3>
+                    <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                       "파일을 수정해줘" 대신 "User.tsx의 23번째 줄에서 useState 초기값을 null로 변경해줘"처럼 구체적으로 요청하세요.
                     </p>
                   </div>
                   
-                  <div className="p-4 bg-slate-50 dark:bg-slate-900 rounded-lg">
+                  <div className="p-3 sm:p-4 bg-slate-50 dark:bg-slate-900 rounded-lg">
                     <h3 className="font-semibold text-slate-900 dark:text-white mb-2">🔄 점진적 개발</h3>
                     <p className="text-sm text-slate-600 dark:text-slate-300">
                       한 번에 모든 것을 구현하려 하지 말고, 작은 단위로 나누어 점진적으로 개발하세요.
                     </p>
                   </div>
                   
-                  <div className="p-4 bg-slate-50 dark:bg-slate-900 rounded-lg">
+                  <div className="p-3 sm:p-4 bg-slate-50 dark:bg-slate-900 rounded-lg">
                     <h3 className="font-semibold text-slate-900 dark:text-white mb-2">📝 변경사항 추적</h3>
                     <p className="text-sm text-slate-600 dark:text-slate-300">
                       각 단계마다 무엇이 변경되었는지 확인하고, 예상과 다른 결과가 나오면 즉시 피드백하세요.
                     </p>
                   </div>
 
-                  <div className="p-4 bg-slate-50 dark:bg-slate-900 rounded-lg">
+                  <div className="p-3 sm:p-4 bg-slate-50 dark:bg-slate-900 rounded-lg">
                     <h3 className="font-semibold text-slate-900 dark:text-white mb-2">🔄 CLAUDE.md 지속 개선</h3>
                     <p className="text-sm text-slate-600 dark:text-slate-300">
                       정기적으로 `/project:reflection` 명령어를 실행하여 CLAUDE.md 파일을 분석하고 개선점을 찾아 적용하세요.
@@ -387,28 +387,28 @@ Remember, your goal is to enhance Claude's performance and consistency while mai
                 </div>
                 
                 <div className="space-y-4">
-                  <div className="p-4 bg-slate-50 dark:bg-slate-900 rounded-lg">
+                  <div className="p-3 sm:p-4 bg-slate-50 dark:bg-slate-900 rounded-lg">
                     <h3 className="font-semibold text-slate-900 dark:text-white mb-2">🧪 테스트 우선</h3>
                     <p className="text-sm text-slate-600 dark:text-slate-300">
                       기능 구현 전에 테스트 케이스를 먼저 작성하도록 하면 더 안정적인 코드를 얻을 수 있습니다.
                     </p>
                   </div>
                   
-                  <div className="p-4 bg-slate-50 dark:bg-slate-900 rounded-lg">
+                  <div className="p-3 sm:p-4 bg-slate-50 dark:bg-slate-900 rounded-lg">
                     <h3 className="font-semibold text-slate-900 dark:text-white mb-2">🔍 코드 리뷰</h3>
                     <p className="text-sm text-slate-600 dark:text-slate-300">
                       Claude가 생성한 코드를 항상 검토하고, 프로젝트의 코딩 스타일과 일치하는지 확인하세요.
                     </p>
                   </div>
                   
-                  <div className="p-4 bg-slate-50 dark:bg-slate-900 rounded-lg">
+                  <div className="p-3 sm:p-4 bg-slate-50 dark:bg-slate-900 rounded-lg">
                     <h3 className="font-semibold text-slate-900 dark:text-white mb-2">📋 프로젝트 컨텍스트</h3>
                     <p className="text-sm text-slate-600 dark:text-slate-300">
                       CLAUDE.md에 현재 진행 중인 에픽, 프로젝트 목표, 비즈니스 컨텍스트를 포함하여 더 나은 결정을 내리도록 하세요.
                     </p>
                   </div>
 
-                  <div className="p-4 bg-slate-50 dark:bg-slate-900 rounded-lg">
+                  <div className="p-3 sm:p-4 bg-slate-50 dark:bg-slate-900 rounded-lg">
                     <h3 className="font-semibold text-slate-900 dark:text-white mb-2">🎯 도구 통합 가이드</h3>
                     <p className="text-sm text-slate-600 dark:text-slate-300">
                       Jira, Slack, 데이터베이스 등 사용하는 도구들의 MCP 연결 방법과 활용법을 명시하세요.
@@ -419,11 +419,11 @@ Remember, your goal is to enhance Claude's performance and consistency while mai
             </div>
 
             {/* 마무리 섹션 */}
-            <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-8 text-center">
-              <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">
+            <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 sm:p-6 lg:p-8 text-center">
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-slate-900 dark:text-white mb-4">
                 Claude Code는 정말 강력한 도구입니다
               </h3>
-              <p className="text-slate-600 dark:text-slate-300 mb-6">
+              <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
                 대규모 작업도 쉽게 처리하고, 제대로 사용하면 믿을 수 없을 정도로 강력합니다. 
                 이 팁들을 활용해서 여러분도 놀라운 생산성을 경험해보세요.
               </p>

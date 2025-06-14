@@ -55,32 +55,32 @@ export default function MCPPage() {
         />
       </NavigationHeader>
 
-      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         {/* Hero Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-slate-900 dark:text-white mb-4">
+        <div className="text-center mb-8 sm:mb-16">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 dark:text-white mb-4">
             Model Context Protocol (MCP)
           </h1>
-          <p className="text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg lg:text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto leading-relaxed">
             Claude Code와 외부 데이터 소스를 안전하게 연결하는 개방형 표준 프로토콜
           </p>
         </div>
 
         {/* What is MCP */}
-        <section className="mb-12">
-          <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-8">
-            <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">Claude Code에서 MCP란?</h2>
+        <section className="mb-8 sm:mb-12">
+          <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-4 sm:p-6 lg:p-8">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-slate-900 dark:text-white mb-6">Claude Code에서 MCP란?</h2>
             
             <div className="space-y-6">
-              <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
+              <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">
                 MCP는 Claude Code가 외부 도구와 데이터에 접근할 수 있게 해주는 표준 프로토콜입니다. 
                 Anthropic에서는 MCP를 "에이전트 시스템의 USB-C"라고 부르며, Claude Code를 단순한 코딩 도구에서 
                 전체 개발 생태계와 연결된 강력한 AI 어시스턴트로 변화시킵니다.
               </p>
 
-              <div className="bg-gradient-to-r from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
-                <h3 className="text-lg font-semibold text-blue-900 dark:text-blue-300 mb-3">🚀 Claude Code + MCP로 가능한 것들</h3>
-                <div className="grid md:grid-cols-2 gap-4">
+              <div className="bg-gradient-to-r from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 p-4 sm:p-6 rounded-lg border border-blue-200 dark:border-blue-800">
+                <h3 className="text-base sm:text-lg font-semibold text-blue-900 dark:text-blue-300 mb-3">🚀 Claude Code + MCP로 가능한 것들</h3>
+                <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-4">
                   <ul className="space-y-2 text-blue-800 dark:text-blue-200">
                     <li className="flex items-start">
                       <svg className="w-4 h-4 text-blue-600 dark:text-blue-400 mt-1 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -136,8 +136,8 @@ export default function MCPPage() {
                 </div>
               </div>
 
-              <div className="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-lg border border-amber-200 dark:border-amber-800">
-                <p className="text-amber-800 dark:text-amber-200 text-sm">
+              <div className="bg-amber-50 dark:bg-amber-900/20 p-3 sm:p-4 rounded-lg border border-amber-200 dark:border-amber-800">
+                <p className="text-amber-800 dark:text-amber-200 text-xs sm:text-sm">
                   <strong>💡 간단한 예시:</strong> "사용자 테이블에서 오늘 가입한 사람들을 조회해서 Slack #growth 채널에 보고해줘" 
                   라고 말하면 Claude Code가 MCP를 통해 데이터베이스 조회부터 Slack 메시지 전송까지 자동으로 처리합니다.
                 </p>
@@ -147,9 +147,9 @@ export default function MCPPage() {
         </section>
 
         {/* Core Components */}
-        <section className="mb-12">
-          <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-8">
-            <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-8">핵심 구성 요소</h2>
+        <section className="mb-8 sm:mb-12">
+          <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-4 sm:p-6 lg:p-8">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-slate-900 dark:text-white mb-6 sm:mb-8">핵심 구성 요소</h2>
             
             <div className="grid gap-6">
               <div className="border border-slate-200 dark:border-slate-600 rounded-lg p-6">
@@ -160,8 +160,8 @@ export default function MCPPage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">Prompts</h3>
-                    <p className="text-slate-600 dark:text-slate-300 mb-3">
+                    <h3 className="text-base sm:text-lg font-semibold text-slate-900 dark:text-white mb-2">Prompts</h3>
+                    <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 mb-3 leading-relaxed">
                       AI 모델을 가이드하는 준비된 지침이나 템플릿입니다.
                     </p>
                     <div className="bg-slate-50 dark:bg-slate-700 p-3 rounded">
@@ -181,8 +181,8 @@ export default function MCPPage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">Resources</h3>
-                    <p className="text-slate-600 dark:text-slate-300 mb-3">
+                    <h3 className="text-base sm:text-lg font-semibold text-slate-900 dark:text-white mb-2">Resources</h3>
+                    <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 mb-3 leading-relaxed">
                       모델의 컨텍스트를 풍부하게 하는 구조화된 데이터 (문서 스니펫, 코드 조각 등)
                     </p>
                     <div className="bg-slate-50 dark:bg-slate-700 p-3 rounded">
@@ -203,8 +203,8 @@ export default function MCPPage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">Tools</h3>
-                    <p className="text-slate-600 dark:text-slate-300 mb-3">
+                    <h3 className="text-base sm:text-lg font-semibold text-slate-900 dark:text-white mb-2">Tools</h3>
+                    <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 mb-3 leading-relaxed">
                       모델이 서버를 통해 호출할 수 있는 실행 가능한 함수나 작업들
                     </p>
                     <div className="bg-slate-50 dark:bg-slate-700 p-3 rounded">
@@ -225,8 +225,8 @@ export default function MCPPage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">Roots</h3>
-                    <p className="text-slate-600 dark:text-slate-300 mb-3">
+                    <h3 className="text-base sm:text-lg font-semibold text-slate-900 dark:text-white mb-2">Roots</h3>
+                    <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 mb-3 leading-relaxed">
                       서버가 권한을 받아 접근할 수 있는 호스트 파일 시스템이나 환경의 진입점
                     </p>
                     <div className="bg-slate-50 dark:bg-slate-700 p-3 rounded">
@@ -242,19 +242,19 @@ export default function MCPPage() {
         </section>
 
         {/* Popular MCP Servers */}
-        <section className="mb-12">
-          <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-8">
-            <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">실무에서 많이 사용하는 MCP 서버</h2>
+        <section className="mb-8 sm:mb-12">
+          <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-4 sm:p-6 lg:p-8">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-slate-900 dark:text-white mb-6">실무에서 많이 사용하는 MCP 서버</h2>
             
-            <p className="text-slate-600 dark:text-slate-300 mb-6">
+            <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
               개발자들이 실제로 가장 많이 사용하는 MCP 서버들과 Claude Code에서의 활용법:
             </p>
 
-            <div className="grid lg:grid-cols-2 gap-8">
+            <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
               
               {/* Top Tier - Most Popular */}
               <div className="space-y-6">
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-4">🔥 필수 MCP 서버</h3>
+                <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white mb-4">🔥 필수 MCP 서버</h3>
                 
                 <div className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 p-6 rounded-lg border border-green-200 dark:border-green-800">
                   <div className="flex items-center mb-3">
@@ -319,7 +319,7 @@ export default function MCPPage() {
 
               {/* High Value MCP Servers */}
               <div className="space-y-6">
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-4">💎 고가치 MCP 서버</h3>
+                <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white mb-4">💎 고가치 MCP 서버</h3>
                 
                 <div className="bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 p-6 rounded-lg border border-purple-200 dark:border-purple-800">
                   <div className="flex items-center mb-3">
@@ -393,16 +393,16 @@ export default function MCPPage() {
         </section>
 
         {/* Claude Code MCP Setup */}
-        <section className="mb-12">
-          <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-8">
-            <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">Claude Code에서 MCP 서버 설정하기</h2>
+        <section className="mb-8 sm:mb-12">
+          <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-4 sm:p-6 lg:p-8">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-slate-900 dark:text-white mb-6">Claude Code에서 MCP 서버 설정하기</h2>
             
             <div className="space-y-8">
               
               {/* Quick Setup */}
-              <div className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 p-6 rounded-lg border border-green-200 dark:border-green-800">
-                <h3 className="text-lg font-semibold text-green-900 dark:text-green-300 mb-4">⚡ 3분만에 MCP 서버 추가하기</h3>
-                <p className="text-green-800 dark:text-green-200 mb-4">
+              <div className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 p-4 sm:p-6 rounded-lg border border-green-200 dark:border-green-800">
+                <h3 className="text-base sm:text-lg font-semibold text-green-900 dark:text-green-300 mb-4">⚡ 3분만에 MCP 서버 추가하기</h3>
+                <p className="text-sm sm:text-base text-green-800 dark:text-green-200 mb-4 leading-relaxed">
                   Claude Code는 간단한 명령어로 MCP 서버를 추가할 수 있습니다:
                 </p>
                 
@@ -443,7 +443,7 @@ export default function MCPPage() {
               </div>
 
               {/* Management Commands */}
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                 <div className="bg-slate-50 dark:bg-slate-700 p-6 rounded-lg">
                   <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-4">📋 MCP 서버 관리</h3>
                   <div className="space-y-3">
@@ -500,7 +500,7 @@ export default function MCPPage() {
               {/* Popular Combinations */}
               <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
                 <h3 className="text-lg font-semibold text-blue-900 dark:text-blue-300 mb-4">🎯 인기 MCP 조합</h3>
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                   <div>
                     <h4 className="font-semibold text-blue-900 dark:text-blue-300 mb-3">풀스택 개발자 세트</h4>
                     <ul className="space-y-2 text-blue-800 dark:text-blue-200 text-sm">
@@ -526,14 +526,14 @@ export default function MCPPage() {
         </section>
 
         {/* Development Support */}
-        <section className="mb-12">
-          <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-8">
-            <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">개발 지원</h2>
+        <section className="mb-8 sm:mb-12">
+          <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-4 sm:p-6 lg:p-8">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-slate-900 dark:text-white mb-6">개발 지원</h2>
             
             <div className="space-y-6">
               <div>
-                <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-4">SDK 지원</h3>
-                <p className="text-slate-600 dark:text-slate-300 mb-4">
+                <h3 className="text-base sm:text-lg font-semibold text-slate-900 dark:text-white mb-4">SDK 지원</h3>
+                <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
                   다양한 프로그래밍 언어로 MCP 클라이언트와 서버를 구축할 수 있는 SDK를 제공합니다:
                 </p>
                 
@@ -558,7 +558,7 @@ export default function MCPPage() {
               </div>
 
               <div>
-                <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-4">Claude Opus 4 & Sonnet 4 지원</h3>
+                <h3 className="text-base sm:text-lg font-semibold text-slate-900 dark:text-white mb-4">Claude Opus 4 & Sonnet 4 지원</h3>
                 <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
                   <p className="text-blue-800 dark:text-blue-200">
                     Claude Opus 4와 Sonnet 4는 향상된 추론 능력으로 MCP 서버 구현을 더욱 신속하고 정확하게 구축할 수 있으며, 
@@ -568,8 +568,8 @@ export default function MCPPage() {
               </div>
 
               <div>
-                <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-4">Docker 통합</h3>
-                <p className="text-slate-600 dark:text-slate-300 mb-4">
+                <h3 className="text-base sm:text-lg font-semibold text-slate-900 dark:text-white mb-4">Docker 통합</h3>
+                <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
                   Docker Hub의 mcp 네임스페이스에서 제공되는 Docker 이미지를 통해 쉽게 MCP 서버를 실행할 수 있습니다.
                 </p>
                 
@@ -586,14 +586,14 @@ export default function MCPPage() {
         </section>
 
         {/* Getting Started */}
-        <section className="mb-12">
-          <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-xl border border-blue-200 dark:border-blue-800 p-8">
-            <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">Claude Code + MCP 실전 활용</h2>
+        <section className="mb-8 sm:mb-12">
+          <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-xl border border-blue-200 dark:border-blue-800 p-4 sm:p-6 lg:p-8">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-slate-900 dark:text-white mb-6">Claude Code + MCP 실전 활용</h2>
             
             <div className="space-y-8">
               
               {/* Real World Examples */}
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                 <div className="bg-white dark:bg-slate-800 rounded-lg p-6 border border-slate-200 dark:border-slate-700">
                   <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-4">🔥 실제 개발 시나리오</h3>
                   <div className="space-y-4">
@@ -741,17 +741,17 @@ export default function MCPPage() {
 
         {/* Industry Adoption */}
         <section>
-          <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-8">
-            <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">산업 채택 현황</h2>
+          <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-4 sm:p-6 lg:p-8">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-slate-900 dark:text-white mb-6">산업 채택 현황</h2>
             
             <div className="space-y-6">
-              <p className="text-slate-600 dark:text-slate-300">
+              <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">
                 MCP는 이미 다양한 기업과 개발 도구에서 채택되고 있습니다:
               </p>
 
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                 <div>
-                  <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-4">얼리 어답터</h3>
+                  <h3 className="text-base sm:text-lg font-semibold text-slate-900 dark:text-white mb-4">얼리 어답터</h3>
                   <div className="space-y-3">
                     <div className="flex items-center p-3 bg-slate-50 dark:bg-slate-700 rounded-lg">
                       <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
@@ -769,7 +769,7 @@ export default function MCPPage() {
                 </div>
 
                 <div>
-                  <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-4">개발 도구</h3>
+                  <h3 className="text-base sm:text-lg font-semibold text-slate-900 dark:text-white mb-4">개발 도구</h3>
                   <div className="space-y-3">
                     <div className="flex items-center p-3 bg-slate-50 dark:bg-slate-700 rounded-lg">
                       <div className="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
@@ -791,9 +791,9 @@ export default function MCPPage() {
                 </div>
               </div>
 
-              <div className="p-6 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg">
-                <h3 className="text-lg font-semibold text-green-900 dark:text-green-300 mb-3">오픈소스 생태계</h3>
-                <p className="text-green-800 dark:text-green-200">
+              <div className="p-4 sm:p-6 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg">
+                <h3 className="text-base sm:text-lg font-semibold text-green-900 dark:text-green-300 mb-3">오픈소스 생태계</h3>
+                <p className="text-sm sm:text-base text-green-800 dark:text-green-200 leading-relaxed">
                   MCP는 오픈소스 및 협업 방식으로 설계되어 있으며, 개발자들이 AI 기반 애플리케이션을 구축할 수 있도록 
                   광범위한 문서와 지원을 제공합니다. 표준화된 접근 방식을 통해 AI 통합의 복잡성을 크게 줄일 수 있습니다.
                 </p>

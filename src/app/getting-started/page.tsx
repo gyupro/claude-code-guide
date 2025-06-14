@@ -55,103 +55,79 @@ export default function GettingStarted() {
         />
       </NavigationHeader>
 
-      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         {/* Hero Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-slate-900 dark:text-white mb-4">
+        <div className="text-center mb-8 sm:mb-16">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 dark:text-white mb-3 sm:mb-4">
             Claude Code 시작하기
           </h1>
-          <p className="text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg lg:text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto leading-relaxed">
             Claude Code 설치부터 첫 프로젝트 설정까지, 단계별로 안내해드립니다.
           </p>
         </div>
 
         {/* Progress Steps */}
-        <div className="flex justify-center mb-12">
-          <div className="flex items-center space-x-4">
+        <div className="flex justify-center mb-8 sm:mb-12 overflow-x-auto">
+          <div className="flex items-center space-x-2 sm:space-x-4 min-w-max px-4">
             <div className="flex items-center">
-              <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-medium">1</div>
-              <span className="ml-2 text-sm font-medium text-slate-900 dark:text-white">시스템 요구사항</span>
+              <div className="w-6 h-6 sm:w-8 sm:h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs sm:text-sm font-medium">1</div>
+              <span className="ml-1 sm:ml-2 text-xs sm:text-sm font-medium text-slate-900 dark:text-white whitespace-nowrap">시스템 요구사항</span>
             </div>
-            <div className="w-8 h-0.5 bg-slate-300 dark:bg-slate-600"></div>
+            <div className="w-4 sm:w-8 h-0.5 bg-slate-300 dark:bg-slate-600"></div>
             <div className="flex items-center">
-              <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-medium">2</div>
-              <span className="ml-2 text-sm font-medium text-slate-900 dark:text-white">설치</span>
+              <div className="w-6 h-6 sm:w-8 sm:h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs sm:text-sm font-medium">2</div>
+              <span className="ml-1 sm:ml-2 text-xs sm:text-sm font-medium text-slate-900 dark:text-white whitespace-nowrap">설치</span>
             </div>
-            <div className="w-8 h-0.5 bg-slate-300 dark:bg-slate-600"></div>
+            <div className="w-4 sm:w-8 h-0.5 bg-slate-300 dark:bg-slate-600"></div>
             <div className="flex items-center">
-              <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-medium">3</div>
-              <span className="ml-2 text-sm font-medium text-slate-900 dark:text-white">인증</span>
+              <div className="w-6 h-6 sm:w-8 sm:h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs sm:text-sm font-medium">3</div>
+              <span className="ml-1 sm:ml-2 text-xs sm:text-sm font-medium text-slate-900 dark:text-white whitespace-nowrap">인증</span>
             </div>
-            <div className="w-8 h-0.5 bg-slate-300 dark:bg-slate-600"></div>
+            <div className="w-4 sm:w-8 h-0.5 bg-slate-300 dark:bg-slate-600"></div>
             <div className="flex items-center">
-              <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-medium">4</div>
-              <span className="ml-2 text-sm font-medium text-slate-900 dark:text-white">첫 프로젝트</span>
+              <div className="w-6 h-6 sm:w-8 sm:h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs sm:text-sm font-medium">4</div>
+              <span className="ml-1 sm:ml-2 text-xs sm:text-sm font-medium text-slate-900 dark:text-white whitespace-nowrap">첫 프로젝트</span>
             </div>
           </div>
         </div>
 
         {/* Step 1: System Requirements */}
-        <section className="mb-12">
-          <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-8">
-            <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6 flex items-center">
-              <span className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-medium mr-3">1</span>
+        <section className="mb-8 sm:mb-12">
+          <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-4 sm:p-6 lg:p-8">
+            <h2 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-4 sm:mb-6 flex items-center">
+              <span className="w-6 h-6 sm:w-8 sm:h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs sm:text-sm font-medium mr-2 sm:mr-3">1</span>
               시스템 요구사항 확인
             </h2>
             
-            <div className="grid md:grid-cols-2 gap-6">
-              <div>
-                <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-3">운영체제</h3>
-                <ul className="space-y-2 text-slate-600 dark:text-slate-300">
-                  <li className="flex items-center">
-                    <svg className="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    macOS 10.15 이상
-                  </li>
-                  <li className="flex items-center">
-                    <svg className="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    Ubuntu 20.04+ / Debian 10+
-                  </li>
-                  <li className="flex items-center">
-                    <svg className="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    Windows (WSL 환경)
-                  </li>
-                </ul>
+            <div className="grid sm:grid-cols-3 gap-4 sm:gap-6">
+              <div className="text-center p-4 border border-slate-200 dark:border-slate-600 rounded-lg">
+                <div className="w-12 h-12 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <svg className="w-6 h-6 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <h3 className="font-semibold text-slate-900 dark:text-white mb-2">운영체제</h3>
+                <p className="text-sm text-slate-600 dark:text-slate-300">macOS, Linux, Windows (WSL)</p>
               </div>
               
-              <div>
-                <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-3">하드웨어 & 소프트웨어</h3>
-                <ul className="space-y-2 text-slate-600 dark:text-slate-300">
-                  <li className="flex items-center">
-                    <svg className="w-5 h-5 text-blue-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
-                    </svg>
-                    최소 4GB RAM
-                  </li>
-                  <li className="flex items-center">
-                    <svg className="w-5 h-5 text-blue-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                    </svg>
-                    Node.js 18 이상
-                  </li>
-                  <li className="flex items-center">
-                    <svg className="w-5 h-5 text-blue-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9" />
-                    </svg>
-                    인터넷 연결
-                  </li>
-                  <li className="flex items-center text-slate-500 dark:text-slate-400">
-                    <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    Git 2.23+ (선택사항)
-                  </li>
-                </ul>
+              <div className="text-center p-4 border border-slate-200 dark:border-slate-600 rounded-lg">
+                <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <svg className="w-6 h-6 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                  </svg>
+                </div>
+                <h3 className="font-semibold text-slate-900 dark:text-white mb-2">필수 요구사항</h3>
+                <p className="text-sm text-slate-600 dark:text-slate-300">Node.js 18+, 4GB RAM</p>
+              </div>
+              
+              <div className="text-center p-4 border border-slate-200 dark:border-slate-600 rounded-lg">
+                <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <svg className="w-6 h-6 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4" />
+                  </svg>
+                </div>
+                <h3 className="font-semibold text-slate-900 dark:text-white mb-2">네트워크</h3>
+                <p className="text-sm text-slate-600 dark:text-slate-300">안정적인 인터넷 연결</p>
               </div>
             </div>
 
@@ -172,153 +148,73 @@ export default function GettingStarted() {
         </section>
 
         {/* Step 2: Installation */}
-        <section className="mb-12">
-          <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-8">
-            <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6 flex items-center">
-              <span className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-medium mr-3">2</span>
+        <section className="mb-8 sm:mb-12">
+          <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-4 sm:p-6 lg:p-8">
+            <h2 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-4 sm:mb-6 flex items-center">
+              <span className="w-6 h-6 sm:w-8 sm:h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs sm:text-sm font-medium mr-2 sm:mr-3">2</span>
               Claude Code 설치
             </h2>
 
-            <div className="space-y-6">
-              <div>
-                <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-3">1. Node.js 설치 확인</h3>
-                <p className="text-slate-600 dark:text-slate-300 mb-3">먼저 Node.js가 설치되어 있는지 확인합니다:</p>
-                <div className="bg-slate-900 dark:bg-slate-800 rounded-lg p-4">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-slate-400 text-sm">터미널</span>
-                    <CopyButton text="node --version" />
-                  </div>
-                  <code className="text-green-400 font-mono">node --version</code>
+            <div className="space-y-4 sm:space-y-6">
+              <div className="bg-slate-900 dark:bg-slate-800 rounded-lg p-4">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-slate-400 text-sm">한 번에 설치하기</span>
+                  <CopyButton text="npm install -g @anthropic-ai/claude-code" />
                 </div>
-                <p className="text-slate-600 dark:text-slate-300 text-sm mt-2">
-                  v18.0.0 이상이 표시되어야 합니다. 설치되지 않았다면 <a href="https://nodejs.org" className="text-blue-600 dark:text-blue-400 hover:underline">nodejs.org</a>에서 다운로드하세요.
-                </p>
+                <code className="text-green-400 font-mono text-sm sm:text-base">npm install -g @anthropic-ai/claude-code</code>
               </div>
 
-              <div>
-                <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-3">2. Claude Code 설치</h3>
-                <div className="bg-slate-900 dark:bg-slate-800 rounded-lg p-4">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-slate-400 text-sm">터미널</span>
-                    <CopyButton text="npm install -g @anthropic-ai/claude-code" />
-                  </div>
-                  <code className="text-green-400 font-mono">npm install -g @anthropic-ai/claude-code</code>
-                </div>
-              </div>
-
-              <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg">
+              <div className="p-3 sm:p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg">
                 <div className="flex">
-                  <svg className="w-5 h-5 text-red-600 dark:text-red-400 mt-0.5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  <svg className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   <div>
-                    <p className="text-red-800 dark:text-red-200 font-medium">중요한 주의사항</p>
-                    <p className="text-red-700 dark:text-red-300 text-sm mt-1">
-                      <code className="bg-red-100 dark:bg-red-800 px-1 rounded">sudo npm install -g</code>를 사용하지 마세요. 권한 문제와 보안 위험을 초래할 수 있습니다.
+                    <p className="text-blue-800 dark:text-blue-200 font-medium text-sm sm:text-base">설치 전 확인사항</p>
+                    <p className="text-blue-700 dark:text-blue-300 text-xs sm:text-sm mt-1">
+                      Node.js 18+ 필요. <code className="bg-blue-100 dark:bg-blue-800 px-1 rounded">node --version</code>로 확인 후 <a href="https://nodejs.org" className="underline">nodejs.org</a>에서 설치하세요.
                     </p>
                   </div>
                 </div>
-              </div>
-
-              <div>
-                <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-3">3. 설치 확인</h3>
-                <div className="bg-slate-900 dark:bg-slate-800 rounded-lg p-4">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-slate-400 text-sm">터미널</span>
-                    <CopyButton text="claude --version" />
-                  </div>
-                  <code className="text-green-400 font-mono">claude --version</code>
-                </div>
-                <p className="text-slate-600 dark:text-slate-300 text-sm mt-2">
-                  Claude Code 버전이 표시되면 설치가 완료된 것입니다.
-                </p>
               </div>
             </div>
           </div>
         </section>
 
         {/* Step 3: Authentication */}
-        <section className="mb-12">
-          <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-8">
-            <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6 flex items-center">
-              <span className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-medium mr-3">3</span>
+        <section className="mb-8 sm:mb-12">
+          <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-4 sm:p-6 lg:p-8">
+            <h2 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-4 sm:mb-6 flex items-center">
+              <span className="w-6 h-6 sm:w-8 sm:h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs sm:text-sm font-medium mr-2 sm:mr-3">3</span>
               인증 설정
             </h2>
 
-            <div className="space-y-6">
-              <div>
-                <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-3">Claude Code 시작</h3>
-                <p className="text-slate-600 dark:text-slate-300 mb-3">프로젝트 디렉토리로 이동한 후 Claude Code를 시작합니다:</p>
-                <div className="bg-slate-900 dark:bg-slate-800 rounded-lg p-4 mb-4">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-slate-400 text-sm">터미널</span>
-                    <CopyButton text="cd my-project" />
-                  </div>
-                  <code className="text-green-400 font-mono block mb-2">cd my-project</code>
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-slate-400 text-sm invisible">터미널</span>
-                    <CopyButton text="claude" />
-                  </div>
-                  <code className="text-green-400 font-mono">claude</code>
+            <div className="space-y-4 sm:space-y-6">
+              <div className="bg-slate-900 dark:bg-slate-800 rounded-lg p-4">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-slate-400 text-sm">프로젝트에서 시작하기</span>
+                  <CopyButton text="cd my-project && claude" />
                 </div>
+                <code className="text-green-400 font-mono text-sm sm:text-base">cd my-project && claude</code>
               </div>
 
-              <div>
-                <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-4">인증 방법 선택</h3>
-                <div className="grid gap-4">
-                  <div className="border border-slate-200 dark:border-slate-600 rounded-lg p-4">
-                    <div className="flex items-start">
-                      <div className="w-6 h-6 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mt-1 mr-3">
-                        <span className="text-blue-600 dark:text-blue-400 font-bold text-sm">1</span>
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-slate-900 dark:text-white mb-2">Anthropic Console (권장)</h4>
-                        <p className="text-slate-600 dark:text-slate-300 text-sm mb-2">
-                          기본 옵션으로, Anthropic Console을 통해 OAuth 인증을 진행합니다.
-                        </p>
-                        <ul className="text-sm text-slate-500 dark:text-slate-400 space-y-1">
-                          <li>• console.anthropic.com에서 활성 결제 필요</li>
-                          <li>• 가장 안정적인 인증 방법</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="border border-slate-200 dark:border-slate-600 rounded-lg p-4">
-                    <div className="flex items-start">
-                      <div className="w-6 h-6 bg-purple-100 dark:bg-purple-900 rounded-full flex items-center justify-center mt-1 mr-3">
-                        <span className="text-purple-600 dark:text-purple-400 font-bold text-sm">2</span>
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-slate-900 dark:text-white mb-2">Claude Pro/Max 플랜</h4>
-                        <p className="text-slate-600 dark:text-slate-300 text-sm mb-2">
-                          Claude.ai Pro 또는 Max 구독을 통한 통합 인증
-                        </p>
-                        <ul className="text-sm text-slate-500 dark:text-slate-400 space-y-1">
-                          <li>• 웹 인터페이스와 동일한 계정 사용</li>
-                          <li>• 하나의 구독으로 모든 서비스 이용</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="border border-slate-200 dark:border-slate-600 rounded-lg p-4">
-                    <div className="flex items-start">
-                      <div className="w-6 h-6 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center mt-1 mr-3">
-                        <span className="text-green-600 dark:text-green-400 font-bold text-sm">3</span>
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-slate-900 dark:text-white mb-2">기업용 플랫폼</h4>
-                        <p className="text-slate-600 dark:text-slate-300 text-sm mb-2">
-                          Amazon Bedrock 또는 Google Vertex AI 연동
-                        </p>
-                        <ul className="text-sm text-slate-500 dark:text-slate-400 space-y-1">
-                          <li>• 기업 클라우드 인프라와 통합</li>
-                          <li>• 규정 준수 및 보안 요구사항 충족</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
+              <div className="grid sm:grid-cols-3 gap-3 sm:gap-4">
+                <div className="text-center p-3 sm:p-4 border border-blue-200 dark:border-blue-600 rounded-lg bg-blue-50 dark:bg-blue-900/20">
+                  <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-2 text-sm font-bold">1</div>
+                  <h4 className="font-semibold text-slate-900 dark:text-white text-sm mb-1">Console</h4>
+                  <p className="text-xs text-slate-600 dark:text-slate-300">권장 방법</p>
+                </div>
+                
+                <div className="text-center p-3 sm:p-4 border border-purple-200 dark:border-purple-600 rounded-lg">
+                  <div className="w-8 h-8 bg-purple-600 text-white rounded-full flex items-center justify-center mx-auto mb-2 text-sm font-bold">2</div>
+                  <h4 className="font-semibold text-slate-900 dark:text-white text-sm mb-1">Pro/Max</h4>
+                  <p className="text-xs text-slate-600 dark:text-slate-300">구독 연동</p>
+                </div>
+                
+                <div className="text-center p-3 sm:p-4 border border-green-200 dark:border-green-600 rounded-lg">
+                  <div className="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center mx-auto mb-2 text-sm font-bold">3</div>
+                  <h4 className="font-semibold text-slate-900 dark:text-white text-sm mb-1">기업용</h4>
+                  <p className="text-xs text-slate-600 dark:text-slate-300">AWS/GCP</p>
                 </div>
               </div>
             </div>
@@ -326,68 +222,44 @@ export default function GettingStarted() {
         </section>
 
         {/* Step 4: First Project */}
-        <section className="mb-12">
-          <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-8">
-            <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6 flex items-center">
-              <span className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-medium mr-3">4</span>
-              첫 프로젝트 초기화
+        <section className="mb-8 sm:mb-12">
+          <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-4 sm:p-6 lg:p-8">
+            <h2 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-4 sm:mb-6 flex items-center">
+              <span className="w-6 h-6 sm:w-8 sm:h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs sm:text-sm font-medium mr-2 sm:mr-3">4</span>
+              첫 프로젝트 시작
             </h2>
 
-            <div className="space-y-6">
-              <div>
-                <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-3">1. 프로젝트 요약 생성</h3>
-                <p className="text-slate-600 dark:text-slate-300 mb-3">Claude Code가 프로젝트를 이해할 수 있도록 요약을 생성합니다:</p>
+            <div className="space-y-4 sm:space-y-6">
+              <div className="grid sm:grid-cols-2 gap-4">
                 <div className="bg-slate-900 dark:bg-slate-800 rounded-lg p-4">
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-slate-400 text-sm">Claude Code</span>
+                    <span className="text-slate-400 text-sm">프로젝트 이해하기</span>
                     <CopyButton text="이 프로젝트에 대해 요약해줘" />
                   </div>
-                  <code className="text-blue-400 font-mono">claude{`>`} </code>
-                  <code className="text-white font-mono">이 프로젝트에 대해 요약해줘</code>
+                  <code className="text-blue-400 font-mono text-sm">claude{`>`} </code>
+                  <code className="text-white font-mono text-sm">이 프로젝트에 대해 요약해줘</code>
                 </div>
-              </div>
 
-              <div>
-                <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-3">2. CLAUDE.md 파일 생성</h3>
-                <p className="text-slate-600 dark:text-slate-300 mb-3">프로젝트 가이드 파일을 자동으로 생성합니다:</p>
                 <div className="bg-slate-900 dark:bg-slate-800 rounded-lg p-4">
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-slate-400 text-sm">Claude Code</span>
+                    <span className="text-slate-400 text-sm">프로젝트 초기화</span>
                     <CopyButton text="/init" />
                   </div>
-                  <code className="text-blue-400 font-mono">claude{`>`} </code>
-                  <code className="text-white font-mono">/init</code>
-                </div>
-                <p className="text-slate-600 dark:text-slate-300 text-sm mt-2">
-                  이 명령어는 프로젝트의 구조, 개발 명령어, 아키텍처 정보를 포함한 CLAUDE.md 파일을 생성합니다.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-3">3. 변경사항 커밋</h3>
-                <p className="text-slate-600 dark:text-slate-300 mb-3">생성된 CLAUDE.md 파일을 저장소에 추가합니다:</p>
-                <div className="bg-slate-900 dark:bg-slate-800 rounded-lg p-4">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-slate-400 text-sm">Claude Code</span>
-                    <CopyButton text="생성된 CLAUDE.md 파일을 커밋해줘" />
-                  </div>
-                  <code className="text-blue-400 font-mono">claude{`>`} </code>
-                  <code className="text-white font-mono">CLAUDE.md 파일을 커밋해줘</code>
+                  <code className="text-blue-400 font-mono text-sm">claude{`>`} </code>
+                  <code className="text-white font-mono text-sm">/init</code>
                 </div>
               </div>
 
-              <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg">
-                <div className="flex">
-                  <svg className="w-5 h-5 text-green-600 dark:text-green-400 mt-0.5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              <div className="text-center p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg">
+                <div className="w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center mx-auto mb-3">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <div>
-                    <p className="text-green-800 dark:text-green-200 font-medium">축하합니다!</p>
-                    <p className="text-green-700 dark:text-green-300 text-sm mt-1">
-                      Claude Code 설정이 완료되었습니다. 이제 자연어 명령으로 코딩을 시작할 수 있습니다.
-                    </p>
-                  </div>
                 </div>
+                <h3 className="font-semibold text-green-800 dark:text-green-200 mb-2">설정 완료!</h3>
+                <p className="text-sm text-green-700 dark:text-green-300">
+                  이제 Claude Code와 함께 스마트한 개발을 시작할 수 있습니다.
+                </p>
               </div>
             </div>
           </div>

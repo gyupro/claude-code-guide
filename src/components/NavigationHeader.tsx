@@ -20,16 +20,16 @@ export default function NavigationHeader({
   const desktopLinkClasses = 'transition-colors';
 
   return (
-    <header className="border-b border-slate-200 dark:border-slate-700 bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm">
+    <header className="fixed top-0 left-0 right-0 z-50 border-b border-slate-200 dark:border-slate-700 bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
             <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">V</span>
+              <span className="text-white font-bold text-sm">C</span>
             </div>
             <div className="flex flex-col">
-              <span className="text-xl font-bold text-slate-900 dark:text-white">Hello! Vibe</span>
-              <span className="text-xs text-slate-600 dark:text-slate-400">Claude Code편</span>
+              <span className="text-xl font-bold text-slate-900 dark:text-white">Claude Code</span>
+              <span className="text-xs text-slate-600 dark:text-slate-400">사용 가이드</span>
             </div>
           </Link>
           

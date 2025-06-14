@@ -116,4 +116,4 @@ Disallow: /admin/
 Disallow: /private/
 
 # Sitemap location
-Sitemap: https://gyupro.github.io/claude-code-guide/sitemap.xml
+Sitemap: https://claude.develop-on.co.kr/sitemap.xml

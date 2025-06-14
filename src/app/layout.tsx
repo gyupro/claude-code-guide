@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Hello! Vibe - AI와 함께하는 스마트한 개발",
-  description: "한국 개발자를 위한 Claude Code 사용자 모임. AI 코딩 도구 Claude Code의 활용법, 튜토리얼, 커뮤니티를 제공합니다.",
-  metadataBase: new URL('https://hellovibe.io'),
+  title: "Claude Code 사용 가이드 - AI와 함께하는 스마트한 개발",
+  description: "한국 개발자를 위한 Claude Code 사용법 가이드. AI 코딩 도구 Claude Code의 활용법과 실전 팁을 제공합니다.",
+  metadataBase: new URL('https://claude.develop-on.co.kr'),
 };
 
 export default function RootLayout({
@@ -42,7 +42,7 @@ export default function RootLayout({
         </Script>
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased pt-16`}
       >
         {children}
       </body>

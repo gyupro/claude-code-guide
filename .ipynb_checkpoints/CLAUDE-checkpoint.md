@@ -4,7 +4,7 @@ This file provides comprehensive guidance to Claude Code (claude.ai/code) when w
 
 ## Project Overview
 
-**Claude Code 사용 가이드** is a Korean developer guide website focused on Claude Code education, tutorials, and best practices. It serves as the primary learning resource for Korean developers wanting to master AI-assisted coding with Claude Code.
+**Hello! Vibe - Claude Code Guide** is a Korean developer community website focused on Claude Code education, tutorials, and best practices. It serves as the primary learning resource for Korean developers wanting to master AI-assisted coding with Claude Code.
 
 ### Key Characteristics
 - **Target Audience**: Korean developers learning Claude Code
@@ -54,19 +54,19 @@ claude-code-guide/
 
 ## Deployment Strategy
 
-### Primary Deployment: Custom Domain
-- **Platform**: GitHub Pages with static export  
-- **URL**: `https://claude.develop-on.co.kr/`
-- **Fallback URL**: `https://gyupro.github.io/claude-code-guide/`
-- **Trigger**: Automatic on push to `main` branch
-- **Build**: Static export with `output: 'export'` in Next.js config
-
-### Secondary Deployment: Cloudflare Workers (Optional)
+### Primary Deployment: Cloudflare Workers (hellovibe.io)
 - **Platform**: Cloudflare Workers via OpenNext.js
+- **Domains**: `hellovibe.io`, `www.hellovibe.io`
 - **Commands**: 
   - `pnpm preview` - Local Cloudflare preview
   - `pnpm deploy` - Deploy to Cloudflare
 - **Configuration**: `wrangler.toml` with Node.js compatibility
+
+### Secondary Deployment: GitHub Pages
+- **Platform**: GitHub Pages with static export  
+- **URL**: `https://gyupro.github.io/claude-code-guide/`
+- **Trigger**: Automatic on push to `main` branch
+- **Build**: Static export with `output: 'export'` in Next.js config
 
 ## Development Commands
 
@@ -260,16 +260,6 @@ This project supports MCP (Model Context Protocol) for enhanced GitHub integrati
 
 ## Community Focus
 
-### Mobile Responsiveness
-- **모바일 UI 고려사항**: 모든 페이지에 대해 모바일 레이아웃과 콘텐츠를 최적화
-- **Responsive Design**: Ensure seamless user experience across mobile devices
-- **Key Considerations**:
-  - Adapt layout for smaller screens
-  - Optimize content readability on mobile
-  - Use mobile-first design principles
-  - Implement responsive navigation (hamburger menu)
-  - Test across various mobile device sizes and orientations
-
 Remember that this is a **Korean developer community project**:
 - **Language**: Prioritize Korean explanations with English technical terms
 - **Cultural Context**: Consider Korean software development practices
@@ -278,4 +268,4 @@ Remember that this is a **Korean developer community project**:
 
 ---
 
-This CLAUDE.md serves as the definitive guide for understanding and contributing to the Claude Code 사용 가이드 project.
+This CLAUDE.md serves as the definitive guide for understanding and contributing to the Hello! Vibe Claude Code community project.

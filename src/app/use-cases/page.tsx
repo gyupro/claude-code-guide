@@ -22,13 +22,13 @@ export default function UseCases() {
         />
       </NavigationHeader>
 
-      <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         {/* Hero Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-slate-900 dark:text-white mb-4">
+        <div className="text-center mb-8 sm:mb-16">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 dark:text-white mb-4">
             Claude Code 활용 사례
           </h1>
-          <p className="text-xl text-slate-600 dark:text-slate-300 max-w-4xl mx-auto">
+          <p className="text-base sm:text-lg lg:text-xl text-slate-600 dark:text-slate-300 max-w-4xl mx-auto leading-relaxed">
             Claude Code를 어떻게 활용하여 조직의 업무 효율성을 극대화하고 있는지 심층적으로 알아보세요.
           </p>
           <div className="mt-6 text-sm text-slate-500 dark:text-slate-400">
@@ -37,17 +37,17 @@ export default function UseCases() {
         </div>
 
         {/* Teams Grid */}
-        <div className="grid lg:grid-cols-2 gap-8 mb-16">
+        <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 mb-8 sm:mb-16">
           
           {/* Data Infrastructure Team */}
-          <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-8 hover:shadow-lg transition-shadow">
+          <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-4 sm:p-6 lg:p-8 hover:shadow-lg transition-shadow">
             <div className="flex items-center mb-6">
               <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center mr-4">
                 <svg className="w-6 h-6 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4" />
                 </svg>
               </div>
-              <h2 className="text-2xl font-bold text-slate-900 dark:text-white">데이터 인프라 팀</h2>
+              <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-slate-900 dark:text-white">데이터 인프라 팀</h2>
             </div>
             
             <p className="text-slate-600 dark:text-slate-300 mb-6">
@@ -56,8 +56,8 @@ export default function UseCases() {
 
             <div className="space-y-4">
               <div>
-                <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">주요 성과</h3>
-                <ul className="space-y-2 text-slate-600 dark:text-slate-300 text-sm">
+                <h3 className="text-base sm:text-lg font-semibold text-slate-900 dark:text-white mb-2">주요 성과</h3>
+                <ul className="space-y-2 text-slate-600 dark:text-slate-300 text-xs sm:text-sm">
                   <li className="flex items-start">
                     <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 mr-2 flex-shrink-0"></span>
                     <span>Kubernetes 장애 진단을 스크린샷만으로 해결</span>
@@ -83,7 +83,7 @@ export default function UseCases() {
           </div>
 
           {/* Product Development Team */}
-          <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-8 hover:shadow-lg transition-shadow">
+          <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-4 sm:p-6 lg:p-8 hover:shadow-lg transition-shadow">
             <div className="flex items-center mb-6">
               <div className="w-12 h-12 bg-green-100 dark:bg-green-900 rounded-lg flex items-center justify-center mr-4">
                 <svg className="w-6 h-6 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -99,8 +99,8 @@ export default function UseCases() {
 
             <div className="space-y-4">
               <div>
-                <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">주요 성과</h3>
-                <ul className="space-y-2 text-slate-600 dark:text-slate-300 text-sm">
+                <h3 className="text-base sm:text-lg font-semibold text-slate-900 dark:text-white mb-2">주요 성과</h3>
+                <ul className="space-y-2 text-slate-600 dark:text-slate-300 text-xs sm:text-sm">
                   <li className="flex items-start">
                     <span className="w-1.5 h-1.5 bg-green-500 rounded-full mt-2 mr-2 flex-shrink-0"></span>
                     <span>자동 수락 모드로 자율 반복 프로토타이핑</span>
@@ -126,7 +126,7 @@ export default function UseCases() {
           </div>
 
           {/* Security Engineering Team */}
-          <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-8 hover:shadow-lg transition-shadow">
+          <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-4 sm:p-6 lg:p-8 hover:shadow-lg transition-shadow">
             <div className="flex items-center mb-6">
               <div className="w-12 h-12 bg-orange-100 dark:bg-orange-900 rounded-lg flex items-center justify-center mr-4">
                 <svg className="w-6 h-6 text-orange-600 dark:text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -142,8 +142,8 @@ export default function UseCases() {
 
             <div className="space-y-4">
               <div>
-                <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">주요 성과</h3>
-                <ul className="space-y-2 text-slate-600 dark:text-slate-300 text-sm">
+                <h3 className="text-base sm:text-lg font-semibold text-slate-900 dark:text-white mb-2">주요 성과</h3>
+                <ul className="space-y-2 text-slate-600 dark:text-slate-300 text-xs sm:text-sm">
                   <li className="flex items-start">
                     <span className="w-1.5 h-1.5 bg-orange-500 rounded-full mt-2 mr-2 flex-shrink-0"></span>
                     <span>스택 트레이스 추적으로 인시던트 해결 시간 50% 단축</span>
@@ -169,7 +169,7 @@ export default function UseCases() {
           </div>
 
           {/* Inference Team */}
-          <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-8 hover:shadow-lg transition-shadow">
+          <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-4 sm:p-6 lg:p-8 hover:shadow-lg transition-shadow">
             <div className="flex items-center mb-6">
               <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-lg flex items-center justify-center mr-4">
                 <svg className="w-6 h-6 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -185,8 +185,8 @@ export default function UseCases() {
 
             <div className="space-y-4">
               <div>
-                <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">주요 성과</h3>
-                <ul className="space-y-2 text-slate-600 dark:text-slate-300 text-sm">
+                <h3 className="text-base sm:text-lg font-semibold text-slate-900 dark:text-white mb-2">주요 성과</h3>
+                <ul className="space-y-2 text-slate-600 dark:text-slate-300 text-xs sm:text-sm">
                   <li className="flex items-start">
                     <span className="w-1.5 h-1.5 bg-purple-500 rounded-full mt-2 mr-2 flex-shrink-0"></span>
                     <span>ML 리서치 학습 시간 80% 단축</span>
@@ -213,16 +213,16 @@ export default function UseCases() {
         </div>
 
         {/* More Teams Section */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-8 text-center">
+        <section className="mb-8 sm:mb-16">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-slate-900 dark:text-white mb-6 sm:mb-8 text-center">
             더 많은 팀들의 혁신적 활용 사례
           </h2>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {/* Data Science Team */}
-            <div className="bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 p-6">
-              <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-4">데이터 과학·시각화 팀</h3>
-              <p className="text-slate-600 dark:text-slate-300 text-sm mb-4">
+            <div className="bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 p-4 sm:p-6">
+              <h3 className="text-lg sm:text-xl font-semibold text-slate-900 dark:text-white mb-4">데이터 과학·시각화 팀</h3>
+              <p className="text-slate-600 dark:text-slate-300 text-xs sm:text-sm mb-4 leading-relaxed">
                 React/TypeScript 기반 5,000행 규모 대시보드를 완전 자동으로 작성하여 2-4배 작업 시간 단축
               </p>
               <div className="text-xs text-slate-500 dark:text-slate-400">
@@ -231,7 +231,7 @@ export default function UseCases() {
             </div>
 
             {/* API Knowledge Team */}
-            <div className="bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 p-6">
+            <div className="bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 p-4 sm:p-6">
               <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-4">API Knowledge 팀</h3>
               <p className="text-slate-600 dark:text-slate-300 text-sm mb-4">
                 PDF, 인용, 웹 검색 등 지식 확장 기능 개발·테스트에서 컨텍스트 스위칭 대폭 감소
@@ -242,7 +242,7 @@ export default function UseCases() {
             </div>
 
             {/* Growth Marketing Team */}
-            <div className="bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 p-6">
+            <div className="bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 p-4 sm:p-6">
               <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-4">성장 마케팅 팀</h3>
               <p className="text-slate-600 dark:text-slate-300 text-sm mb-4">
                 Google Ads 크리에이티브 자동 생성으로 광고 문안 제작 2시간→15분 단축, 크리에이티브 10배 생산
@@ -253,7 +253,7 @@ export default function UseCases() {
             </div>
 
             {/* Product Design Team */}
-            <div className="bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 p-6">
+            <div className="bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 p-4 sm:p-6">
               <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-4">제품 디자인 팀</h3>
               <p className="text-slate-600 dark:text-slate-300 text-sm mb-4">
                 디자이너가 프론트엔드 개발을 직접 수행하여 2-3배 속도 향상, 복잡 메시지 교체 1주→1시간
@@ -264,7 +264,7 @@ export default function UseCases() {
             </div>
 
             {/* RL Engineering Team */}
-            <div className="bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 p-6">
+            <div className="bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 p-4 sm:p-6">
               <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-4">강화학습 팀</h3>
               <p className="text-slate-600 dark:text-slate-300 text-sm mb-4">
                 대규모 샘플링·가중치 전송 시스템 개발에서 '시도 후 롤백' 실험 문화 정착
@@ -275,7 +275,7 @@ export default function UseCases() {
             </div>
 
             {/* Legal Team */}
-            <div className="bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 p-6">
+            <div className="bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 p-4 sm:p-6">
               <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-4">법무 팀</h3>
               <p className="text-slate-600 dark:text-slate-300 text-sm mb-4">
                 비개발자도 1시간 만에 예측 텍스트 보조 앱 프로토타입 구현으로 맞춤형 법무 도구 개발
@@ -288,14 +288,14 @@ export default function UseCases() {
         </section>
 
         {/* Key Insights Section */}
-        <section className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-xl border border-blue-200 dark:border-blue-800 p-8">
-          <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6 text-center">
+        <section className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-xl border border-blue-200 dark:border-blue-800 p-4 sm:p-6 lg:p-8">
+          <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-slate-900 dark:text-white mb-6 text-center">
             공통 성공 요인 & 실무 인사이트
           </h2>
           
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
             <div>
-              <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-4">🚀 생산성 향상 패턴</h3>
+              <h3 className="text-base sm:text-lg font-semibold text-slate-900 dark:text-white mb-4">🚀 생산성 향상 패턴</h3>
               <ul className="space-y-3 text-slate-600 dark:text-slate-300">
                 <li className="flex items-start">
                   <span className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-medium mr-3 mt-0.5">1</span>
@@ -317,7 +317,7 @@ export default function UseCases() {
             </div>
             
             <div>
-              <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-4">💡 조직별 맞춤 전략</h3>
+              <h3 className="text-base sm:text-lg font-semibold text-slate-900 dark:text-white mb-4">💡 조직별 맞춤 전략</h3>
               <ul className="space-y-3 text-slate-600 dark:text-slate-300">
                 <li className="flex items-center">
                   <svg className="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -355,12 +355,12 @@ export default function UseCases() {
         </section>
 
         {/* CTA Section */}
-        <section className="text-center mt-16">
-          <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-8">
-            <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">
+        <section className="text-center mt-8 sm:mt-16">
+          <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-4 sm:p-6 lg:p-8">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-slate-900 dark:text-white mb-4">
               지금 바로 Claude Code를 시작해보세요
             </h2>
-            <p className="text-slate-600 dark:text-slate-300 mb-6 max-w-2xl mx-auto">
+            <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 mb-6 max-w-2xl mx-auto leading-relaxed">
               Anthropic 팀들의 혁신적인 활용 사례를 참고하여 여러분의 업무에도 Claude Code를 적용해보세요. 
               개발자부터 비개발자까지, 모든 팀이 생산성을 극대화할 수 있습니다.
             </p>
