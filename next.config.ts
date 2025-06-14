@@ -6,8 +6,7 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: process.env.NODE_ENV === 'production' ? '/claude-code-guide' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/claude-code-guide/' : '',
+  // basePath and assetPrefix removed for custom domain deployment
 
   async headers() {
     return [
