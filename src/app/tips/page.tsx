@@ -207,7 +207,7 @@ export default function Tips() {
                       <div className="flex items-center justify-between mb-3">
                         <h4 className="font-semibold text-slate-900 dark:text-white">리플렉션 프롬프트 (복사하여 사용):</h4>
                         <button 
-                          onClick={() => {
+                          onClick={(event) => {
                             const code = `You are an expert in prompt engineering, specializing in optimizing AI code assistant instructions. Your task is to analyze and improve the instructions for Claude Code found in u/CLAUDE.md. Follow these steps carefully:
 
 1. Analysis Phase:
@@ -259,7 +259,7 @@ Present your final output in the following structure:
 Remember, your goal is to enhance Claude's performance and consistency while maintaining the core functionality and purpose of the AI assistant. Be thorough in your analysis, clear in your explanations, and precise in your implementations.`;
                             navigator.clipboard.writeText(code);
                             // Show toast or feedback
-                            const btn = event.target;
+                            const btn = event.currentTarget as HTMLButtonElement;
                             const originalText = btn.textContent;
                             btn.textContent = '복사됨!';
                             btn.className = btn.className.replace('text-slate-400', 'text-green-400');
