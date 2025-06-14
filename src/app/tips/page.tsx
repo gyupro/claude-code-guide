@@ -184,6 +184,171 @@ export default function Tips() {
               </div>
             </div>
 
+
+            {/* 팁 4: 프로젝트 리플렉션 */}
+            <div className="bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 p-8">
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-600 rounded-lg flex items-center justify-center">
+                    <span className="text-white font-bold text-lg">4</span>
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">
+                    프로젝트 리플렉션으로 CLAUDE.md 최적화
+                  </h2>
+                  <div className="prose dark:prose-invert max-w-none">
+                    <p className="text-slate-600 dark:text-slate-300 mb-4">
+                      CLAUDE.md 파일 자체를 지속적으로 개선하는 강력한 방법을 발견했습니다. 
+                      `/project:reflection` 명령어를 만들어서 Claude가 현재 지시사항을 분석하고 개선점을 제안하도록 합니다.
+                    </p>
+
+                    <div className="bg-slate-50 dark:bg-slate-900 rounded-lg p-4 mb-4">
+                      <div className="flex items-center justify-between mb-3">
+                        <h4 className="font-semibold text-slate-900 dark:text-white">리플렉션 프롬프트 (복사하여 사용):</h4>
+                        <button 
+                          onClick={() => {
+                            const code = `You are an expert in prompt engineering, specializing in optimizing AI code assistant instructions. Your task is to analyze and improve the instructions for Claude Code found in u/CLAUDE.md. Follow these steps carefully:
+
+1. Analysis Phase:
+Review the chat history in your context window.
+
+Then, examine the current Claude instructions:
+<claude_instructions>
+u/CLAUDE.md
+</claude_instructions>
+
+Analyze the chat history and instructions to identify areas that could be improved. Look for:
+- Inconsistencies in Claude's responses
+- Misunderstandings of user requests
+- Areas where Claude could provide more detailed or accurate information
+- Opportunities to enhance Claude's ability to handle specific types of queries or tasks
+
+2. Interaction Phase:
+Present your findings and improvement ideas to the human. For each suggestion:
+a) Explain the current issue you've identified
+b) Propose a specific change or addition to the instructions
+c) Describe how this change would improve Claude's performance
+
+Wait for feedback from the human on each suggestion before proceeding. If the human approves a change, move it to the implementation phase. If not, refine your suggestion or move on to the next idea.
+
+3. Implementation Phase:
+For each approved change:
+a) Clearly state the section of the instructions you're modifying
+b) Present the new or modified text for that section
+c) Explain how this change addresses the issue identified in the analysis phase
+
+4. Output Format:
+Present your final output in the following structure:
+
+<analysis>
+[List the issues identified and potential improvements]
+</analysis>
+
+<improvements>
+[For each approved improvement:
+1. Section being modified
+2. New or modified instruction text
+3. Explanation of how this addresses the identified issue]
+</improvements>
+
+<final_instructions>
+[Present the complete, updated set of instructions for Claude, incorporating all approved changes]
+</final_instructions>
+
+Remember, your goal is to enhance Claude's performance and consistency while maintaining the core functionality and purpose of the AI assistant. Be thorough in your analysis, clear in your explanations, and precise in your implementations.`;
+                            navigator.clipboard.writeText(code);
+                            // Show toast or feedback
+                            const btn = event.target;
+                            const originalText = btn.textContent;
+                            btn.textContent = '복사됨!';
+                            btn.className = btn.className.replace('text-slate-400', 'text-green-400');
+                            setTimeout(() => {
+                              btn.textContent = originalText;
+                              btn.className = btn.className.replace('text-green-400', 'text-slate-400');
+                            }, 2000);
+                          }}
+                          className="text-slate-400 hover:text-white transition-colors flex items-center gap-1 text-xs"
+                        >
+                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                          </svg>
+                          복사
+                        </button>
+                      </div>
+                      <div className="bg-slate-800 rounded p-4 text-sm font-mono text-slate-300 overflow-x-auto">
+                        <pre className="whitespace-pre-wrap">{`You are an expert in prompt engineering, specializing in optimizing AI code assistant instructions. Your task is to analyze and improve the instructions for Claude Code found in u/CLAUDE.md. Follow these steps carefully:
+
+1. Analysis Phase:
+Review the chat history in your context window.
+
+Then, examine the current Claude instructions:
+<claude_instructions>
+u/CLAUDE.md
+</claude_instructions>
+
+Analyze the chat history and instructions to identify areas that could be improved. Look for:
+- Inconsistencies in Claude's responses
+- Misunderstandings of user requests
+- Areas where Claude could provide more detailed or accurate information
+- Opportunities to enhance Claude's ability to handle specific types of queries or tasks
+
+2. Interaction Phase:
+Present your findings and improvement ideas to the human. For each suggestion:
+a) Explain the current issue you've identified
+b) Propose a specific change or addition to the instructions
+c) Describe how this change would improve Claude's performance
+
+Wait for feedback from the human on each suggestion before proceeding. If the human approves a change, move it to the implementation phase. If not, refine your suggestion or move on to the next idea.
+
+3. Implementation Phase:
+For each approved change:
+a) Clearly state the section of the instructions you're modifying
+b) Present the new or modified text for that section
+c) Explain how this change addresses the issue identified in the analysis phase
+
+4. Output Format:
+Present your final output in the following structure:
+
+<analysis>
+[List the issues identified and potential improvements]
+</analysis>
+
+<improvements>
+[For each approved improvement:
+1. Section being modified
+2. New or modified instruction text
+3. Explanation of how this addresses the identified issue]
+</improvements>
+
+<final_instructions>
+[Present the complete, updated set of instructions for Claude, incorporating all approved changes]
+</final_instructions>
+
+Remember, your goal is to enhance Claude's performance and consistency while maintaining the core functionality and purpose of the AI assistant. Be thorough in your analysis, clear in your explanations, and precise in your implementations.`}</pre>
+                      </div>
+                    </div>
+
+                    <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg p-4 mb-4">
+                      <h4 className="font-semibold text-amber-900 dark:text-amber-100 mb-2">실제 리플렉션 결과 예시:</h4>
+                      <ul className="text-sm text-amber-800 dark:text-amber-200 space-y-1">
+                        <li>• Jira/Atlassian 통합 지시사항 누락 발견</li>
+                        <li>• 문서화 생성 가이드라인 부재</li>
+                        <li>• 리팩토링 전략 지침 필요</li>
+                        <li>• 프로젝트 컨텍스트 정보 부족</li>
+                        <li>• 점진적 개발 프로세스 가이드 필요</li>
+                      </ul>
+                    </div>
+
+                    <blockquote className="border-l-4 border-orange-500 pl-4 italic text-slate-600 dark:text-slate-300">
+                      "각 리플렉션 사이클마다 코딩 어시스턴트가 프로젝트 요구사항을 
+                      이해하는 능력이 측정 가능하게 향상됩니다."
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             {/* 추가 실전 팁들 */}
             <div className="bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 p-8">
               <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">
@@ -212,6 +377,13 @@ export default function Tips() {
                       각 단계마다 무엇이 변경되었는지 확인하고, 예상과 다른 결과가 나오면 즉시 피드백하세요.
                     </p>
                   </div>
+
+                  <div className="p-4 bg-slate-50 dark:bg-slate-900 rounded-lg">
+                    <h3 className="font-semibold text-slate-900 dark:text-white mb-2">🔄 CLAUDE.md 지속 개선</h3>
+                    <p className="text-sm text-slate-600 dark:text-slate-300">
+                      정기적으로 `/project:reflection` 명령어를 실행하여 CLAUDE.md 파일을 분석하고 개선점을 찾아 적용하세요.
+                    </p>
+                  </div>
                 </div>
                 
                 <div className="space-y-4">
@@ -230,86 +402,17 @@ export default function Tips() {
                   </div>
                   
                   <div className="p-4 bg-slate-50 dark:bg-slate-900 rounded-lg">
-                    <h3 className="font-semibold text-slate-900 dark:text-white mb-2">🔄 CLAUDE.md 지속 개선</h3>
-                    <p className="text-sm text-slate-600 dark:text-slate-300">
-                      정기적으로 `/project:reflection` 명령어를 실행하여 CLAUDE.md 파일을 분석하고 개선점을 찾아 적용하세요.
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="space-y-4">
-                  <div className="p-4 bg-slate-50 dark:bg-slate-900 rounded-lg">
                     <h3 className="font-semibold text-slate-900 dark:text-white mb-2">📋 프로젝트 컨텍스트</h3>
                     <p className="text-sm text-slate-600 dark:text-slate-300">
                       CLAUDE.md에 현재 진행 중인 에픽, 프로젝트 목표, 비즈니스 컨텍스트를 포함하여 더 나은 결정을 내리도록 하세요.
                     </p>
                   </div>
-                  
+
                   <div className="p-4 bg-slate-50 dark:bg-slate-900 rounded-lg">
                     <h3 className="font-semibold text-slate-900 dark:text-white mb-2">🎯 도구 통합 가이드</h3>
                     <p className="text-sm text-slate-600 dark:text-slate-300">
                       Jira, Slack, 데이터베이스 등 사용하는 도구들의 MCP 연결 방법과 활용법을 명시하세요.
                     </p>
-                  </div>
-                  
-                  <div className="p-4 bg-slate-50 dark:bg-slate-900 rounded-lg">
-                    <h3 className="font-semibold text-slate-900 dark:text-white mb-2">⚡ 피드백 루프</h3>
-                    <p className="text-sm text-slate-600 dark:text-slate-300">
-                      각 작업 후 Claude의 성과를 평가하고, 개선점을 즉시 CLAUDE.md에 반영하여 지속적으로 발전시키세요.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* 팁 4: 프로젝트 리플렉션 */}
-            <div className="bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 p-8">
-              <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0">
-                  <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-600 rounded-lg flex items-center justify-center">
-                    <span className="text-white font-bold text-lg">4</span>
-                  </div>
-                </div>
-                <div className="flex-1">
-                  <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">
-                    프로젝트 리플렉션으로 CLAUDE.md 최적화
-                  </h2>
-                  <div className="prose dark:prose-invert max-w-none">
-                    <p className="text-slate-600 dark:text-slate-300 mb-4">
-                      CLAUDE.md 파일 자체를 지속적으로 개선하는 강력한 방법을 발견했습니다. 
-                      `/project:reflection` 명령어를 만들어서 Claude가 현재 지시사항을 분석하고 개선점을 제안하도록 합니다.
-                    </p>
-
-                    <div className="bg-slate-50 dark:bg-slate-900 rounded-lg p-4 mb-4">
-                      <h4 className="font-semibold text-slate-900 dark:text-white mb-2">리플렉션 프롬프트 예시:</h4>
-                      <div className="bg-slate-800 rounded p-3 text-sm font-mono text-slate-300">
-                        <code>
-                          당신은 프롬프트 엔지니어링 전문가입니다.<br/>
-                          CLAUDE.md 파일의 지시사항을 분석하고 개선하세요.<br/><br/>
-                          
-                          1. 분석 단계: 채팅 기록과 현재 지시사항 검토<br/>
-                          2. 개선점 식별: 불일치, 오해, 누락된 부분 찾기<br/>
-                          3. 구체적 개선안 제시: 섹션별 수정 제안<br/>
-                          4. 피드백 루프: 승인된 변경사항 구현
-                        </code>
-                      </div>
-                    </div>
-
-                    <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg p-4 mb-4">
-                      <h4 className="font-semibold text-amber-900 dark:text-amber-100 mb-2">실제 리플렉션 결과 예시:</h4>
-                      <ul className="text-sm text-amber-800 dark:text-amber-200 space-y-1">
-                        <li>• Jira/Atlassian 통합 지시사항 누락 발견</li>
-                        <li>• 문서화 생성 가이드라인 부재</li>
-                        <li>• 리팩토링 전략 지침 필요</li>
-                        <li>• 프로젝트 컨텍스트 정보 부족</li>
-                        <li>• 점진적 개발 프로세스 가이드 필요</li>
-                      </ul>
-                    </div>
-
-                    <blockquote className="border-l-4 border-orange-500 pl-4 italic text-slate-600 dark:text-slate-300">
-                      "각 리플렉션 사이클마다 코딩 어시스턴트가 프로젝트 요구사항을 
-                      이해하는 능력이 측정 가능하게 향상됩니다."
-                    </blockquote>
                   </div>
                 </div>
               </div>
