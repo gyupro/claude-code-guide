@@ -53,10 +53,19 @@ jobs:
       - name: Build with Next.js
         run: pnpm build
 
+      - name: List build output
+        run: |
+          echo "=== Root directory ==="
+          ls -la
+          echo "=== .next directory ==="
+          ls -la .next || echo ".next directory not found"
+          echo "=== out directory ==="
+          ls -la out || echo "out directory not found"
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./.next/out
+          path: ./out
 
   deploy:
     environment:
