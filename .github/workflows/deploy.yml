@@ -33,10 +33,10 @@ jobs:
           node-version: '20'
           cache: 'pnpm'
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-        with:
-          static_site_generator: next
+      # - name: Setup Pages
+      #   uses: actions/configure-pages@v4
+      #   with:
+      #     static_site_generator: next
 
       - name: Restore cache
         uses: actions/cache@v4
@@ -51,7 +51,7 @@ jobs:
         run: pnpm install --no-frozen-lockfile
 
       - name: Build with Next.js
-        run: pnpm build
+        run: pnpm export
 
       - name: List build output
         run: |
