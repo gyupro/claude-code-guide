@@ -6,6 +6,7 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
+  distDir: 'out',
   basePath: process.env.NODE_ENV === 'production' ? '/claude-code-guide' : '',
   assetPrefix: process.env.NODE_ENV === 'production' ? '/claude-code-guide/' : '',
 
