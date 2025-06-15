@@ -462,7 +462,7 @@ export default function MCPClient({ locale, dictionary }: MCPClientProps) {
                     </div>
                   </div>
                   <div className="text-blue-800 dark:text-blue-200 text-xs sm:text-sm space-y-1">
-                    {(dictionary.mcp?.tutorials?.workflowAutomation?.magicCommand?.workflow || []).map((step, index) => (
+                    {(dictionary.mcp?.tutorials?.workflowAutomation?.magicCommand?.workflow || []).map((step: string, index: number) => (
                       <p key={index}>{step}</p>
                     ))}
                   </div>
