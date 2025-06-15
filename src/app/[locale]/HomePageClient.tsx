@@ -4,43 +4,11 @@ import NavigationHeader from '@/components/NavigationHeader';
 import MobileMenu from '@/components/MobileMenu';
 import { useNavigationMenu } from '@/hooks/useNavigationMenu';
 import { type Locale } from '@/lib/i18n/config';
+import { type Dictionary } from '@/lib/i18n/dictionaries';
 
 interface HomePageClientProps {
   locale: Locale;
-  dictionary: {
-    home: {
-      title: string;
-      subtitle: string;
-      getStarted: string;
-      learnMore: string;
-      features: {
-        title: string;
-        subtitle: string;
-        aiPowered: { title: string; description: string };
-        terminalIntegration: { title: string; description: string };
-        multilingual: { title: string; description: string };
-      };
-      quickStart: {
-        title: string;
-        subtitle: string;
-        installation: { title: string; description: string };
-        startCoding: { title: string; description: string };
-      };
-      useCases: {
-        title: string;
-        subtitle: string;
-        codeReview: { title: string; description: string; linkText: string };
-        testGeneration: { title: string; description: string; linkText: string };
-        documentation: { title: string; description: string; linkText: string };
-        debugging: { title: string; description: string; linkText: string };
-      };
-    };
-    common: {
-      bannerAlt: string;
-      copyright: string;
-      email: string;
-    };
-  };
+  dictionary: Dictionary;
 }
 
 export default function HomePageClient({ locale, dictionary }: HomePageClientProps) {
@@ -75,10 +43,10 @@ export default function HomePageClient({ locale, dictionary }: HomePageClientPro
               {/* Left Content */}
               <div className="text-center lg:text-left order-2 lg:order-1">
                 <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-slate-900 dark:text-white mb-3 sm:mb-4 lg:mb-6 leading-tight">
-                  {dictionary.home.title}
+                  {(dictionary.home as any).title}
                 </h1>
                 <p className="text-sm sm:text-base lg:text-lg xl:text-xl text-slate-600 dark:text-slate-300 mb-6 sm:mb-8 lg:mb-12 leading-relaxed">
-                  {dictionary.home.subtitle}
+                  {(dictionary.home as any).subtitle}
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 lg:gap-6 lg:justify-start justify-center">
@@ -86,13 +54,13 @@ export default function HomePageClient({ locale, dictionary }: HomePageClientPro
                     href={`/${locale}/getting-started`}
                     className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-5 sm:px-6 lg:px-8 py-3 sm:py-3.5 lg:py-4 rounded-lg font-medium text-sm sm:text-base lg:text-lg hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 transform hover:-translate-y-0.5 touch-manipulation"
                   >
-                    {dictionary.home.getStarted}
+                    {(dictionary.home as any).getStarted}
                   </a>
                   <a 
                     href={`/${locale}/usage-guide`}
                     className="border-2 border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-200 px-5 sm:px-6 lg:px-8 py-3 sm:py-3.5 lg:py-4 rounded-lg font-medium text-sm sm:text-base lg:text-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors touch-manipulation"
                   >
-                    {dictionary.home.learnMore}
+                    {(dictionary.home as any).learnMore}
                   </a>
                 </div>
               </div>
@@ -102,7 +70,7 @@ export default function HomePageClient({ locale, dictionary }: HomePageClientPro
                 <div className="relative max-w-sm sm:max-w-md lg:max-w-none mx-auto">
                   <img 
                     src="/banner.png" 
-                    alt={dictionary.common.bannerAlt}
+                    alt={(dictionary.common as any).bannerAlt}
                     className="w-full h-auto rounded-lg sm:rounded-xl shadow-xl lg:shadow-2xl"
                   />
                   <div className="absolute inset-0 rounded-lg sm:rounded-xl bg-gradient-to-tr from-blue-600/10 via-purple-600/5 to-cyan-600/10"></div>
@@ -117,10 +85,10 @@ export default function HomePageClient({ locale, dictionary }: HomePageClientPro
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-10 sm:mb-12 lg:mb-16">
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 dark:text-white mb-3 sm:mb-4">
-                {dictionary.home.features.title}
+                {(dictionary.home as any).features.title}
               </h2>
               <p className="text-sm sm:text-base lg:text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed px-4 sm:px-0">
-                {dictionary.home.features.subtitle}
+                {(dictionary.home as any).features.subtitle}
               </p>
             </div>
             
@@ -132,10 +100,10 @@ export default function HomePageClient({ locale, dictionary }: HomePageClientPro
                   </svg>
                 </div>
                 <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-slate-900 dark:text-white mb-3 sm:mb-4">
-                  {dictionary.home.features.aiPowered.title}
+                  {(dictionary.home as any).features.aiPowered.title}
                 </h3>
                 <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">
-                  {dictionary.home.features.aiPowered.description}
+                  {(dictionary.home as any).features.aiPowered.description}
                 </p>
               </div>
 
@@ -146,10 +114,10 @@ export default function HomePageClient({ locale, dictionary }: HomePageClientPro
                   </svg>
                 </div>
                 <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-slate-900 dark:text-white mb-3 sm:mb-4">
-                  {dictionary.home.features.terminalIntegration.title}
+                  {(dictionary.home as any).features.terminalIntegration.title}
                 </h3>
                 <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">
-                  {dictionary.home.features.terminalIntegration.description}
+                  {(dictionary.home as any).features.terminalIntegration.description}
                 </p>
               </div>
 
@@ -160,10 +128,10 @@ export default function HomePageClient({ locale, dictionary }: HomePageClientPro
                   </svg>
                 </div>
                 <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-slate-900 dark:text-white mb-3 sm:mb-4">
-                  {dictionary.home.features.multilingual.title}
+                  {(dictionary.home as any).features.multilingual.title}
                 </h3>
                 <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">
-                  {dictionary.home.features.multilingual.description}
+                  {(dictionary.home as any).features.multilingual.description}
                 </p>
               </div>
             </div>
@@ -175,10 +143,10 @@ export default function HomePageClient({ locale, dictionary }: HomePageClientPro
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-10 sm:mb-12 lg:mb-16">
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 dark:text-white mb-3 sm:mb-4">
-                {dictionary.home.quickStart.title}
+                {(dictionary.home as any).quickStart.title}
               </h2>
               <p className="text-sm sm:text-base lg:text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed px-4 sm:px-0">
-                {dictionary.home.quickStart.subtitle}
+                {(dictionary.home as any).quickStart.subtitle}
               </p>
             </div>
             
@@ -190,10 +158,10 @@ export default function HomePageClient({ locale, dictionary }: HomePageClientPro
                   </div>
                   <div className="bg-white dark:bg-slate-800 rounded-lg sm:rounded-xl p-4 sm:p-6 shadow-lg border border-slate-200 dark:border-slate-700 h-full">
                     <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white mb-2 sm:mb-3">
-                      {dictionary.home.quickStart.installation.title}
+                      {(dictionary.home as any).quickStart.installation.title}
                     </h3>
                     <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 mb-3 sm:mb-4 leading-relaxed">
-                      {dictionary.home.quickStart.installation.description}
+                      {(dictionary.home as any).quickStart.installation.description}
                     </p>
                     <div className="bg-slate-100 dark:bg-slate-700 rounded-lg p-3 font-mono text-xs sm:text-sm overflow-x-auto">
                       <code className="whitespace-nowrap">npm install -g @anthropic-ai/claude-code</code>
@@ -207,10 +175,10 @@ export default function HomePageClient({ locale, dictionary }: HomePageClientPro
                   </div>
                   <div className="bg-white dark:bg-slate-800 rounded-lg sm:rounded-xl p-4 sm:p-6 shadow-lg border border-slate-200 dark:border-slate-700 h-full">
                     <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white mb-2 sm:mb-3">
-                      {dictionary.home.quickStart.startCoding.title}
+                      {(dictionary.home as any).quickStart.startCoding.title}
                     </h3>
                     <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 mb-3 sm:mb-4 leading-relaxed">
-                      {dictionary.home.quickStart.startCoding.description}
+                      {(dictionary.home as any).quickStart.startCoding.description}
                     </p>
                     <div className="bg-slate-100 dark:bg-slate-700 rounded-lg p-3 font-mono text-xs sm:text-sm">
                       <code>claude</code>
@@ -227,10 +195,10 @@ export default function HomePageClient({ locale, dictionary }: HomePageClientPro
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-10 sm:mb-12 lg:mb-16">
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 dark:text-white mb-3 sm:mb-4">
-                {dictionary.home.useCases.title}
+                {(dictionary.home as any).useCases.title}
               </h2>
               <p className="text-sm sm:text-base lg:text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed px-4 sm:px-0">
-                {dictionary.home.useCases.subtitle}
+                {(dictionary.home as any).useCases.subtitle}
               </p>
             </div>
             
@@ -243,14 +211,14 @@ export default function HomePageClient({ locale, dictionary }: HomePageClientPro
                     </svg>
                   </div>
                   <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">
-                    {dictionary.home.useCases.codeReview.title}
+                    {(dictionary.home as any).useCases.codeReview.title}
                   </h3>
                 </div>
                 <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 mb-4 sm:mb-6 leading-relaxed">
-                  {dictionary.home.useCases.codeReview.description}
+                  {(dictionary.home as any).useCases.codeReview.description}
                 </p>
                 <a href={`/${locale}/use-cases`} className="text-blue-600 dark:text-blue-400 font-medium hover:underline text-sm sm:text-base touch-manipulation">
-                  {dictionary.home.useCases.codeReview.linkText}
+                  {(dictionary.home as any).useCases.codeReview.linkText}
                 </a>
               </div>
 
@@ -262,14 +230,14 @@ export default function HomePageClient({ locale, dictionary }: HomePageClientPro
                     </svg>
                   </div>
                   <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">
-                    {dictionary.home.useCases.testGeneration.title}
+                    {(dictionary.home as any).useCases.testGeneration.title}
                   </h3>
                 </div>
                 <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 mb-4 sm:mb-6 leading-relaxed">
-                  {dictionary.home.useCases.testGeneration.description}
+                  {(dictionary.home as any).useCases.testGeneration.description}
                 </p>
                 <a href={`/${locale}/tutorials`} className="text-green-600 dark:text-green-400 font-medium hover:underline text-sm sm:text-base touch-manipulation">
-                  {dictionary.home.useCases.testGeneration.linkText}
+                  {(dictionary.home as any).useCases.testGeneration.linkText}
                 </a>
               </div>
 
@@ -281,14 +249,14 @@ export default function HomePageClient({ locale, dictionary }: HomePageClientPro
                     </svg>
                   </div>
                   <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">
-                    {dictionary.home.useCases.documentation.title}
+                    {(dictionary.home as any).useCases.documentation.title}
                   </h3>
                 </div>
                 <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 mb-4 sm:mb-6 leading-relaxed">
-                  {dictionary.home.useCases.documentation.description}
+                  {(dictionary.home as any).useCases.documentation.description}
                 </p>
                 <a href={`/${locale}/tips`} className="text-orange-600 dark:text-orange-400 font-medium hover:underline text-sm sm:text-base touch-manipulation">
-                  {dictionary.home.useCases.documentation.linkText}
+                  {(dictionary.home as any).useCases.documentation.linkText}
                 </a>
               </div>
 
@@ -300,14 +268,14 @@ export default function HomePageClient({ locale, dictionary }: HomePageClientPro
                     </svg>
                   </div>
                   <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">
-                    {dictionary.home.useCases.debugging.title}
+                    {(dictionary.home as any).useCases.debugging.title}
                   </h3>
                 </div>
                 <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 mb-4 sm:mb-6 leading-relaxed">
-                  {dictionary.home.useCases.debugging.description}
+                  {(dictionary.home as any).useCases.debugging.description}
                 </p>
                 <a href={`/${locale}/getting-started`} className="text-purple-600 dark:text-purple-400 font-medium hover:underline text-sm sm:text-base touch-manipulation">
-                  {dictionary.home.useCases.debugging.linkText}
+                  {(dictionary.home as any).useCases.debugging.linkText}
                 </a>
               </div>
             </div>
@@ -319,10 +287,10 @@ export default function HomePageClient({ locale, dictionary }: HomePageClientPro
         <footer className="bg-slate-900 dark:bg-slate-950 text-white py-8 sm:py-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <p className="text-slate-300 mb-4">
-              {dictionary.common.copyright}
+              {(dictionary.common as any).copyright}
             </p>
             <p className="text-slate-400 text-sm">
-              {dictionary.common.email}
+              {(dictionary.common as any).email}
             </p>
           </div>
         </footer>

@@ -5,7 +5,7 @@ import { getDictionary } from '@/lib/i18n/dictionaries';
 import HomePageClient from './HomePageClient';
 
 interface HomePageProps {
-  params: { locale: Locale };
+  params: Promise<{ locale: Locale }>;
 }
 
 export default async function HomePage({ params }: HomePageProps) {
