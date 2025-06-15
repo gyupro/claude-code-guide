@@ -8,6 +8,8 @@ const nextConfig: NextConfig = {
   },
   // basePath and assetPrefix removed for custom domain deployment
 
+  // Remove experimental appDir as it's now default in Next.js 15
+
   async headers() {
     return [
       {

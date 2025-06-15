@@ -3,19 +3,24 @@
 import { MutableRefObject } from 'react';
 import Link from 'next/link';
 import { NAVIGATION_ITEMS, EXTERNAL_LINKS, GitHubIcon } from '@/constants/navigation';
+import { type Locale } from '@/lib/i18n/config';
 
 interface MobileMenuProps {
   isOpen: boolean;
   onLinkClick: () => void;
   getLinkClassName: (href: string, baseClasses: string) => string;
   menuRef: MutableRefObject<HTMLDivElement | null>;
+  locale: Locale;
+  dictionary: any;
 }
 
 export default function MobileMenu({
   isOpen,
   onLinkClick,
   getLinkClassName,
-  menuRef
+  menuRef,
+  locale,
+  dictionary
 }: MobileMenuProps) {
   const baseLinkClasses = 'block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors';
 
@@ -32,11 +37,11 @@ export default function MobileMenu({
         {NAVIGATION_ITEMS.map((item) => (
           <Link 
             key={item.href}
-            href={item.href} 
-            className={getLinkClassName(item.href, baseLinkClasses)} 
+            href={`/${locale}${item.href}`} 
+            className={getLinkClassName(`/${locale}${item.href}`, baseLinkClasses)} 
             onClick={onLinkClick}
           >
-            {item.label}
+            {dictionary.navigation[item.key] || item.label}
           </Link>
         ))}
         

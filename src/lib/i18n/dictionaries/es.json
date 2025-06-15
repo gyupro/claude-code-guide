@@ -1,0 +1,673 @@
+{
+  "metadata": {
+    "title": "Guía de Claude Code | Asistente de programación IA en terminal",
+    "description": "Domina Claude Code con guías completas, tutoriales prácticos y ejemplos del mundo real. Aprende a aumentar tu productividad de desarrollo con IA en la terminal.",
+    "keywords": "Claude Code, programación IA, terminal, herramientas desarrollo, programación, inteligencia artificial, asistente codificación"
+  },
+  "common": {
+    "selectLanguage": "Seleccionar idioma"
+  },
+  "navigation": {
+    "home": "Inicio",
+    "gettingStarted": "Comenzar",
+    "usageGuide": "Guía de Uso",
+    "tutorials": "Tutoriales",
+    "tips": "Consejos",
+    "mcp": "MCP",
+    "community": "Comunidad",
+    "useCases": "Casos de Uso",
+    "subtitle": "Guía de Uso",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú"
+  },
+  "home": {
+    "title": "Asistente de programación con IA en tu terminal",
+    "subtitle": "Domina Claude Code con guías completas en español, tutoriales prácticos y ejemplos del mundo real. Aprende a aumentar tu productividad de desarrollo con IA en la terminal.",
+    "getStarted": "Comenzar",
+    "learnMore": "Aprender más",
+    "features": {
+      "title": "¿Por qué Claude Code?",
+      "subtitle": "Experimenta la manera más rápida y eficiente de codificar con IA directamente en tu terminal.",
+      "aiPowered": {
+        "title": "Potenciado por IA",
+        "description": "Mejora tu proceso de codificación con tecnología de IA de vanguardia."
+      },
+      "terminalIntegration": {
+        "title": "Integración con terminal",
+        "description": "Funciona perfectamente en tu entorno de terminal favorito."
+      },
+      "multilingual": {
+        "title": "Soporte multiidioma",
+        "description": "Admite múltiples idiomas para desarrolladores de todo el mundo."
+      }
+    },
+    "quickStart": {
+      "title": "Comenzar en 30 segundos",
+      "subtitle": "Experimenta el poder de Claude Code con solo dos comandos simples.",
+      "installation": {
+        "title": "1. Instalar Claude Code",
+        "description": "Un solo comando para configurar todo."
+      },
+      "startCoding": {
+        "title": "2. Comenzar a codificar",
+        "description": "Inicia tu sesión de codificación con IA."
+      }
+    },
+    "useCases": {
+      "codeReview": {
+        "title": "Revisión y refactorización de código",
+        "description": "La IA analiza la calidad del código y sugiere mejoras. Ayuda automáticamente con la optimización del rendimiento y la aplicación de mejores prácticas.",
+        "linkText": "Aprender más →"
+      },
+      "testGeneration": {
+        "title": "Generación de código de prueba",
+        "description": "Genera automáticamente pruebas unitarias para funciones y clases. Admite varios marcos de prueba como Jest, Pytest y más.",
+        "linkText": "Ver tutorial →"
+      },
+      "documentation": {
+        "title": "Generación de documentación",
+        "description": "Genera automáticamente README, documentación de API y comentarios. Actualiza la documentación en tiempo real cuando el código cambia.",
+        "linkText": "Ver consejos →"
+      },
+      "debugging": {
+        "title": "Depuración y corrección de errores",
+        "description": "Analiza mensajes de error y proporciona soluciones. Lee archivos de registro e identifica rápidamente la causa raíz de los errores.",
+        "linkText": "Comenzar →"
+      }
+    }
+  },
+  "gettingStarted": {
+    "title": "Comenzar con Claude Code",
+    "subtitle": "Guía completa de instalación desde los requisitos del sistema hasta la configuración de tu primer proyecto.",
+    "systemRequirements": "Verificar requisitos del sistema",
+    "installation": "Instalar Claude Code",
+    "authentication": "Configuración de autenticación",
+    "firstProject": "Primer proyecto",
+    "copyToClipboard": "Copiar al portapapeles",
+    "copied": "¡Copiado!",
+    "systemRequirementsDetail": {
+      "operatingSystem": "Sistema Operativo",
+      "requirements": "Requisitos",
+      "network": "Red",
+      "stableConnection": "Conexión a internet estable",
+      "windowsNote": "Nota para Usuarios de Windows",
+      "windowsWarning": "Claude Code no se ejecuta directamente en Windows. Por favor, usa WSL (Windows Subsystem for Linux)."
+    },
+    "installationDetail": {
+      "installOneCommand": "Instalar con un comando",
+      "beforeInstallation": "Antes de la Instalación",
+      "nodeRequirement": "Node.js 18+ requerido. Verifica con node --version e instala desde nodejs.org si es necesario."
+    },
+    "authenticationDetail": {
+      "startInProject": "Comenzar en tu proyecto",
+      "recommended": "Recomendado",
+      "subscription": "Suscripción",
+      "enterprise": "Empresarial"
+    },
+    "firstProjectDetail": {
+      "understandingProject": "Entendiendo el proyecto",
+      "projectInitialization": "Inicialización del proyecto",
+      "setupComplete": "¡Configuración Completa!",
+      "readyToStart": "Ahora puedes comenzar el desarrollo inteligente con Claude Code."
+    },
+    "nextSteps": {
+      "title": "Siguientes Pasos",
+      "learnBasicUsage": "Aprender Uso Básico",
+      "exploreAdvanced": "Explorar Características Avanzadas",
+      "backToHome": "Volver al Inicio",
+      "examples": {
+        "askCode": "Preguntar sobre código: \"explica cómo funciona la autenticación\"",
+        "editFiles": "Editar archivos: \"añade validación de entrada al formulario\"",
+        "runTests": "Ejecutar pruebas: \"ejecuta las pruebas y arregla los fallos\"",
+        "extendedThinking": "Pensamiento extendido: \"piensa profundamente sobre la arquitectura de esta funcionalidad\"",
+        "gitAutomation": "Automatización Git: \"crea un PR para esta funcionalidad\"",
+        "webSearch": "Búsqueda web: Claude encuentra y referencia documentación automáticamente"
+      }
+    }
+  },
+  "usageGuide": {
+    "title": "Guía Completa de Uso de Claude Code",
+    "subtitle": "Aprende cómo desarrollar con IA en la terminal. Desde comandos básicos hasta automatización avanzada, te guiamos paso a paso.",
+    "basicCommands": "Comandos Básicos",
+    "coreWorkflows": "Flujos de Trabajo de Desarrollo",
+    "advancedFeatures": "Características Avanzadas",
+    "cliOptions": "Opciones CLI y Configuración",
+    "copyToClipboard": "Copiar al portapapeles",
+    "basicCommandsDetail": {
+      "description": "Aprende las formas básicas de interactuar con Claude en la terminal.",
+      "items": {
+        "interactiveSession": {
+          "title": "Sesión Interactiva",
+          "description": "Iniciar conversación con el comando claude"
+        },
+        "quickQuestions": {
+          "title": "Preguntas Rápidas",
+          "description": "Obtener respuestas instantáneas con claude -p \"pregunta\""
+        },
+        "fileAnalysis": {
+          "title": "Análisis de Archivos",
+          "description": "Analizar contenido de archivos con cat file.js | claude"
+        }
+      }
+    },
+    "coreWorkflowsDetail": {
+      "description": "Aprende patrones frecuentemente utilizados en procesos de desarrollo reales.",
+      "items": {
+        "projectExploration": {
+          "title": "Exploración de Proyectos",
+          "description": "\"explica este proyecto\" - análisis integral de la base de código"
+        },
+        "smartEditing": {
+          "title": "Edición Inteligente",
+          "description": "\"arregla el error\" - modificaciones de código basadas en contexto"
+        },
+        "gitWorkflow": {
+          "title": "Flujo de Trabajo Git",
+          "description": "\"crea un PR\" - mensajes de commit automáticos y pull requests"
+        }
+      }
+    },
+    "advancedFeaturesDetail": {
+      "description": "Maximiza la productividad de desarrollo con las características avanzadas de Claude Code.",
+      "items": {
+        "deepThinking": {
+          "title": "Modo de Pensamiento Profundo",
+          "description": "Diseño de arquitectura compleja y resolución de problemas"
+        },
+        "projectMemory": {
+          "title": "Memoria del Proyecto",
+          "description": "Gestionar reglas y contexto del proyecto con CLAUDE.md"
+        },
+        "realtimeSearch": {
+          "title": "Búsqueda de Documentación en Tiempo Real",
+          "description": "Referencia automática a la documentación de librerías más recientes"
+        }
+      }
+    },
+    "cliOptionsDetail": {
+      "description": "Aprende sobre varias opciones CLI y métodos de configuración del entorno.",
+      "items": {
+        "builtinCommands": {
+          "title": "Comandos Integrados",
+          "description": "/init, /help, /compact, /memory y otras utilidades"
+        },
+        "executionOptions": {
+          "title": "Opciones de Ejecución",
+          "description": "Utilizando flags como --allowedTools, --model"
+        },
+        "environmentSetup": {
+          "title": "Configuración del Entorno",
+          "description": "Claves API, selección de modelo, configuración de proxy"
+        }
+      }
+    },
+    "quickExamples": {
+      "title": "Ejemplos de Comandos Prácticos",
+      "projectAnalysis": "Análisis de Proyecto",
+      "developmentWork": "Trabajo de Desarrollo",
+      "labels": {
+        "projectUnderstanding": "Comprensión del Proyecto",
+        "apiDocumentation": "Documentación de API",
+        "featureAddition": "Adición de Características",
+        "testAutomation": "Automatización de Pruebas"
+      }
+    },
+    "bestPractices": {
+      "title": "Consejos Prácticos para Aumentar la Productividad",
+      "items": {
+        "specificInstructions": {
+          "title": "Instrucciones Específicas",
+          "description": "En lugar de \"arregla el error\", solicita específicamente como \"arregla el error de referencia nula en la línea 34 de user.tsx\"."
+        },
+        "incrementalDevelopment": {
+          "title": "Desarrollo Incremental",
+          "description": "No implementes características completas de una vez; divide en unidades pequeñas y construye incrementalmente."
+        },
+        "projectMemoryTip": {
+          "title": "Memoria del Proyecto",
+          "description": "Especifica reglas y contexto del proyecto en el archivo CLAUDE.md para obtener resultados consistentes."
+        }
+      }
+    }
+  },
+  "tutorials": {
+    "title": "Tutoriales Prácticos de Claude Code",
+    "subtitle": "Domina las características poderosas de Claude Code a través de guías paso a paso y ejemplos reales. Aprende sistemáticamente desde flujos de trabajo diarios hasta automatización avanzada.",
+    "quickStart": "Tutoriales de Inicio Rápido",
+    "quickStartTutorials": {
+      "resumeConversations": {
+        "title": "Reanudar Conversaciones Anteriores",
+        "description": "Aprende cómo continuar el trabajo desde donde lo dejaste después de una interrupción.",
+        "continueLatest": "Continuar Última Conversación",
+        "useSelector": "Usar Selector de Conversación",
+        "tip": "Usa el comando /memory para verificar el contexto de la conversación antes de continuar."
+      },
+      "understandingCodebases": {
+        "title": "Entender Nuevas Bases de Código",
+        "description": "Aprende cómo comprender rápidamente la estructura y arquitectura de proyectos que encuentras por primera vez.",
+        "getOverview": "Obtener Vista General",
+        "findFeatures": "Encontrar Características Específicas",
+        "tip": "Comienza con preguntas amplias y gradualmente reduce a áreas específicas. La capacidad de comprensión de contexto mejorada de Claude Opus 4 permite análisis más precisos."
+      }
+    },
+    "coreWorkflows": {
+      "title": "Tutoriales de Flujos de Trabajo Principales",
+      "bugFixing": {
+        "title": "Corrección Eficiente de Errores",
+        "description": "Proceso completo desde el análisis de mensajes de error hasta la identificación de causa raíz e implementación de correcciones"
+      },
+      "codeRefactoring": {
+        "title": "Refactorización de Código",
+        "description": "Cómo actualizar de forma segura código heredado a patrones modernos"
+      },
+      "testing": {
+        "title": "Trabajo de Pruebas",
+        "description": "Agregar cobertura de pruebas, analizar pruebas fallidas, encontrar casos límite"
+      },
+      "prCreation": {
+        "title": "Creación de PR",
+        "description": "Automatización desde resumen de cambios hasta creación de descripción detallada de PR"
+      },
+      "documentation": {
+        "title": "Documentación",
+        "description": "Automatización de comentarios de código, documentos de API y actualizaciones de README"
+      },
+      "imageWork": {
+        "title": "Trabajo con Imágenes",
+        "description": "Desarrollo usando capturas de pantalla, diagramas y mockups de diseño",
+        "dragDrop": "Arrastrar y soltar para agregar imágenes"
+      }
+    },
+    "startNow": {
+      "title": "Comienza los tutoriales ahora mismo",
+      "description": "Sigue las guías paso a paso para aprender una por una las características poderosas de Claude Code. Desde comandos básicos hasta automatización avanzada, obtén conocimiento práctico que puedes aplicar inmediatamente en tu trabajo.",
+      "installButton": "Instalar Claude Code",
+      "learnButton": "Aprender Uso Básico"
+    },
+    "common": {
+      "tip": "Consejo"
+    }
+  },
+  "tips": {
+    "title": "Consejos del Mundo Real",
+    "subtitle": "Consejos prácticos y trucos para maximizar la productividad con Claude Code en escenarios de desarrollo reales.",
+    "copied": "¡Copiado!",
+    "mainTitle": "Consejos Prácticos de Claude Code",
+    "mainSubtitle": "Técnicas comprobadas de Claude Code validadas en proyectos a gran escala",
+    "detailSubtitle": "Consejos Validados en Entornos de Producción Reales",
+    "detailDescription": "Compartimos consejos de productividad validados a través de un proyecto de rediseño de aplicación web a gran escala con suscripción Claude Pro MAX, trabajando 12 horas al día durante una semana.",
+    "planningTitle": "Planifica, Planifica y Vuelve a Planificar",
+    "planningDescription": "Al implementar funciones grandes o cambios, no comiences a codificar inmediatamente. Haz que Claude analice el código o documentación existente y cree un plan en archivos markdown.",
+    "planningPractical": "Ver Aplicación Práctica",
+    "planningList": {
+      "codebaseAnalysis": "Solicitar análisis de la estructura del código existente",
+      "implementationPlan": "Crear plan de implementación paso a paso en markdown",
+      "nuanceUnderstanding": "Usar junto con el modelo o3 de OpenAI para entender matices en la fase de planificación",
+      "structuredRoadmap": "Proceder con el trabajo basado en una hoja de ruta estructurada"
+    },
+    "planningNote": "El tiempo invertido en la fase de planificación regresa 10x durante la implementación. La diferencia de calidad entre tener y no tener un plan estructurado es notable.",
+    "rulesTitle": "Las Reglas Son Tu Mejor Amigo",
+    "rulesDescription": "Inicialmente, Claude seguía repitiendo los mismos errores, lo cual era frustrante, pero todo cambió cuando comencé a gestionar el archivo de reglas CLAUDE.md.",
+    "rulesExample": "Ejemplo de Uso de CLAUDE.md",
+    "rulesExampleContent": {
+      "title": "# Reglas relacionadas con paquetes",
+      "breakingChanges": "- Vigilar cambios disruptivos en las últimas versiones de paquetes",
+      "checkDocs": "- Siempre verificar la documentación oficial antes de codificar",
+      "noFakeSolutions": "- No crear soluciones falsas (mocking, datos temporales)",
+      "focusReal": "- Enfocarse solo en resolver problemas reales"
+    },
+    "rulesProTip": "Consejo Pro",
+    "rulesProTipText": "Usa el comando # para agregar rápidamente reglas a tu archivo CLAUDE.md.",
+    "compactTitle": "Usa /compact Con Frecuencia y Temprano",
+    "compactDescription": "Durante el trabajo con funciones grandes, si Claude alcanza los límites automáticos de compactación, puede perder contexto importante y volverse inmanejable.",
+    "compactWrong": "Enfoque Incorrecto",
+    "compactWrongList": {
+      "waitingAuto": "Esperar la compactación automática",
+      "reworkAfterLoss": "Rehacer trabajo después de perder contexto",
+      "regenerateCompleted": "Regenerar archivos ya completados"
+    },
+    "compactCorrect": "Enfoque Correcto",
+    "compactCorrectList": {
+      "manualEarly": "Ejecutar /compact manualmente y temprano",
+      "specifyGoals": "Especificar claramente los próximos objetivos",
+      "maintainWorkflow": "Mantener un flujo de trabajo consistente"
+    },
+    "compactResult": "Seguir solo estas tres reglas mejora enormemente la experiencia general. Pude lograr resultados asombrosos mientras ejecutaba Claude Code sin parar.",
+    "optimizationTitle": "Optimización Continua de CLAUDE.md",
+    "optimizationDescription": "Descubrí un método poderoso para mejorar continuamente el archivo CLAUDE.md en sí. Crea un comando `/project:reflection` para que Claude analice las instrucciones actuales y sugiera mejoras.",
+    "optimizationReflection": "Ver Prompt de Reflexión (Copiable)",
+    "optimizationReflectionLabel": "Prompt de Reflexión:",
+    "optimizationCopy": "Copiar",
+    "optimizationExamples": "Ejemplos de Resultados de Reflexión",
+    "optimizationExamplesList": {
+      "jiraIntegration": "Falta de instrucciones de integración con Jira/Atlassian",
+      "docGeneration": "Ausencia de pautas de generación de documentación",
+      "refactoringStrategy": "Necesidad de pautas de estrategia de refactorización",
+      "projectContext": "Información de contexto del proyecto insuficiente",
+      "incrementalDev": "Necesidad de guía de proceso de desarrollo incremental"
+    },
+    "optimizationBenefit": "Cada ciclo de reflexión mejora de manera medible la capacidad del asistente de codificación para entender los requisitos del proyecto.",
+    "additionalTips": "Consejos Prácticos Adicionales",
+    "clearInstructions": "Instrucciones Claras",
+    "clearInstructionsText": "En lugar de \"modificar el archivo\", solicita específicamente como \"cambiar el valor inicial de useState a null en la línea 23 de User.tsx\".",
+    "incrementalDev": "Desarrollo Incremental",
+    "incrementalDevText": "No intentes implementar todo de una vez; divídelo en unidades pequeñas y desarrolla incrementalmente.",
+    "trackChanges": "Rastrear Cambios",
+    "trackChangesText": "Verifica qué cambia en cada paso y proporciona retroalimentación inmediata si los resultados difieren de las expectativas.",
+    "continuousImprovement": "Mejora Continua de CLAUDE.md",
+    "continuousImprovementText": "Ejecuta regularmente comandos `/project:reflection` para analizar el archivo CLAUDE.md y encontrar y aplicar mejoras.",
+    "testFirst": "Prueba Primero",
+    "testFirstText": "Escribir casos de prueba antes de implementar funciones conduce a un código más estable.",
+    "codeReview": "Revisión de Código",
+    "codeReviewText": "Siempre revisa el código generado por Claude y asegúrate de que coincida con el estilo de codificación de tu proyecto.",
+    "projectContext": "Contexto del Proyecto",
+    "projectContextText": "Incluye épicas actuales, objetivos del proyecto y contexto empresarial en CLAUDE.md para una mejor toma de decisiones.",
+    "toolIntegration": "Guía de Integración de Herramientas",
+    "toolIntegrationText": "Especifica métodos de conexión MCP y uso para herramientas como Jira, Slack, bases de datos, etc.",
+    "conclusion": "Claude Code es una herramienta verdaderamente poderosa",
+    "conclusionText": "Maneja fácilmente el trabajo a gran escala y es increíblemente poderoso cuando se usa correctamente. Usa estos consejos para experimentar una productividad asombrosa tú mismo.",
+    "getStarted": "Comenzar",
+    "viewMoreGuides": "Ver Más Guías"
+  },
+  "mcp": {
+    "title": "Guía del Protocolo MCP",
+    "subtitle": "Aprende cómo extender las capacidades de Claude Code con servidores del Protocolo de Contexto de Modelo (MCP).",
+    "heroTitle": "Protocolo de Contexto de Modelo (MCP)",
+    "heroSubtitle": "Un protocolo estándar abierto para conectar de forma segura Claude Code con fuentes de datos externas",
+    "copyToClipboard": "Copiar al portapapeles",
+    "whatIsMcp": {
+      "title": "¿Qué es MCP?",
+      "description": "El Protocolo de Contexto de Modelo (MCP) es un protocolo revolucionario que permite a Claude Code conectarse con servicios y herramientas externos, expandiendo dramáticamente sus capacidades más allá de la asistencia básica de código.",
+      "possibleTitle": "Lo que es posible",
+      "features": {
+        "supabase": "Operaciones de base de datos Supabase",
+        "github": "Gestión de issues y PR de GitHub",
+        "slack": "Comunicación de equipo en Slack",
+        "filesystem": "Operaciones del sistema de archivos",
+        "postgresql": "Gestión de base de datos PostgreSQL",
+        "notion": "Gestión de páginas y documentos de Notion",
+        "browser": "Automatización del navegador web",
+        "monitoring": "Monitoreo del sistema y alertas"
+      },
+      "example": {
+        "title": "Ejemplo",
+        "description": "Conéctate a GitHub para gestionar issues, a Supabase para operaciones de base de datos, o a Slack para comunicación de equipo - todo directamente desde Claude Code."
+      }
+    },
+    "popularServers": {
+      "title": "Servidores MCP Populares en la Práctica",
+      "subtitle": "Los servidores MCP más utilizados por desarrolladores y cómo usarlos en Claude Code:",
+      "essential": {
+        "title": "Servidores MCP Esenciales",
+        "supabase": {
+          "title": "Supabase MCP",
+          "description": "Operaciones directas de base de datos, gestión de esquemas y consultas de datos en tiempo real.",
+          "features": {
+            "queries": "Ejecutar consultas SQL",
+            "schema": "Gestión de esquemas",
+            "realtime": "Suscripciones en tiempo real"
+          },
+          "examples": {
+            "createTable": "Crear tablas y diseñar esquemas",
+            "queryUsers": "Consultar y analizar datos de usuarios"
+          }
+        },
+        "github": {
+          "title": "GitHub MCP",
+          "description": "Integración completa de GitHub para gestión de repositorios, issues y pull requests.",
+          "features": {
+            "repos": "Gestión de repositorios",
+            "issues": "Seguimiento de issues",
+            "prs": "Gestión de pull requests"
+          },
+          "examples": {
+            "issueToPr": "Convertir automáticamente issues en PRs",
+            "releaseNotes": "Generar notas de lanzamiento automáticamente"
+          }
+        }
+      },
+      "highValue": {
+        "title": "Servidores MCP de Alto Valor",
+        "slack": {
+          "title": "Slack MCP",
+          "description": "Comunicación de equipo, gestión de canales y notificaciones automatizadas.",
+          "features": {
+            "messages": "Enviar mensajes",
+            "channels": "Gestionar canales",
+            "notifications": "Alertas automatizadas"
+          },
+          "examples": {
+            "deployNotify": "Enviar notificaciones de finalización de despliegue",
+            "shareErrors": "Compartir errores con el equipo cuando ocurren"
+          }
+        },
+        "postgresql": {
+          "title": "PostgreSQL MCP",
+          "description": "Operaciones avanzadas de base de datos, ajuste de rendimiento y análisis de datos.",
+          "features": {
+            "advanced": "Consultas avanzadas",
+            "performance": "Análisis de rendimiento",
+            "migration": "Migraciones de base de datos"
+          },
+          "examples": {
+            "optimizeQueries": "Optimizar consultas lentas",
+            "drawDiagram": "Generar diagramas de base de datos"
+          }
+        }
+      },
+      "proTip": {
+        "title": "Consejo Profesional",
+        "description": "Comienza con GitHub y Supabase MCPs ya que proporcionan el valor más inmediato para los flujos de trabajo de desarrollo."
+      }
+    },
+    "practicalUsage": {
+      "title": "¿Listo para Comenzar con MCP?",
+      "description": "Explora nuestros tutoriales y guías completos para configurar y usar servidores MCP de manera efectiva.",
+      "startTutorials": "Comenzar Tutoriales",
+      "viewMoreServers": "Ver Más Servidores"
+    }
+  },
+  "community": {
+    "title": "Comunidad de Aprendizaje de Claude Code",
+    "subtitle": "Un espacio donde los desarrolladores aprenden Claude Code juntos y comparten experiencias. Compartimos conferencias de YouTube, proyectos de código abierto y consejos prácticos.",
+    "heroTitle": "Comunidad de Aprendizaje de Claude Code",
+    "heroSubtitle": "Un espacio donde los desarrolladores aprenden Claude Code juntos y comparten experiencias. Compartimos tutoriales de YouTube, proyectos de código abierto y consejos prácticos.",
+    "videos": {
+      "title": "Contenido de Video de Aprendizaje",
+      "featured": {
+        "title": "Guía Completa de Uso de Claude Code",
+        "description": "Explicación detallada de cómo usar Claude Code en entornos de desarrollo reales y técnicas clave para aumentar la productividad."
+      },
+      "quickStart": {
+        "title": "Tutorial de Inicio Rápido de Claude Code",
+        "description": "Un tutorial para principiantes que guía paso a paso desde la configuración básica hasta su primer proyecto para nuevos usuarios."
+      },
+      "advanced": {
+        "title": "Profundización en Características Avanzadas",
+        "description": "Cubre características avanzadas de Claude Code como integración MCP, scripts de automatización y gestión de proyectos complejos desde una perspectiva práctica."
+      }
+    },
+    "github": {
+      "title": "Proyectos de Código Abierto",
+      "mainRepo": {
+        "title": "Claude Code",
+        "description": "El repositorio oficial de Claude Code, que proporciona descargas de la última versión y documentación. También puedes reportar errores o sugerir características aquí.",
+        "features": {
+          "installation": "Guía de Instalación & Documentación",
+          "issues": "Reporte de Issues & Discusiones",
+          "downloads": "Descargas de Última Versión"
+        }
+      },
+      "actionRepo": {
+        "title": "Claude Code Action",
+        "description": "Una acción que permite el uso de Claude Code en flujos de trabajo de GitHub Actions. Son posibles revisiones de código automatizadas y manejo de issues.",
+        "features": {
+          "integration": "Integración con GitHub Actions",
+          "automation": "Flujos de Trabajo de Automatización",
+          "templates": "Ejemplos de Configuración & Plantillas"
+        }
+      }
+    },
+    "cta": {
+      "title": "Convértete en un Mejor Desarrollador con Claude Code",
+      "description": "Aprovecha el poder de las herramientas de codificación con IA para aumentar la productividad de desarrollo y enfocarte en una codificación más creativa y significativa.",
+      "contribute": "Contribuir al Código Abierto",
+      "getStarted": "Comenzar Ahora"
+    }
+  },
+  "useCases": {
+    "title": "Colección de Casos de Uso Reales",
+    "subtitle": "Descubre cómo varios equipos y proyectos usan Claude Code para maximizar la productividad de desarrollo y la eficiencia del trabajo con estudios de casos reales.",
+    "heroTitle": "Colección de Casos de Uso del Mundo Real",
+    "heroSubtitle": "Presentamos casos reales donde varios equipos y proyectos han maximizado la productividad de desarrollo y la eficiencia del trabajo usando Claude Code.",
+    "teams": {
+      "backend": {
+        "title": "Equipo de Desarrollo Backend",
+        "description": "Flujos de trabajo innovadores usando Claude Code para infraestructura de servidor y gestión de bases de datos",
+        "achievements": {
+          "title": "Logros Principales",
+          "sql": "Generación y optimización de consultas SQL complejas en lenguaje natural",
+          "api": "Generación automática de endpoints de API y documentación",
+          "logs": "Análisis de logs de servidor detectando automáticamente cuellos de botella de rendimiento"
+        },
+        "tip": "Documenta claramente el esquema de base de datos y la lógica de negocio en CLAUDE.md, e integra MCP para automatizar de forma segura el trabajo de base de datos."
+      },
+      "frontend": {
+        "title": "Equipo de Desarrollo Frontend",
+        "description": "Logros innovadores usando Claude Code en desarrollo de interfaz de usuario y experiencia de usuario",
+        "achievements": {
+          "title": "Logros Principales",
+          "design": "Conversión automática de mockups de diseño a código",
+          "responsive": "Automatización de implementación de diseños responsivos y animaciones",
+          "components": "Mantenimiento y extensión de consistencia en biblioteca de componentes"
+        },
+        "tip": "Usa activamente capturas de pantalla y archivos de diseño, y especifica la guía de estilo en CLAUDE.md para mantener UI consistente."
+      },
+      "devops": {
+        "title": "Equipo DevOps",
+        "description": "Enfoques innovadores usando Claude Code para pipelines CI/CD y automatización de infraestructura",
+        "achievements": {
+          "title": "Logros Principales",
+          "kubernetes": "Generación automática de scripts de despliegue de Kubernetes",
+          "monitoring": "Configuración de alertas de monitoreo y automatización de respuesta a incidentes",
+          "security": "Automatización de revisión de código de infraestructura y verificaciones de seguridad"
+        },
+        "tip": "Documenta configuraciones de infraestructura y patrones de despliegue en CLAUDE.md e integra con GitHub Actions para automatización completa."
+      },
+      "data": {
+        "title": "Equipo de Análisis de Datos",
+        "description": "Flujos de trabajo eficientes usando Claude Code en proyectos de análisis de datos y aprendizaje automático",
+        "achievements": {
+          "title": "Logros Principales",
+          "pipeline": "Generación automática de pipelines complejos de preprocesamiento de datos",
+          "visualization": "Creación automática de código de gráficos de visualización de datos",
+          "reports": "Generación automática de reportes de análisis de rendimiento de modelos"
+        },
+        "tip": "Clarifica el esquema del conjunto de datos y los objetivos de análisis, e integra con Jupyter notebooks para construir un entorno de análisis interactivo."
+      }
+    },
+    "roles": {
+      "title": "Casos de Uso por Diferentes Roles",
+      "qa": {
+        "title": "Equipo de Pruebas QA",
+        "description": "Mejora significativa de la eficiencia de gestión de calidad a través de generación automática de casos de prueba y creación de reportes de errores",
+        "achievement": "Descubrimiento de casos límite y automatización de pruebas de regresión"
+      },
+      "documentation": {
+        "title": "Equipo de Documentación Técnica",
+        "description": "Automatización de creación de documentación de API, guías de desarrollador y tutoriales, mejorando simultáneamente la calidad de documentación y productividad",
+        "achievement": "Automatización de sincronización entre ejemplos de código y documentación"
+      },
+      "startup": {
+        "title": "Equipo de Startup",
+        "description": "Prototipado rápido y desarrollo de MVP incluso con recursos humanos limitados, reduciendo significativamente el tiempo de entrada al mercado",
+        "achievement": "Un solo desarrollador puede obtener capacidades de desarrollo full-stack"
+      },
+      "ux": {
+        "title": "Equipo de Diseño UX",
+        "description": "Conversión rápida de mockups de diseño a prototipos funcionalmente operativos, mejorando la eficiencia de pruebas de usuario",
+        "achievement": "Minimización de costos de comunicación entre diseño y desarrollo"
+      },
+      "individual": {
+        "title": "Desarrollador Individual",
+        "description": "Una persona puede construir aplicaciones web complejas y aprender y aplicar rápidamente nuevas pilas tecnológicas",
+        "achievement": "Reducción de curva de aprendizaje y mejora de productividad al doble"
+      },
+      "education": {
+        "title": "Instituciones Educativas",
+        "description": "Construcción de sistemas de educación en programación y evaluación automática de tareas, mejorando simultáneamente la calidad educativa y la eficiencia",
+        "achievement": "Provisión de rutas de aprendizaje personalizadas y retroalimentación"
+      },
+      "common": {
+        "keyAchievement": "Logro Principal",
+        "keyTip": "Consejo Principal"
+      }
+    },
+    "strategies": {
+      "title": "Estrategias Principales para Uso Exitoso",
+      "productivity": {
+        "title": "Patrones de Mejora de Productividad",
+        "goals": "Establecimiento de objetivos claros: Definir específicamente los problemas a resolver",
+        "progress": "Progreso incremental: Dividir en pequeñas unidades e implementar gradualmente",
+        "feedback": "Bucle de retroalimentación: Aplicar mejoras inmediatamente después de confirmar resultados",
+        "documentation": "Hábito de documentación: Registrar patrones aprendidos en forma reutilizable"
+      },
+      "teamStrategies": {
+        "title": "Estrategias de Uso por Equipo",
+        "development": "Equipo de Desarrollo: Revisión de código, refactorización, automatización",
+        "design": "Equipo de Diseño: Prototipado, implementación de UI",
+        "data": "Equipo de Datos: Scripts de análisis, visualización",
+        "qa": "Equipo QA: Casos de prueba, automatización",
+        "individual": "Individual: Aceleración de aprendizaje, mejora de productividad"
+      }
+    },
+    "cta": {
+      "title": "Comienza a usar Claude Code ahora mismo",
+      "description": "Inspirándote en los casos de uso innovadores del equipo de Anthropic, aplica Claude Code también en tu trabajo. Desde desarrolladores hasta no desarrolladores, todos los equipos pueden maximizar la productividad.",
+      "getStarted": "Comenzar con Claude Code",
+      "usageGuide": "Guía de Uso"
+    }
+  },
+  "common": {
+    "learnMore": "Aprender Más",
+    "readMore": "Leer Más",
+    "getStarted": "Comenzar",
+    "documentation": "Documentación",
+    "examples": "Ejemplos",
+    "loading": "Cargando...",
+    "error": "Error",
+    "retry": "Reintentar",
+    "close": "Cerrar",
+    "open": "Abrir",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "confirm": "Confirmar",
+    "back": "Atrás",
+    "next": "Siguiente",
+    "previous": "Anterior",
+    "search": "Buscar",
+    "filter": "Filtrar",
+    "clear": "Limpiar",
+    "selectLanguage": "Seleccionar idioma",
+    "copyError": "Error de copia:",
+    "copied": "¡Copiado!",
+    "bannerAlt": "Banner de Claude Code",
+    "copyright": "© 2025 Guía de Uso de Claude Code. Licencia MIT.",
+    "email": "gyupro89@gmail.com",
+    "keyTip": "Consejo Clave"
+  },
+  "footer": {
+    "about": {
+      "title": "Acerca de Claude Code Guide",
+      "description": "La Guía de Uso de Claude Code es un recurso de aprendizaje integral que ayuda a desarrolladores de todo el mundo a dominar la codificación asistida por IA con Claude Code. Proporcionamos guías, tutoriales y consejos prácticos en múltiples idiomas."
+    },
+    "links": {
+      "title": "Enlaces Rápidos"
+    },
+    "resources": {
+      "title": "Recursos",
+      "documentation": "Documentación"
+    },
+    "copyright": "© 2025 Guía de Uso de Claude Code. Todos los derechos reservados."
+  }
+}

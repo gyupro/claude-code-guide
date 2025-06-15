@@ -4,13 +4,13 @@ This file provides comprehensive guidance to Claude Code (claude.ai/code) when w
 
 ## Project Overview
 
-**Claude Code 사용 가이드** is a Korean developer guide website focused on Claude Code education, tutorials, and best practices. It serves as the primary learning resource for Korean developers wanting to master AI-assisted coding with Claude Code.
+**Claude Code 사용 가이드** is a multilingual developer guide website focused on Claude Code education, tutorials, and best practices. It serves as the primary learning resource for developers wanting to master AI-assisted coding with Claude Code.
 
 ### Key Characteristics
-- **Target Audience**: Korean developers learning Claude Code
+- **Target Audience**: Global developers learning Claude Code, with primary focus on Korean and English speakers
 - **Content Focus**: Educational guides, practical tutorials, and community resources
-- **Language**: Primarily Korean with technical terms in English
-- **Community-Driven**: Designed to foster knowledge sharing and collaboration
+- **Language**: Multilingual support (Korean, English) with seamless language switching
+- **Community-Driven**: Designed to foster knowledge sharing and collaboration across language barriers
 
 ## Project Structure
 
@@ -18,27 +18,32 @@ This is a Next.js 15 application with dual deployment strategy and advanced GitH
 
 ```
 claude-code-guide/
-├── src/app/                    # Next.js App Router pages (Korean content)
-│   ├── page.tsx               # Homepage with hero section
-│   ├── layout.tsx             # Root layout with Korean fonts
-│   ├── getting-started/       # 시작하기 - Getting started guide
-│   ├── usage-guide/           # 사용법 가이드 - Usage guides
-│   │   ├── basic-commands/    # 기본 명령어 - Basic commands
-│   │   ├── cli-commands/      # CLI 명령어 - CLI commands  
-│   │   ├── core-workflows/    # 핵심 워크플로우 - Core workflows
-│   │   └── advanced-features/ # 고급 기능 - Advanced features
-│   ├── tutorials/             # 튜토리얼 - Tutorials
-│   │   └── github-actions/    # GitHub Actions integration
-│   ├── tips/                  # 실전 팁 - Practical tips
-│   ├── mcp/                   # MCP 프로토콜 - MCP Protocol guide
-│   ├── use-cases/             # 활용 사례 - Use cases
-│   └── community/             # 커뮤니티 - Community
-├── src/components/            # React components
-│   ├── NavigationHeader.tsx   # Main navigation (Korean labels)
-│   └── MobileMenu.tsx         # Mobile navigation
+├── src/app/                    # Next.js App Router with i18n support
+│   └── [locale]/              # Dynamic locale routing (en, ko)
+│       ├── page.tsx           # Homepage with hero section
+│       ├── layout.tsx         # Root layout with i18n fonts
+│       ├── getting-started/   # 시작하기 - Getting started guide
+│       ├── usage-guide/       # 사용법 가이드 - Usage guides
+│       ├── tutorials/         # 튜토리얼 - Tutorials
+│       ├── tips/              # 실전 팁 - Practical tips
+│       ├── mcp/               # MCP 프로토콜 - MCP Protocol guide
+│       ├── use-cases/         # 활용 사례 - Use cases
+│       └── community/         # 커뮤니티 - Community
+├── src/components/            # React components with i18n support
+│   ├── NavigationHeader.tsx   # Main navigation with language switcher
+│   ├── MobileMenu.tsx         # Mobile navigation with i18n
+│   └── LanguageSwitcher.tsx   # Language selection component
+├── src/lib/i18n/              # Internationalization system
+│   ├── config.ts              # Locale configuration (en, ko)
+│   ├── dictionaries.ts        # Dictionary loader
+│   ├── utils.ts               # i18n utility functions
+│   └── dictionaries/          # Translation files
+│       ├── en.json            # English translations
+│       └── ko.json            # Korean translations
 ├── src/constants/             # Configuration constants
-│   └── navigation.tsx         # Navigation structure (Korean)
+│   └── navigation.tsx         # Navigation structure with i18n keys
 ├── src/hooks/                 # Custom React hooks
+├── middleware.ts              # Language detection & routing
 ├── public/                    # Static assets
 │   ├── banner.png            # Main hero banner image
 │   ├── robots.txt            # SEO + AI bot blocking
@@ -128,39 +133,6 @@ const nextConfig: NextConfig = {
 - **Static Export**: Full static site generation capability
 
 ## GitHub Actions Automation
-
-This project features sophisticated GitHub automation with 4 distinct workflows:
-
-### 1. Claude Code Integration (`claude-code.yml`)
-- **Trigger**: `@claude` mentions in issues/PRs/comments
-- **Purpose**: Direct Claude Code assistance for development tasks
-- **Capabilities**: Code analysis, bug fixes, feature implementation
-- **Permissions**: Read repository content, interact with issues/PRs
-
-### 2. Automated PR Reviews (`claude-review.yml`)  
-- **Trigger**: Pull request creation/updates
-- **Purpose**: Automated code review and quality assessment
-- **Features**: Korean language feedback, best practices enforcement
-- **Integration**: Uses MCP GitHub Server for advanced GitHub API access
-
-### 3. Issue Triage (`issue-triage.yml`)
-- **Trigger**: New issue creation
-- **Purpose**: Automatic labeling, prioritization, duplicate detection
-- **Features**: Korean language processing, intelligent categorization
-- **Tools**: GitHub MCP Server for comprehensive issue management
-
-### 4. Deployment (`deploy.yml`)
-- **Trigger**: Push to `main` branch
-- **Purpose**: Automated GitHub Pages deployment
-- **Process**: pnpm install → static export → GitHub Pages upload
-- **Optimizations**: pnpm caching, Node.js 20, Turbopack builds
-
-## Content & Navigation
-
-### Korean Localization
-- **Navigation Labels**: All Korean (홈, 시작하기, 사용법 가이드, etc.)
-- **Content Structure**: Organized for Korean developer learning patterns
-- **Cultural Adaptation**: Tailored to Korean software development culture
 
 ### Navigation Structure (`src/constants/navigation.tsx`)
 ```typescript
@@ -258,6 +230,61 @@ This project supports MCP (Model Context Protocol) for enhanced GitHub integrati
 - **PR Reviews**: Intelligent code analysis and feedback
 - **Repository Operations**: Comprehensive GitHub workflow automation
 
+## Internationalization (i18n) System
+
+This project implements a comprehensive multilingual system supporting Korean and English:
+
+### Core i18n Architecture
+- **Dynamic Routing**: Uses `[locale]` parameter for URL-based language switching
+- **Middleware**: Automatic language detection based on browser preferences
+- **Dictionary System**: JSON-based translation files for each locale
+- **Browser Detection**: Automatic redirect to user's preferred language
+- **Manual Selection**: Language switcher component for user choice
+
+### Language Configuration
+```typescript
+// src/lib/i18n/config.ts
+export const i18n = {
+  defaultLocale: 'en',
+  locales: ['en', 'ko'],
+} as const
+
+export const localeNames = {
+  en: 'English',
+  ko: '한국어',
+}
+```
+
+### URL Structure
+- **English**: `/en/getting-started`, `/en/usage-guide`
+- **Korean**: `/ko/getting-started`, `/ko/usage-guide`  
+- **Root Redirect**: `/` → `/en/` (default) or user's preferred language
+
+### Content Translation Guidelines
+- **Navigation**: Fully translated in both languages
+- **Page Titles**: Complete translation for all major headings
+- **Content**: Technical content with language-appropriate explanations
+- **UI Elements**: All buttons, labels, and interactive elements translated
+- **Fallback**: Graceful fallback to English if translation missing
+
+### Adding New Languages
+To add support for additional languages:
+1. Add locale to `src/lib/i18n/config.ts`
+2. Create new dictionary file in `src/lib/i18n/dictionaries/`
+3. Update middleware language detection
+4. Add locale-specific content in page components
+5. Update metadata and SEO configurations
+
+### Language-Specific Content Strategy
+- **Korean (ko)**: 
+  - Detailed explanations with Korean development culture context
+  - Step-by-step tutorials with Korean learning preferences
+  - Community-focused language and collaborative tone
+- **English (en)**:
+  - Concise, technical documentation style
+  - International development practices focus
+  - Clear, direct instructional language
+
 ## Community Focus
 
 ### Mobile Responsiveness
@@ -270,12 +297,14 @@ This project supports MCP (Model Context Protocol) for enhanced GitHub integrati
   - Implement responsive navigation (hamburger menu)
   - Test across various mobile device sizes and orientations
 
-Remember that this is a **Korean developer community project**:
-- **Language**: Prioritize Korean explanations with English technical terms
-- **Cultural Context**: Consider Korean software development practices
-- **Learning Style**: Structured, step-by-step approach preferred in Korean education
-- **Community Building**: Foster collaboration and knowledge sharing among Korean developers
+### Global Developer Community
+This project serves a **global developer community** with multilingual support:
+- **Language Accessibility**: Content available in Korean and English
+- **Cultural Adaptation**: Respect for different learning styles and development practices
+- **Technical Consistency**: Consistent technical information across all languages
+- **Community Building**: Foster collaboration across language barriers
+- **Documentation Standards**: Maintain high-quality content in all supported languages
 
 ---
 
-This CLAUDE.md serves as the definitive guide for understanding and contributing to the Claude Code 사용 가이드 project.
+This CLAUDE.md serves as the definitive guide for understanding and contributing to the Claude Code  User Guid project.

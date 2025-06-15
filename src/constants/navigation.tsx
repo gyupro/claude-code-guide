@@ -1,19 +1,20 @@
 export interface NavigationItem {
   href: string;
   label: string;
+  key: string; // Key for i18n dictionary lookup
   external?: boolean;
   icon?: React.ComponentType<{ className?: string }>;
 }
 
 export const NAVIGATION_ITEMS: NavigationItem[] = [
-  { href: '/', label: '홈' },
-  { href: '/getting-started', label: '시작하기' },
-  { href: '/usage-guide', label: '사용법 가이드' },
-  { href: '/tips', label: '실전 팁' },
-  { href: '/mcp', label: 'MCP 프로토콜' },
-  { href: '/tutorials', label: '튜토리얼' },
-  { href: '/community', label: '커뮤니티' },
-  { href: '/use-cases', label: '활용 사례' },
+  { href: '/', label: 'Home', key: 'home' },
+  { href: '/getting-started', label: 'Getting Started', key: 'gettingStarted' },
+  { href: '/usage-guide', label: 'Usage Guide', key: 'usageGuide' },
+  { href: '/tutorials', label: 'Tutorials', key: 'tutorials' },
+  { href: '/tips', label: 'Tips', key: 'tips' },
+  { href: '/mcp', label: 'MCP', key: 'mcp' },
+  { href: '/community', label: 'Community', key: 'community' },
+  { href: '/use-cases', label: 'Use Cases', key: 'useCases' },
 ] as const;
 
 export const EXTERNAL_LINKS = {
