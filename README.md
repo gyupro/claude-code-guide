@@ -1,163 +1,268 @@
-# Claude Code 사용 가이드
+# Claude Code Guide 🚀
 
-한국 개발자를 위한 Claude Code 사용법 가이드 웹사이트입니다. AI 코딩 도구 Claude Code의 활용법과 실전 팁을 제공합니다.
+<div align="center">
 
-🌐 **Website**: [https://claude.develop-on.co.kr/](https://claude.develop-on.co.kr/)  
-📧 **Contact**: gyupro89@gmail.com  
-📚 **GitHub**: [https://github.com/gyupro/claude-code-guide](https://github.com/gyupro/claude-code-guide)
+![Claude Code Guide Banner](./public/banner.png)
 
-## 🚀 프로젝트 개요
+**A comprehensive multilingual guide for mastering Claude Code**
 
-이 프로젝트는 Next.js 15와 Tailwind CSS v4를 사용하여 구축된 정적 웹사이트입니다. GitHub Pages를 통해 무료로 호스팅되며, Claude Code 사용자들을 위한 체계적인 학습 자료를 제공합니다.
+[English](#english) | [한국어](#한국어) | [日本語](#日本語) | [中文](#中文) | [Español](#español) | [Français](#français)
 
-### 주요 기능
+[![Deploy Status](https://github.com/gyupro/claude-code-guide/actions/workflows/deploy.yml/badge.svg)](https://github.com/gyupro/claude-code-guide/actions/workflows/deploy.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Powered by Next.js](https://img.shields.io/badge/Powered%20by-Next.js%2015-black)](https://nextjs.org/)
 
-- **📖 학습 가이드**: Claude Code 기본 사용법부터 고급 기능까지
-- **🛠️ 실전 팁**: 실제 프로젝트에서 활용할 수 있는 팁과 트릭
-- **💡 활용 사례**: 다양한 개발 시나리오별 활용 방법
-- **🔧 CLI 명령어**: 효율적인 개발을 위한 명령어 가이드
-- **🚀 자동 배포**: GitHub Actions를 통한 자동 배포
+🌐 **Live Site**: [https://claude.develop-on.co.kr/](https://claude.develop-on.co.kr/)  
+🌐 **Fallback URL**: [https://gyupro.github.io/claude-code-guide/](https://gyupro.github.io/claude-code-guide/)
 
-## 🛠️ 기술 스택
+</div>
+
+---
+
+## English
+
+### 🌟 Overview
+
+Claude Code Guide is a multilingual educational platform designed to help developers master AI-assisted coding with Claude Code. Built with Next.js 15 and supporting 6 languages, it provides comprehensive tutorials, best practices, and real-world examples.
+
+### ✨ Key Features
+
+- **🌍 Multilingual Support**: Available in English, Korean, Japanese, Chinese, Spanish, and French
+- **📚 Comprehensive Guides**: From getting started to advanced techniques
+- **🔧 MCP Protocol Documentation**: Learn to extend Claude Code with Model Context Protocol
+- **💡 Real-World Examples**: Practical use cases and workflow automation
+- **🎯 Interactive Tutorials**: Step-by-step learning paths
+- **🌙 Dark Mode**: Eye-friendly dark theme support
+- **📱 Mobile Responsive**: Optimized for all devices
+- **🚀 Fast Performance**: Static site generation with Next.js 15
+
+### 🛠️ Technology Stack
+
+- **Framework**: Next.js 15 (App Router, Static Export)
+- **Styling**: Tailwind CSS v4
+- **Languages**: TypeScript, React 19
+- **Deployment**: GitHub Pages (primary), Cloudflare Workers (optional)
+- **CI/CD**: GitHub Actions with automated deployments
+- **Package Manager**: pnpm
+- **Font**: Geist Sans & Geist Mono
+
+### 🚀 Getting Started
+
+```bash
+# Clone the repository
+git clone https://github.com/gyupro/claude-code-guide.git
+cd claude-code-guide
+
+# Install dependencies (pnpm recommended)
+pnpm install
+
+# Start development server with Turbopack
+pnpm dev
+
+# Open http://localhost:3000 in your browser
+```
+
+### 📦 Available Scripts
+
+```bash
+pnpm dev          # Start development server (Turbopack)
+pnpm build        # Production build
+pnpm export       # Static export for GitHub Pages
+pnpm start        # Start production server
+pnpm lint         # Run ESLint
+pnpm preview      # Preview with Cloudflare (optional)
+pnpm deploy       # Deploy to Cloudflare Workers (optional)
+```
+
+### 📁 Project Structure
+
+```
+claude-code-guide/
+├── src/
+│   ├── app/
+│   │   └── [locale]/          # Dynamic locale routing
+│   │       ├── page.tsx       # Homepage
+│   │       ├── getting-started/
+│   │       ├── usage-guide/
+│   │       ├── tutorials/
+│   │       ├── tips/
+│   │       ├── mcp/           # MCP Protocol guide
+│   │       ├── use-cases/
+│   │       └── community/
+│   ├── components/            # Reusable React components
+│   ├── lib/i18n/             # Internationalization
+│   │   ├── config.ts         # Locale configuration
+│   │   ├── dictionaries.ts   # Dictionary loader
+│   │   └── dictionaries/     # Translation files (6 languages)
+│   ├── contexts/             # React contexts (Theme, etc.)
+│   └── hooks/                # Custom React hooks
+├── public/                   # Static assets
+├── .github/workflows/        # GitHub Actions
+│   ├── deploy.yml           # Auto-deploy to GitHub Pages
+│   ├── claude-code.yml      # Claude integration
+│   ├── claude-review.yml    # Automated PR reviews
+│   └── issue-triage.yml     # Issue management
+└── CLAUDE.md                # Claude Code instructions
+```
+
+### 🌐 Internationalization
+
+The project supports 6 languages with automatic locale detection:
+
+- 🇺🇸 English (en) - Default
+- 🇰🇷 Korean (ko)
+- 🇯🇵 Japanese (ja)
+- 🇨🇳 Chinese (zh)
+- 🇪🇸 Spanish (es)
+- 🇫🇷 French (fr)
+
+### 🤖 GitHub Automation
+
+This project features advanced GitHub automation:
+
+1. **Automated Deployment**: Push to `main` triggers deployment to GitHub Pages
+2. **Claude Code Integration**: Mention @claude in issues/PRs for AI assistance
+3. **Automated PR Reviews**: AI-powered code reviews on all pull requests
+4. **Issue Triage**: Automatic labeling and categorization of issues
+
+### 🔒 Security Features
+
+- Comprehensive security headers
+- Bot protection (blocks AI training bots)
+- HTTPS enforcement
+- XSS and clickjacking prevention
+
+---
+
+## 한국어
+
+### 🌟 개요
+
+Claude Code Guide는 개발자들이 Claude Code를 활용한 AI 코딩을 마스터할 수 있도록 돕는 다국어 교육 플랫폼입니다. Next.js 15로 구축되었으며 6개 언어를 지원하고, 포괄적인 튜토리얼, 모범 사례, 실제 사례를 제공합니다.
+
+### ✨ 주요 기능
+
+- **🌍 다국어 지원**: 한국어, 영어, 일본어, 중국어, 스페인어, 프랑스어 지원
+- **📚 포괄적인 가이드**: 시작하기부터 고급 기술까지
+- **🔧 MCP 프로토콜 문서**: Model Context Protocol로 Claude Code 확장하기
+- **💡 실제 사례**: 실용적인 사용 사례와 워크플로우 자동화
+- **🎯 인터랙티브 튜토리얼**: 단계별 학습 경로
+- **🌙 다크 모드**: 눈에 편안한 다크 테마 지원
+- **📱 모바일 반응형**: 모든 기기에 최적화
+- **🚀 빠른 성능**: Next.js 15의 정적 사이트 생성
+
+### 🛠️ 기술 스택
 
 - **프레임워크**: Next.js 15 (App Router, Static Export)
 - **스타일링**: Tailwind CSS v4
-- **폰트**: Geist Sans & Geist Mono
-- **배포**: GitHub Pages
+- **언어**: TypeScript, React 19
+- **배포**: GitHub Pages (기본), Cloudflare Workers (선택사항)
+- **CI/CD**: GitHub Actions 자동 배포
 - **패키지 매니저**: pnpm
-- **CI/CD**: GitHub Actions
+- **폰트**: Geist Sans & Geist Mono
 
-## 🏃‍♂️ 시작하기
-
-### 개발 환경 설정
+### 🚀 시작하기
 
 ```bash
 # 저장소 클론
 git clone https://github.com/gyupro/claude-code-guide.git
 cd claude-code-guide
 
-# 의존성 설치
+# 의존성 설치 (pnpm 권장)
 pnpm install
 
-# 개발 서버 실행 (Turbopack 사용)
+# Turbopack으로 개발 서버 시작
 pnpm dev
 
-# 브라우저에서 http://localhost:3000 접속
+# 브라우저에서 http://localhost:3000 열기
 ```
 
-### 주요 명령어
+### 📦 사용 가능한 스크립트
 
 ```bash
-# 개발
 pnpm dev          # 개발 서버 시작 (Turbopack)
 pnpm build        # 프로덕션 빌드
-pnpm start        # 프로덕션 서버 실행
+pnpm export       # GitHub Pages용 정적 내보내기
+pnpm start        # 프로덕션 서버 시작
 pnpm lint         # ESLint 실행
-
-# 정적 사이트 생성
-pnpm export       # 정적 사이트 빌드 (GitHub Pages용)
-
-# Cloudflare 배포 (선택사항)
-pnpm preview      # 로컬에서 Cloudflare 미리보기
-pnpm deploy       # Cloudflare에 배포
+pnpm preview      # Cloudflare 미리보기 (선택사항)
+pnpm deploy       # Cloudflare Workers 배포 (선택사항)
 ```
-
-## 📁 프로젝트 구조
-
-```
-claude-code-guide/
-├── src/app/                    # Next.js App Router 페이지
-│   ├── getting-started/       # 시작하기 가이드
-│   ├── usage-guide/           # 사용법 가이드
-│   │   ├── basic-commands/    # 기본 명령어
-│   │   ├── cli-commands/      # CLI 명령어
-│   │   ├── core-workflows/    # 핵심 워크플로우
-│   │   └── advanced-features/ # 고급 기능
-│   ├── tutorials/             # 튜토리얼
-│   │   └── github-actions/    # GitHub Actions 연동
-│   ├── tips/                  # 실전 팁
-│   ├── use-cases/             # 활용 사례
-│   ├── community/             # 커뮤니티
-│   └── mcp/                   # MCP 서버 가이드
-├── src/components/            # React 컴포넌트
-├── public/                    # 정적 자산
-│   ├── banner.png            # 메인 배너 이미지
-│   ├── robots.txt            # SEO 설정
-│   └── *.svg                 # 아이콘들
-├── .github/workflows/         # GitHub Actions 워크플로우
-│   └── deploy.yml            # 자동 배포 스크립트
-└── CLAUDE.md                 # Claude Code 프로젝트 지침
-```
-
-## 🚀 GitHub Pages 배포
-
-이 프로젝트는 GitHub Actions를 통해 자동으로 GitHub Pages에 배포됩니다.
-
-### 자동 배포 프로세스
-
-1. `main` 브랜치에 푸시하면 자동으로 빌드 및 배포
-2. GitHub Actions가 Next.js 정적 사이트 생성
-3. `out` 디렉토리의 내용을 GitHub Pages에 배포
-
-### 수동 배포
-
-```bash
-# 정적 사이트 빌드
-pnpm export
-
-# 빌드된 파일은 out/ 디렉토리에 생성됨
-```
-
-## 🎨 커스터마이징
-
-### 콘텐츠 수정
-
-- 각 페이지는 `src/app/` 디렉토리 내의 해당 폴더에 있습니다
-- Markdown 스타일의 컴포넌트로 구성되어 있어 쉽게 수정 가능
-
-### 스타일 수정
-
-- Tailwind CSS v4를 사용하여 스타일링
-- 다크 모드 지원 (`dark:` 클래스 사용)
-- 반응형 디자인 구현
-
-## 🤝 기여하기
-
-1. 이 저장소를 포크합니다
-2. 기능 브랜치를 생성합니다 (`git checkout -b feature/amazing-feature`)
-3. 변경사항을 커밋합니다 (`git commit -m 'feat: Add amazing feature'`)
-4. 브랜치에 푸시합니다 (`git push origin feature/amazing-feature`)
-5. Pull Request를 생성합니다
-
-### 커밋 메시지 컨벤션
-
-- `feat:` 새로운 기능 추가
-- `fix:` 버그 수정
-- `docs:` 문서 수정
-- `style:` 코드 포맷팅, 세미콜론 누락 등
-- `refactor:` 코드 리팩토링
-- `test:` 테스트 추가
-- `chore:` 빌드 업무 수정, 패키지 매니저 수정 등
-
-## 📝 라이선스
-
-이 프로젝트는 MIT 라이선스 하에 공개되어 있습니다. 코드와 컨텐츠 모두 자유롭게 사용, 수정, 배포할 수 있습니다. 자세한 내용은 [LICENSE](./LICENSE) 파일을 참조하세요.
-
-## 🙏 크레딧
-
-이 프로젝트는 [hellovibe.io](https://hellovibe.io/)의 오픈소스 프로젝트를 기반으로 제작되었습니다. 
-원본 프로젝트의 뛰어난 설계와 구조에 감사드립니다.
-
-## 📞 연락처
-
-- **메인테이너**: gyupro89@gmail.com
-- **GitHub**: [https://github.com/gyupro/claude-code-guide](https://github.com/gyupro/claude-code-guide)
-- **웹사이트**: [https://claude.develop-on.co.kr/](https://claude.develop-on.co.kr/)
 
 ---
 
-💡 **Claude Code에 대해 더 알고 싶다면?**
+## 日本語
 
-- [Claude Code 공식 문서](https://docs.anthropic.com/en/docs/claude-code)
-- [Claude Code GitHub](https://github.com/anthropics/claude-code)
-- [Anthropic Discord](https://www.anthropic.com/discord)
+### 🌟 概要
+
+Claude Code Guideは、開発者がClaude Codeを使用したAIコーディングをマスターするための多言語教育プラットフォームです。Next.js 15で構築され、6言語をサポートし、包括的なチュートリアル、ベストプラクティス、実例を提供します。
+
+---
+
+## 中文
+
+### 🌟 概述
+
+Claude Code Guide 是一个多语言教育平台，旨在帮助开发者掌握使用 Claude Code 进行 AI 辅助编码。基于 Next.js 15 构建，支持 6 种语言，提供全面的教程、最佳实践和实际案例。
+
+---
+
+## Español
+
+### 🌟 Resumen
+
+Claude Code Guide es una plataforma educativa multilingüe diseñada para ayudar a los desarrolladores a dominar la codificación asistida por IA con Claude Code. Construido con Next.js 15 y compatible con 6 idiomas, proporciona tutoriales completos, mejores prácticas y ejemplos del mundo real.
+
+---
+
+## Français
+
+### 🌟 Aperçu
+
+Claude Code Guide est une plateforme éducative multilingue conçue pour aider les développeurs à maîtriser le codage assisté par IA avec Claude Code. Construit avec Next.js 15 et prenant en charge 6 langues, il fournit des tutoriels complets, des bonnes pratiques et des exemples concrets.
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please follow these steps:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'feat: Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+### Commit Convention
+
+- `feat:` New features
+- `fix:` Bug fixes
+- `docs:` Documentation changes
+- `style:` Code formatting
+- `refactor:` Code refactoring
+- `test:` Test additions
+- `chore:` Build tasks, package manager changes
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
+
+## 🙏 Credits
+
+This project is based on the open-source project from [hellovibe.io](https://hellovibe.io/). We appreciate their excellent design and architecture.
+
+## 📞 Contact
+
+- **Maintainer**: gyupro89@gmail.com
+- **GitHub**: [https://github.com/gyupro/claude-code-guide](https://github.com/gyupro/claude-code-guide)
+- **Website**: [https://claude.develop-on.co.kr/](https://claude.develop-on.co.kr/)
+
+---
+
+<div align="center">
+
+**Built with ❤️ for the global developer community**
+
+[Claude Code Official Docs](https://docs.anthropic.com/en/docs/claude-code) | [Claude Code GitHub](https://github.com/anthropics/claude-code) | [Anthropic Discord](https://www.anthropic.com/discord)
+
+</div>
