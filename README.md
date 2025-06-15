@@ -197,6 +197,55 @@ pnpm deploy       # Cloudflare Workers 배포 (선택사항)
 
 Claude Code Guideは、開発者がClaude Codeを使用したAIコーディングをマスターするための多言語教育プラットフォームです。Next.js 15で構築され、6言語をサポートし、包括的なチュートリアル、ベストプラクティス、実例を提供します。
 
+### ✨ 主な機能
+
+- **🌍 多言語サポート**: 日本語、英語、韓国語、中国語、スペイン語、フランス語に対応
+- **📚 包括的なガイド**: 入門から高度なテクニックまで
+- **🔧 MCPプロトコルドキュメント**: Model Context ProtocolでClaude Codeを拡張
+- **💡 実例**: 実践的なユースケースとワークフロー自動化
+- **🎯 インタラクティブチュートリアル**: ステップバイステップの学習パス
+- **🌙 ダークモード**: 目に優しいダークテーマサポート
+- **📱 モバイルレスポンシブ**: すべてのデバイスに最適化
+- **🚀 高速パフォーマンス**: Next.js 15による静的サイト生成
+
+### 🛠️ 技術スタック
+
+- **フレームワーク**: Next.js 15 (App Router、静的エクスポート)
+- **スタイリング**: Tailwind CSS v4
+- **言語**: TypeScript、React 19
+- **デプロイ**: GitHub Pages（プライマリ）、Cloudflare Workers（オプション）
+- **CI/CD**: GitHub Actionsによる自動デプロイ
+- **パッケージマネージャー**: pnpm
+- **フォント**: Geist Sans & Geist Mono
+
+### 🚀 はじめに
+
+```bash
+# リポジトリのクローン
+git clone https://github.com/gyupro/claude-code-guide.git
+cd claude-code-guide
+
+# 依存関係のインストール（pnpm推奨）
+pnpm install
+
+# Turbopackで開発サーバーを起動
+pnpm dev
+
+# ブラウザで http://localhost:3000 を開く
+```
+
+### 📦 利用可能なスクリプト
+
+```bash
+pnpm dev          # 開発サーバーの起動（Turbopack）
+pnpm build        # プロダクションビルド
+pnpm export       # GitHub Pages用の静的エクスポート
+pnpm start        # プロダクションサーバーの起動
+pnpm lint         # ESLintの実行
+pnpm preview      # Cloudflareプレビュー（オプション）
+pnpm deploy       # Cloudflare Workersへのデプロイ（オプション）
+```
+
 ---
 
 ## 中文
@@ -204,6 +253,55 @@ Claude Code Guideは、開発者がClaude Codeを使用したAIコーディン�
 ### 🌟 概述
 
 Claude Code Guide 是一个多语言教育平台，旨在帮助开发者掌握使用 Claude Code 进行 AI 辅助编码。基于 Next.js 15 构建，支持 6 种语言，提供全面的教程、最佳实践和实际案例。
+
+### ✨ 主要特性
+
+- **🌍 多语言支持**：支持中文、英文、韩文、日文、西班牙文和法文
+- **📚 全面的指南**：从入门到高级技巧
+- **🔧 MCP 协议文档**：学习使用模型上下文协议扩展 Claude Code
+- **💡 实际案例**：实用的用例和工作流自动化
+- **🎯 交互式教程**：循序渐进的学习路径
+- **🌙 深色模式**：护眼的深色主题支持
+- **📱 移动响应式**：为所有设备优化
+- **🚀 高性能**：使用 Next.js 15 进行静态站点生成
+
+### 🛠️ 技术栈
+
+- **框架**：Next.js 15（App Router、静态导出）
+- **样式**：Tailwind CSS v4
+- **语言**：TypeScript、React 19
+- **部署**：GitHub Pages（主要）、Cloudflare Workers（可选）
+- **CI/CD**：使用 GitHub Actions 自动部署
+- **包管理器**：pnpm
+- **字体**：Geist Sans & Geist Mono
+
+### 🚀 快速开始
+
+```bash
+# 克隆仓库
+git clone https://github.com/gyupro/claude-code-guide.git
+cd claude-code-guide
+
+# 安装依赖（推荐使用 pnpm）
+pnpm install
+
+# 使用 Turbopack 启动开发服务器
+pnpm dev
+
+# 在浏览器中打开 http://localhost:3000
+```
+
+### 📦 可用脚本
+
+```bash
+pnpm dev          # 启动开发服务器（Turbopack）
+pnpm build        # 生产构建
+pnpm export       # 为 GitHub Pages 静态导出
+pnpm start        # 启动生产服务器
+pnpm lint         # 运行 ESLint
+pnpm preview      # Cloudflare 预览（可选）
+pnpm deploy       # 部署到 Cloudflare Workers（可选）
+```
 
 ---
 
@@ -213,6 +311,55 @@ Claude Code Guide 是一个多语言教育平台，旨在帮助开发者掌握�
 
 Claude Code Guide es una plataforma educativa multilingüe diseñada para ayudar a los desarrolladores a dominar la codificación asistida por IA con Claude Code. Construido con Next.js 15 y compatible con 6 idiomas, proporciona tutoriales completos, mejores prácticas y ejemplos del mundo real.
 
+### ✨ Características Principales
+
+- **🌍 Soporte Multilingüe**: Disponible en español, inglés, coreano, japonés, chino y francés
+- **📚 Guías Completas**: Desde principiantes hasta técnicas avanzadas
+- **🔧 Documentación del Protocolo MCP**: Aprende a extender Claude Code con Model Context Protocol
+- **💡 Ejemplos del Mundo Real**: Casos de uso prácticos y automatización de flujos de trabajo
+- **🎯 Tutoriales Interactivos**: Rutas de aprendizaje paso a paso
+- **🌙 Modo Oscuro**: Soporte de tema oscuro amigable con los ojos
+- **📱 Responsive Móvil**: Optimizado para todos los dispositivos
+- **🚀 Alto Rendimiento**: Generación de sitios estáticos con Next.js 15
+
+### 🛠️ Stack Tecnológico
+
+- **Framework**: Next.js 15 (App Router, Exportación Estática)
+- **Estilos**: Tailwind CSS v4
+- **Lenguajes**: TypeScript, React 19
+- **Despliegue**: GitHub Pages (principal), Cloudflare Workers (opcional)
+- **CI/CD**: GitHub Actions con despliegues automatizados
+- **Gestor de Paquetes**: pnpm
+- **Fuentes**: Geist Sans & Geist Mono
+
+### 🚀 Comenzar
+
+```bash
+# Clonar el repositorio
+git clone https://github.com/gyupro/claude-code-guide.git
+cd claude-code-guide
+
+# Instalar dependencias (se recomienda pnpm)
+pnpm install
+
+# Iniciar servidor de desarrollo con Turbopack
+pnpm dev
+
+# Abrir http://localhost:3000 en tu navegador
+```
+
+### 📦 Scripts Disponibles
+
+```bash
+pnpm dev          # Iniciar servidor de desarrollo (Turbopack)
+pnpm build        # Construcción de producción
+pnpm export       # Exportación estática para GitHub Pages
+pnpm start        # Iniciar servidor de producción
+pnpm lint         # Ejecutar ESLint
+pnpm preview      # Vista previa con Cloudflare (opcional)
+pnpm deploy       # Desplegar a Cloudflare Workers (opcional)
+```
+
 ---
 
 ## Français
@@ -220,6 +367,55 @@ Claude Code Guide es una plataforma educativa multilingüe diseñada para ayudar
 ### 🌟 Aperçu
 
 Claude Code Guide est une plateforme éducative multilingue conçue pour aider les développeurs à maîtriser le codage assisté par IA avec Claude Code. Construit avec Next.js 15 et prenant en charge 6 langues, il fournit des tutoriels complets, des bonnes pratiques et des exemples concrets.
+
+### ✨ Caractéristiques Principales
+
+- **🌍 Support Multilingue**: Disponible en français, anglais, coréen, japonais, chinois et espagnol
+- **📚 Guides Complets**: Des bases aux techniques avancées
+- **🔧 Documentation du Protocole MCP**: Apprenez à étendre Claude Code avec le Model Context Protocol
+- **💡 Exemples Concrets**: Cas d'utilisation pratiques et automatisation des flux de travail
+- **🎯 Tutoriels Interactifs**: Parcours d'apprentissage étape par étape
+- **🌙 Mode Sombre**: Support du thème sombre pour le confort des yeux
+- **📱 Responsive Mobile**: Optimisé pour tous les appareils
+- **🚀 Haute Performance**: Génération de site statique avec Next.js 15
+
+### 🛠️ Stack Technique
+
+- **Framework**: Next.js 15 (App Router, Export Statique)
+- **Styles**: Tailwind CSS v4
+- **Langages**: TypeScript, React 19
+- **Déploiement**: GitHub Pages (principal), Cloudflare Workers (optionnel)
+- **CI/CD**: GitHub Actions avec déploiements automatisés
+- **Gestionnaire de Paquets**: pnpm
+- **Polices**: Geist Sans & Geist Mono
+
+### 🚀 Démarrage Rapide
+
+```bash
+# Cloner le dépôt
+git clone https://github.com/gyupro/claude-code-guide.git
+cd claude-code-guide
+
+# Installer les dépendances (pnpm recommandé)
+pnpm install
+
+# Démarrer le serveur de développement avec Turbopack
+pnpm dev
+
+# Ouvrir http://localhost:3000 dans votre navigateur
+```
+
+### 📦 Scripts Disponibles
+
+```bash
+pnpm dev          # Démarrer le serveur de développement (Turbopack)
+pnpm build        # Build de production
+pnpm export       # Export statique pour GitHub Pages
+pnpm start        # Démarrer le serveur de production
+pnpm lint         # Exécuter ESLint
+pnpm preview      # Aperçu avec Cloudflare (optionnel)
+pnpm deploy       # Déployer sur Cloudflare Workers (optionnel)
+```
 
 ---
 
