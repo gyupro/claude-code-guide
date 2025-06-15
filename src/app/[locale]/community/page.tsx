@@ -5,7 +5,7 @@ import { getDictionary } from '@/lib/i18n/dictionaries';
 import CommunityClient from './CommunityClient';
 
 interface CommunityPageProps {
-  params: { locale: Locale };
+  params: Promise<{ locale: Locale }>;
 }
 
 export default async function CommunityPage({ params }: CommunityPageProps) {
