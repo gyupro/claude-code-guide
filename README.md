@@ -246,6 +246,64 @@ pnpm preview      # Cloudflareプレビュー（オプション）
 pnpm deploy       # Cloudflare Workersへのデプロイ（オプション）
 ```
 
+### 📁 プロジェクト構造
+
+```
+claude-code-guide/
+├── src/
+│   ├── app/
+│   │   └── [locale]/          # 動的ロケールルーティング
+│   │       ├── page.tsx       # ホームページ
+│   │       ├── getting-started/
+│   │       ├── usage-guide/
+│   │       ├── tutorials/
+│   │       ├── tips/
+│   │       ├── mcp/           # MCPプロトコルガイド
+│   │       ├── use-cases/
+│   │       └── community/
+│   ├── components/            # 再利用可能なReactコンポーネント
+│   ├── lib/i18n/             # 国際化
+│   │   ├── config.ts         # ロケール設定
+│   │   ├── dictionaries.ts   # 辞書ローダー
+│   │   └── dictionaries/     # 翻訳ファイル（6言語）
+│   ├── contexts/             # Reactコンテキスト（テーマなど）
+│   └── hooks/                # カスタムReactフック
+├── public/                   # 静的アセット
+├── .github/workflows/        # GitHub Actions
+│   ├── deploy.yml           # GitHub Pagesへの自動デプロイ
+│   ├── claude-code.yml      # Claude統合
+│   ├── claude-review.yml    # 自動PRレビュー
+│   └── issue-triage.yml     # イシュー管理
+└── CLAUDE.md                # Claude Code指示書
+```
+
+### 🌐 国際化
+
+6言語対応、自動ロケール検出：
+
+- 🇺🇸 英語 (en) - デフォルト
+- 🇰🇷 韓国語 (ko)
+- 🇯🇵 日本語 (ja)
+- 🇨🇳 中国語 (zh)
+- 🇪🇸 スペイン語 (es)
+- 🇫🇷 フランス語 (fr)
+
+### 🤖 GitHub自動化
+
+高度なGitHub自動化機能：
+
+1. **自動デプロイ**: `main`へのプッシュでGitHub Pagesにデプロイ
+2. **Claude Code統合**: イシュー/PRで@claudeメンションでAI支援
+3. **自動PRレビュー**: すべてのプルリクエストにAIコードレビュー
+4. **イシュートリアージ**: 自動ラベリングとカテゴリ分け
+
+### 🔒 セキュリティ機能
+
+- 包括的なセキュリティヘッダー
+- ボット保護（AIトレーニングボットをブロック）
+- HTTPS強制
+- XSSとクリックジャッキング防止
+
 ---
 
 ## 中文
@@ -302,6 +360,64 @@ pnpm lint         # 运行 ESLint
 pnpm preview      # Cloudflare 预览（可选）
 pnpm deploy       # 部署到 Cloudflare Workers（可选）
 ```
+
+### 📁 项目结构
+
+```
+claude-code-guide/
+├── src/
+│   ├── app/
+│   │   └── [locale]/          # 动态语言路由
+│   │       ├── page.tsx       # 主页
+│   │       ├── getting-started/
+│   │       ├── usage-guide/
+│   │       ├── tutorials/
+│   │       ├── tips/
+│   │       ├── mcp/           # MCP 协议指南
+│   │       ├── use-cases/
+│   │       └── community/
+│   ├── components/            # 可重用的 React 组件
+│   ├── lib/i18n/             # 国际化
+│   │   ├── config.ts         # 语言配置
+│   │   ├── dictionaries.ts   # 字典加载器
+│   │   └── dictionaries/     # 翻译文件（6 种语言）
+│   ├── contexts/             # React 上下文（主题等）
+│   └── hooks/                # 自定义 React 钩子
+├── public/                   # 静态资源
+├── .github/workflows/        # GitHub Actions
+│   ├── deploy.yml           # 自动部署到 GitHub Pages
+│   ├── claude-code.yml      # Claude 集成
+│   ├── claude-review.yml    # 自动 PR 审查
+│   └── issue-triage.yml     # 问题管理
+└── CLAUDE.md                # Claude Code 说明
+```
+
+### 🌐 国际化
+
+项目支持 6 种语言，带自动语言检测：
+
+- 🇺🇸 英文 (en) - 默认
+- 🇰🇷 韩文 (ko)
+- 🇯🇵 日文 (ja)
+- 🇨🇳 中文 (zh)
+- 🇪🇸 西班牙文 (es)
+- 🇫🇷 法文 (fr)
+
+### 🤖 GitHub 自动化
+
+本项目具有先进的 GitHub 自动化功能：
+
+1. **自动部署**：推送到 `main` 触发部署到 GitHub Pages
+2. **Claude Code 集成**：在问题/PR 中提及 @claude 获得 AI 协助
+3. **自动 PR 审查**：所有拉取请求的 AI 代码审查
+4. **问题分类**：自动标记和分类问题
+
+### 🔒 安全功能
+
+- 全面的安全标头
+- 机器人保护（阻止 AI 训练机器人）
+- HTTPS 强制执行
+- XSS 和点击劫持防护
 
 ---
 
@@ -360,6 +476,64 @@ pnpm preview      # Vista previa con Cloudflare (opcional)
 pnpm deploy       # Desplegar a Cloudflare Workers (opcional)
 ```
 
+### 📁 Estructura del Proyecto
+
+```
+claude-code-guide/
+├── src/
+│   ├── app/
+│   │   └── [locale]/          # Enrutamiento dinámico de idioma
+│   │       ├── page.tsx       # Página principal
+│   │       ├── getting-started/
+│   │       ├── usage-guide/
+│   │       ├── tutorials/
+│   │       ├── tips/
+│   │       ├── mcp/           # Guía del Protocolo MCP
+│   │       ├── use-cases/
+│   │       └── community/
+│   ├── components/            # Componentes React reutilizables
+│   ├── lib/i18n/             # Internacionalización
+│   │   ├── config.ts         # Configuración de idiomas
+│   │   ├── dictionaries.ts   # Cargador de diccionarios
+│   │   └── dictionaries/     # Archivos de traducción (6 idiomas)
+│   ├── contexts/             # Contextos React (Tema, etc.)
+│   └── hooks/                # Hooks React personalizados
+├── public/                   # Activos estáticos
+├── .github/workflows/        # GitHub Actions
+│   ├── deploy.yml           # Auto-despliegue a GitHub Pages
+│   ├── claude-code.yml      # Integración Claude
+│   ├── claude-review.yml    # Revisiones PR automatizadas
+│   └── issue-triage.yml     # Gestión de issues
+└── CLAUDE.md                # Instrucciones Claude Code
+```
+
+### 🌐 Internacionalización
+
+El proyecto soporta 6 idiomas con detección automática:
+
+- 🇺🇸 Inglés (en) - Por defecto
+- 🇰🇷 Coreano (ko)
+- 🇯🇵 Japonés (ja)
+- 🇨🇳 Chino (zh)
+- 🇪🇸 Español (es)
+- 🇫🇷 Francés (fr)
+
+### 🤖 Automatización GitHub
+
+Este proyecto cuenta con automatización avanzada de GitHub:
+
+1. **Despliegue Automatizado**: Push a `main` activa el despliegue a GitHub Pages
+2. **Integración Claude Code**: Menciona @claude en issues/PRs para asistencia AI
+3. **Revisiones PR Automatizadas**: Revisiones de código con AI en todos los pull requests
+4. **Triaje de Issues**: Etiquetado y categorización automática
+
+### 🔒 Características de Seguridad
+
+- Encabezados de seguridad completos
+- Protección contra bots (bloquea bots de entrenamiento AI)
+- Aplicación de HTTPS
+- Prevención de XSS y clickjacking
+
 ---
 
 ## Français
@@ -416,6 +590,64 @@ pnpm lint         # Exécuter ESLint
 pnpm preview      # Aperçu avec Cloudflare (optionnel)
 pnpm deploy       # Déployer sur Cloudflare Workers (optionnel)
 ```
+
+### 📁 Structure du Projet
+
+```
+claude-code-guide/
+├── src/
+│   ├── app/
+│   │   └── [locale]/          # Routage dynamique des langues
+│   │       ├── page.tsx       # Page d'accueil
+│   │       ├── getting-started/
+│   │       ├── usage-guide/
+│   │       ├── tutorials/
+│   │       ├── tips/
+│   │       ├── mcp/           # Guide du Protocole MCP
+│   │       ├── use-cases/
+│   │       └── community/
+│   ├── components/            # Composants React réutilisables
+│   ├── lib/i18n/             # Internationalisation
+│   │   ├── config.ts         # Configuration des langues
+│   │   ├── dictionaries.ts   # Chargeur de dictionnaires
+│   │   └── dictionaries/     # Fichiers de traduction (6 langues)
+│   ├── contexts/             # Contextes React (Thème, etc.)
+│   └── hooks/                # Hooks React personnalisés
+├── public/                   # Ressources statiques
+├── .github/workflows/        # GitHub Actions
+│   ├── deploy.yml           # Déploiement auto vers GitHub Pages
+│   ├── claude-code.yml      # Intégration Claude
+│   ├── claude-review.yml    # Revues PR automatisées
+│   └── issue-triage.yml     # Gestion des issues
+└── CLAUDE.md                # Instructions Claude Code
+```
+
+### 🌐 Internationalisation
+
+Le projet prend en charge 6 langues avec détection automatique :
+
+- 🇺🇸 Anglais (en) - Par défaut
+- 🇰🇷 Coréen (ko)
+- 🇯🇵 Japonais (ja)
+- 🇨🇳 Chinois (zh)
+- 🇪🇸 Espagnol (es)
+- 🇫🇷 Français (fr)
+
+### 🤖 Automatisation GitHub
+
+Ce projet dispose d'une automatisation GitHub avancée :
+
+1. **Déploiement Automatisé** : Push vers `main` déclenche le déploiement sur GitHub Pages
+2. **Intégration Claude Code** : Mentionnez @claude dans les issues/PRs pour l'assistance IA
+3. **Revues PR Automatisées** : Revues de code par IA sur toutes les pull requests
+4. **Triage des Issues** : Étiquetage et catégorisation automatique
+
+### 🔒 Fonctionnalités de Sécurité
+
+- En-têtes de sécurité complets
+- Protection contre les bots (bloque les bots d'entraînement IA)
+- Application HTTPS
+- Prévention XSS et clickjacking
 
 ---
 
