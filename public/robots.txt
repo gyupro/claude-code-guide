@@ -1,21 +1,37 @@
-# Allow legitimate search engines
+# Claude Code Guide - Robots.txt
+# Last updated: 2025-01-15
+
+# Sitemap Location
+Sitemap: https://claude.develop-on.co.kr/sitemap.xml
+
+# Allow legitimate search engines with crawl delay
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 1
+
+User-agent: Googlebot-Image
+Allow: /
+Crawl-delay: 2
 
 User-agent: Bingbot
 Allow: /
+Crawl-delay: 2
 
 User-agent: Slurp
 Allow: /
+Crawl-delay: 2
 
 User-agent: DuckDuckBot
 Allow: /
+Crawl-delay: 2
 
 User-agent: Baiduspider
 Allow: /
+Crawl-delay: 3
 
 User-agent: YandexBot
 Allow: /
+Crawl-delay: 3
 
 User-agent: facebookexternalhit
 Allow: /

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- Homepage for all languages -->
+  <url>
+    <loc>https://claude.develop-on.co.kr/en/</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://claude.develop-on.co.kr/ko/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://claude.develop-on.co.kr/ja/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://claude.develop-on.co.kr/zh/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://claude.develop-on.co.kr/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://claude.develop-on.co.kr/fr/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://claude.develop-on.co.kr/en/" />
+  </url>
+  
+  <!-- Getting Started -->
+  <url>
+    <loc>https://claude.develop-on.co.kr/en/getting-started/</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://claude.develop-on.co.kr/ko/getting-started/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://claude.develop-on.co.kr/ja/getting-started/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://claude.develop-on.co.kr/zh/getting-started/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://claude.develop-on.co.kr/es/getting-started/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://claude.develop-on.co.kr/fr/getting-started/" />
+  </url>
+  
+  <!-- Usage Guide -->
+  <url>
+    <loc>https://claude.develop-on.co.kr/en/usage-guide/</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://claude.develop-on.co.kr/ko/usage-guide/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://claude.develop-on.co.kr/ja/usage-guide/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://claude.develop-on.co.kr/zh/usage-guide/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://claude.develop-on.co.kr/es/usage-guide/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://claude.develop-on.co.kr/fr/usage-guide/" />
+  </url>
+  
+  <!-- Tutorials -->
+  <url>
+    <loc>https://claude.develop-on.co.kr/en/tutorials/</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://claude.develop-on.co.kr/ko/tutorials/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://claude.develop-on.co.kr/ja/tutorials/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://claude.develop-on.co.kr/zh/tutorials/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://claude.develop-on.co.kr/es/tutorials/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://claude.develop-on.co.kr/fr/tutorials/" />
+  </url>
+  
+  <!-- Tips -->
+  <url>
+    <loc>https://claude.develop-on.co.kr/en/tips/</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://claude.develop-on.co.kr/ko/tips/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://claude.develop-on.co.kr/ja/tips/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://claude.develop-on.co.kr/zh/tips/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://claude.develop-on.co.kr/es/tips/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://claude.develop-on.co.kr/fr/tips/" />
+  </url>
+  
+  <!-- MCP Protocol -->
+  <url>
+    <loc>https://claude.develop-on.co.kr/en/mcp/</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://claude.develop-on.co.kr/ko/mcp/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://claude.develop-on.co.kr/ja/mcp/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://claude.develop-on.co.kr/zh/mcp/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://claude.develop-on.co.kr/es/mcp/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://claude.develop-on.co.kr/fr/mcp/" />
+  </url>
+  
+  <!-- Use Cases -->
+  <url>
+    <loc>https://claude.develop-on.co.kr/en/use-cases/</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://claude.develop-on.co.kr/ko/use-cases/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://claude.develop-on.co.kr/ja/use-cases/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://claude.develop-on.co.kr/zh/use-cases/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://claude.develop-on.co.kr/es/use-cases/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://claude.develop-on.co.kr/fr/use-cases/" />
+  </url>
+  
+  <!-- Community -->
+  <url>
+    <loc>https://claude.develop-on.co.kr/en/community/</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://claude.develop-on.co.kr/ko/community/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://claude.develop-on.co.kr/ja/community/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://claude.develop-on.co.kr/zh/community/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://claude.develop-on.co.kr/es/community/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://claude.develop-on.co.kr/fr/community/" />
+  </url>
+</urlset>

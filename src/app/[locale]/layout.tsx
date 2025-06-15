@@ -36,34 +36,98 @@ export async function generateMetadata({
   const { locale } = await params;
   const dictionary = await getDictionary(locale);
   
+  // SEO optimized locale mapping
+  const localeMap: Record<Locale, string> = {
+    'en': 'en_US',
+    'ko': 'ko_KR',
+    'ja': 'ja_JP',
+    'zh': 'zh_CN',
+    'es': 'es_ES',
+    'fr': 'fr_FR'
+  };
+
+  const baseUrl = 'https://claude.develop-on.co.kr';
+  const currentUrl = `${baseUrl}/${locale}`;
+  
   return {
-    title: dictionary.metadata?.title || "Claude Code Usage Guide",
+    metadataBase: new URL(baseUrl),
+    title: {
+      default: dictionary.metadata?.title || "Claude Code Guide",
+      template: `%s | ${dictionary.metadata?.title || "Claude Code Guide"}`
+    },
     description: dictionary.metadata?.description || "Master Claude Code with comprehensive guides and tutorials.",
     keywords: dictionary.metadata?.keywords || "Claude Code, AI coding, terminal, development tools",
+    authors: [{ name: 'Claude Code Guide Team' }],
+    creator: 'gyupro89',
+    publisher: 'Claude Code Guide',
+    formatDetection: {
+      email: false,
+      address: false,
+      telephone: false,
+    },
     openGraph: {
-      title: dictionary.metadata?.title || "Claude Code Usage Guide",
+      title: dictionary.metadata?.title || "Claude Code Guide",
       description: dictionary.metadata?.description || "Master Claude Code with comprehensive guides and tutorials.",
       type: 'website',
-      locale: locale === 'zh' ? 'zh-CN' : locale,
-      url: `https://claude.develop-on.co.kr/${locale}`,
-      siteName: "Claude Code Usage Guide",
+      locale: localeMap[locale],
+      url: currentUrl,
+      siteName: "Claude Code Guide",
+      images: [
+        {
+          url: '/banner.png',
+          width: 1200,
+          height: 630,
+          alt: dictionary.metadata?.title || "Claude Code Guide",
+        }
+      ],
     },
     twitter: {
       card: 'summary_large_image',
-      title: dictionary.metadata?.title || "Claude Code Usage Guide",
+      title: dictionary.metadata?.title || "Claude Code Guide",
       description: dictionary.metadata?.description || "Master Claude Code with comprehensive guides and tutorials.",
+      images: ['/banner.png'],
+      creator: '@gyupro89',
     },
-    alternates: {
-      canonical: `https://claude.develop-on.co.kr/${locale}`,
-      languages: {
-        'en': 'https://claude.develop-on.co.kr/en',
-        'ko': 'https://claude.develop-on.co.kr/ko',
-        'ja': 'https://claude.develop-on.co.kr/ja',
-        'zh': 'https://claude.develop-on.co.kr/zh',
-        'es': 'https://claude.develop-on.co.kr/es',
-        'fr': 'https://claude.develop-on.co.kr/fr',
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
       },
     },
+    alternates: {
+      canonical: currentUrl,
+      languages: {
+        'en': `${baseUrl}/en`,
+        'ko': `${baseUrl}/ko`,
+        'ja': `${baseUrl}/ja`,
+        'zh': `${baseUrl}/zh`,
+        'es': `${baseUrl}/es`,
+        'fr': `${baseUrl}/fr`,
+        'x-default': `${baseUrl}/en`,
+      },
+    },
+    manifest: '/manifest.json',
+    icons: {
+      icon: [
+        { url: '/favicon.ico' },
+        { url: '/icon-16x16.png', sizes: '16x16', type: 'image/png' },
+        { url: '/icon-32x32.png', sizes: '32x32', type: 'image/png' },
+      ],
+      apple: [
+        { url: '/apple-icon.png' },
+      ],
+    },
+    verification: {
+      google: 'google-site-verification-code',
+      yandex: 'yandex-verification-code',
+      yahoo: 'yahoo-verification-code',
+    },
+    category: 'technology',
   };
 }
 
@@ -77,11 +141,97 @@ export default async function LocaleLayout({
   const { locale } = await params;
   const dictionary = await getDictionary(locale);
   
+  // JSON-LD Structured Data for SEO
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: dictionary.metadata?.title || 'Claude Code Guide',
+    description: dictionary.metadata?.description || 'Master Claude Code with comprehensive guides and tutorials',
+    url: `https://claude.develop-on.co.kr/${locale}`,
+    inLanguage: locale,
+    author: {
+      '@type': 'Person',
+      name: 'gyupro89',
+      email: 'gyupro89@gmail.com'
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Claude Code Guide',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://claude.develop-on.co.kr/banner.png'
+      }
+    },
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: `https://claude.develop-on.co.kr/${locale}/search?q={search_term_string}`
+      },
+      'query-input': 'required name=search_term_string'
+    },
+    hasPart: [
+      {
+        '@type': 'WebPage',
+        name: dictionary.navigation?.gettingStarted || 'Getting Started',
+        url: `https://claude.develop-on.co.kr/${locale}/getting-started`
+      },
+      {
+        '@type': 'WebPage',
+        name: dictionary.navigation?.usageGuide || 'Usage Guide',
+        url: `https://claude.develop-on.co.kr/${locale}/usage-guide`
+      },
+      {
+        '@type': 'WebPage',
+        name: dictionary.navigation?.tutorials || 'Tutorials',
+        url: `https://claude.develop-on.co.kr/${locale}/tutorials`
+      },
+      {
+        '@type': 'WebPage',
+        name: dictionary.navigation?.mcp || 'MCP Protocol',
+        url: `https://claude.develop-on.co.kr/${locale}/mcp`
+      }
+    ]
+  };
+
+  // Breadcrumb JSON-LD
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: dictionary.navigation?.home || 'Home',
+        item: `https://claude.develop-on.co.kr/${locale}`
+      }
+    ]
+  };
+  
   return (
-    <div className={`${geistSans.variable} ${geistMono.variable} ${notoSansKR.variable}`} lang={locale}>
-      <ClientLayout dictionary={dictionary} locale={locale}>
-        {children}
-      </ClientLayout>
-    </div>
+    <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
+      <head>
+        <link rel="alternate" hrefLang="x-default" href="https://claude.develop-on.co.kr/en" />
+        <link rel="alternate" hrefLang="en" href="https://claude.develop-on.co.kr/en" />
+        <link rel="alternate" hrefLang="ko" href="https://claude.develop-on.co.kr/ko" />
+        <link rel="alternate" hrefLang="ja" href="https://claude.develop-on.co.kr/ja" />
+        <link rel="alternate" hrefLang="zh" href="https://claude.develop-on.co.kr/zh" />
+        <link rel="alternate" hrefLang="es" href="https://claude.develop-on.co.kr/es" />
+        <link rel="alternate" hrefLang="fr" href="https://claude.develop-on.co.kr/fr" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+        />
+      </head>
+      <body className={`${geistSans.variable} ${geistMono.variable} ${notoSansKR.variable}`}>
+        <ClientLayout dictionary={dictionary} locale={locale}>
+          {children}
+        </ClientLayout>
+      </body>
+    </html>
   );
 }
