@@ -475,6 +475,89 @@
       "description": "Explore our comprehensive tutorials and guides to set up and use MCP servers effectively.",
       "startTutorials": "Start Tutorials",
       "viewMoreServers": "View More Servers"
+    },
+    "tutorials": {
+      "title": "MCP Protocol Tutorials",
+      "supabaseTutorial": {
+        "title": "Master Supabase MCP",
+        "description": "Connect the most popular MCP server, Supabase, to Claude Code and fully automate your backend development.",
+        "quickSetup": {
+          "title": "Quick Setup",
+          "command": "claude mcp add supabase -e SUPABASE_ACCESS_TOKEN=your_token npx -y @supabase/mcp-server-supabase@latest",
+          "description": "Connect MCP server with Supabase personal access token (generate from Settings → Access Tokens)"
+        },
+        "practicalExamples": {
+          "title": "Practical Usage Examples",
+          "example1": {
+            "command": "Create a table to store blog posts",
+            "result": "→ Schema design → Table creation → RLS policy setup"
+          },
+          "example2": {
+            "command": "Create and deploy user authentication Edge Function",
+            "result": "→ Function writing → Testing → Live deployment"
+          },
+          "example3": {
+            "command": "Analyze current database usage and costs",
+            "result": "→ Usage query → Cost calculation → Optimization suggestions"
+          },
+          "example4": {
+            "command": "Set up real-time subscriptions for users table",
+            "result": "→ Enable Realtime → Configure subscription → Create event listeners"
+          }
+        },
+        "proTip": {
+          "title": "Pro Tip",
+          "description": "Advanced commands like \"Analyze database costs\" and \"Optimize slow queries\" are also available!"
+        }
+      },
+      "workflowAutomation": {
+        "title": "Complete Workflow Automation",
+        "description": "Connect GitHub + Supabase + Slack to automate \"Issue received → Code fix → Deploy → Team notification\" all at once!",
+        "steps": {
+          "step1": {
+            "title": "Connect GitHub",
+            "command": "claude mcp add github"
+          },
+          "step2": {
+            "title": "Connect Supabase", 
+            "command": "claude mcp add supabase"
+          },
+          "step3": {
+            "title": "Connect Slack",
+            "command": "claude mcp add slack"
+          }
+        },
+        "magicCommand": {
+          "title": "Magic One-Line Command",
+          "command": "Analyze GitHub issue #42, fix it, deploy, and notify Slack #dev",
+          "workflow": [
+            "→ Analyze issue content and find related code files",
+            "→ Write bug fix code and test", 
+            "→ Create PR on GitHub and merge",
+            "→ Deploy Edge Function to Supabase",
+            "→ Send completion notification to Slack channel"
+          ]
+        },
+        "additionalExamples": {
+          "title": "Additional Workflow Examples",
+          "example1": {
+            "command": "Backup database daily at 9 AM and notify Slack with results",
+            "description": "Automated regular backups"
+          },
+          "example2": {
+            "command": "When new PR opens, automatically run tests and comment results",
+            "description": "CI/CD automation"
+          },
+          "example3": {
+            "command": "If database performance slows, auto-optimize and report to team",
+            "description": "Performance monitoring automation"
+          }
+        },
+        "realWorldExample": {
+          "title": "Real-World Case",
+          "description": "A startup reduced bug fix time from 3 hours to 15 minutes using this workflow!"
+        }
+      }
     }
   },
   "community": {
@@ -663,7 +746,10 @@
     "bannerAlt": "Claude Code Banner",
     "copyright": "© 2025 Claude Code Usage Guide. MIT License.",
     "email": "gyupro89@gmail.com",
-    "keyTip": "Key Tip"
+    "keyTip": "Key Tip",
+    "switchToDarkMode": "Switch to dark mode",
+    "switchToLightMode": "Switch to light mode",
+    "toggleTheme": "Toggle theme"
   },
   "footer": {
     "about": {

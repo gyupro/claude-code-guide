@@ -465,6 +465,89 @@
       "description": "Explora nuestros tutoriales y guías completos para configurar y usar servidores MCP de manera efectiva.",
       "startTutorials": "Comenzar Tutoriales",
       "viewMoreServers": "Ver Más Servidores"
+    },
+    "tutorials": {
+      "title": "Tutoriales del Protocolo MCP",
+      "supabaseTutorial": {
+        "title": "Domina Supabase MCP",
+        "description": "Conecta el servidor MCP más popular, Supabase, a Claude Code y automatiza completamente tu desarrollo backend.",
+        "quickSetup": {
+          "title": "Configuración Rápida",
+          "command": "claude mcp add supabase -e SUPABASE_ACCESS_TOKEN=tu_token npx -y @supabase/mcp-server-supabase@latest",
+          "description": "Conecta el servidor MCP con tu token de acceso personal de Supabase (generar desde Configuración → Tokens de Acceso)"
+        },
+        "practicalExamples": {
+          "title": "Ejemplos de Uso Práctico",
+          "example1": {
+            "command": "Crea una tabla para almacenar publicaciones de blog",
+            "result": "→ Diseño de esquema → Creación de tabla → Configuración de políticas RLS"
+          },
+          "example2": {
+            "command": "Crea y despliega una Edge Function de autenticación de usuarios",
+            "result": "→ Escritura de función → Pruebas → Despliegue en vivo"
+          },
+          "example3": {
+            "command": "Analiza el uso actual de la base de datos y los costos",
+            "result": "→ Consulta de uso → Cálculo de costos → Sugerencias de optimización"
+          },
+          "example4": {
+            "command": "Configura suscripciones en tiempo real para la tabla de usuarios",
+            "result": "→ Habilitar Realtime → Configurar suscripción → Crear listeners de eventos"
+          }
+        },
+        "proTip": {
+          "title": "Consejo Pro",
+          "description": "¡También están disponibles comandos avanzados como \"Analiza los costos de la base de datos\" y \"Optimiza las consultas lentas\"!"
+        }
+      },
+      "workflowAutomation": {
+        "title": "Automatización Completa de Flujos de Trabajo",
+        "description": "Conecta GitHub + Supabase + Slack para automatizar \"Issue recibido → Corrección de código → Despliegue → Notificación al equipo\" ¡todo de una vez!",
+        "steps": {
+          "step1": {
+            "title": "Conectar GitHub",
+            "command": "claude mcp add github"
+          },
+          "step2": {
+            "title": "Conectar Supabase", 
+            "command": "claude mcp add supabase"
+          },
+          "step3": {
+            "title": "Conectar Slack",
+            "command": "claude mcp add slack"
+          }
+        },
+        "magicCommand": {
+          "title": "Comando Mágico de Una Línea",
+          "command": "Analiza el issue #42 de GitHub, corrígelo, despliega y notifica a Slack #dev",
+          "workflow": [
+            "→ Analizar contenido del issue y encontrar archivos de código relacionados",
+            "→ Escribir código de corrección de bugs y probar", 
+            "→ Crear PR en GitHub y fusionar",
+            "→ Desplegar Edge Function en Supabase",
+            "→ Enviar notificación de finalización al canal de Slack"
+          ]
+        },
+        "additionalExamples": {
+          "title": "Ejemplos Adicionales de Flujos de Trabajo",
+          "example1": {
+            "command": "Respalda la base de datos diariamente a las 9 AM y notifica a Slack con los resultados",
+            "description": "Respaldos regulares automatizados"
+          },
+          "example2": {
+            "command": "Cuando se abra un nuevo PR, ejecuta automáticamente las pruebas y comenta los resultados",
+            "description": "Automatización CI/CD"
+          },
+          "example3": {
+            "command": "Si el rendimiento de la base de datos se ralentiza, optimiza automáticamente e informa al equipo",
+            "description": "Automatización de monitoreo de rendimiento"
+          }
+        },
+        "realWorldExample": {
+          "title": "Caso del Mundo Real",
+          "description": "¡Una startup redujo el tiempo de corrección de bugs de 3 horas a 15 minutos usando este flujo de trabajo!"
+        }
+      }
     }
   },
   "community": {
@@ -654,7 +737,10 @@
     "bannerAlt": "Banner de Claude Code",
     "copyright": "© 2025 Guía de Uso de Claude Code. Licencia MIT.",
     "email": "gyupro89@gmail.com",
-    "keyTip": "Consejo Clave"
+    "keyTip": "Consejo Clave",
+    "switchToDarkMode": "Cambiar a modo oscuro",
+    "switchToLightMode": "Cambiar a modo claro",
+    "toggleTheme": "Cambiar tema"
   },
   "footer": {
     "about": {

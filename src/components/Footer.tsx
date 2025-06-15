@@ -8,6 +8,15 @@ interface FooterProps {
 }
 
 export default function Footer({ dictionary, locale }: FooterProps) {
+  // Add defensive check
+  if (!dictionary || !dictionary.footer) {
+    console.error('Footer: Missing dictionary or footer section', {
+      hasDictionary: !!dictionary,
+      hasFooter: !!dictionary?.footer
+    });
+    return null;
+  }
+
   return (
     <footer className="bg-gray-100 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -15,10 +24,10 @@ export default function Footer({ dictionary, locale }: FooterProps) {
           {/* About section - full width on mobile, equal column on desktop */}
           <div className="lg:hidden">
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-              {dictionary.footer.about.title}
+              {dictionary.footer?.about?.title || 'About'}
             </h3>
             <p className="text-gray-600 dark:text-gray-400">
-              {dictionary.footer.about.description}
+              {dictionary.footer?.about?.description || 'Claude Code Guide'}
             </p>
           </div>
           
@@ -27,17 +36,17 @@ export default function Footer({ dictionary, locale }: FooterProps) {
             {/* About section - hidden on mobile, shown on desktop */}
             <div className="hidden lg:block">
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-                {dictionary.footer.about.title}
+                {dictionary.footer?.about?.title || 'About'}
               </h3>
               <p className="text-gray-600 dark:text-gray-400">
-                {dictionary.footer.about.description}
+                {dictionary.footer?.about?.description || 'Claude Code Guide'}
               </p>
             </div>
             
             {/* Quick Links section */}
             <div>
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-                {dictionary.footer.links.title}
+                {dictionary.footer?.links?.title || 'Quick Links'}
               </h3>
               <ul className="space-y-2">
                 <li>
@@ -66,7 +75,7 @@ export default function Footer({ dictionary, locale }: FooterProps) {
             {/* Resources section */}
             <div>
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-                {dictionary.footer.resources.title}
+                {dictionary.footer?.resources?.title || 'Resources'}
               </h3>
               <ul className="space-y-2">
                 <li>
@@ -96,7 +105,7 @@ export default function Footer({ dictionary, locale }: FooterProps) {
                     rel="noopener noreferrer"
                     className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
                   >
-                    {dictionary.footer.resources.documentation}
+                    {dictionary.footer?.resources?.documentation || 'Documentation'}
                   </a>
                 </li>
               </ul>
@@ -105,7 +114,7 @@ export default function Footer({ dictionary, locale }: FooterProps) {
             {/* Contact section */}
             <div>
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-                {dictionary.footer.contact.title}
+                {dictionary.footer?.contact?.title || 'Contact'}
               </h3>
               <ul className="space-y-2">
                 <li>
@@ -123,7 +132,7 @@ export default function Footer({ dictionary, locale }: FooterProps) {
         
         <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-800">
           <p className="text-center text-gray-600 dark:text-gray-400">
-            {dictionary.footer.copyright}
+            {dictionary.footer?.copyright || '© 2025 Claude Code Guide. All rights reserved.'}
           </p>
         </div>
       </div>

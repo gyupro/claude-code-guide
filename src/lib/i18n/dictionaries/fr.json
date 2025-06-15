@@ -465,6 +465,91 @@
       "description": "Explorez nos tutoriels et guides complets pour configurer et utiliser efficacement les serveurs MCP.",
       "startTutorials": "Commencer les Tutoriels",
       "viewMoreServers": "Voir Plus de Serveurs"
+    },
+    "tutorials": {
+      "title": "Tutoriels du Protocole MCP",
+      "supabaseTutorial": {
+        "title": "Tutoriel MCP Supabase",
+        "description": "Apprenez à intégrer Claude avec votre base de données Supabase pour une manipulation automatisée des données, la génération de requêtes et la gestion de schémas.",
+        "quickSetup": {
+          "title": "Configuration Rapide",
+          "description": "Utilisez la commande suivante pour ajouter Supabase MCP :",
+          "command": "claude mcp add supabase",
+          "configNote": "Ajoutez votre URL Supabase et votre clé API dans la configuration."
+        },
+        "practicalExamples": {
+          "title": "Exemples Pratiques",
+          "example1": {
+            "command": "Claude, génère une requête SQL pour trouver tous les utilisateurs actifs du mois dernier avec leurs statistiques de commandes",
+            "result": "Claude analyse votre schéma et crée des requêtes optimisées avec des jointures appropriées"
+          },
+          "example2": {
+            "command": "Crée une nouvelle table 'analytics' avec des colonnes pour suivre le comportement des utilisateurs",
+            "result": "Génère automatiquement les scripts de migration avec les types et contraintes appropriés"
+          },
+          "example3": {
+            "command": "Analyse et optimise les requêtes lentes dans ma table 'orders'",
+            "result": "Identifie les index manquants et suggère des optimisations de requêtes"
+          },
+          "example4": {
+            "command": "Synchronise les données utilisateur entre les environnements de développement et de staging",
+            "result": "Gère en toute sécurité le transfert de données avec validation et rollback automatique"
+          }
+        },
+        "proTip": {
+          "title": "Astuce de Pro",
+          "description": "Utilisez Supabase MCP avec les variables d'environnement pour basculer facilement entre les environnements de développement, staging et production sans modifier le code."
+        }
+      },
+      "workflowAutomation": {
+        "title": "Automatisation des Flux de Travail avec MCP",
+        "description": "Maîtrisez l'art de connecter plusieurs serveurs MCP pour créer des flux de travail d'automatisation puissants qui s'étendent sur GitHub, les bases de données et les services externes.",
+        "steps": {
+          "step1": {
+            "title": "Connecter GitHub",
+            "command": "claude mcp add github"
+          },
+          "step2": {
+            "title": "Connecter Supabase",
+            "command": "claude mcp add supabase"
+          },
+          "step3": {
+            "title": "Connecter Slack",
+            "command": "claude mcp add slack"
+          }
+        },
+        "magicCommand": {
+          "title": "La Commande Magique",
+          "description": "Utilisez cette commande puissante pour automatiser des flux de travail complexes :",
+          "command": "\"Claude, créez un flux de travail qui :\"",
+          "workflow": [
+            "Surveille les nouvelles issues GitHub avec le label 'bug'",
+            "Vérifie les logs d'erreur associés dans Supabase",
+            "Crée un rapport détaillé avec les traces de pile",
+            "Assigne automatiquement au développeur approprié",
+            "Envoie une notification Slack avec le résumé"
+          ]
+        },
+        "additionalExamples": {
+          "title": "Exemples Supplémentaires",
+          "example1": {
+            "command": "Pipeline CI/CD Automatisé",
+            "description": "Configure des déploiements automatiques basés sur les métriques de performance de base de données"
+          },
+          "example2": {
+            "command": "Système de Génération de Documentation",
+            "description": "Génère automatiquement la documentation API à partir des schémas de base de données et des spécifications d'endpoint"
+          },
+          "example3": {
+            "command": "Alertes de Sécurité Intelligentes",
+            "description": "Surveille les modèles d'accès à la base de données et crée des issues de sécurité pour les activités suspectes"
+          }
+        },
+        "realWorldExample": {
+          "title": "Exemple Concret",
+          "description": "Une startup SaaS utilise cette automatisation pour réduire le temps de résolution des bugs de 70% en connectant automatiquement les rapports d'erreur aux développeurs appropriés avec le contexte complet de la base de données."
+        }
+      }
     }
   },
   "community": {
@@ -654,7 +739,10 @@
     "bannerAlt": "Bannière Claude Code",
     "copyright": "© 2025 Guide d'Utilisation Claude Code. Licence MIT.",
     "email": "gyupro89@gmail.com",
-    "keyTip": "Conseil Clé"
+    "keyTip": "Conseil Clé",
+    "switchToDarkMode": "Passer en mode sombre",
+    "switchToLightMode": "Passer en mode clair",
+    "toggleTheme": "Changer de thème"
   },
   "footer": {
     "about": {

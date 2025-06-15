@@ -82,7 +82,10 @@
     "bannerAlt": "Claude Code 横幅",
     "copyright": "© 2025 Claude Code 使用指南. MIT License.",
     "email": "gyupro89@gmail.com",
-    "keyTip": "关键提示"
+    "keyTip": "关键提示",
+    "switchToDarkMode": "切换到深色模式",
+    "switchToLightMode": "切换到浅色模式",
+    "toggleTheme": "切换主题"
   },
   "gettingStarted": {
     "title": "开始使用 Claude Code",
@@ -286,6 +289,74 @@
         "dragDrop": "拖放添加图像"
       }
     },
+    "mcpTutorials": {
+      "title": "MCP 集成教程",
+      "supabase": {
+        "title": "Supabase MCP 教程",
+        "description": "学习如何通过 MCP 直接从 Claude Code 操作 Supabase 数据库。无需手动连接或复杂配置。",
+        "quickSetup": "快速设置：在 Claude Code 设置中添加 Supabase MCP 服务器，输入您的项目 URL 和 API 密钥即可开始。",
+        "practicalExamples": "实际应用示例",
+        "examples": {
+          "userAnalysis": {
+            "title": "用户分析",
+            "command": "分析过去 7 天的用户注册趋势并生成报告",
+            "description": "Claude 会自动查询数据库、分析模式并生成可视化报告"
+          },
+          "schemaManagement": {
+            "title": "架构管理",
+            "command": "为电子商务平台创建产品和订单表",
+            "description": "Claude 会设计优化的架构并创建具有适当关系的表"
+          },
+          "dataSync": {
+            "title": "数据同步",
+            "command": "将所有用户数据从旧表迁移到新架构",
+            "description": "Claude 会处理数据验证、转换和迁移错误"
+          },
+          "realtimeMonitoring": {
+            "title": "实时监控",
+            "command": "设置实时订阅以监控新订单",
+            "description": "Claude 会配置实时监听器并处理传入的数据更新"
+          }
+        },
+        "proTip": "专业提示：在 CLAUDE.md 中记录您的数据库架构。Claude 会使用此信息编写更准确的查询并理解数据关系。"
+      },
+      "workflowAutomation": {
+        "title": "工作流自动化教程",
+        "description": "学习如何使用多个 MCP 服务器创建强大的自动化工作流。将 GitHub、Slack 和数据库操作组合成无缝的自动化流程。",
+        "connectingServices": {
+          "title": "连接服务的 3 个步骤",
+          "step1": "在 Claude Code 设置中启用多个 MCP 服务器（例如：GitHub + Supabase + Slack）",
+          "step2": "在 CLAUDE.md 中描述服务之间的关系",
+          "step3": "使用自然语言请求跨服务的复杂操作"
+        },
+        "magicCommand": "魔法命令示例",
+        "workflowExample": {
+          "command": "当创建新的 GitHub 问题时，在 Supabase 中创建任务记录并通知 Slack 团队",
+          "steps": {
+            "step1": "Claude 监控 GitHub 问题事件",
+            "step2": "自动在 Supabase 任务表中创建记录",
+            "step3": "向相关 Slack 频道发送格式化通知",
+            "step4": "在问题评论中更新任务 ID 以供跟踪"
+          }
+        },
+        "additionalExamples": {
+          "title": "更多自动化示例",
+          "deploymentTracking": {
+            "title": "部署跟踪",
+            "description": "GitHub 发布 → 更新部署数据库 → Slack 通知 → 生成发布说明"
+          },
+          "errorHandling": {
+            "title": "错误处理",
+            "description": "日志错误检测 → 创建 GitHub 问题 → 分配给团队 → Slack 警报"
+          },
+          "contentPublishing": {
+            "title": "内容发布",
+            "description": "Notion 批准 → 生成 Markdown → 创建 GitHub PR → 部署预览"
+          }
+        },
+        "realWorldExample": "真实案例：一家初创公司使用此工作流将手动发布流程从 2 小时减少到 5 分钟。Claude Code 处理从代码审查到生产部署通知的所有事务。"
+      }
+    },
     "startNow": {
       "title": "现在就开始教程",
       "description": "跟随逐步指南，逐一学习 Claude Code 的强大功能。从基本命令到高级自动化，获得可立即应用于工作的实践知识。",
@@ -473,6 +544,101 @@
       "description": "探索我们的综合教程和指南，有效设置和使用MCP服务器。",
       "startTutorials": "开始教程",
       "viewMoreServers": "查看更多服务器"
+    },
+    "tutorials": {
+      "title": "MCP 协议教程",
+      "supabaseTutorial": {
+        "title": "Supabase MCP 实践教程",
+        "description": "学习如何在Claude Code中集成Supabase MCP服务器，直接从终端管理数据库。",
+        "quickSetup": {
+          "title": "快速设置",
+          "description": "使用以下命令添加Supabase MCP：",
+          "command": "claude mcp add supabase",
+          "configNote": "在配置中添加您的Supabase URL和API密钥。"
+        },
+        "exampleUsage": {
+          "title": "使用示例",
+          "example1": {
+            "title": "示例 1：创建用户表",
+            "request": "创建一个包含id、email、created_at字段的用户表",
+            "description": "Claude Code会自动生成并执行SQL命令创建表。"
+          },
+          "example2": {
+            "title": "示例 2：查询数据",
+            "request": "显示过去7天注册的所有用户",
+            "description": "Claude Code会自动生成SQL查询并格式化显示结果。"
+          },
+          "example3": {
+            "title": "示例 3：数据分析",
+            "request": "分析用户增长趋势并生成报告",
+            "description": "Claude Code会查询数据、分析趋势并生成易读的报告。"
+          },
+          "example4": {
+            "title": "示例 4：模式管理",
+            "request": "显示当前数据库模式并建议优化",
+            "description": "Claude Code会分析表结构并提供性能优化建议。"
+          },
+          "example5": {
+            "title": "示例 5：数据迁移",
+            "request": "将旧用户表迁移到新的结构",
+            "description": "Claude Code会生成安全的迁移脚本并执行数据转换。"
+          },
+          "example6": {
+            "title": "示例 6：备份管理",
+            "request": "创建生产数据库的备份",
+            "description": "Claude Code会执行备份命令并验证备份完整性。"
+          },
+          "example7": {
+            "title": "示例 7：性能监控",
+            "request": "找出最慢的查询并优化它们",
+            "description": "Claude Code会分析查询日志并提供优化的SQL语句。"
+          }
+        }
+      },
+      "workflowAutomation": {
+        "title": "工作流程自动化",
+        "description": "学习如何连接多个MCP服务器实现复杂的自动化工作流程。",
+        "steps": {
+          "step1": {
+            "title": "连接 GitHub",
+            "command": "claude mcp add github"
+          },
+          "step2": {
+            "title": "连接 Supabase", 
+            "command": "claude mcp add supabase"
+          },
+          "step3": {
+            "title": "连接 Slack",
+            "command": "claude mcp add slack"
+          }
+        },
+        "automationExample": {
+          "title": "自动化示例",
+          "description": "创建一个监控系统：当GitHub收到问题时，自动检查数据库相关数据，并将分析结果发送到Slack。",
+          "request": "监控名为'payment-failed'的GitHub问题，检查相关支付数据，并通知开发团队",
+          "result": "Claude Code会：\n1. 监控GitHub问题\n2. 查询Supabase中的支付记录\n3. 分析失败原因\n4. 将详细报告发送到Slack #dev-alerts频道"
+        },
+        "additionalExamples": {
+          "example1": {
+            "title": "部署通知系统",
+            "description": "GitHub PR合并时自动运行测试并通知团队",
+            "request": "当main分支有PR合并时，运行测试套件并将结果发送到Slack",
+            "result": "自动化CI/CD通知流程"
+          },
+          "example2": {
+            "title": "数据同步工作流",
+            "description": "定期同步GitHub issues到数据库并生成报告",
+            "request": "每天同步开放的GitHub issues到Supabase并生成统计报告",
+            "result": "自动化项目管理数据流"
+          },
+          "example3": {
+            "title": "错误警报系统",
+            "description": "监控应用程序错误并自动创建GitHub issues",
+            "request": "当数据库中出现错误日志时，自动创建GitHub issue并通知相关开发者",
+            "result": "实时错误响应系统"
+          }
+        }
+      }
     }
   },
   "community": {

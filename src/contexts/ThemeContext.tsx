@@ -40,13 +40,13 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     updateThemeClass(newTheme)
   }
 
-  if (!mounted) {
-    return <>{children}</>
-  }
-
+  // Prevent hydration mismatch by always providing context
+  // but use suppressHydrationWarning for the theme-dependent parts
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      {children}
+      <div suppressHydrationWarning>
+        {children}
+      </div>
     </ThemeContext.Provider>
   )
 }

@@ -82,7 +82,10 @@
     "bannerAlt": "Claude Code バナー",
     "copyright": "© 2025 Claude Code 使用ガイド. MIT License.",
     "email": "gyupro89@gmail.com",
-    "keyTip": "重要なヒント"
+    "keyTip": "重要なヒント",
+    "switchToDarkMode": "ダークモードに切り替え",
+    "switchToLightMode": "ライトモードに切り替え",
+    "toggleTheme": "テーマを切り替え"
   },
   "gettingStarted": {
     "title": "Claude Code を始める",
@@ -452,6 +455,89 @@
       "title": "Claude Code + MCP実戦活用",
       "startTutorials": "実戦MCPチュートリアル開始",
       "viewMoreServers": "より多くのMCPサーバーを見る"
+    },
+    "tutorials": {
+      "title": "MCPプロトコルチュートリアル",
+      "supabaseTutorial": {
+        "title": "Supabase MCPマスターガイド",
+        "description": "最も人気のあるMCPサーバーであるSupabaseをClaude Codeに接続して、バックエンド開発を完全に自動化しましょう。",
+        "quickSetup": {
+          "title": "クイックセットアップ",
+          "command": "claude mcp add supabase -e SUPABASE_ACCESS_TOKEN=your_token npx -y @supabase/mcp-server-supabase@latest",
+          "description": "Supabase個人アクセストークンでMCPサーバーを接続（設定 → アクセストークンで生成）"
+        },
+        "practicalExamples": {
+          "title": "実践使用例",
+          "example1": {
+            "command": "ブログ投稿を保存するテーブルを作成して",
+            "result": "→ スキーマ設計 → テーブル作成 → RLSポリシー設定"
+          },
+          "example2": {
+            "command": "ユーザー認証Edge Functionを作成してデプロイして",
+            "result": "→ 関数作成 → テスト → ライブデプロイ"
+          },
+          "example3": {
+            "command": "現在のデータベース使用量とコストを分析して",
+            "result": "→ 使用量クエリ → コスト計算 → 最適化提案"
+          },
+          "example4": {
+            "command": "usersテーブルにリアルタイムサブスクリプションを設定して",
+            "result": "→ Realtime有効化 → サブスクリプション設定 → イベントリスナー作成"
+          }
+        },
+        "proTip": {
+          "title": "プロのヒント",
+          "description": "「データベースコストを分析して」「遅いクエリを最適化して」などの高度なコマンドも使用可能です！"
+        }
+      },
+      "workflowAutomation": {
+        "title": "完全ワークフロー自動化",
+        "description": "GitHub + Supabase + Slackを連携して「イシュー受付 → コード修正 → デプロイ → チーム通知」まで一度に！",
+        "steps": {
+          "step1": {
+            "title": "GitHub接続",
+            "command": "claude mcp add github"
+          },
+          "step2": {
+            "title": "Supabase接続", 
+            "command": "claude mcp add supabase"
+          },
+          "step3": {
+            "title": "Slack接続",
+            "command": "claude mcp add slack"
+          }
+        },
+        "magicCommand": {
+          "title": "魔法の一行コマンド",
+          "command": "GitHubイシュー#42を分析して修正し、デプロイ後Slack #devに通知して",
+          "workflow": [
+            "→ イシュー内容分析と関連コードファイル検索",
+            "→ バグ修正コード作成とテスト", 
+            "→ GitHubにPR作成とマージ",
+            "→ SupabaseにEdge Functionデプロイ",
+            "→ Slackチャンネルに完了通知送信"
+          ]
+        },
+        "additionalExamples": {
+          "title": "追加ワークフロー例",
+          "example1": {
+            "command": "毎日午前9時にデータベースをバックアップしてSlackに結果を通知して",
+            "description": "定期バックアップ自動化"
+          },
+          "example2": {
+            "command": "新しいPRが開かれたら自動でテストを実行して結果をコメントして",
+            "description": "CI/CD自動化"
+          },
+          "example3": {
+            "command": "データベースパフォーマンスが低下したら自動で最適化してチームに報告して",
+            "description": "パフォーマンス監視自動化"
+          }
+        },
+        "realWorldExample": {
+          "title": "実例",
+          "description": "スタートアップがこのワークフローでバグ修正時間を3時間から15分に短縮しました！"
+        }
+      }
     }
   },
   "community": {

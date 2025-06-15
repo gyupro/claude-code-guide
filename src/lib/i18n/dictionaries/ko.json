@@ -475,6 +475,89 @@
       "description": "MCP 서버를 효과적으로 설정하고 사용하는 방법에 대한 포괄적인 튜토리얼과 가이드를 탐색해보세요.",
       "startTutorials": "튜토리얼 시작하기",
       "viewMoreServers": "더 많은 서버 보기"
+    },
+    "tutorials": {
+      "title": "MCP 프로토콜 튜토리얼",
+      "supabaseTutorial": {
+        "title": "Supabase MCP 완전 정복",
+        "description": "가장 인기 있는 MCP 서버인 Supabase를 Claude Code에 연결하여 백엔드 개발을 완전 자동화해보세요.",
+        "quickSetup": {
+          "title": "빠른 설정",
+          "command": "claude mcp add supabase -e SUPABASE_ACCESS_TOKEN=your_token npx -y @supabase/mcp-server-supabase@latest",
+          "description": "Supabase 개인 액세스 토큰으로 MCP 서버 연결 (설정 → 액세스 토큰에서 생성)"
+        },
+        "practicalExamples": {
+          "title": "실전 사용 예시",
+          "example1": {
+            "command": "블로그 포스트를 저장할 테이블을 만들어줘",
+            "result": "→ 스키마 설계 → 테이블 생성 → RLS 정책 설정"
+          },
+          "example2": {
+            "command": "사용자 인증 Edge Function을 만들고 배포해줘",
+            "result": "→ 함수 작성 → 테스트 → 실시간 배포"
+          },
+          "example3": {
+            "command": "현재 데이터베이스 사용량과 비용을 분석해줘",
+            "result": "→ 사용량 조회 → 비용 계산 → 최적화 제안"
+          },
+          "example4": {
+            "command": "users 테이블에 실시간 구독을 설정해줘",
+            "result": "→ Realtime 활성화 → 구독 설정 → 이벤트 리스너 생성"
+          }
+        },
+        "proTip": {
+          "title": "프로 팁",
+          "description": "\"데이터베이스 비용을 분석해줘\", \"느린 쿼리를 최적화해줘\" 같은 고급 명령도 사용 가능합니다!"
+        }
+      },
+      "workflowAutomation": {
+        "title": "완전 자동화 워크플로우",
+        "description": "GitHub + Supabase + Slack을 연결하여 \"이슈 접수 → 코드 수정 → 배포 → 팀 알림\"까지 한 번에!",
+        "steps": {
+          "step1": {
+            "title": "GitHub 연결",
+            "command": "claude mcp add github"
+          },
+          "step2": {
+            "title": "Supabase 연결", 
+            "command": "claude mcp add supabase"
+          },
+          "step3": {
+            "title": "Slack 연결",
+            "command": "claude mcp add slack"
+          }
+        },
+        "magicCommand": {
+          "title": "마법의 한 줄 명령어",
+          "command": "GitHub 이슈 #42를 분석해서 수정하고, 배포 후 Slack #dev에 알려줘",
+          "workflow": [
+            "→ 이슈 내용 분석 및 관련 코드 파일 찾기",
+            "→ 버그 수정 코드 작성 및 테스트", 
+            "→ GitHub에 PR 생성 및 머지",
+            "→ Supabase에 Edge Function 배포",
+            "→ Slack 채널에 완료 알림 전송"
+          ]
+        },
+        "additionalExamples": {
+          "title": "추가 워크플로우 예시",
+          "example1": {
+            "command": "매일 오전 9시에 데이터베이스 백업하고 Slack에 결과 알려줘",
+            "description": "정기 백업 자동화"
+          },
+          "example2": {
+            "command": "새 PR이 열리면 자동으로 테스트 실행하고 결과를 코멘트로 달아줘",
+            "description": "CI/CD 자동화"
+          },
+          "example3": {
+            "command": "데이터베이스 성능이 느려지면 자동으로 최적화하고 팀에 보고해줘",
+            "description": "성능 모니터링 자동화"
+          }
+        },
+        "realWorldExample": {
+          "title": "실제 사례",
+          "description": "스타트업에서 이 워크플로우로 버그 수정 시간을 3시간에서 15분으로 단축했습니다!"
+        }
+      }
     }
   },
   "community": {
@@ -663,7 +746,10 @@
     "bannerAlt": "Claude Code 배너",
     "copyright": "© 2025 Claude Code 사용 가이드. MIT License.",
     "email": "gyupro89@gmail.com",
-    "keyTip": "핵심 팁"
+    "keyTip": "핵심 팁",
+    "switchToDarkMode": "다크 모드로 전환",
+    "switchToLightMode": "라이트 모드로 전환",
+    "toggleTheme": "테마 전환"
   },
   "footer": {
     "about": {
