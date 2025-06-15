@@ -649,6 +649,10 @@
       "title": "リソース",
       "documentation": "ドキュメント"
     },
+    "contact": {
+      "title": "お問い合わせ",
+      "email": "メール"
+    },
     "copyright": "© 2025 Claude Code使用ガイド. All rights reserved."
   }
 }

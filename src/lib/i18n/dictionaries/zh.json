@@ -670,6 +670,10 @@
       "title": "资源",
       "documentation": "文档"
     },
+    "contact": {
+      "title": "联系我们",
+      "email": "邮箱"
+    },
     "copyright": "© 2025 Claude Code使用指南。保留所有权利。"
   }
 }

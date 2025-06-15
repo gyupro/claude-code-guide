@@ -281,19 +281,6 @@ export default function HomePageClient({ locale, dictionary }: HomePageClientPro
             </div>
           </div>
         </section>
-
-
-        {/* Footer */}
-        <footer className="bg-slate-900 dark:bg-slate-950 text-white py-8 sm:py-12">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p className="text-slate-300 mb-4">
-              {(dictionary.common as any).copyright}
-            </p>
-            <p className="text-slate-400 text-sm">
-              {(dictionary.common as any).email}
-            </p>
-          </div>
-        </footer>
       </main>
     </div>
   );

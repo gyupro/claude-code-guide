@@ -668,6 +668,10 @@
       "title": "Ressources",
       "documentation": "Documentation"
     },
+    "contact": {
+      "title": "Contact",
+      "email": "Email"
+    },
     "copyright": "© 2025 Guide d'utilisation de Claude Code. Tous droits réservés."
   }
 }

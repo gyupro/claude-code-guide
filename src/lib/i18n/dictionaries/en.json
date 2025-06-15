@@ -677,6 +677,10 @@
       "title": "Resources",
       "documentation": "Documentation"
     },
+    "contact": {
+      "title": "Contact",
+      "email": "Email"
+    },
     "copyright": "© 2025 Claude Code Usage Guide. All rights reserved."
   }
 }

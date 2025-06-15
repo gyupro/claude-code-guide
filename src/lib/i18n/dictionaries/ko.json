@@ -677,6 +677,10 @@
       "title": "리소스",
       "documentation": "문서"
     },
+    "contact": {
+      "title": "문의",
+      "email": "이메일"
+    },
     "copyright": "© 2025 Claude Code 사용 가이드. All rights reserved."
   }
 }
