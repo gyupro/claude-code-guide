@@ -32,9 +32,7 @@ export default function ClientLayout({ children, dictionary, locale }: ClientLay
         <div className="flex-grow">
           {children}
         </div>
-        {/* Temporarily disable Footer to debug
         <Footer dictionary={dictionary} locale={locale} />
-        */}
       </div>
     </ThemeProvider>
   );
