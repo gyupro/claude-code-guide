@@ -16,11 +16,11 @@ export async function generateMetadata({
   const dictionary = await getDictionary(locale);
   
   return {
-    title: dictionary.home?.heroTitle || dictionary.metadata?.title || 'Claude Code Guide',
-    description: dictionary.home?.heroSubtitle || dictionary.metadata?.description || 'Master AI-assisted coding with Claude Code',
+    title: dictionary.home?.title || dictionary.metadata?.title || 'Claude Code Guide',
+    description: dictionary.home?.subtitle || dictionary.metadata?.description || 'Master AI-assisted coding with Claude Code',
     openGraph: {
-      title: dictionary.home?.heroTitle || 'Claude Code Guide',
-      description: dictionary.home?.heroSubtitle || 'Master AI-assisted coding with Claude Code',
+      title: dictionary.home?.title || 'Claude Code Guide',
+      description: dictionary.home?.subtitle || 'Master AI-assisted coding with Claude Code',
       images: ['/banner.png'],
     },
   };

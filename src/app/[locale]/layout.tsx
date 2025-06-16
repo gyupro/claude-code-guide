@@ -209,7 +209,7 @@ export default async function LocaleLayout({
   };
   
   return (
-    <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
+    <html lang={locale}>
       <head>
         <link rel="alternate" hrefLang="x-default" href="https://claude.develop-on.co.kr/en" />
         <link rel="alternate" hrefLang="en" href="https://claude.develop-on.co.kr/en" />
