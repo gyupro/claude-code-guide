@@ -218,6 +218,18 @@ export default async function LocaleLayout({
         <link rel="alternate" hrefLang="zh" href="https://claude.develop-on.co.kr/zh" />
         <link rel="alternate" hrefLang="es" href="https://claude.develop-on.co.kr/es" />
         <link rel="alternate" hrefLang="fr" href="https://claude.develop-on.co.kr/fr" />
+        {/* Google tag (gtag.js) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-VX16G6RCVS"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-VX16G6RCVS');
+            `,
+          }}
+        />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} ${notoSansKR.variable} antialiased`}>
         <script
