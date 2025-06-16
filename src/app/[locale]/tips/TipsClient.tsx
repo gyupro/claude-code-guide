@@ -441,10 +441,10 @@ Remember, your goal is to enhance Claude's performance and consistency while mai
                 {dictionary.tips.conclusionText}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href={`/${locale}/getting-started`} className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:shadow-lg transition-all">
+                <Link href={`/getting-started`} className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:shadow-lg transition-all">
                   {dictionary.tips.getStarted}
                 </Link>
-                <Link href={`/${locale}/usage-guide`} className="border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-200 px-6 py-3 rounded-lg font-medium hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                <Link href={`/usage-guide`} className="border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-200 px-6 py-3 rounded-lg font-medium hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
                   {dictionary.tips.viewMoreGuides}
                 </Link>
               </div>

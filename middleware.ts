@@ -104,7 +104,8 @@ export const config = {
   // - API routes
   // - Static files (images, fonts, etc.)
   // - Next.js internals
+  // - PWA icons and manifest files
   matcher: [
-    '/((?!api|_next/static|_next/image|favicon.ico|robots.txt|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)'
+    '/((?!api|_next/static|_next/image|favicon.ico|robots.txt|sitemap.xml|manifest.json|icon-.*\\.png|apple-icon.*\\.png|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)'
   ]
 };

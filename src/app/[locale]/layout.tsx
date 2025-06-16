@@ -218,6 +218,8 @@ export default async function LocaleLayout({
         <link rel="alternate" hrefLang="zh" href="https://claude.develop-on.co.kr/zh" />
         <link rel="alternate" hrefLang="es" href="https://claude.develop-on.co.kr/es" />
         <link rel="alternate" hrefLang="fr" href="https://claude.develop-on.co.kr/fr" />
+      </head>
+      <body className={`${geistSans.variable} ${geistMono.variable} ${notoSansKR.variable} antialiased`}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -226,8 +228,6 @@ export default async function LocaleLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
         />
-      </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} ${notoSansKR.variable}`}>
         <ClientLayout dictionary={dictionary} locale={locale}>
           {children}
         </ClientLayout>
