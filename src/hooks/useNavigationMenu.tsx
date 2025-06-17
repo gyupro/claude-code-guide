@@ -63,6 +63,20 @@ export const useNavigationMenu = (): UseNavigationMenuReturn => {
     return () => document.removeEventListener('keydown', handleEscape);
   }, [isMobileMenuOpen]);
 
+  // 모바일 메뉴 열림 시 body 스크롤 방지
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+
+    // Cleanup function to reset overflow when component unmounts
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isMobileMenuOpen]);
+
   // 외부 클릭 감지
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
