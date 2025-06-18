@@ -534,7 +534,7 @@ export default function MCPClient({ locale, dictionary }: MCPClientProps) {
               {dictionary.mcp?.practicalUsage?.startTutorials || 'Start Tutorial'}
             </a>
             <a 
-              href="https://github.com/punkpeye/awesome-mcp-servers" 
+              href="https://glama.ai/mcp/servers" 
               target="_blank" 
               rel="noopener noreferrer"
               className="border border-blue-300 dark:border-blue-600 text-blue-600 dark:text-blue-400 px-8 py-3 rounded-lg font-medium hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors text-center"
