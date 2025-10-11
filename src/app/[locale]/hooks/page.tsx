@@ -11,7 +11,7 @@ export async function generateMetadata({ params }: HooksPageProps): Promise<Meta
   const { locale } = await params;
   const dictionary = await getDictionary(locale);
 
-  const title = `${dictionary.navigation.hooks} | Claude Code`;
+  const title = `${(dictionary.navigation as any)?.hooks || 'Hooks'} | Claude Code`;
   const description = locale === 'ko'
     ? 'Claude Code의 이벤트 훅으로 워크플로우를 커스터마이즈하세요. 코드 포맷팅, 알림, 보안 검증 등을 자동화하는 방법을 배워보세요.'
     : 'Customize your workflow with Claude Code event hooks. Learn how to automate code formatting, notifications, security validation, and more.';
