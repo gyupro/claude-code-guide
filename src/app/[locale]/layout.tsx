@@ -40,6 +40,8 @@ export async function generateMetadata({
   const localeMap: Record<Locale, string> = {
     'en': 'en_US',
     'ko': 'ko_KR',
+    'ja': 'ja_JP',
+    'zh': 'zh_CN',
   };
 
   const baseUrl = 'https://claude.develop-on.co.kr';
@@ -100,6 +102,8 @@ export async function generateMetadata({
       languages: {
         'en': `${baseUrl}/en`,
         'ko': `${baseUrl}/ko`,
+        'ja': `${baseUrl}/ja`,
+        'zh': `${baseUrl}/zh`,
         'x-default': `${baseUrl}/en`,
       },
     },
@@ -206,6 +210,8 @@ export default async function LocaleLayout({
         <link rel="alternate" hrefLang="x-default" href="https://claude.develop-on.co.kr/en" />
         <link rel="alternate" hrefLang="en" href="https://claude.develop-on.co.kr/en" />
         <link rel="alternate" hrefLang="ko" href="https://claude.develop-on.co.kr/ko" />
+        <link rel="alternate" hrefLang="ja" href="https://claude.develop-on.co.kr/ja" />
+        <link rel="alternate" hrefLang="zh" href="https://claude.develop-on.co.kr/zh" />
         {/* Google tag (gtag.js) */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-VX16G6RCVS"></script>
         <script

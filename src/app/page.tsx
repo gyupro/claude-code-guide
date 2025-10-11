@@ -9,7 +9,7 @@ export default function RootPage() {
   useEffect(() => {
     // Check for stored language preference first
     const storedLocale = localStorage.getItem('preferredLanguage');
-    if (storedLocale && ['en', 'ko'].includes(storedLocale)) {
+    if (storedLocale && ['en', 'ko', 'ja', 'zh'].includes(storedLocale)) {
       router.replace(`/${storedLocale}`);
       return;
     }
@@ -20,6 +20,10 @@ export default function RootPage() {
     // Language detection with priority order
     if (browserLanguage.startsWith('ko')) {
       router.replace('/ko');
+    } else if (browserLanguage.startsWith('ja')) {
+      router.replace('/ja');
+    } else if (browserLanguage.startsWith('zh')) {
+      router.replace('/zh');
     } else {
       // Default to English
       router.replace('/en');

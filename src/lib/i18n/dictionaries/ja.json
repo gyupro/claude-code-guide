@@ -1,0 +1,744 @@
+{
+  "metadata": {
+    "title": "Claude Code 使用ガイド | ターミナル AI コーディングアシスタント",
+    "description": "包括的なガイドと実践的なチュートリアル、実際の活用事例でClaude Codeをマスターしましょう。ターミナルでAIと一緒に開発生産性を向上させる方法を学びましょう。",
+    "keywords": "Claude Code, AIコーディング, ターミナル, 開発ツール, プログラミング, 人工知能, コーディングアシスタント"
+  },
+  "navigation": {
+    "home": "ホーム",
+    "gettingStarted": "始める",
+    "usageGuide": "使用ガイド",
+    "tutorials": "チュートリアル",
+    "tips": "コツ",
+    "mcp": "MCP",
+    "community": "コミュニティ",
+    "useCases": "活用事例",
+    "subtitle": "使用ガイド",
+    "openMenu": "メニューを開く",
+    "closeMenu": "メニューを閉じる"
+  },
+  "home": {
+    "title": "ターミナルでのAIコーディングアシスタント",
+    "subtitle": "包括的な日本語ガイド、実践的なチュートリアル、実際の例でClaude Codeをマスターしましょう。ターミナルでAIと一緒に開発生産性を向上させる方法を学びましょう。",
+    "getStarted": "始める",
+    "learnMore": "詳しく学ぶ",
+    "features": {
+      "title": "Claude Codeの主要機能",
+      "subtitle": "ターミナルでAI駆動コーディングによって開発生産性を最大化",
+      "aiPowered": {
+        "title": "AI駆動",
+        "description": "最先端のAI技術でコーディングプロセスを向上させます。"
+      },
+      "terminalIntegration": {
+        "title": "ターミナル統合",
+        "description": "お気に入りのターミナル環境でシームレスに動作します。"
+      },
+      "multilingual": {
+        "title": "多言語対応",
+        "description": "世界中の開発者のために複数の言語をサポートします。"
+      }
+    },
+    "quickStart": {
+      "title": "クイックスタートガイド",
+      "subtitle": "2つの簡単なステップでClaude Codeを始めましょう",
+      "installation": {
+        "title": "1. Claude Codeをインストール",
+        "description": "1つのコマンドですべてをセットアップ。"
+      },
+      "startCoding": {
+        "title": "2. コーディングを開始",
+        "description": "AIアシスト付きコーディングセッションを起動。"
+      }
+    },
+    "useCases": {
+      "title": "実際の使用例",
+      "subtitle": "Claude Codeでよりスマートに開発する様々な方法を発見しましょう",
+      "codeReview": {
+        "title": "コードレビューとリファクタリング",
+        "description": "AIがコード品質を分析し、改善点を提案します。パフォーマンス最適化とベストプラクティスの適用を自動的に支援します。",
+        "linkText": "詳しく見る →"
+      },
+      "testGeneration": {
+        "title": "テストコード生成",
+        "description": "関数やクラスに対するユニットテストを自動生成します。Jest、Pytestなど、さまざまなテストフレームワークをサポートします。",
+        "linkText": "チュートリアルを見る →"
+      },
+      "documentation": {
+        "title": "ドキュメント生成",
+        "description": "README、APIドキュメント、コメントを自動生成します。コードの変更に合わせてドキュメントをリアルタイムで更新します。",
+        "linkText": "コツを見る →"
+      },
+      "debugging": {
+        "title": "デバッグとエラー修正",
+        "description": "エラーメッセージを分析し、解決策を提供します。ログファイルを読み取り、バグの根本原因を素早く特定します。",
+        "linkText": "始める →"
+      }
+    }
+  },
+  "common": {
+    "selectLanguage": "言語を選択",
+    "copyError": "コピー失敗:",
+    "copied": "コピーしました!",
+    "bannerAlt": "Claude Code バナー",
+    "copyright": "© 2025 Claude Code 使用ガイド. MIT License.",
+    "email": "gyupro89@gmail.com",
+    "keyTip": "重要なヒント",
+    "switchToDarkMode": "ダークモードに切り替え",
+    "switchToLightMode": "ライトモードに切り替え",
+    "toggleTheme": "テーマを切り替え"
+  },
+  "gettingStarted": {
+    "title": "Claude Code を始める",
+    "subtitle": "システム要件から最初のプロジェクト設定まで、完全なインストールガイド。",
+    "systemRequirements": "システム要件の確認",
+    "installation": "Claude Code のインストール",
+    "authentication": "認証設定",
+    "firstProject": "最初のプロジェクト",
+    "copyToClipboard": "クリップボードにコピー",
+    "copied": "コピーしました！",
+    "systemRequirementsDetail": {
+      "operatingSystem": "オペレーティングシステム",
+      "requirements": "必須要件",
+      "network": "ネットワーク",
+      "stableConnection": "安定したインターネット接続",
+      "windowsNote": "Windowsユーザーへの注意",
+      "windowsWarning": "Claude CodeはWindowsでは直接実行できません。WSL（Windows Subsystem for Linux）環境で実行してください。"
+    },
+    "installationDetail": {
+      "installOneCommand": "コマンド一つでインストール",
+      "beforeInstallation": "インストール前の確認事項",
+      "nodeRequirement": "Node.js 18+が必要です。node --versionで確認し、nodejs.orgからインストールしてください。"
+    },
+    "authenticationDetail": {
+      "startInProject": "プロジェクトで始める",
+      "recommended": "推奨方法",
+      "subscription": "サブスクリプション",
+      "enterprise": "エンタープライズ"
+    },
+    "firstProjectDetail": {
+      "understandingProject": "プロジェクト理解",
+      "projectInitialization": "プロジェクト初期化",
+      "setupComplete": "設定完了！",
+      "readyToStart": "Claude Codeと一緒にスマートな開発を始めることができます。"
+    },
+    "nextSteps": {
+      "title": "次のステップ",
+      "learnBasicUsage": "基本使用法を学ぶ",
+      "exploreAdvanced": "高度な機能を探す",
+      "backToHome": "ホームに戻る",
+      "examples": {
+        "askCode": "コードについて質問: \"認証の仕組みを説明して\"",
+        "editFiles": "ファイル編集: \"フォームに入力検証を追加して\"",
+        "runTests": "テスト実行: \"テストを実行して失敗を修正して\"",
+        "extendedThinking": "拡張思考: \"この機能のアーキテクチャについて深く考えて\"",
+        "gitAutomation": "Git自動化: \"この機能のPRを作成して\"",
+        "webSearch": "ウェブ検索: Claudeが自動的にドキュメントを検索して参照"
+      }
+    }
+  },
+  "usageGuide": {
+    "title": "Claude Code 完全活用ガイド",
+    "subtitle": "ターミナルでAIと開発する新しい方法を学びましょう。基本コマンドから高度な自動化まで、ステップバイステップでガイドします。",
+    "basicCommands": "基本コマンド",
+    "coreWorkflows": "開発ワークフロー",
+    "advancedFeatures": "高度な活用法",
+    "cliOptions": "CLIオプション & 設定",
+    "copyToClipboard": "クリップボードにコピー",
+    "basicCommandsDetail": {
+      "description": "ターミナルでClaudeと対話する基本的な方法を学びましょう。",
+      "items": {
+        "interactiveSession": {
+          "title": "対話セッション",
+          "description": "claudeコマンドで会話を開始"
+        },
+        "quickQuestions": {
+          "title": "クイック質問",
+          "description": "claude -p \"質問\"で即座に回答を取得"
+        },
+        "fileAnalysis": {
+          "title": "ファイル分析",
+          "description": "cat file.js | claudeでファイル内容を分析"
+        }
+      }
+    },
+    "coreWorkflowsDetail": {
+      "description": "実際の開発プロセスでよく使用されるパターンを学びましょう。",
+      "items": {
+        "projectExploration": {
+          "title": "プロジェクト探索",
+          "description": "\"このプロジェクトを説明して\" - 包括的なコードベース分析"
+        },
+        "smartEditing": {
+          "title": "スマート編集",
+          "description": "\"バグを修正して\" - コンテキストベースのコード修正"
+        },
+        "gitWorkflow": {
+          "title": "Gitワークフロー",
+          "description": "\"PRを作成して\" - 自動コミットメッセージとプルリクエスト"
+        }
+      }
+    },
+    "advancedFeaturesDetail": {
+      "description": "Claude Codeの高度な機能で開発生産性を最大化しましょう。",
+      "items": {
+        "deepThinking": {
+          "title": "ディープシンキングモード",
+          "description": "複雑なアーキテクチャ設計と問題解決"
+        },
+        "projectMemory": {
+          "title": "プロジェクトメモリ",
+          "description": "CLAUDE.mdでプロジェクトルールとコンテキストを管理"
+        },
+        "realtimeSearch": {
+          "title": "リアルタイム文書検索",
+          "description": "最新ライブラリ文書の自動参照"
+        }
+      }
+    },
+    "cliOptionsDetail": {
+      "description": "コマンドラインツールの様々なオプションと環境設定方法を学びましょう。",
+      "items": {
+        "builtinCommands": {
+          "title": "内蔵コマンド",
+          "description": "/init、/help、/compact、/memoryなどのユーティリティ"
+        },
+        "executionOptions": {
+          "title": "実行オプション",
+          "description": "--allowedTools、--modelなどのフラグ活用"
+        },
+        "environmentSetup": {
+          "title": "環境設定",
+          "description": "APIキー、モデル選択、プロキシ設定"
+        }
+      }
+    },
+    "quickExamples": {
+      "title": "実践コマンド例",
+      "projectAnalysis": "プロジェクト分析",
+      "developmentWork": "開発作業",
+      "labels": {
+        "projectUnderstanding": "プロジェクト理解",
+        "apiDocumentation": "APIドキュメント",
+        "featureAddition": "機能追加",
+        "testAutomation": "テスト自動化"
+      }
+    },
+    "bestPractices": {
+      "title": "生産性を高める実践のコツ",
+      "items": {
+        "specificInstructions": {
+          "title": "具体的な指示",
+          "description": "\"エラーを修正して\"ではなく、\"user.tsxの34行目のnull参照エラーを修正して\"のように具体的に依頼しましょう。"
+        },
+        "incrementalDevelopment": {
+          "title": "段階的開発",
+          "description": "機能全体を一度に実装せず、小さな単位に分けて段階的に構築しましょう。"
+        },
+        "projectMemoryTip": {
+          "title": "プロジェクトメモリ",
+          "description": "CLAUDE.mdファイルにプロジェクトルールとコンテキストを明記して一貫した結果を得ましょう。"
+        }
+      }
+    }
+  },
+  "tutorials": {
+    "title": "Claude Code 実践チュートリアル",
+    "subtitle": "ステップバイステップガイドと実際の例を通じて、Claude Codeの強力な機能をマスターしましょう。日常のワークフローから高度な自動化まで体系的に学習できます。",
+    "quickStart": "クイックスタートチュートリアル",
+    "quickStartTutorials": {
+      "resumeConversations": {
+        "title": "前の会話を再開する",
+        "description": "作業を中断した後、後で続きから続行する方法を学びます。",
+        "continueLatest": "最新の会話を続ける",
+        "useSelector": "会話セレクターを使用",
+        "tip": "すべての会話はローカルに自動保存され、コンテキストとツール使用履歴がすべて保持されます。"
+      },
+      "understandingCodebases": {
+        "title": "新しいコードベースを理解する",
+        "description": "初めて接するプロジェクトの構造とアーキテクチャを素早く把握する方法を学びます。",
+        "getOverview": "全体概要を把握する",
+        "findFeatures": "特定の機能を見つける",
+        "tip": "広い質問から始めて、徐々に具体的な領域に絞り込んでください。Claude Opus 4の向上したコンテキスト理解能力により、より正確な分析が可能です。"
+      }
+    },
+    "coreWorkflows": {
+      "title": "コア ワークフロー チュートリアル",
+      "bugFixing": {
+        "title": "効率的なバグ修正",
+        "description": "エラーメッセージ分析から根本原因の特定、修正の適用までの全プロセス"
+      },
+      "codeRefactoring": {
+        "title": "コードリファクタリング",
+        "description": "レガシーコードを現代的なパターンに安全に更新する方法"
+      },
+      "testing": {
+        "title": "テスト作業",
+        "description": "テストカバレッジの追加、失敗テストの分析、エッジケースの発見"
+      },
+      "prCreation": {
+        "title": "PR作成",
+        "description": "変更内容の要約から詳細なPR説明の作成まで自動化"
+      },
+      "documentation": {
+        "title": "ドキュメント化",
+        "description": "コードコメント、APIドキュメント、README更新の自動化"
+      },
+      "imageWork": {
+        "title": "画像作業",
+        "description": "スクリーンショット、図、デザインモックアップを活用した開発",
+        "dragDrop": "ドラッグ&ドロップで画像を追加"
+      }
+    },
+    "startNow": {
+      "title": "今すぐチュートリアルを始めましょう",
+      "description": "ステップバイステップガイドに従ってClaude Codeの強力な機能を一つずつ学びましょう。基本コマンドから高度な自動化まで、実務にすぐに適用できる実践的な知識を習得できます。",
+      "installButton": "Claude Code をインストール",
+      "learnButton": "基本使用法を学ぶ"
+    },
+    "common": {
+      "tip": "コツ"
+    }
+  },
+  "tips": {
+    "title": "実践のコツ",
+    "subtitle": "実際の開発現場でClaude Codeを使って生産性を最大化する実用的なコツとノウハウを共有します。",
+    "copied": "コピーしました！",
+    "mainTitle": "Claude Code実践的なヒント",
+    "mainSubtitle": "大規模プロジェクトで検証された実証済みClaude Codeテクニック",
+    "detailSubtitle": "実際の本番環境で検証されたヒント",
+    "detailDescription": "Claude Pro MAXサブスクリプションで、1日１２時間、1週間働いた大規模ウェブアプリ再設計プロジェクトを通じて検証された生産性のヒントを共有します。",
+    "planningTitle": "計画、計画、そしてまた計画",
+    "planningDescription": "大きな機能や変更を実装する際は、すぐにコーディングを始めないでください。Claudeに既存のコードやドキュメントを分析させ、マークダウンファイルで計画を作成させましょう。",
+    "planningPractical": "実際の応用を見る",
+    "planningList": {
+      "codebaseAnalysis": "既存のコードベース構造の分析を依頼",
+      "implementationPlan": "マークダウンでステップバイステップの実装計画を作成",
+      "nuanceUnderstanding": "計画フェーズでニュアンスを理解するためにOpenAI o3モデルと一緒に使用",
+      "structuredRoadmap": "構造化されたロードマップに基づいて作業を進める"
+    },
+    "planningNote": "計画フェーズに投資した時間は、実装中に10倍になって戻ってきます。構造化された計画がある場合とない場合の品質の違いは歴然です。",
+    "rulesTitle": "ルールはあなたの親友",
+    "rulesDescription": "最初は、Claudeが同じミスを繰り返し続けてイライラしましたが、CLAUDE.mdルールファイルを管理し始めてからすべてが変わりました。",
+    "rulesExample": "CLAUDE.md使用例",
+    "rulesExampleContent": {
+      "title": "# パッケージ関連のルール",
+      "breakingChanges": "- 最新パッケージバージョンのブレーキングチェンジに注意",
+      "checkDocs": "- コーディング前に必ず公式ドキュメントを確認",
+      "noFakeSolutions": "- 偽のソリューション（モッキング、一時データ）を作成しない",
+      "focusReal": "- 実際の問題を解決することにのみ集中"
+    },
+    "rulesProTip": "プロのヒント",
+    "rulesProTipText": "#コマンドを使用して、CLAUDE.mdファイルに素早くルールを追加できます。",
+    "compactTitle": "/compactを頻繁に、早めに使用する",
+    "compactDescription": "大きな機能の作業中に、Claudeが自動コンパクトの限界に達した場合、重要なコンテキストを失い、管理不能になる可能性があります。",
+    "compactWrong": "間違ったアプローチ",
+    "compactWrongList": {
+      "waitingAuto": "自動コンパクトを待つ",
+      "reworkAfterLoss": "コンテキスト喪失後の再作業",
+      "regenerateCompleted": "完成したファイルの再生成"
+    },
+    "compactCorrect": "正しいアプローチ",
+    "compactCorrectList": {
+      "manualEarly": "手動で早めに/compactを実行",
+      "specifyGoals": "次の目標を明確に指定",
+      "maintainWorkflow": "一貫したワークフローを維持"
+    },
+    "compactResult": "これらの3つのルールに従うだけで、全体的なエクスペリエンスが大幅に改善されます。Claude Codeをノンストップで実行しながら、驚くべき結果を得ることができました。",
+    "optimizationTitle": "CLAUDE.mdの継続的な最適化",
+    "optimizationDescription": "CLAUDE.mdファイル自体を継続的に改善する強力な方法を発見しました。`/project:reflection`コマンドを作成して、Claudeに現在の指示を分析させ、改善を提案させます。",
+    "optimizationReflection": "リフレクションプロンプトを表示（コピー可能）",
+    "optimizationReflectionLabel": "リフレクションプロンプト：",
+    "optimizationCopy": "コピー",
+    "optimizationExamples": "リフレクション結果の例",
+    "optimizationExamplesList": {
+      "jiraIntegration": "Jira/Atlassian統合指示の不足",
+      "docGeneration": "ドキュメント生成ガイドラインの欠如",
+      "refactoringStrategy": "リファクタリング戦略ガイドラインの必要性",
+      "projectContext": "プロジェクトコンテキスト情報の不足",
+      "incrementalDev": "漸進的開発プロセスガイドの必要性"
+    },
+    "optimizationBenefit": "各リフレクションサイクルごとに、コーディングアシスタントがプロジェクト要件を理解する能力が測定可能に改善されます。",
+    "additionalTips": "追加の実践的なヒント",
+    "clearInstructions": "明確な指示",
+    "clearInstructionsText": "「ファイルを修正して」ではなく、「User.tsxの23行目のuseStateの初期値をnullに変更して」のように具体的にリクエストしてください。",
+    "incrementalDev": "漸進的開発",
+    "incrementalDevText": "一度にすべてを実装しようとせず、小さな単位に分割して漸進的に開発してください。",
+    "trackChanges": "変更の追跡",
+    "trackChangesText": "各ステップで何が変更されるかを確認し、結果が期待と異なる場合はすぐにフィードバックを提供してください。",
+    "continuousImprovement": "CLAUDE.mdの継続的改善",
+    "continuousImprovementText": "定期的に`/project:reflection`コマンドを実行してCLAUDE.mdファイルを分析し、改善点を見つけて適用してください。",
+    "testFirst": "テストファースト",
+    "testFirstText": "機能を実装する前にテストケースを書くと、より安定したコードにつながります。",
+    "codeReview": "コードレビュー",
+    "codeReviewText": "Claudeが生成したコードを常にレビューし、プロジェクトのコーディングスタイルに一致しているか確認してください。",
+    "projectContext": "プロジェクトコンテキスト",
+    "projectContextText": "より良い意思決定のために、現在のエピック、プロジェクト目標、ビジネスコンテキストをCLAUDE.mdに含めてください。",
+    "toolIntegration": "ツール統合ガイド",
+    "toolIntegrationText": "Jira、Slack、データベースなどのツールのMCP接続方法と使用法を指定してください。",
+    "conclusion": "Claude Codeは本当に強力なツールです",
+    "conclusionText": "大規模な作業を簡単に処理し、適切に使用すれば信じられないほど強力です。これらのヒントを使って、あなた自身も驚くべき生産性を体験してください。",
+    "getStarted": "始める",
+    "viewMoreGuides": "もっとガイドを見る"
+  },
+  "mcp": {
+    "title": "MCPプロトコルガイド",
+    "subtitle": "MCP（Model Context Protocol）サーバーでClaude Codeの機能を拡張する方法を学びましょう。",
+    "heroTitle": "Model Context Protocol (MCP)",
+    "heroSubtitle": "Claude Codeと外部データソースを安全に接続するオープン標準プロトコル",
+    "copyToClipboard": "クリップボードにコピー",
+    "whatIsMcp": {
+      "title": "Claude CodeにおけるMCPとは？",
+      "description": "MCPは、Claude Codeが外部ツールやデータにアクセスできるようにする標準プロトコルです。AnthropicはMCPを「エージェントシステムのUSB-C」と呼び、Claude Codeを単純なコーディングツールから、開発エコシステム全体に接続された強力なAIアシスタントに変貌させます。",
+      "possibleTitle": "Claude Code + MCPで可能なこと",
+      "features": {
+        "supabase": "Supabaseデータベースの直接操作",
+        "github": "GitHubリポジトリの自動管理",
+        "slack": "Slackメッセージの自動送信",
+        "filesystem": "ローカルファイルシステムへの安全なアクセス",
+        "postgresql": "PostgreSQLスキーマ分析",
+        "notion": "Notionタスク管理",
+        "browser": "Webブラウザ自動化",
+        "monitoring": "リアルタイムログ監視"
+      },
+      "example": {
+        "title": "簡単な例",
+        "description": "『今日登録したユーザーをユーザーテーブルから検索してSlackの#growthチャンネルに報告して』と言うと、Claude CodeがMCPを通じてデータベース検索からSlackメッセージ送信まで自動的に処理します。"
+      }
+    },
+    "popularServers": {
+      "title": "実務でよく使用されるMCPサーバー",
+      "subtitle": "開発者が実際に最も多く使用するMCPサーバーとClaude Codeでの活用法：",
+      "essential": {
+        "title": "必須MCPサーバー",
+        "supabase": {
+          "title": "Supabase MCP",
+          "description": "バックエンド開発の完全自動化。データベース管理からEdge Function配布まで。",
+          "examples": {
+            "createTable": "ユーザー認証テーブルを作成して",
+            "queryUsers": "今日登録したユーザー数を検索して"
+          }
+        },
+        "github": {
+          "title": "GitHub MCP",
+          "description": "リポジトリ管理、イシュー追跡、PR自動化を自然言語で。",
+          "examples": {
+            "issueToPr": "バグイシューをPRに変換して",
+            "releaseNotes": "最近のコミットを分析してリリースノートを作成して"
+          }
+        }
+      },
+      "highValue": {
+        "title": "高価値MCPサーバー",
+        "slack": {
+          "title": "Slack MCP",
+          "description": "チームコミュニケーション自動化。配布通知、エラー報告、ステータス更新。",
+          "examples": {
+            "deployNotify": "配布完了を#devチャンネルに知らせて",
+            "shareErrors": "エラーログをチームに共有して"
+          }
+        },
+        "postgresql": {
+          "title": "PostgreSQL MCP",
+          "description": "データベーススキーマ分析、パフォーマンス最適化、安全なクエリ実行。",
+          "examples": {
+            "optimizeQueries": "遅いクエリを分析して最適化を提案して",
+            "drawDiagram": "テーブル関係図を描いて"
+          }
+        }
+      },
+      "proTip": {
+        "title": "プロのヒント",
+        "description": "複数のMCPサーバーを組み合わせると完全なワークフロー自動化が可能です。例：GitHubイシュー → コード修正 → テスト → 配布 → Slack通知まで全て自然言語一回で！"
+      }
+    },
+    "practicalUsage": {
+      "title": "Claude Code + MCP実戦活用",
+      "startTutorials": "実戦MCPチュートリアル開始",
+      "viewMoreServers": "より多くのMCPサーバーを見る"
+    },
+    "tutorials": {
+      "title": "MCPプロトコルチュートリアル",
+      "supabaseTutorial": {
+        "title": "Supabase MCPマスターガイド",
+        "description": "最も人気のあるMCPサーバーであるSupabaseをClaude Codeに接続して、バックエンド開発を完全に自動化しましょう。",
+        "quickSetup": {
+          "title": "クイックセットアップ",
+          "command": "claude mcp add supabase -e SUPABASE_ACCESS_TOKEN=your_token npx -y @supabase/mcp-server-supabase@latest",
+          "description": "Supabase個人アクセストークンでMCPサーバーを接続（設定 → アクセストークンで生成）"
+        },
+        "practicalExamples": {
+          "title": "実践使用例",
+          "example1": {
+            "command": "ブログ投稿を保存するテーブルを作成して",
+            "result": "→ スキーマ設計 → テーブル作成 → RLSポリシー設定"
+          },
+          "example2": {
+            "command": "ユーザー認証Edge Functionを作成してデプロイして",
+            "result": "→ 関数作成 → テスト → ライブデプロイ"
+          },
+          "example3": {
+            "command": "現在のデータベース使用量とコストを分析して",
+            "result": "→ 使用量クエリ → コスト計算 → 最適化提案"
+          },
+          "example4": {
+            "command": "usersテーブルにリアルタイムサブスクリプションを設定して",
+            "result": "→ Realtime有効化 → サブスクリプション設定 → イベントリスナー作成"
+          }
+        },
+        "proTip": {
+          "title": "プロのヒント",
+          "description": "「データベースコストを分析して」「遅いクエリを最適化して」などの高度なコマンドも使用可能です！"
+        }
+      },
+      "workflowAutomation": {
+        "title": "完全ワークフロー自動化",
+        "description": "GitHub + Supabase + Slackを連携して「イシュー受付 → コード修正 → デプロイ → チーム通知」まで一度に！",
+        "steps": {
+          "step1": {
+            "title": "GitHub接続",
+            "command": "claude mcp add github"
+          },
+          "step2": {
+            "title": "Supabase接続", 
+            "command": "claude mcp add supabase"
+          },
+          "step3": {
+            "title": "Slack接続",
+            "command": "claude mcp add slack"
+          }
+        },
+        "magicCommand": {
+          "title": "魔法の一行コマンド",
+          "command": "GitHubイシュー#42を分析して修正し、デプロイ後Slack #devに通知して",
+          "workflow": [
+            "→ イシュー内容分析と関連コードファイル検索",
+            "→ バグ修正コード作成とテスト", 
+            "→ GitHubにPR作成とマージ",
+            "→ SupabaseにEdge Functionデプロイ",
+            "→ Slackチャンネルに完了通知送信"
+          ]
+        },
+        "additionalExamples": {
+          "title": "追加ワークフロー例",
+          "example1": {
+            "command": "毎日午前9時にデータベースをバックアップしてSlackに結果を通知して",
+            "description": "定期バックアップ自動化"
+          },
+          "example2": {
+            "command": "新しいPRが開かれたら自動でテストを実行して結果をコメントして",
+            "description": "CI/CD自動化"
+          },
+          "example3": {
+            "command": "データベースパフォーマンスが低下したら自動で最適化してチームに報告して",
+            "description": "パフォーマンス監視自動化"
+          }
+        },
+        "realWorldExample": {
+          "title": "実例",
+          "description": "スタートアップがこのワークフローでバグ修正時間を3時間から15分に短縮しました！"
+        }
+      }
+    }
+  },
+  "community": {
+    "title": "Claude Code 学習コミュニティ",
+    "subtitle": "開発者がClaude Codeを一緒に学び、経験を共有する場所です。YouTubeレクチャー、オープンソースプロジェクト、実践的なコツを共有します。",
+    "heroTitle": "Claude Code 学習コミュニティ",
+    "heroSubtitle": "開発者が一緒にClaude Codeを学び、経験を共有する空間です。YouTubeチュートリアル、オープンソースプロジェクト、実用的なティップスを共有しています。",
+    "videos": {
+      "title": "学習動画コンテンツ",
+      "featured": {
+        "title": "Claude Code 活用法完全ガイド",
+        "description": "実際の開発現場でClaude Codeをどのように活用するか、生産性を高めるコア技術を詳しく説明します。"
+      },
+      "quickStart": {
+        "title": "Claude Code クイックスタートチュートリアル",
+        "description": "初めて使用する方のための基本設定から最初のプロジェクトまでステップバイステップで案内する初心者向けチュートリアルです。"
+      },
+      "advanced": {
+        "title": "高級機能深層講義",
+        "description": "MCP連携、自動化スクリプト、複雑なプロジェクト管理などClaude Codeの高級機能を実務中心に扱います。"
+      }
+    },
+    "github": {
+      "title": "オープンソースプロジェクト",
+      "mainRepo": {
+        "title": "Claude Code",
+        "description": "Claude Codeの公式リポジトリで、最新バージョンのダウンロードとドキュメントを提供します。バグレポートや機能提案もこちらで行えます。",
+        "features": {
+          "installation": "インストールガイド & ドキュメント",
+          "issues": "イシューレポート & ディスカッション",
+          "downloads": "最新リリースダウンロード"
+        }
+      },
+      "actionRepo": {
+        "title": "Claude Code Action",
+        "description": "GitHub ActionsワークフローでClaude Codeを使用できるようにするアクションです。自動化されたコードレビューとイシュー処理が可能です。",
+        "features": {
+          "integration": "GitHub Actions 連携",
+          "automation": "自動化ワークフロー",
+          "templates": "設定例 & テンプレート"
+        }
+      }
+    },
+    "cta": {
+      "title": "Claude Codeと一緒により良い開発者に",
+      "description": "AIコーディングツールの力を活用して開発生産性を高め、より創造的で意味のあるコーディングに集中してみてください。",
+      "contribute": "オープンソース貢献",
+      "getStarted": "今すぐ始める"
+    }
+  },
+  "useCases": {
+    "title": "実践活用事例集",
+    "subtitle": "様々なチームやプロジェクトでClaude Codeを活用して開発生産性と業務効率性を最大化した実際の事例を紹介します。",
+    "heroTitle": "実戦活用事例コレクション",
+    "heroSubtitle": "様々なチームやプロジェクトでClaude Codeを活用して開発生産性と業務効率性を最大化した実際の事例を紹介します。",
+    "teams": {
+      "backend": {
+        "title": "バックエンド開発チーム",
+        "description": "サーバーインフラとデータベース管理でClaude Codeを活用した革新的なワークフロー",
+        "achievements": {
+          "title": "主な成果",
+          "sql": "複雑なSQLクエリを自然言語で生成および最適化",
+          "api": "APIエンドポイント自動生成および文書化",
+          "logs": "サーバーログ分析でパフォーマンスボトルネック自動検知"
+        },
+        "tip": "データベーススキーマとビジネスロジックをCLAUDE.mdに明記し、MCP連携で安全にDB作業を自動化してください。"
+      },
+      "frontend": {
+        "title": "フロントエンド開発チーム",
+        "description": "ユーザーインターフェースとユーザーエクスペリエンス開発でClaude Codeで達成した革新的成果",
+        "achievements": {
+          "title": "主な成果",
+          "design": "デザインモックアップをコードに自動変換",
+          "responsive": "レスポンシブレイアウトとアニメーション実装自動化",
+          "components": "コンポーネントライブラリ一貫性維持および拡張"
+        },
+        "tip": "スクリーンショットとデザインファイルを積極的に活用し、スタイルガイドをCLAUDE.mdに明記して一貫したUIを維持してください。"
+      },
+      "devops": {
+        "title": "DevOpsチーム",
+        "description": "CI/CDパイプラインとインフラ自動化でClaude Codeを活用した革新的アプローチ",
+        "achievements": {
+          "title": "主な成果",
+          "kubernetes": "Kubernetesデプロイスクリプト自動生成",
+          "monitoring": "モニタリングアラーム設定および障害対応自動化",
+          "security": "インフラコードレビューおよびセキュリティチェック自動化"
+        },
+        "tip": "インフラ構成とデプロイパターンをCLAUDE.mdに文書化し、GitHub Actionsと連携して完全自動化を実装してください。"
+      },
+      "data": {
+        "title": "データ分析チーム",
+        "description": "データ分析と機械学習プロジェクトでClaude Codeを活用した効率的なワークフロー",
+        "achievements": {
+          "title": "主な成果",
+          "pipeline": "複雑なデータ前処理パイプライン自動生成",
+          "visualization": "データ可視化チャートコード自動作成",
+          "reports": "モデルパフォーマンス分析レポート自動生成"
+        },
+        "tip": "データセットスキーマと分析目標を明確にし、Jupyterノートブックと連携してインタラクティブな分析環境を構築してください。"
+      }
+    },
+    "roles": {
+      "title": "様々な职務別活用事例",
+      "qa": {
+        "title": "QAテストチーム",
+        "description": "テストケース自動生成とバグレポート作成を通じて品質管理効率性を大幅に向上",
+        "achievement": "エッジケース発見と回帰テスト自動化"
+      },
+      "documentation": {
+        "title": "技術文書チーム",
+        "description": "API文書、開発者ガイド、チュートリアル作成を自動化して文書品質と生産性を同時に向上",
+        "achievement": "コード例と文書同期化自動化"
+      },
+      "startup": {
+        "title": "スタートアップチーム",
+        "description": "少ない人力でも早いプロトタイピングとMVP開発を通じて市場参入時間を大幅に短縮",
+        "achievement": "1人開発者もフルスタック開発能力確保"
+      },
+      "ux": {
+        "title": "UXデザインチーム",
+        "description": "デザインモックアップを実際に動作するプロトタイプに素早く変換してユーザーテスト効率性向上",
+        "achievement": "デザイン-開発間コミュニケーションコスト最小化"
+      },
+      "individual": {
+        "title": "個人開発者",
+        "description": "一人でも複雑なWebアプリケーションを構築し、新しい技術スタックを素早く学習して適用",
+        "achievement": "ラーニングカーブ短縮と生産性ぎ倍向上"
+      },
+      "education": {
+        "title": "教育機関",
+        "description": "プログラミング教育と課題自動評価システム構築で教育品質と効率性を同時に改善",
+        "achievement": "個人カスタマイズ学習パスおよびフィードバック提供"
+      },
+      "common": {
+        "keyAchievement": "主な成果",
+        "keyTip": "主なヒント"
+      }
+    },
+    "strategies": {
+      "title": "成功的な活用のための主な戦略",
+      "productivity": {
+        "title": "生産性向上パターン",
+        "goals": "明確な目標設定: 解決しようとする問題を具体的に定義",
+        "progress": "段階的進行: 小さな単位に分けて漸進的実装",
+        "feedback": "フィードバックループ: 結果確認後即座改善適用",
+        "documentation": "文書化習慣: 学習したパターンを再利用可能に記録"
+      },
+      "teamStrategies": {
+        "title": "チーム別活用戦略",
+        "development": "開発チーム: コードレビュー、リファクタリング、自動化",
+        "design": "デザインチーム: プロトタイピング、UI実装",
+        "data": "データチーム: 分析スクリプト、可視化",
+        "qa": "QAチーム: テストケース、自動化",
+        "individual": "個人: 学習加速化、生産性向上"
+      }
+    },
+    "cta": {
+      "title": "今すぐClaude Codeを始めてみてください",
+      "description": "Anthropicチームの革新的な活用事例を参考にして、皆さんの業務にもClaude Codeを適用してみてください。開発者から非開発者まで、すべてのチームが生産性を最大化できます。",
+      "getStarted": "Claude Codeを始める",
+      "usageGuide": "使用法ガイド"
+    }
+  },
+  "common": {
+    "learnMore": "詳しく学ぶ",
+    "readMore": "もっと見る",
+    "getStarted": "始める",
+    "documentation": "ドキュメント",
+    "examples": "例",
+    "loading": "読み込み中...",
+    "error": "エラー",
+    "retry": "再試行",
+    "close": "閉じる",
+    "open": "開く",
+    "save": "保存",
+    "cancel": "キャンセル",
+    "confirm": "確認",
+    "back": "戻る",
+    "next": "次へ",
+    "previous": "前へ",
+    "search": "検索",
+    "filter": "フィルター",
+    "clear": "クリア",
+    "selectLanguage": "言語を選択"
+  },
+  "footer": {
+    "about": {
+      "title": "Claude Codeガイドについて",
+      "description": "Claude Code使用ガイドは、世界中の開発者がClaude Codeを使ったAIアシストコーディングをマスターできるように支援する総合的な学習リソースです。複数の言語でガイド、チュートリアル、実践的なヒントを提供しています。"
+    },
+    "links": {
+      "title": "クイックリンク"
+    },
+    "resources": {
+      "title": "リソース",
+      "documentation": "ドキュメント"
+    },
+    "contact": {
+      "title": "お問い合わせ",
+      "email": "メール"
+    },
+    "copyright": "© 2025 Claude Code使用ガイド. All rights reserved."
+  }
+}
