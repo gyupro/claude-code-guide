@@ -7,7 +7,12 @@
   "navigation": {
     "home": "首页",
     "gettingStarted": "开始使用",
+    "features": "功能",
+    "learn": "学习",
     "usageGuide": "使用指南",
+    "subagents": "子代理",
+    "plugins": "插件",
+    "hooks": "钩子",
     "tutorials": "教程",
     "tips": "技巧",
     "mcp": "MCP",
@@ -639,6 +644,190 @@
           }
         }
       }
+    }
+  },
+  "subagents": {
+    "title": "子代理",
+    "subtitle": "用于特定任务工作流的专业AI助手"
+  },
+  "plugins": {
+    "title": "插件",
+    "subtitle": "通过自定义命令、代理、钩子和MCP服务器扩展Claude Code",
+    "whatArePlugins": {
+      "title": "什么是插件？",
+      "description": "插件允许您使用自定义功能扩展Claude Code，这些功能可以在您的团队或整个社区之间共享。创建可重用的命令、专业代理、事件钩子和MCP服务器集成。",
+      "customCommands": "自定义命令",
+      "customCommandsDesc": "为常见工作流创建可重用的斜杠命令",
+      "teamSharing": "团队共享",
+      "teamSharingDesc": "在您的组织内共享插件",
+      "eventHooks": "事件钩子",
+      "eventHooksDesc": "响应Claude Code生命周期中的事件",
+      "mcpIntegration": "MCP集成",
+      "mcpIntegrationDesc": "将MCP服务器与您的插件捆绑在一起"
+    },
+    "pluginStructure": {
+      "title": "插件结构",
+      "step1": "plugin.json - 插件清单",
+      "step1Desc": "定义您的插件名称、版本、描述和提供的功能",
+      "step2": "commands/ - 可重用命令",
+      "step2Desc": "创建定义自定义斜杠命令的markdown文件",
+      "step3": "agents/ - 专业代理",
+      "step3Desc": "捆绑具有特定专业知识的预配置子代理",
+      "step4": "hooks/ - 事件处理器",
+      "step4Desc": "响应Claude Code事件的JavaScript文件"
+    },
+    "creatingPlugin": {
+      "title": "创建您的第一个插件",
+      "customCommand": {
+        "title": "自定义命令",
+        "desc": "为您的团队创建/deploy命令"
+      },
+      "manifest": {
+        "title": "插件清单",
+        "desc": "在plugin.json中定义插件元数据"
+      }
+    },
+    "distribution": {
+      "title": "插件分发",
+      "project": {
+        "title": "项目级别",
+        "desc": "与您的项目一起检入版本控制"
+      },
+      "team": {
+        "title": "团队注册表",
+        "desc": "在您的组织内共享"
+      },
+      "marketplace": {
+        "title": "插件市场",
+        "desc": "发布到社区市场"
+      }
+    },
+    "useCases": {
+      "title": "插件使用场景",
+      "teamWorkflows": {
+        "title": "团队工作流",
+        "item1": "标准化部署流程",
+        "item2": "代码审查模板",
+        "item3": "文档生成"
+      },
+      "domainExperts": {
+        "title": "领域专家",
+        "item1": "安全审计专家",
+        "item2": "数据库优化代理",
+        "item3": "API文档生成器"
+      }
+    },
+    "bestPractices": {
+      "title": "最佳实践",
+      "documentation": {
+        "title": "彻底的文档",
+        "desc": "提供清晰的README文件，解释您的插件做什么以及如何使用它"
+      },
+      "versioning": {
+        "title": "使用语义化版本",
+        "desc": "遵循语义化版本（major.minor.patch）以更好地管理兼容性"
+      },
+      "testing": {
+        "title": "测试您的插件",
+        "desc": "在与团队共享之前，在不同场景下验证插件"
+      },
+      "security": {
+        "title": "安全第一",
+        "desc": "不要在插件中包含密钥。对敏感数据使用环境变量"
+      }
+    },
+    "cta": {
+      "title": "准备创建您的第一个插件了吗？",
+      "description": "开始构建自定义功能，并与您的团队或整个社区共享"
+    }
+  },
+  "hooks": {
+    "title": "钩子",
+    "subtitle": "通过响应生命周期事件来自定义Claude Code行为",
+    "whatAreHooks": {
+      "title": "什么是钩子？",
+      "description": "钩子是响应Claude Code中特定事件而执行的JavaScript函数。它们允许您自定义行为、执行策略、集成外部工具和自动化工作流。",
+      "eventDriven": "事件驱动",
+      "eventDrivenDesc": "自动响应特定的生命周期事件",
+      "customizable": "完全可自定义",
+      "customizableDesc": "编写JavaScript来自定义任何行为",
+      "policiesEnforcement": "策略执行",
+      "policiesEnforcementDesc": "执行团队标准和安全策略",
+      "integrations": "外部集成",
+      "integrationsDesc": "连接到外部服务和工具"
+    },
+    "availableHooks": {
+      "title": "可用的钩子事件",
+      "preToolUse": {
+        "desc": "在Claude使用任何工具之前触发。验证、修改或阻止工具使用。",
+        "useCase": "使用场景：安全验证、文件保护"
+      },
+      "postToolUse": {
+        "desc": "工具完成后触发。处理结果、触发通知或记录操作。",
+        "useCase": "使用场景：自动格式化、日志记录、指标"
+      },
+      "userPromptSubmit": {
+        "desc": "用户提交提示时触发。修改提示、添加上下文或触发工作流。",
+        "useCase": "使用场景：上下文注入、提示增强"
+      },
+      "notification": {
+        "desc": "Claude发送通知时触发。自定义通知行为。",
+        "useCase": "使用场景：自定义警报、团队通知"
+      },
+      "sessionStart": {
+        "desc": "Claude会话开始时触发。初始化资源或加载上下文。",
+        "useCase": "使用场景：会话设置、环境检查"
+      },
+      "sessionEnd": {
+        "desc": "会话结束时触发。清理资源或保存会话数据。",
+        "useCase": "使用场景：清理、分析、会话报告"
+      }
+    },
+    "examples": {
+      "title": "实践示例",
+      "autoFormat": {
+        "title": "编辑后自动格式化代码",
+        "desc": "在Claude编辑文件后自动运行Prettier"
+      },
+      "fileProtection": {
+        "title": "保护敏感文件",
+        "desc": "防止Claude编辑关键配置文件"
+      },
+      "slackNotify": {
+        "title": "发送Slack通知",
+        "desc": "部署发生时通知团队"
+      }
+    },
+    "security": {
+      "title": "安全注意事项",
+      "description": "钩子执行任意JavaScript代码。遵循以下安全最佳实践：",
+      "item1": "永远不要在钩子文件中存储密钥 - 使用环境变量",
+      "item2": "在执行外部命令之前验证所有输入",
+      "item3": "在使用来自外部源的钩子之前先审查它们",
+      "item4": "使用try-catch块优雅地处理错误"
+    },
+    "bestPractices": {
+      "title": "最佳实践",
+      "keepSimple": {
+        "title": "保持钩子简单",
+        "desc": "每个钩子应该只做好一件事。复杂的逻辑会降低Claude的速度。"
+      },
+      "errorHandling": {
+        "title": "优雅地处理错误",
+        "desc": "始终使用try-catch块并提供有意义的错误消息。"
+      },
+      "async": {
+        "title": "使用Async/Await",
+        "desc": "钩子支持用于外部API调用和文件操作的异步函数。"
+      },
+      "testing": {
+        "title": "测试您的钩子",
+        "desc": "在部署之前彻底测试钩子，以避免中断工作流。"
+      }
+    },
+    "cta": {
+      "title": "准备自定义您的工作流了吗？",
+      "description": "开始创建钩子来自动化您的团队工作流并执行您的开发标准"
     }
   },
   "community": {

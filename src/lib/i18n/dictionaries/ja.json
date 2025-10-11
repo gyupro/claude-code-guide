@@ -7,7 +7,12 @@
   "navigation": {
     "home": "ホーム",
     "gettingStarted": "始める",
+    "features": "Features",
+    "learn": "Learn",
     "usageGuide": "使用ガイド",
+    "subagents": "Subagents",
+    "plugins": "Plugins",
+    "hooks": "Hooks",
     "tutorials": "チュートリアル",
     "tips": "コツ",
     "mcp": "MCP",
@@ -722,6 +727,190 @@
     "filter": "フィルター",
     "clear": "クリア",
     "selectLanguage": "言語を選択"
+  },
+  "subagents": {
+    "title": "Subagents",
+    "subtitle": "タスク固有のワークフロー向けの特化したAIアシスタント"
+  },
+  "plugins": {
+    "title": "Plugins",
+    "subtitle": "カスタムコマンド、エージェント、フック、MCPサーバーでClaude Codeを拡張",
+    "whatArePlugins": {
+      "title": "Pluginsとは？",
+      "description": "Pluginsを使用すると、チーム全体またはコミュニティ全体で共有できるカスタム機能でClaude Codeを拡張できます。再利用可能なコマンド、専門的なエージェント、イベントフック、MCPサーバー統合を作成しましょう。",
+      "customCommands": "カスタムコマンド",
+      "customCommandsDesc": "一般的なワークフロー用の再利用可能なスラッシュコマンドを作成",
+      "teamSharing": "チーム共有",
+      "teamSharingDesc": "組織全体でプラグインを共有",
+      "eventHooks": "イベントフック",
+      "eventHooksDesc": "Claude Codeライフサイクルのイベントに応答",
+      "mcpIntegration": "MCP統合",
+      "mcpIntegrationDesc": "プラグインにMCPサーバーをバンドル"
+    },
+    "pluginStructure": {
+      "title": "プラグイン構造",
+      "step1": "plugin.json - プラグインマニフェスト",
+      "step1Desc": "プラグイン名、バージョン、説明、提供する機能を定義",
+      "step2": "commands/ - 再利用可能なコマンド",
+      "step2Desc": "カスタムスラッシュコマンドを定義するマークダウンファイルを作成",
+      "step3": "agents/ - 専門エージェント",
+      "step3Desc": "特定の専門知識を持つ事前設定されたサブエージェントをバンドル",
+      "step4": "hooks/ - イベントハンドラ",
+      "step4Desc": "Claude Codeイベントに応答するJavaScriptファイル"
+    },
+    "creatingPlugin": {
+      "title": "最初のプラグインを作成",
+      "customCommand": {
+        "title": "カスタムコマンド",
+        "desc": "チーム用の/deployコマンドを作成"
+      },
+      "manifest": {
+        "title": "プラグインマニフェスト",
+        "desc": "plugin.jsonでプラグインメタデータを定義"
+      }
+    },
+    "distribution": {
+      "title": "プラグイン配布",
+      "project": {
+        "title": "プロジェクトレベル",
+        "desc": "プロジェクトと一緒にバージョン管理にチェックイン"
+      },
+      "team": {
+        "title": "チームレジストリ",
+        "desc": "組織全体で共有"
+      },
+      "marketplace": {
+        "title": "プラグインマーケットプレイス",
+        "desc": "コミュニティマーケットプレイスに公開"
+      }
+    },
+    "useCases": {
+      "title": "プラグイン活用事例",
+      "teamWorkflows": {
+        "title": "チームワークフロー",
+        "item1": "標準化されたデプロイ手順",
+        "item2": "コードレビューテンプレート",
+        "item3": "ドキュメント自動生成"
+      },
+      "domainExperts": {
+        "title": "ドメインエキスパート",
+        "item1": "セキュリティ監査スペシャリスト",
+        "item2": "データベース最適化エージェント",
+        "item3": "APIドキュメント生成ツール"
+      }
+    },
+    "bestPractices": {
+      "title": "ベストプラクティス",
+      "documentation": {
+        "title": "徹底的なドキュメント化",
+        "desc": "プラグインが何をするか、どのように使用するかを説明する明確なREADMEファイルを提供"
+      },
+      "versioning": {
+        "title": "セマンティックバージョニングの使用",
+        "desc": "より良い互換性管理のためにセマンティックバージョニング（major.minor.patch）に従う"
+      },
+      "testing": {
+        "title": "プラグインのテスト",
+        "desc": "チームと共有する前に、さまざまなシナリオでプラグインを検証"
+      },
+      "security": {
+        "title": "セキュリティ優先",
+        "desc": "プラグインにシークレットを含めないでください。機密データには環境変数を使用"
+      }
+    },
+    "cta": {
+      "title": "最初のプラグインを作成する準備はできましたか？",
+      "description": "カスタム機能を構築し、チームまたはコミュニティ全体と共有しましょう"
+    }
+  },
+  "hooks": {
+    "title": "Hooks",
+    "subtitle": "ライフサイクルイベントに応答してClaude Codeの動作をカスタマイズ",
+    "whatAreHooks": {
+      "title": "Hooksとは？",
+      "description": "HooksはClaude Codeの特定のイベントに応答して実行されるJavaScript関数です。動作のカスタマイズ、ポリシーの適用、外部ツールの統合、ワークフローの自動化が可能です。",
+      "eventDriven": "イベント駆動",
+      "eventDrivenDesc": "特定のライフサイクルイベントに自動的に応答",
+      "customizable": "完全にカスタマイズ可能",
+      "customizableDesc": "JavaScriptであらゆる動作をカスタマイズ",
+      "policiesEnforcement": "ポリシー適用",
+      "policiesEnforcementDesc": "チーム標準とセキュリティポリシーを適用",
+      "integrations": "外部統合",
+      "integrationsDesc": "外部サービスとツールに接続"
+    },
+    "availableHooks": {
+      "title": "利用可能なフックイベント",
+      "preToolUse": {
+        "desc": "Claudeがツールを使用する前に実行。ツールの使用を検証、変更、またはブロック可能。",
+        "useCase": "活用例：セキュリティ検証、ファイル保護"
+      },
+      "postToolUse": {
+        "desc": "ツールが完了した後に実行。結果の処理、通知のトリガー、アクションのログ記録が可能。",
+        "useCase": "活用例：自動フォーマット、ロギング、メトリクス"
+      },
+      "userPromptSubmit": {
+        "desc": "ユーザーがプロンプトを送信したときに実行。プロンプトの変更、コンテキストの追加、ワークフローのトリガーが可能。",
+        "useCase": "活用例：コンテキスト注入、プロンプト強化"
+      },
+      "notification": {
+        "desc": "Claudeが通知を送信するときに実行。通知動作をカスタマイズ可能。",
+        "useCase": "活用例：カスタムアラート、チーム通知"
+      },
+      "sessionStart": {
+        "desc": "Claudeセッションが開始されるときに実行。リソースの初期化やコンテキストの読み込みが可能。",
+        "useCase": "活用例：セッション設定、環境チェック"
+      },
+      "sessionEnd": {
+        "desc": "セッションが終了するときに実行。リソースのクリーンアップやセッションデータの保存が可能。",
+        "useCase": "活用例：クリーンアップ、分析、セッションレポート"
+      }
+    },
+    "examples": {
+      "title": "実践例",
+      "autoFormat": {
+        "title": "編集後にコードを自動フォーマット",
+        "desc": "Claudeがファイルを編集した後、自動的にPrettierを実行"
+      },
+      "fileProtection": {
+        "title": "機密ファイルの保護",
+        "desc": "Claudeが重要な設定ファイルを編集できないように防止"
+      },
+      "slackNotify": {
+        "title": "Slack通知の送信",
+        "desc": "デプロイが発生したときにチームに通知"
+      }
+    },
+    "security": {
+      "title": "セキュリティ上の考慮事項",
+      "description": "Hooksは任意のJavaScriptコードを実行します。次のセキュリティベストプラクティスに従ってください：",
+      "item1": "フックファイルにシークレットを保存しないでください - 環境変数を使用",
+      "item2": "外部コマンドを実行する前にすべての入力を検証",
+      "item3": "外部ソースのフックを使用する前にレビュー",
+      "item4": "エラーを適切に処理するためにtry-catchブロックを使用"
+    },
+    "bestPractices": {
+      "title": "ベストプラクティス",
+      "keepSimple": {
+        "title": "フックをシンプルに保つ",
+        "desc": "各フックは1つのことをうまく実行する必要があります。複雑なロジックはClaudeを遅くする可能性があります。"
+      },
+      "errorHandling": {
+        "title": "エラーを適切に処理",
+        "desc": "常にtry-catchブロックを使用し、意味のあるエラーメッセージを提供してください。"
+      },
+      "async": {
+        "title": "Async/Awaitの使用",
+        "desc": "フックは外部API呼び出しとファイル操作のための非同期関数をサポートします。"
+      },
+      "testing": {
+        "title": "フックのテスト",
+        "desc": "ワークフローを妨げないように、デプロイ前にフックを徹底的にテストしてください。"
+      }
+    },
+    "cta": {
+      "title": "ワークフローをカスタマイズする準備はできましたか？",
+      "description": "チームワークフローを自動化し、開発基準を適用するフックの作成を始めましょう"
+    }
   },
   "footer": {
     "about": {
