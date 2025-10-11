@@ -1,6 +1,6 @@
 'use client';
 
-import { ReactNode } from 'react';
+import { ReactNode, useState } from 'react';
 import Link from 'next/link';
 import { NAVIGATION_ITEMS, EXTERNAL_LINKS, GitHubIcon } from '../constants/navigation';
 import LanguageSwitcher from './LanguageSwitcher';
@@ -25,6 +25,7 @@ export default function NavigationHeader({
   dictionary
 }: NavigationHeaderProps) {
   const desktopLinkClasses = 'transition-colors';
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-slate-200 dark:border-slate-700 bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm">
@@ -41,27 +42,72 @@ export default function NavigationHeader({
               </span>
             </div>
           </Link>
-          
+
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-6">
-            {NAVIGATION_ITEMS.map((item) => (
-              <Link 
-                key={item.href}
-                href={`/${locale}${item.href}`} 
-                className={getLinkClassName(`/${locale}${item.href}`, desktopLinkClasses)}
-              >
-                {dictionary.navigation[item.key] || item.label}
-              </Link>
-            ))}
-            
+            {NAVIGATION_ITEMS.map((item) => {
+              // Check if item has children (dropdown)
+              if (item.children && item.children.length > 0) {
+                return (
+                  <div
+                    key={item.key}
+                    className="relative"
+                    onMouseEnter={() => setOpenDropdown(item.key)}
+                    onMouseLeave={() => setOpenDropdown(null)}
+                  >
+                    <button
+                      className={`flex items-center space-x-1 ${desktopLinkClasses} text-slate-700 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400`}
+                    >
+                      <span>{dictionary.navigation[item.key] || item.label}</span>
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
+
+                    {/* Dropdown menu */}
+                    <div
+                      className={`absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white dark:bg-slate-800 ring-1 ring-black ring-opacity-5 transition-all duration-200 ${
+                        openDropdown === item.key
+                          ? 'opacity-100 visible translate-y-0'
+                          : 'opacity-0 invisible -translate-y-2'
+                      }`}
+                    >
+                      <div className="py-1">
+                        {item.children.map((child) => (
+                          <Link
+                            key={child.key}
+                            href={`/${locale}${child.href}`}
+                            className="block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors"
+                          >
+                            {dictionary.navigation[child.key] || child.label}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                );
+              }
+
+              // Regular link without dropdown
+              return (
+                <Link
+                  key={item.key}
+                  href={`/${locale}${item.href}`}
+                  className={getLinkClassName(`/${locale}${item.href}`, desktopLinkClasses)}
+                >
+                  {dictionary.navigation[item.key] || item.label}
+                </Link>
+              );
+            })}
+
             <LanguageSwitcher currentLocale={locale} dictionary={dictionary} />
-            
+
             <ThemeToggle />
-            
-            <a 
-              href={EXTERNAL_LINKS.github.href} 
-              target="_blank" 
-              rel="noopener noreferrer" 
+
+            <a
+              href={EXTERNAL_LINKS.github.href}
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-slate-700 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
             >
               <GitHubIcon />

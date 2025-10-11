@@ -4,17 +4,34 @@ export interface NavigationItem {
   key: string; // Key for i18n dictionary lookup
   external?: boolean;
   icon?: React.ComponentType<{ className?: string }>;
+  children?: Omit<NavigationItem, 'children'>[]; // Dropdown items
 }
 
 export const NAVIGATION_ITEMS: NavigationItem[] = [
   { href: '/', label: 'Home', key: 'home' },
   { href: '/getting-started', label: 'Getting Started', key: 'gettingStarted' },
-  { href: '/usage-guide', label: 'Usage Guide', key: 'usageGuide' },
-  { href: '/tutorials', label: 'Tutorials', key: 'tutorials' },
-  { href: '/tips', label: 'Tips', key: 'tips' },
+  {
+    href: '#',
+    label: 'Features',
+    key: 'features',
+    children: [
+      { href: '/subagents', label: 'Subagents', key: 'subagents' },
+      { href: '/plugins', label: 'Plugins', key: 'plugins' },
+      { href: '/hooks', label: 'Hooks', key: 'hooks' },
+    ]
+  },
+  {
+    href: '#',
+    label: 'Learn',
+    key: 'learn',
+    children: [
+      { href: '/usage-guide', label: 'Usage Guide', key: 'usageGuide' },
+      { href: '/tutorials', label: 'Tutorials', key: 'tutorials' },
+      { href: '/tips', label: 'Tips', key: 'tips' },
+    ]
+  },
   { href: '/mcp', label: 'MCP', key: 'mcp' },
   { href: '/community', label: 'Community', key: 'community' },
-  { href: '/use-cases', label: 'Use Cases', key: 'useCases' },
 ] as const;
 
 export const EXTERNAL_LINKS = {

@@ -24,6 +24,9 @@ claude-code-guide/
 │       ├── layout.tsx         # Root layout with i18n fonts
 │       ├── getting-started/   # 시작하기 - Getting started guide
 │       ├── usage-guide/       # 사용법 가이드 - Usage guides
+│       ├── subagents/         # 서브에이전트 - Subagents (specialized AI assistants)
+│       ├── plugins/           # 플러그인 - Plugins (extensibility system)
+│       ├── hooks/             # 훅스 - Hooks (event handlers & automation)
 │       ├── tutorials/         # 튜토리얼 - Tutorials
 │       ├── tips/              # 실전 팁 - Practical tips
 │       ├── mcp/               # MCP 프로토콜 - MCP Protocol guide
@@ -138,11 +141,14 @@ const nextConfig: NextConfig = {
 ```typescript
 export const NAVIGATION_ITEMS = [
   { href: '/', label: '홈' },                    // Home
-  { href: '/getting-started', label: '시작하기' }, // Getting Started  
+  { href: '/getting-started', label: '시작하기' }, // Getting Started
   { href: '/usage-guide', label: '사용법 가이드' }, // Usage Guide
+  { href: '/subagents', label: '서브에이전트' },   // Subagents
+  { href: '/plugins', label: '플러그인' },        // Plugins
+  { href: '/hooks', label: '훅스' },              // Hooks
+  { href: '/tutorials', label: '튜토리얼' },      // Tutorials
   { href: '/tips', label: '실전 팁' },            // Practical Tips
   { href: '/mcp', label: 'MCP 프로토콜' },        // MCP Protocol
-  { href: '/tutorials', label: '튜토리얼' },      // Tutorials
   { href: '/community', label: '커뮤니티' },      // Community
   { href: '/use-cases', label: '활용 사례' },     // Use Cases
 ]
@@ -222,6 +228,51 @@ interface NavigationItem {
 - **pnpm Cache**: Configured for faster builds, may need clearing if corrupted  
 - **Node Version**: Pinned to Node.js 20 for consistency
 
+## Latest Claude Code Features (2025)
+
+### Core Features Documented
+1. **Subagents** - Specialized AI assistants with independent context windows
+   - Custom system prompts for specific tasks
+   - Tool access control and permissions
+   - Model selection (inherit, sonnet, opus, haiku)
+   - Project and user-level configurations
+
+2. **Plugins** - Extensibility system for custom functionality
+   - Custom slash commands
+   - Specialized agents bundled in plugins
+   - Event-driven hooks
+   - MCP server integration
+   - Plugin marketplaces for distribution
+
+3. **Hooks** - Event handlers for workflow automation
+   - PreToolUse, PostToolUse events
+   - UserPromptSubmit, Notification events
+   - SessionStart, SessionEnd lifecycle hooks
+   - SubagentStop for subagent task completion
+   - Security considerations and best practices
+
+4. **Installation Methods**
+   - NPM install: `npm install -g @anthropic-ai/claude-code`
+   - Native install (Beta):
+     - macOS/Linux/WSL: `curl -fsSL https://claude.ai/install.sh | bash`
+     - Windows PowerShell: `irm https://claude.ai/install.ps1 | iex`
+     - Windows CMD: `curl -fsSL https://claude.ai/install.cmd -o install.cmd && install.cmd && del install.cmd`
+
+5. **VS Code Extension (Beta)** - Native IDE integration
+   - Graphical interface in VS Code sidebar
+   - No terminal required
+   - Direct marketplace installation
+
+6. **Additional Features**
+   - Output Styles for customized formatting
+   - Headless Mode for automation
+   - GitHub Actions & GitLab CI/CD integration
+   - Checkpointing for conversation management
+   - Memory Management system
+   - Model Configuration options
+   - Status Line Configuration
+   - Plugin Marketplaces for team distribution
+
 ## MCP Integration
 
 This project supports MCP (Model Context Protocol) for enhanced GitHub integration:
@@ -229,6 +280,7 @@ This project supports MCP (Model Context Protocol) for enhanced GitHub integrati
 - **Issue Management**: Automated triage and labeling
 - **PR Reviews**: Intelligent code analysis and feedback
 - **Repository Operations**: Comprehensive GitHub workflow automation
+- **Custom MCP Servers**: Integrate with external tools and services
 
 ## Internationalization (i18n) System
 

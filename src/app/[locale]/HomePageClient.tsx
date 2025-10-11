@@ -1,8 +1,5 @@
 'use client';
 
-import NavigationHeader from '@/components/NavigationHeader';
-import MobileMenu from '@/components/MobileMenu';
-import { useNavigationMenu } from '@/hooks/useNavigationMenu';
 import { type Locale } from '@/lib/i18n/config';
 import { type Dictionary } from '@/lib/i18n/dictionaries';
 
@@ -12,27 +9,8 @@ interface HomePageClientProps {
 }
 
 export default function HomePageClient({ locale, dictionary }: HomePageClientProps) {
-  const { mobileMenu, helpers } = useNavigationMenu();
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-zinc-100 dark:from-slate-900 dark:to-zinc-900">
-      <NavigationHeader
-        isMobileMenuOpen={mobileMenu.isOpen}
-        onMobileMenuToggle={mobileMenu.toggle}
-        getLinkClassName={helpers.getLinkClassName}
-        locale={locale}
-        dictionary={dictionary}
-      >
-        <MobileMenu
-          isOpen={mobileMenu.isOpen}
-          onLinkClick={mobileMenu.onLinkClick}
-          getLinkClassName={helpers.getLinkClassName}
-          menuRef={mobileMenu.menuRef}
-          locale={locale}
-          dictionary={dictionary}
-        />
-      </NavigationHeader>
-
       <main className="pt-16">
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-purple-50 to-cyan-50 dark:from-slate-900 dark:via-purple-900/20 dark:to-slate-900">

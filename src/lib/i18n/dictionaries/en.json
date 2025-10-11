@@ -7,7 +7,12 @@
   "navigation": {
     "home": "Home",
     "gettingStarted": "Getting Started",
+    "features": "Features",
+    "learn": "Learn",
     "usageGuide": "Usage Guide",
+    "subagents": "Subagents",
+    "plugins": "Plugins",
+    "hooks": "Hooks",
     "tutorials": "Tutorials",
     "tips": "Tips",
     "mcp": "MCP",
@@ -558,6 +563,190 @@
           "description": "A startup reduced bug fix time from 3 hours to 15 minutes using this workflow!"
         }
       }
+    }
+  },
+  "subagents": {
+    "title": "Subagents",
+    "subtitle": "Specialized AI assistants for task-specific workflows"
+  },
+  "plugins": {
+    "title": "Plugins",
+    "subtitle": "Extend Claude Code with custom commands, agents, hooks, and MCP servers",
+    "whatArePlugins": {
+      "title": "What are Plugins?",
+      "description": "Plugins allow you to extend Claude Code with custom functionality that can be shared across your team or the entire community. Create reusable commands, specialized agents, event hooks, and MCP server integrations.",
+      "customCommands": "Custom Commands",
+      "customCommandsDesc": "Create reusable slash commands for common workflows",
+      "teamSharing": "Team Sharing",
+      "teamSharingDesc": "Share plugins across your organization",
+      "eventHooks": "Event Hooks",
+      "eventHooksDesc": "Respond to events in Claude Code lifecycle",
+      "mcpIntegration": "MCP Integration",
+      "mcpIntegrationDesc": "Bundle MCP servers with your plugins"
+    },
+    "pluginStructure": {
+      "title": "Plugin Structure",
+      "step1": "plugin.json - Plugin Manifest",
+      "step1Desc": "Define your plugin name, version, description, and what it provides",
+      "step2": "commands/ - Reusable Commands",
+      "step2Desc": "Create markdown files that define custom slash commands",
+      "step3": "agents/ - Specialized Agents",
+      "step3Desc": "Bundle pre-configured subagents with specific expertise",
+      "step4": "hooks/ - Event Handlers",
+      "step4Desc": "JavaScript files that respond to Claude Code events"
+    },
+    "creatingPlugin": {
+      "title": "Creating Your First Plugin",
+      "customCommand": {
+        "title": "Custom Command",
+        "desc": "Create a /deploy command for your team"
+      },
+      "manifest": {
+        "title": "Plugin Manifest",
+        "desc": "Define plugin metadata in plugin.json"
+      }
+    },
+    "distribution": {
+      "title": "Plugin Distribution",
+      "project": {
+        "title": "Project-Level",
+        "desc": "Check into version control with your project"
+      },
+      "team": {
+        "title": "Team Registry",
+        "desc": "Share across your organization"
+      },
+      "marketplace": {
+        "title": "Plugin Marketplace",
+        "desc": "Publish to the community marketplace"
+      }
+    },
+    "useCases": {
+      "title": "Plugin Use Cases",
+      "teamWorkflows": {
+        "title": "Team Workflows",
+        "item1": "Standardized deployment procedures",
+        "item2": "Code review templates",
+        "item3": "Documentation generation"
+      },
+      "domainExperts": {
+        "title": "Domain Experts",
+        "item1": "Security audit specialists",
+        "item2": "Database optimization agents",
+        "item3": "API documentation generators"
+      }
+    },
+    "bestPractices": {
+      "title": "Best Practices",
+      "documentation": {
+        "title": "Document Thoroughly",
+        "desc": "Provide clear README files explaining what your plugin does and how to use it"
+      },
+      "versioning": {
+        "title": "Use Semantic Versioning",
+        "desc": "Follow semantic versioning (major.minor.patch) for better compatibility management"
+      },
+      "testing": {
+        "title": "Test Your Plugins",
+        "desc": "Validate plugins in different scenarios before sharing with your team"
+      },
+      "security": {
+        "title": "Security First",
+        "desc": "Never include secrets in plugins. Use environment variables for sensitive data"
+      }
+    },
+    "cta": {
+      "title": "Ready to Create Your First Plugin?",
+      "description": "Start building custom functionality and share it with your team or the entire community"
+    }
+  },
+  "hooks": {
+    "title": "Hooks",
+    "subtitle": "Customize Claude Code behavior by responding to lifecycle events",
+    "whatAreHooks": {
+      "title": "What are Hooks?",
+      "description": "Hooks are JavaScript functions that execute in response to specific events in Claude Code. They allow you to customize behavior, enforce policies, integrate external tools, and automate workflows.",
+      "eventDriven": "Event-Driven",
+      "eventDrivenDesc": "Respond to specific lifecycle events automatically",
+      "customizable": "Fully Customizable",
+      "customizableDesc": "Write JavaScript to customize any behavior",
+      "policiesEnforcement": "Policy Enforcement",
+      "policiesEnforcementDesc": "Enforce team standards and security policies",
+      "integrations": "External Integrations",
+      "integrationsDesc": "Connect to external services and tools"
+    },
+    "availableHooks": {
+      "title": "Available Hook Events",
+      "preToolUse": {
+        "desc": "Fired before Claude uses any tool. Validate, modify, or block tool usage.",
+        "useCase": "Use case: Security validation, file protection"
+      },
+      "postToolUse": {
+        "desc": "Fired after a tool completes. Process results, trigger notifications, or log actions.",
+        "useCase": "Use case: Auto-formatting, logging, metrics"
+      },
+      "userPromptSubmit": {
+        "desc": "Fired when user submits a prompt. Modify prompts, add context, or trigger workflows.",
+        "useCase": "Use case: Context injection, prompt enhancement"
+      },
+      "notification": {
+        "desc": "Fired when Claude sends a notification. Customize notification behavior.",
+        "useCase": "Use case: Custom alerts, team notifications"
+      },
+      "sessionStart": {
+        "desc": "Fired when a Claude session starts. Initialize resources or load context.",
+        "useCase": "Use case: Session setup, environment checks"
+      },
+      "sessionEnd": {
+        "desc": "Fired when a session ends. Clean up resources or save session data.",
+        "useCase": "Use case: Cleanup, analytics, session reports"
+      }
+    },
+    "examples": {
+      "title": "Practical Examples",
+      "autoFormat": {
+        "title": "Auto-Format Code After Edits",
+        "desc": "Automatically run Prettier on files after Claude edits them"
+      },
+      "fileProtection": {
+        "title": "Protect Sensitive Files",
+        "desc": "Prevent Claude from editing critical configuration files"
+      },
+      "slackNotify": {
+        "title": "Send Slack Notifications",
+        "desc": "Notify team when deployment happens"
+      }
+    },
+    "security": {
+      "title": "Security Considerations",
+      "description": "Hooks execute arbitrary JavaScript code. Follow these security best practices:",
+      "item1": "Never store secrets in hook files - use environment variables",
+      "item2": "Validate all inputs before executing external commands",
+      "item3": "Review hooks from external sources before using them",
+      "item4": "Use try-catch blocks to handle errors gracefully"
+    },
+    "bestPractices": {
+      "title": "Best Practices",
+      "keepSimple": {
+        "title": "Keep Hooks Simple",
+        "desc": "Each hook should do one thing well. Complex logic can slow down Claude."
+      },
+      "errorHandling": {
+        "title": "Handle Errors Gracefully",
+        "desc": "Always use try-catch blocks and provide meaningful error messages."
+      },
+      "async": {
+        "title": "Use Async/Await",
+        "desc": "Hooks support async functions for external API calls and file operations."
+      },
+      "testing": {
+        "title": "Test Your Hooks",
+        "desc": "Test hooks thoroughly before deploying to avoid disrupting workflows."
+      }
+    },
+    "cta": {
+      "title": "Ready to Customize Your Workflow?",
+      "description": "Start creating hooks to automate your team workflows and enforce your development standards"
     }
   },
   "community": {

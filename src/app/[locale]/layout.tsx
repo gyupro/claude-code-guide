@@ -209,7 +209,7 @@ export default async function LocaleLayout({
   };
   
   return (
-    <html lang={locale}>
+    <html lang={locale} suppressHydrationWarning>
       <head>
         <link rel="alternate" hrefLang="x-default" href="https://claude.develop-on.co.kr/en" />
         <link rel="alternate" hrefLang="en" href="https://claude.develop-on.co.kr/en" />
@@ -227,6 +227,18 @@ export default async function LocaleLayout({
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
               gtag('config', 'G-VX16G6RCVS');
+            `,
+          }}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              try {
+                const theme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                if (theme === 'dark') {
+                  document.documentElement.classList.add('dark');
+                }
+              } catch {}
             `,
           }}
         />
