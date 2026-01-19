@@ -11,12 +11,13 @@
     "learn": "学习",
     "usageGuide": "使用指南",
     "subagents": "子代理",
+    "skills": "技能",
     "plugins": "插件",
     "hooks": "钩子",
     "tutorials": "教程",
     "tips": "技巧",
     "mcp": "MCP",
-    "community": "社区",
+    "thirdPartyTools": "第三方工具",
     "useCases": "使用案例",
     "subtitle": "使用指南",
     "openMenu": "打开菜单",
@@ -109,10 +110,18 @@
       "windowsNote": "Windows 用户注意",
       "windowsWarning": "Claude Code 不能在 Windows 上直接运行。请使用 WSL（Windows Subsystem for Linux）环境。"
     },
-    "installationDetail": {
+"installationDetail": {
       "installOneCommand": "一键安装",
       "beforeInstallation": "安装前检查",
-      "nodeRequirement": "需要 Node.js 18+。使用 node --version 检查，如需要请从 nodejs.org 安装。"
+      "nodeRequirement": "需要 Node.js 18+。使用 node --version 检查，如需要请从 nodejs.org 安装。",
+      "recommended": "推荐",
+      "autoUpdate": "后台自动更新",
+      "manualUpdate": "运行 `brew upgrade claude-code` 更新",
+      "wingetUpdate": "运行 `winget upgrade` 更新",
+      "accountRequired": "需要账户",
+      "subscriptionInfo": "需要 Claude Pro、Max、Teams、Enterprise 或 Claude Console 账户",
+      "npmDeprecated": "NPM 安装已弃用",
+      "npmDeprecatedInfo": "npm install -g @anthropic-ai/claude-code 不再支持。请使用上面的原生安装。"
     },
     "authenticationDetail": {
       "startInProject": "在项目中开始",
@@ -228,7 +237,7 @@
         "testAutomation": "测试自动化"
       }
     },
-    "bestPractices": {
+"bestPractices": {
       "title": "提高生产力的实用技巧",
       "items": {
         "specificInstructions": {
@@ -242,6 +251,35 @@
         "projectMemoryTip": {
           "title": "项目记忆",
           "description": "在 CLAUDE.md 文件中指定项目规则和上下文以获得一致的结果。"
+        }
+      }
+    },
+    "newFeatures": {
+      "title": "Claude Code 2.1 新功能",
+      "items": {
+        "skillHotReload": {
+          "title": "技能热重载",
+          "description": "无需重启会话，技能即时更新"
+        },
+        "asyncAgents": {
+          "title": "异步子代理",
+          "description": "使用 Ctrl+B 在后台运行代理"
+        },
+        "mcpSearch": {
+          "title": "MCP 工具搜索",
+          "description": "自动延迟 MCP 工具节省 85% 上下文"
+        },
+        "keybindings": {
+          "title": "自定义快捷键",
+          "description": "通过 /keybindings 自定义快捷键"
+        },
+        "language": {
+          "title": "多语言支持",
+          "description": "设置响应语言：日语、西班牙语等"
+        },
+        "planCommand": {
+          "title": "/plan 命令",
+          "description": "直接从提示启用计划模式"
         }
       }
     }
@@ -448,6 +486,44 @@
     "projectContextText": "在 CLAUDE.md 中包含当前史诗、项目目标和业务上下文，以便做出更好的决策。",
     "toolIntegration": "工具集成指南",
     "toolIntegrationText": "指定 Jira、Slack、数据库等工具的 MCP 连接方法和用法。",
+    "keyboardShortcuts": "键盘快捷键 & Vim 动作",
+    "keyboardShortcutsDescription": "Claude Code 2.1 为高级用户引入了增强的键盘快捷键和 Vim 风格动作。使用 /keybindings 命令自定义键绑定。",
+    "essentialShortcuts": "必备快捷键",
+    "navigationShortcuts": "导航与控制",
+    "cancelGeneration": "取消生成",
+    "exitFocusInput": "退出 / 聚焦输入",
+    "promptHistory": "提示历史",
+    "clearScreen": "清屏",
+    "newShortcuts": "2.1 新增",
+    "toggleThinking": "切换思考模式",
+    "switchModel": "切换模型",
+    "backgroundTask": "后台任务",
+    "customizeKeys": "自定义按键",
+    "vimMotions": "Vim 动作（新）",
+    "vimMotionsDescription": "在输入区域使用 Vim 风格动作像专业人士一样导航和编辑。",
+    "movement": "移动",
+    "basicMovement": "基本光标移动",
+    "wordMovement": "单词导航",
+    "lineMovement": "行首/行尾",
+    "findChar": "查找字符",
+    "repeatFind": "重复查找 下一个/上一个",
+    "editing": "编辑",
+    "yank": "复制（yank）",
+    "paste": "粘贴 后/前",
+    "delete": "删除",
+    "change": "修改",
+    "indent": "缩进/取消缩进",
+    "joinLines": "合并行",
+    "textObjects": "文本对象",
+    "wordObject": "单词内部/周围",
+    "quoteObject": "引号内部/周围",
+    "bracketObject": "括号内部/周围",
+    "promptSuggestions": "提示建议（新）",
+    "promptSuggestionsDescription": "Claude Code 现在在您输入时提供智能提示建议。",
+    "acceptSuggestion": "接受建议",
+    "submitPrompt": "直接提交提示",
+    "dismissSuggestion": "忽略建议",
+    "suggestionTip": "建议是上下文感知的，会随时间学习您的项目模式。",
     "conclusion": "Claude Code 是一个真正强大的工具",
     "conclusionText": "它可以轻松处理大规模工作，正确使用时功能非常强大。使用这些技巧来体验令人惊叹的生产力。",
     "getStarted": "开始使用",
@@ -476,6 +552,25 @@
       "example": {
         "title": "简单示例",
         "description": "\"查询用户表中今天注册的用户并报告到Slack #growth频道\" - Claude Code将通过MCP自动处理从数据库查询到Slack消息发送的一切。"
+      },
+      "httpTransport": {
+        "title": "HTTP 传输（推荐）",
+        "description": "HTTP 现在是推荐的传输协议。SSE（服务器发送事件）已被弃用。"
+      },
+      "resourceMentions": {
+        "title": "MCP 资源提及",
+        "description": "使用 @ 语法在提示中直接引用 MCP 资源。",
+        "example1": "分析表结构",
+        "example2": "查看最近的问题"
+      },
+      "slashCommands": {
+        "title": "MCP 提示作为斜杠命令",
+        "description": "MCP 服务器提示会自动注册为斜杠命令。"
+      },
+      "mcpSearch": {
+        "title": "MCP 工具搜索自动模式",
+        "description": "当 MCP 工具描述超过上下文窗口的 10% 时，它们会自动延迟加载并可通过 MCPSearch 工具搜索。",
+        "config": "# 设置阈值: auto:N (N = 0-100 百分比)"
       }
     },
     "popularServers": {
@@ -646,9 +741,77 @@
       }
     }
   },
+  "skills": {
+    "title": "代理技能",
+    "subtitle": "通过Claude自动应用的基于Markdown的自定义技能扩展Claude的功能",
+    "whatAreSkills": {
+      "title": "什么是代理技能？",
+      "description": "技能是一个Markdown文件，用于教Claude如何执行特定任务。技能是模型调用的：Claude根据您的请求决定使用哪些技能。当您提出与技能描述匹配的问题时，Claude会自动应用该技能。",
+      "automatic": "自动激活",
+      "automaticDesc": "Claude检测到技能相关时会自动应用",
+      "markdown": "基于Markdown",
+      "markdownDesc": "包含YAML前置元数据和指令的简单SKILL.md文件",
+      "hotReload": "热重载",
+      "hotReloadDesc": "技能在创建或修改时会自动加载"
+    },
+    "locations": {
+      "title": "技能存放位置",
+      "location": "位置",
+      "path": "路径",
+      "appliesTo": "适用于",
+      "priority": "优先级顺序：Enterprise > Personal > Project > Plugin（名称冲突时较高优先）"
+    },
+    "structure": {
+      "title": "SKILL.md 结构",
+      "simpleExample": "简单技能",
+      "advancedExample": "高级技能"
+    },
+    "metadata": {
+      "title": "可用的元数据字段"
+    },
+    "hooks": {
+      "title": "带钩子的技能",
+      "description": "技能可以定义在技能生命周期期间运行的钩子。钩子的作用域限定于技能，并在技能完成时自动清理。",
+      "example": "示例：安全检查钩子"
+    },
+    "vsOthers": {
+      "title": "技能 vs 其他选项"
+    },
+    "multiFile": {
+      "title": "多文件技能（渐进式披露）",
+      "description": "对于复杂的技能，请使用渐进式披露：将基本信息放在SKILL.md中，详细文档放在单独的文件中，Claude只在需要时才读取。",
+      "tip": "保持SKILL.md在500行以内。脚本可以执行而无需加载到上下文中。"
+    },
+    "testing": {
+      "title": "测试您的技能",
+      "viewSkills": "查看可用技能",
+      "testSkill": "测试技能",
+      "testSkillDesc": "提出与技能描述匹配的问题："
+    },
+    "cta": {
+      "title": "开始构建技能",
+      "description": "创建您的第一个技能，用您团队的标准和工作流程扩展Claude的功能。",
+      "button": "阅读完整文档"
+    }
+  },
   "subagents": {
     "title": "子代理",
-    "subtitle": "用于特定任务工作流的专业AI助手"
+    "subtitle": "用于特定任务工作流的专业AI助手",
+    "frontmatter": {
+      "title": "代理 Frontmatter 字段",
+      "tableHeaders": {
+        "field": "字段",
+        "description": "描述",
+        "example": "示例"
+      },
+      "model": "指定代理使用的AI模型",
+      "skills": "将技能文件链接到代理",
+      "hooks": "定义代理特定的钩子",
+      "permissionMode": "设置权限行为（default、bypassPermissions等）",
+      "apiKeyEnvVar": "API密钥的环境变量",
+      "enableUndo": "启用/禁用撤销功能",
+      "tools": "指定允许/禁止的工具"
+    }
   },
   "plugins": {
     "title": "插件",
@@ -700,7 +863,18 @@
       "marketplace": {
         "title": "插件市场",
         "desc": "发布到社区市场"
+      },
+      "cli": {
+        "title": "插件市场 CLI",
+        "search": "在市场中搜索插件",
+        "install": "从市场安装插件",
+        "list": "列出已安装的插件",
+        "update": "更新已安装的插件"
       }
+    },
+    "lspSupport": {
+      "title": "LSP 服务器支持",
+      "description": "插件可以捆绑语言服务器协议（LSP）服务器，以提供高级语言功能和IDE集成。"
     },
     "useCases": {
       "title": "插件使用场景",
@@ -781,7 +955,36 @@
       "sessionEnd": {
         "desc": "会话结束时触发。清理资源或保存会话数据。",
         "useCase": "使用场景：清理、分析、会话报告"
+      },
+      "setup": {
+        "desc": "通过 --init、--init-only 或 --maintenance 标志触发。适用于仓库设置和维护任务。",
+        "useCase": "使用场景：环境设置、依赖检查、项目初始化"
+      },
+      "subagentStop": {
+        "desc": "子代理完成工作时触发。处理结果或触发后续操作。",
+        "useCase": "使用场景：结果处理、任务链接、通知"
+      },
+      "subagentStart": {
+        "desc": "子代理即将启动时触发。监控子代理启动或注入上下文。",
+        "useCase": "使用场景：子代理监控、日志记录、上下文注入"
+      },
+      "permissionRequest": {
+        "desc": "请求权限时触发。自动批准/拒绝或记录权限请求。",
+        "useCase": "使用场景：自动批准、权限记录、安全审计"
+      },
+      "preCompact": {
+        "desc": "上下文压缩发生前触发。在上下文被压缩之前保存重要信息。",
+        "useCase": "使用场景：上下文保存、重要数据备份"
       }
+    },
+    "promptBasedHooks": {
+      "title": "基于提示的钩子",
+      "description": "在钩子中使用LLM驱动的决策。无需编写JavaScript逻辑，而是用自然语言描述您想要的内容。",
+      "whenToUse": "何时使用",
+      "useCase1": "难以用代码编写的复杂决策逻辑",
+      "useCase2": "代码审查和质量检查",
+      "useCase3": "上下文感知验证",
+      "responseFormat": "响应格式"
     },
     "examples": {
       "title": "实践示例",
@@ -1012,6 +1215,95 @@
     "filter": "筛选",
     "clear": "清除",
     "selectLanguage": "选择语言"
+  },
+  "thirdPartyTools": {
+    "title": "第三方工具",
+    "subtitle": "探索Claude Code生态系统中的开源替代品和扩展",
+    "badge": "开源生态系统",
+    "ecosystem": {
+      "title": "Claude Code生态系统",
+      "description": "除了官方Claude Code CLI之外，还形成了活跃的第三方工具生态系统。这些工具提供不同的方法、模型灵活性和专业功能。",
+      "official": {
+        "title": "官方工具"
+      },
+      "openSource": {
+        "title": "开源替代品"
+      },
+      "orchestration": {
+        "title": "编排层"
+      }
+    },
+    "opencode": {
+      "description": "支持75+模型提供商的开源Claude Code替代品，包括Claude、OpenAI、Groq以及通过Ollama的本地模型。",
+      "features": {
+        "title": "主要功能",
+        "multiProvider": "75+模型提供商（Claude、OpenAI、Groq、Ollama）",
+        "localModels": "通过Ollama原生支持本地模型",
+        "clientServer": "用于远程工作流的客户端/服务器架构",
+        "pluginSystem": "带事件钩子的插件系统",
+        "freeTool": "免费工具 - 只需支付API使用费"
+      },
+      "installation": {
+        "title": "安装"
+      }
+    },
+    "ohmyopencode": {
+      "tagline": "OpenCode的全能编排",
+      "description": "构建在OpenCode之上的强大编排层，具有专业代理、多代理并行执行和20+内置工作流自动化钩子。",
+      "agents": {
+        "title": "专业代理",
+        "sisyphus": "默认规划器和执行代理",
+        "librarian": "外部文档和GitHub探索",
+        "explore": "内部代码库搜索",
+        "oracle": "战略调试指导"
+      },
+      "features": {
+        "title": "主要功能",
+        "multiAgent": "多代理并行执行",
+        "hooks": "20+内置工作流钩子",
+        "mcp": "用于代码搜索的MCP集成",
+        "lsp": "完整LSP支持",
+        "multiModel": "多模型支持（Claude、GPT、Gemini）",
+        "buildAware": "构建管道感知"
+      }
+    },
+    "comparison": {
+      "title": "比较",
+      "feature": "功能",
+      "license": "许可证",
+      "modelSupport": "模型支持",
+      "localModels": "本地模型",
+      "checkpoints": "检查点/回退",
+      "sandboxing": "沙盒",
+      "multiAgent": "多代理",
+      "price": "价格"
+    },
+    "bestFor": {
+      "title": "哪个工具最适合您？",
+      "claudeCode": {
+        "desc": "最适合优先考虑性能、安全性和官方支持的团队。",
+        "pro1": "最佳Claude性能",
+        "pro2": "原生沙盒（减少84%提示）",
+        "pro3": "官方IDE集成"
+      },
+      "opencode": {
+        "desc": "最适合需要提供商灵活性和成本控制的开发者。",
+        "pro1": "无供应商锁定",
+        "pro2": "通过Ollama的本地模型",
+        "pro3": "客户端/服务器远程工作流"
+      },
+      "ohmyopencode": {
+        "desc": "最适合需要专业代理编排的复杂项目。",
+        "pro1": "专业代理",
+        "pro2": "并行执行",
+        "pro3": "20+工作流钩子"
+      }
+    },
+    "cta": {
+      "title": "准备好探索了吗？",
+      "description": "从官方Claude Code开始，或根据您的需求探索开源替代品。",
+      "exploreOpenCode": "探索OpenCode"
+    }
   },
   "footer": {
     "about": {

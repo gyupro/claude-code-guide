@@ -347,6 +347,125 @@ Remember, your goal is to enhance Claude's performance and consistency while mai
               </div>
             </div>
 
+            {/* NEW: 키보드 단축키 섹션 */}
+            <div className="bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 p-4 sm:p-6 lg:p-8">
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-violet-600 rounded-lg flex items-center justify-center">
+                    <span className="text-white font-bold text-lg">5</span>
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <div className="flex items-center gap-2 mb-4">
+                    <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-slate-900 dark:text-white">
+                      {dictionary.tips?.keyboardShortcuts || 'Keyboard Shortcuts & Vim Motions'}
+                    </h2>
+                    <span className="px-2 py-0.5 bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 text-xs font-semibold rounded-full">
+                      NEW in 2.1
+                    </span>
+                  </div>
+                  <div className="prose dark:prose-invert max-w-none">
+                    <p className="text-slate-600 dark:text-slate-300 mb-4">
+                      {dictionary.tips?.keyboardShortcutsDescription || 'Claude Code 2.1 introduces enhanced keyboard shortcuts and Vim-style motions for power users. Customize keybindings with /keybindings command.'}
+                    </p>
+
+                    <CollapsibleSection title={dictionary.tips?.essentialShortcuts || 'Essential Shortcuts'} defaultOpen={true}>
+                      <div className="space-y-3">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          <div>
+                            <h4 className="font-semibold text-slate-900 dark:text-white mb-2">{dictionary.tips?.navigationShortcuts || 'Navigation & Control'}</h4>
+                            <div className="space-y-1 text-sm">
+                              <div className="flex justify-between"><code className="bg-slate-100 dark:bg-slate-700 px-1.5 py-0.5 rounded">Ctrl+C</code><span className="text-slate-600 dark:text-slate-300">{dictionary.tips?.cancelGeneration || 'Cancel generation'}</span></div>
+                              <div className="flex justify-between"><code className="bg-slate-100 dark:bg-slate-700 px-1.5 py-0.5 rounded">Escape</code><span className="text-slate-600 dark:text-slate-300">{dictionary.tips?.exitFocusInput || 'Exit / Focus input'}</span></div>
+                              <div className="flex justify-between"><code className="bg-slate-100 dark:bg-slate-700 px-1.5 py-0.5 rounded">↑ / ↓</code><span className="text-slate-600 dark:text-slate-300">{dictionary.tips?.promptHistory || 'Prompt history'}</span></div>
+                              <div className="flex justify-between"><code className="bg-slate-100 dark:bg-slate-700 px-1.5 py-0.5 rounded">Ctrl+L</code><span className="text-slate-600 dark:text-slate-300">{dictionary.tips?.clearScreen || 'Clear screen'}</span></div>
+                            </div>
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-slate-900 dark:text-white mb-2">{dictionary.tips?.newShortcuts || 'New in 2.1'}</h4>
+                            <div className="space-y-1 text-sm">
+                              <div className="flex justify-between"><code className="bg-indigo-100 dark:bg-indigo-900 px-1.5 py-0.5 rounded text-indigo-700 dark:text-indigo-300">Alt+T</code><span className="text-slate-600 dark:text-slate-300">{dictionary.tips?.toggleThinking || 'Toggle thinking mode'}</span></div>
+                              <div className="flex justify-between"><code className="bg-indigo-100 dark:bg-indigo-900 px-1.5 py-0.5 rounded text-indigo-700 dark:text-indigo-300">Alt+P</code><span className="text-slate-600 dark:text-slate-300">{dictionary.tips?.switchModel || 'Switch model'}</span></div>
+                              <div className="flex justify-between"><code className="bg-indigo-100 dark:bg-indigo-900 px-1.5 py-0.5 rounded text-indigo-700 dark:text-indigo-300">Ctrl+B</code><span className="text-slate-600 dark:text-slate-300">{dictionary.tips?.backgroundTask || 'Background task'}</span></div>
+                              <div className="flex justify-between"><code className="bg-indigo-100 dark:bg-indigo-900 px-1.5 py-0.5 rounded text-indigo-700 dark:text-indigo-300">/keybindings</code><span className="text-slate-600 dark:text-slate-300">{dictionary.tips?.customizeKeys || 'Customize keys'}</span></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </CollapsibleSection>
+
+                    <CollapsibleSection title={dictionary.tips?.vimMotions || 'Vim Motions (NEW)'}>
+                      <div className="space-y-3">
+                        <p className="text-sm text-slate-600 dark:text-slate-300 mb-3">
+                          {dictionary.tips?.vimMotionsDescription || 'Navigate and edit like a pro with Vim-style motions in the input area.'}
+                        </p>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          <div>
+                            <h4 className="font-semibold text-slate-900 dark:text-white mb-2">{dictionary.tips?.movement || 'Movement'}</h4>
+                            <div className="space-y-1 text-sm font-mono">
+                              <div><code className="text-green-600 dark:text-green-400">h j k l</code> - {dictionary.tips?.basicMovement || 'basic cursor movement'}</div>
+                              <div><code className="text-green-600 dark:text-green-400">w b e</code> - {dictionary.tips?.wordMovement || 'word navigation'}</div>
+                              <div><code className="text-green-600 dark:text-green-400">0 $ ^</code> - {dictionary.tips?.lineMovement || 'line start/end'}</div>
+                              <div><code className="text-green-600 dark:text-green-400">f F t T</code> - {dictionary.tips?.findChar || 'find character'}</div>
+                              <div><code className="text-green-600 dark:text-green-400">; ,</code> - {dictionary.tips?.repeatFind || 'repeat find next/prev'}</div>
+                            </div>
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-slate-900 dark:text-white mb-2">{dictionary.tips?.editing || 'Editing'}</h4>
+                            <div className="space-y-1 text-sm font-mono">
+                              <div><code className="text-orange-600 dark:text-orange-400">y yy Y</code> - {dictionary.tips?.yank || 'yank (copy)'}</div>
+                              <div><code className="text-orange-600 dark:text-orange-400">p P</code> - {dictionary.tips?.paste || 'paste after/before'}</div>
+                              <div><code className="text-orange-600 dark:text-orange-400">d dd D</code> - {dictionary.tips?.delete || 'delete'}</div>
+                              <div><code className="text-orange-600 dark:text-orange-400">c cc C</code> - {dictionary.tips?.change || 'change'}</div>
+                              <div><code className="text-orange-600 dark:text-orange-400">&gt;&gt; &lt;&lt;</code> - {dictionary.tips?.indent || 'indent/dedent'}</div>
+                              <div><code className="text-orange-600 dark:text-orange-400">J</code> - {dictionary.tips?.joinLines || 'join lines'}</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="mt-3">
+                          <h4 className="font-semibold text-slate-900 dark:text-white mb-2">{dictionary.tips?.textObjects || 'Text Objects'}</h4>
+                          <div className="text-sm font-mono space-y-1">
+                            <div><code className="text-purple-600 dark:text-purple-400">iw aw</code> - {dictionary.tips?.wordObject || 'inner/around word'}</div>
+                            <div><code className="text-purple-600 dark:text-purple-400">i&quot; a&quot; i&apos; a&apos;</code> - {dictionary.tips?.quoteObject || 'inside/around quotes'}</div>
+                            <div><code className="text-purple-600 dark:text-purple-400">i( a( i[ a[ i&#123; a&#123;</code> - {dictionary.tips?.bracketObject || 'inside/around brackets'}</div>
+                          </div>
+                        </div>
+                      </div>
+                    </CollapsibleSection>
+
+                    <CollapsibleSection title={dictionary.tips?.promptSuggestions || 'Prompt Suggestions (NEW)'}>
+                      <div className="space-y-3">
+                        <p className="text-sm text-slate-600 dark:text-slate-300">
+                          {dictionary.tips?.promptSuggestionsDescription || 'Claude Code now offers intelligent prompt suggestions as you type.'}
+                        </p>
+                        <div className="bg-slate-100 dark:bg-slate-900 rounded-lg p-4">
+                          <div className="space-y-2 text-sm">
+                            <div className="flex items-center gap-2">
+                              <code className="bg-blue-100 dark:bg-blue-900 px-2 py-1 rounded text-blue-700 dark:text-blue-300">Tab</code>
+                              <span className="text-slate-600 dark:text-slate-300">{dictionary.tips?.acceptSuggestion || 'Accept suggestion'}</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                              <code className="bg-blue-100 dark:bg-blue-900 px-2 py-1 rounded text-blue-700 dark:text-blue-300">Enter</code>
+                              <span className="text-slate-600 dark:text-slate-300">{dictionary.tips?.submitPrompt || 'Submit prompt directly'}</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                              <code className="bg-blue-100 dark:bg-blue-900 px-2 py-1 rounded text-blue-700 dark:text-blue-300">Escape</code>
+                              <span className="text-slate-600 dark:text-slate-300">{dictionary.tips?.dismissSuggestion || 'Dismiss suggestion'}</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg p-3">
+                          <p className="text-amber-800 dark:text-amber-200 text-sm">
+                            <strong>💡 Tip:</strong> {dictionary.tips?.suggestionTip || 'Suggestions are context-aware and learn from your project patterns over time.'}
+                          </p>
+                        </div>
+                      </div>
+                    </CollapsibleSection>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             {/* 추가 실전 팁들 */}
             <div className="bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 p-4 sm:p-6 lg:p-8">
               <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-slate-900 dark:text-white mb-6">

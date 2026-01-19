@@ -207,6 +207,77 @@ export default function UsageGuideClient({ locale, dictionary }: UsageGuideClien
             </div>
           </div>
 
+          {/* New in 2.1 Features */}
+          <div className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 rounded-xl border-2 border-green-500 dark:border-green-400 p-4 sm:p-6 lg:p-8 hover:shadow-lg transition-shadow relative lg:col-span-2">
+            <div className="absolute -top-3 -right-3 bg-green-500 text-white text-xs px-3 py-1 rounded-full font-medium">NEW in 2.1</div>
+            <div className="flex items-center mb-6">
+              <div className="w-12 h-12 bg-green-100 dark:bg-green-900 rounded-lg flex items-center justify-center mr-4">
+                <svg className="w-6 h-6 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-slate-900 dark:text-white">
+                {dictionary.usageGuide?.newFeatures?.title || 'New in Claude Code 2.1'}
+              </h2>
+            </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div className="block p-4 bg-white dark:bg-slate-800 rounded-lg border border-green-200 dark:border-green-700">
+                <h3 className="font-medium text-green-800 dark:text-green-300 mb-1 flex items-center">
+                  <span className="mr-2">⚡</span>
+                  {dictionary.usageGuide?.newFeatures?.items?.skillHotReload?.title || 'Skill Hot-Reload'}
+                </h3>
+                <p className="text-sm text-green-700 dark:text-green-400">
+                  {dictionary.usageGuide?.newFeatures?.items?.skillHotReload?.description || 'Skills update instantly without session restart'}
+                </p>
+              </div>
+              <div className="block p-4 bg-white dark:bg-slate-800 rounded-lg border border-green-200 dark:border-green-700">
+                <h3 className="font-medium text-green-800 dark:text-green-300 mb-1 flex items-center">
+                  <span className="mr-2">🔀</span>
+                  {dictionary.usageGuide?.newFeatures?.items?.asyncAgents?.title || 'Async Subagents'}
+                </h3>
+                <p className="text-sm text-green-700 dark:text-green-400">
+                  {dictionary.usageGuide?.newFeatures?.items?.asyncAgents?.description || 'Run agents in background with Ctrl+B'}
+                </p>
+              </div>
+              <div className="block p-4 bg-white dark:bg-slate-800 rounded-lg border border-green-200 dark:border-green-700">
+                <h3 className="font-medium text-green-800 dark:text-green-300 mb-1 flex items-center">
+                  <span className="mr-2">🎯</span>
+                  {dictionary.usageGuide?.newFeatures?.items?.mcpSearch?.title || 'MCP Tool Search'}
+                </h3>
+                <p className="text-sm text-green-700 dark:text-green-400">
+                  {dictionary.usageGuide?.newFeatures?.items?.mcpSearch?.description || 'Auto-deferred MCP tools save 85% context'}
+                </p>
+              </div>
+              <div className="block p-4 bg-white dark:bg-slate-800 rounded-lg border border-green-200 dark:border-green-700">
+                <h3 className="font-medium text-green-800 dark:text-green-300 mb-1 flex items-center">
+                  <span className="mr-2">⌨️</span>
+                  {dictionary.usageGuide?.newFeatures?.items?.keybindings?.title || 'Custom Keybindings'}
+                </h3>
+                <p className="text-sm text-green-700 dark:text-green-400">
+                  {dictionary.usageGuide?.newFeatures?.items?.keybindings?.description || 'Customize shortcuts via /keybindings'}
+                </p>
+              </div>
+              <div className="block p-4 bg-white dark:bg-slate-800 rounded-lg border border-green-200 dark:border-green-700">
+                <h3 className="font-medium text-green-800 dark:text-green-300 mb-1 flex items-center">
+                  <span className="mr-2">🌐</span>
+                  {dictionary.usageGuide?.newFeatures?.items?.language?.title || 'Multi-Language'}
+                </h3>
+                <p className="text-sm text-green-700 dark:text-green-400">
+                  {dictionary.usageGuide?.newFeatures?.items?.language?.description || 'Set response language: Japanese, Spanish, etc.'}
+                </p>
+              </div>
+              <div className="block p-4 bg-white dark:bg-slate-800 rounded-lg border border-green-200 dark:border-green-700">
+                <h3 className="font-medium text-green-800 dark:text-green-300 mb-1 flex items-center">
+                  <span className="mr-2">📋</span>
+                  {dictionary.usageGuide?.newFeatures?.items?.planCommand?.title || '/plan Command'}
+                </h3>
+                <p className="text-sm text-green-700 dark:text-green-400">
+                  {dictionary.usageGuide?.newFeatures?.items?.planCommand?.description || 'Enable plan mode directly from prompt'}
+                </p>
+              </div>
+            </div>
+          </div>
+
           {/* CLI Commands */}
           <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-4 sm:p-6 lg:p-8 hover:shadow-lg transition-shadow">
             <div className="flex items-center mb-6">

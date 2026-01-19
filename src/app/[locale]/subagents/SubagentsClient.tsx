@@ -152,6 +152,206 @@ export default function SubagentsClient({ locale, dictionary }: SubagentsClientP
                 </div>
               </div>
             </div>
+
+            {/* New Features in 2.1 */}
+            <div className="mt-8 p-4 bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 rounded-lg border-2 border-green-500 dark:border-green-400 relative">
+              <div className="absolute -top-2 -right-2 bg-green-500 text-white text-xs px-2 py-0.5 rounded">NEW in 2.1</div>
+              <h3 className="text-lg font-semibold text-green-900 dark:text-green-300 mb-4">
+                {dictionary.subagents?.whatAreSubagents?.newFeatures?.title || 'New Subagent Features'}
+              </h3>
+              <div className="grid md:grid-cols-2 gap-4">
+                <div className="flex items-start">
+                  <span className="text-green-500 mr-2">⚡</span>
+                  <div>
+                    <h4 className="font-medium text-green-800 dark:text-green-200">
+                      {dictionary.subagents?.whatAreSubagents?.newFeatures?.async?.title || 'Async Subagents'}
+                    </h4>
+                    <p className="text-green-700 dark:text-green-300 text-sm">
+                      {dictionary.subagents?.whatAreSubagents?.newFeatures?.async?.desc || 'Run subagents asynchronously with Ctrl+B backgrounding'}
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <span className="text-green-500 mr-2">🔀</span>
+                  <div>
+                    <h4 className="font-medium text-green-800 dark:text-green-200">
+                      {dictionary.subagents?.whatAreSubagents?.newFeatures?.fork?.title || 'Context Fork'}
+                    </h4>
+                    <p className="text-green-700 dark:text-green-300 text-sm">
+                      {dictionary.subagents?.whatAreSubagents?.newFeatures?.fork?.desc || 'Use context: fork in skill frontmatter for isolated execution'}
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <span className="text-green-500 mr-2">🎯</span>
+                  <div>
+                    <h4 className="font-medium text-green-800 dark:text-green-200">
+                      {dictionary.subagents?.whatAreSubagents?.newFeatures?.hooks?.title || 'Agent Hooks'}
+                    </h4>
+                    <p className="text-green-700 dark:text-green-300 text-sm">
+                      {dictionary.subagents?.whatAreSubagents?.newFeatures?.hooks?.desc || 'Define PreToolUse, PostToolUse, and Stop hooks in agent frontmatter'}
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <span className="text-green-500 mr-2">🔄</span>
+                  <div>
+                    <h4 className="font-medium text-green-800 dark:text-green-200">
+                      {dictionary.subagents?.whatAreSubagents?.newFeatures?.disable?.title || 'Disable Agents'}
+                    </h4>
+                    <p className="text-green-700 dark:text-green-300 text-sm">
+                      {dictionary.subagents?.whatAreSubagents?.newFeatures?.disable?.desc || 'Use Task(AgentName) syntax in disallowedTools to disable specific agents'}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Built-in Subagents */}
+        <section className="mb-16">
+          <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">
+            {dictionary.subagents?.builtIn?.title || 'Built-in Subagents'}
+          </h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-cyan-100 dark:bg-cyan-900 rounded-lg flex items-center justify-center">
+                  <svg className="w-5 h-5 text-cyan-600 dark:text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                </div>
+                <h3 className="font-bold text-lg text-slate-900 dark:text-white">Explore</h3>
+              </div>
+              <p className="text-sm text-slate-600 dark:text-slate-400 mb-3">
+                {dictionary.subagents?.builtIn?.explore?.desc || 'Fast, read-only agent for searching and analyzing codebases'}
+              </p>
+              <div className="text-xs space-y-1 text-slate-500 dark:text-slate-500">
+                <p><span className="font-semibold">Model:</span> Haiku (fast)</p>
+                <p><span className="font-semibold">Tools:</span> Read-only</p>
+              </div>
+            </div>
+            <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-amber-100 dark:bg-amber-900 rounded-lg flex items-center justify-center">
+                  <svg className="w-5 h-5 text-amber-600 dark:text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                  </svg>
+                </div>
+                <h3 className="font-bold text-lg text-slate-900 dark:text-white">Plan</h3>
+              </div>
+              <p className="text-sm text-slate-600 dark:text-slate-400 mb-3">
+                {dictionary.subagents?.builtIn?.plan?.desc || 'Research agent used in plan mode to gather context'}
+              </p>
+              <div className="text-xs space-y-1 text-slate-500 dark:text-slate-500">
+                <p><span className="font-semibold">Model:</span> Inherits</p>
+                <p><span className="font-semibold">Tools:</span> Read-only</p>
+              </div>
+            </div>
+            <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-violet-100 dark:bg-violet-900 rounded-lg flex items-center justify-center">
+                  <svg className="w-5 h-5 text-violet-600 dark:text-violet-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <h3 className="font-bold text-lg text-slate-900 dark:text-white">general-purpose</h3>
+              </div>
+              <p className="text-sm text-slate-600 dark:text-slate-400 mb-3">
+                {dictionary.subagents?.builtIn?.general?.desc || 'Capable agent for complex, multi-step tasks'}
+              </p>
+              <div className="text-xs space-y-1 text-slate-500 dark:text-slate-500">
+                <p><span className="font-semibold">Model:</span> Inherits</p>
+                <p><span className="font-semibold">Tools:</span> All tools</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Agent Frontmatter Fields - NEW Section */}
+        <section className="mb-16">
+          <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">
+            {dictionary.subagents?.frontmatter?.title || 'Agent Frontmatter Fields'}
+          </h2>
+          <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden">
+            <table className="w-full">
+              <thead className="bg-slate-50 dark:bg-slate-700">
+                <tr>
+                  <th className="px-6 py-3 text-left text-sm font-semibold text-slate-900 dark:text-white">Field</th>
+                  <th className="px-6 py-3 text-left text-sm font-semibold text-slate-900 dark:text-white">Description</th>
+                  <th className="px-6 py-3 text-left text-sm font-semibold text-slate-900 dark:text-white">Example</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-200 dark:divide-slate-700">
+                <tr>
+                  <td className="px-6 py-4 text-sm font-mono text-blue-600 dark:text-blue-400">model</td>
+                  <td className="px-6 py-4 text-sm text-slate-600 dark:text-slate-300">Override model selection</td>
+                  <td className="px-6 py-4 text-sm font-mono text-slate-500">opus, sonnet, haiku, inherit</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 text-sm font-mono text-blue-600 dark:text-blue-400">skills</td>
+                  <td className="px-6 py-4 text-sm text-slate-600 dark:text-slate-300">Enable specific skills</td>
+                  <td className="px-6 py-4 text-sm font-mono text-slate-500">[&quot;code-review&quot;, &quot;testing&quot;]</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 text-sm font-mono text-blue-600 dark:text-blue-400">hooks</td>
+                  <td className="px-6 py-4 text-sm text-slate-600 dark:text-slate-300">Define agent-specific hooks</td>
+                  <td className="px-6 py-4 text-sm font-mono text-slate-500">[&quot;pre-review&quot;]</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 text-sm font-mono text-blue-600 dark:text-blue-400">permissionMode</td>
+                  <td className="px-6 py-4 text-sm text-slate-600 dark:text-slate-300">Permission handling mode</td>
+                  <td className="px-6 py-4 text-sm font-mono text-slate-500">inherit, default, bypassPermissions</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 text-sm font-mono text-blue-600 dark:text-blue-400">apiKeyEnvVar</td>
+                  <td className="px-6 py-4 text-sm text-slate-600 dark:text-slate-300">Custom API key env variable</td>
+                  <td className="px-6 py-4 text-sm font-mono text-slate-500">CUSTOM_API_KEY</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 text-sm font-mono text-blue-600 dark:text-blue-400">enableUndo</td>
+                  <td className="px-6 py-4 text-sm text-slate-600 dark:text-slate-300">Enable undo capability</td>
+                  <td className="px-6 py-4 text-sm font-mono text-slate-500">true, false</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 text-sm font-mono text-blue-600 dark:text-blue-400">tools</td>
+                  <td className="px-6 py-4 text-sm text-slate-600 dark:text-slate-300">Restrict available tools</td>
+                  <td className="px-6 py-4 text-sm font-mono text-slate-500">[&quot;Read&quot;, &quot;Edit&quot;, &quot;Bash&quot;]</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div className="mt-4 bg-slate-900 dark:bg-slate-800 rounded-lg p-4">
+            <div className="flex items-center justify-between mb-2">
+              <span className="text-xs text-slate-400 font-mono">agent.md frontmatter example</span>
+              <CopyButton text={`---
+model: opus
+skills:
+  - code-review
+hooks:
+  - security-check
+permissionMode: inherit
+tools:
+  - Read
+  - Edit
+  - Grep
+---`} dictionary={dictionary} />
+            </div>
+            <pre className="text-sm text-green-400 font-mono overflow-x-auto">
+{`---
+model: opus
+skills:
+  - code-review
+hooks:
+  - security-check
+permissionMode: inherit
+tools:
+  - Read
+  - Edit
+  - Grep
+---`}
+            </pre>
           </div>
         </section>
 

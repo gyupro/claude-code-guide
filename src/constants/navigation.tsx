@@ -16,6 +16,7 @@ export const NAVIGATION_ITEMS: NavigationItem[] = [
     key: 'features',
     children: [
       { href: '/subagents', label: 'Subagents', key: 'subagents' },
+      { href: '/skills', label: 'Skills', key: 'skills' },
       { href: '/plugins', label: 'Plugins', key: 'plugins' },
       { href: '/hooks', label: 'Hooks', key: 'hooks' },
     ]
@@ -31,7 +32,7 @@ export const NAVIGATION_ITEMS: NavigationItem[] = [
     ]
   },
   { href: '/mcp', label: 'MCP', key: 'mcp' },
-  { href: '/community', label: 'Community', key: 'community' },
+  { href: '/third-party-tools', label: 'Third-Party Tools', key: 'thirdPartyTools' },
 ] as const;
 
 export const EXTERNAL_LINKS = {

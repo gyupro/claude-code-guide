@@ -11,12 +11,13 @@
     "learn": "学ぶ",
     "usageGuide": "使用ガイド",
     "subagents": "サブエージェント",
+    "skills": "スキル",
     "plugins": "プラグイン",
     "hooks": "フック",
     "tutorials": "チュートリアル",
     "tips": "コツ",
     "mcp": "MCP",
-    "community": "コミュニティ",
+    "thirdPartyTools": "サードパーティツール",
     "useCases": "活用事例",
     "subtitle": "使用ガイド",
     "openMenu": "メニューを開く",
@@ -109,11 +110,19 @@
       "windowsNote": "Windowsユーザーへの注意",
       "windowsWarning": "Claude CodeはWindowsでは直接実行できません。WSL（Windows Subsystem for Linux）環境で実行してください。"
     },
-    "installationDetail": {
-      "installOneCommand": "コマンド一つでインストール",
-      "beforeInstallation": "インストール前の確認事項",
-      "nodeRequirement": "Node.js 18+が必要です。node --versionで確認し、nodejs.orgからインストールしてください。"
-    },
+"installationDetail": {
+    "installOneCommand": "コマンド一つでインストール",
+    "beforeInstallation": "インストール前の確認事項",
+    "nodeRequirement": "Node.js 18+が必要です。node --versionで確認し、nodejs.orgからインストールしてください。",
+    "recommended": "推奨",
+    "autoUpdate": "バックグラウンドで自動更新",
+    "manualUpdate": "`brew upgrade claude-code`で更新",
+    "wingetUpdate": "`winget upgrade`で更新",
+    "accountRequired": "アカウントが必要",
+    "subscriptionInfo": "Claude Pro、Max、Teams、Enterprise、またはClaude Consoleアカウントが必要です",
+    "npmDeprecated": "NPMインストール非推奨",
+    "npmDeprecatedInfo": "npm install -g @anthropic-ai/claude-codeはサポートされなくなりました。上記のネイティブインストールを使用してください。"
+  },
     "authenticationDetail": {
       "startInProject": "プロジェクトで始める",
       "recommended": "推奨方法",
@@ -228,7 +237,7 @@
         "testAutomation": "テスト自動化"
       }
     },
-    "bestPractices": {
+"bestPractices": {
       "title": "生産性を高める実践のコツ",
       "items": {
         "specificInstructions": {
@@ -242,6 +251,35 @@
         "projectMemoryTip": {
           "title": "プロジェクトメモリ",
           "description": "CLAUDE.mdファイルにプロジェクトルールとコンテキストを明記して一貫した結果を得ましょう。"
+        }
+      }
+    },
+    "newFeatures": {
+      "title": "Claude Code 2.1の新機能",
+      "items": {
+        "skillHotReload": {
+          "title": "スキルホットリロード",
+          "description": "セッション再起動なしでスキルが即座に更新"
+        },
+        "asyncAgents": {
+          "title": "非同期サブエージェント",
+          "description": "Ctrl+Bでバックグラウンドでエージェント実行"
+        },
+        "mcpSearch": {
+          "title": "MCP ツール検索",
+          "description": "自動遅延MCPツールでコンテキスト85%節約"
+        },
+        "keybindings": {
+          "title": "カスタムキーバインド",
+          "description": "/keybindingsでショートカットをカスタマイズ"
+        },
+        "language": {
+          "title": "多言語対応",
+          "description": "応答言語を設定: 日本語、スペイン語など"
+        },
+        "planCommand": {
+          "title": "/planコマンド",
+          "description": "プロンプトから直接プランモードを有効化"
         }
       }
     }
@@ -380,6 +418,44 @@
     "projectContextText": "より良い意思決定のために、現在のエピック、プロジェクト目標、ビジネスコンテキストをCLAUDE.mdに含めてください。",
     "toolIntegration": "ツール統合ガイド",
     "toolIntegrationText": "Jira、Slack、データベースなどのツールのMCP接続方法と使用法を指定してください。",
+    "keyboardShortcuts": "キーボードショートカット & Vimモーション",
+    "keyboardShortcutsDescription": "Claude Code 2.1では、パワーユーザー向けに強化されたキーボードショートカットとVimスタイルのモーションが導入されました。/keybindingsコマンドでキーバインドをカスタマイズできます。",
+    "essentialShortcuts": "必須ショートカット",
+    "navigationShortcuts": "ナビゲーション & 制御",
+    "cancelGeneration": "生成をキャンセル",
+    "exitFocusInput": "終了 / 入力にフォーカス",
+    "promptHistory": "プロンプト履歴",
+    "clearScreen": "画面をクリア",
+    "newShortcuts": "2.1の新機能",
+    "toggleThinking": "思考モードの切り替え",
+    "switchModel": "モデルの切り替え",
+    "backgroundTask": "バックグラウンドタスク",
+    "customizeKeys": "キーのカスタマイズ",
+    "vimMotions": "Vimモーション（新機能）",
+    "vimMotionsDescription": "入力エリアでVimスタイルのモーションを使ってプロのようにナビゲート・編集できます。",
+    "movement": "移動",
+    "basicMovement": "基本カーソル移動",
+    "wordMovement": "単語ナビゲーション",
+    "lineMovement": "行の先頭/末尾",
+    "findChar": "文字を検索",
+    "repeatFind": "検索を繰り返す 次/前",
+    "editing": "編集",
+    "yank": "ヤンク（コピー）",
+    "paste": "ペースト 後/前",
+    "delete": "削除",
+    "change": "変更",
+    "indent": "インデント/アウトデント",
+    "joinLines": "行を結合",
+    "textObjects": "テキストオブジェクト",
+    "wordObject": "単語の内側/周囲",
+    "quoteObject": "引用符の内側/周囲",
+    "bracketObject": "括弧の内側/周囲",
+    "promptSuggestions": "プロンプト候補（新機能）",
+    "promptSuggestionsDescription": "Claude Codeは入力中にインテリジェントなプロンプト候補を提供するようになりました。",
+    "acceptSuggestion": "候補を受け入れる",
+    "submitPrompt": "プロンプトを直接送信",
+    "dismissSuggestion": "候補を無視",
+    "suggestionTip": "候補はコンテキストを認識し、時間とともにプロジェクトのパターンを学習します。",
     "conclusion": "Claude Codeは本当に強力なツールです",
     "conclusionText": "大規模な作業を簡単に処理し、適切に使用すれば信じられないほど強力です。これらのヒントを使って、あなた自身も驚くべき生産性を体験してください。",
     "getStarted": "始める",
@@ -408,6 +484,25 @@
       "example": {
         "title": "簡単な例",
         "description": "『今日登録したユーザーをユーザーテーブルから検索してSlackの#growthチャンネルに報告して』と言うと、Claude CodeがMCPを通じてデータベース検索からSlackメッセージ送信まで自動的に処理します。"
+      },
+      "httpTransport": {
+        "title": "HTTP トランスポート（推奨）",
+        "description": "HTTPは現在推奨されるトランスポートプロトコルです。SSE（Server-Sent Events）は非推奨になりました。"
+      },
+      "resourceMentions": {
+        "title": "MCP リソースメンション",
+        "description": "@ 構文を使用してプロンプト内でMCPリソースを直接参照できます。",
+        "example1": "テーブル構造を分析",
+        "example2": "最近のイシューを表示"
+      },
+      "slashCommands": {
+        "title": "MCPプロンプトをスラッシュコマンドとして",
+        "description": "MCPサーバープロンプトは自動的にスラッシュコマンドとして登録されます。"
+      },
+      "mcpSearch": {
+        "title": "MCPツール検索自動モード",
+        "description": "MCPツールの説明がコンテキストウィンドウの10%を超えると、自動的に遅延ロードされ、MCPSearchツールを通じて検索可能になります。",
+        "config": "# 閾値設定: auto:N (N = 0-100 パーセント)"
       }
     },
     "popularServers": {
@@ -728,9 +823,77 @@
     "clear": "クリア",
     "selectLanguage": "言語を選択"
   },
+  "skills": {
+    "title": "エージェントスキル",
+    "subtitle": "Claudeが自動的に適用するマークダウンベースのカスタムスキルでClaudeの機能を拡張します",
+    "whatAreSkills": {
+      "title": "エージェントスキルとは？",
+      "description": "スキルは、Claudeに特定の作業方法を教えるマークダウンファイルです。スキルはモデル呼び出し方式です：Claudeがリクエストに基づいてどのスキルを使用するかを決定します。スキルの説明に一致する質問をすると、Claudeが自動的にそのスキルを適用します。",
+      "automatic": "自動アクティベーション",
+      "automaticDesc": "Claudeはスキルが関連するときを検出し、自動的に適用します",
+      "markdown": "マークダウンベース",
+      "markdownDesc": "YAMLフロントマターと指示を含むシンプルなSKILL.mdファイル",
+      "hotReload": "ホットリロード",
+      "hotReloadDesc": "スキルは作成または変更時に自動的にロードされます"
+    },
+    "locations": {
+      "title": "スキルの配置場所",
+      "location": "場所",
+      "path": "パス",
+      "appliesTo": "適用対象",
+      "priority": "優先順位：Enterprise > Personal > Project > Plugin（名前の競合時は高い方が優先）"
+    },
+    "structure": {
+      "title": "SKILL.mdの構造",
+      "simpleExample": "シンプルなスキル",
+      "advancedExample": "高度なスキル"
+    },
+    "metadata": {
+      "title": "利用可能なメタデータフィールド"
+    },
+    "hooks": {
+      "title": "フック付きスキル",
+      "description": "スキルは、スキルのライフサイクル中に実行されるフックを定義できます。フックはスキルにスコープされ、スキル完了時に自動的にクリーンアップされます。",
+      "example": "例：セキュリティチェックフック"
+    },
+    "vsOthers": {
+      "title": "スキル vs 他のオプション"
+    },
+    "multiFile": {
+      "title": "マルチファイルスキル（段階的公開）",
+      "description": "複雑なスキルの場合は、段階的公開を使用してください：SKILL.mdに必須情報を入れ、詳細ドキュメントは必要な時だけClaudeが読む別ファイルに入れます。",
+      "tip": "SKILL.mdは500行未満に保ちましょう。スクリプトはコンテキストにロードせずに実行できます。"
+    },
+    "testing": {
+      "title": "スキルのテスト",
+      "viewSkills": "利用可能なスキルを表示",
+      "testSkill": "スキルをテスト",
+      "testSkillDesc": "スキルの説明に一致する質問をしてみてください："
+    },
+    "cta": {
+      "title": "スキル作成を始める",
+      "description": "チームの標準とワークフローでClaudeの機能を拡張する最初のスキルを作成しましょう。",
+      "button": "完全なドキュメントを読む"
+    }
+  },
   "subagents": {
     "title": "Subagents",
-    "subtitle": "タスク固有のワークフロー向けの特化したAIアシスタント"
+    "subtitle": "タスク固有のワークフロー向けの特化したAIアシスタント",
+    "frontmatter": {
+      "title": "エージェント Frontmatter フィールド",
+      "tableHeaders": {
+        "field": "フィールド",
+        "description": "説明",
+        "example": "例"
+      },
+      "model": "エージェントが使用するAIモデルを指定します",
+      "skills": "エージェントにスキルファイルをリンクします",
+      "hooks": "エージェント固有のフックを定義します",
+      "permissionMode": "権限動作を設定します（default、bypassPermissionsなど）",
+      "apiKeyEnvVar": "APIキーの環境変数を指定します",
+      "enableUndo": "元に戻す機能を有効/無効にします",
+      "tools": "許可/禁止するツールを指定します"
+    }
   },
   "plugins": {
     "title": "Plugins",
@@ -782,7 +945,18 @@
       "marketplace": {
         "title": "プラグインマーケットプレイス",
         "desc": "コミュニティマーケットプレイスに公開"
+      },
+      "cli": {
+        "title": "プラグインマーケットプレイス CLI",
+        "search": "マーケットプレイスでプラグインを検索",
+        "install": "マーケットプレイスからプラグインをインストール",
+        "list": "インストール済みプラグインを一覧表示",
+        "update": "インストール済みプラグインを更新"
       }
+    },
+    "lspSupport": {
+      "title": "LSPサーバーサポート",
+      "description": "プラグインは言語サーバープロトコル（LSP）サーバーをバンドルして、高度な言語機能とIDE統合を提供できます。"
     },
     "useCases": {
       "title": "プラグイン活用事例",
@@ -863,7 +1037,36 @@
       "sessionEnd": {
         "desc": "セッションが終了するときに実行。リソースのクリーンアップやセッションデータの保存が可能。",
         "useCase": "活用例：クリーンアップ、分析、セッションレポート"
+      },
+      "setup": {
+        "desc": "--init、--init-only、--maintenanceフラグでトリガーされます。リポジトリのセットアップとメンテナンスタスクに適しています。",
+        "useCase": "活用例：環境設定、依存関係チェック、プロジェクト初期化"
+      },
+      "subagentStop": {
+        "desc": "サブエージェントが作業を完了したときに実行。結果の処理や後続アクションのトリガーが可能。",
+        "useCase": "活用例：結果処理、タスクチェーン、通知"
+      },
+      "subagentStart": {
+        "desc": "サブエージェントが開始しようとしているときに実行。サブエージェントの起動を監視またはコンテキストを注入可能。",
+        "useCase": "活用例：サブエージェント監視、ロギング、コンテキスト注入"
+      },
+      "permissionRequest": {
+        "desc": "権限が要求されたときに実行。自動承認/拒否または権限リクエストのログ記録が可能。",
+        "useCase": "活用例：自動承認、権限ロギング、セキュリティ監査"
+      },
+      "preCompact": {
+        "desc": "コンテキスト圧縮が発生する前に実行。コンテキストが圧縮される前に重要な情報を保存可能。",
+        "useCase": "活用例：コンテキスト保存、重要データのバックアップ"
       }
+    },
+    "promptBasedHooks": {
+      "title": "プロンプトベースフック",
+      "description": "フックでLLMベースの意思決定を使用します。JavaScriptロジックを書く代わりに、自然言語で欲しいものを説明します。",
+      "whenToUse": "使用するタイミング",
+      "useCase1": "コードで書くのが難しい複雑な決定ロジック",
+      "useCase2": "コードレビューと品質チェック",
+      "useCase3": "コンテキスト認識検証",
+      "responseFormat": "レスポンス形式"
     },
     "examples": {
       "title": "実践例",
@@ -910,6 +1113,95 @@
     "cta": {
       "title": "ワークフローをカスタマイズする準備はできましたか？",
       "description": "チームワークフローを自動化し、開発基準を適用するフックの作成を始めましょう"
+    }
+  },
+  "thirdPartyTools": {
+    "title": "サードパーティツール",
+    "subtitle": "Claude Codeエコシステムのオープンソース代替品と拡張機能を探索",
+    "badge": "オープンソースエコシステム",
+    "ecosystem": {
+      "title": "Claude Codeエコシステム",
+      "description": "公式Claude Code CLI以外にも、活発なサードパーティツールエコシステムが形成されています。これらのツールは異なるアプローチ、モデルの柔軟性、特化した機能を提供します。",
+      "official": {
+        "title": "公式ツール"
+      },
+      "openSource": {
+        "title": "オープンソース代替"
+      },
+      "orchestration": {
+        "title": "オーケストレーションレイヤー"
+      }
+    },
+    "opencode": {
+      "description": "Claude、OpenAI、Groq、およびOllama経由のローカルモデルを含む75以上のモデルプロバイダーをサポートするオープンソースClaude Code代替品です。",
+      "features": {
+        "title": "主な機能",
+        "multiProvider": "75以上のモデルプロバイダー（Claude、OpenAI、Groq、Ollama）",
+        "localModels": "Ollama経由のネイティブローカルモデルサポート",
+        "clientServer": "リモートワークフロー向けクライアント/サーバーアーキテクチャ",
+        "pluginSystem": "イベントフック付きプラグインシステム",
+        "freeTool": "無料ツール - API使用量のみ支払い"
+      },
+      "installation": {
+        "title": "インストール"
+      }
+    },
+    "ohmyopencode": {
+      "tagline": "OpenCode向けバッテリー込みオーケストレーション",
+      "description": "特化したエージェント、マルチエージェント並列実行、20以上の組み込みワークフロー自動化フックを備えた、OpenCode上に構築された強力なオーケストレーションレイヤーです。",
+      "agents": {
+        "title": "特化エージェント",
+        "sisyphus": "デフォルトのプランナーおよび実行エージェント",
+        "librarian": "外部ドキュメントとGitHub探索",
+        "explore": "内部コードベース検索",
+        "oracle": "戦略的デバッグガイダンス"
+      },
+      "features": {
+        "title": "主な機能",
+        "multiAgent": "マルチエージェント並列実行",
+        "hooks": "20以上の組み込みワークフローフック",
+        "mcp": "コード検索のためのMCP統合",
+        "lsp": "フルLSPサポート",
+        "multiModel": "マルチモデルサポート（Claude、GPT、Gemini）",
+        "buildAware": "ビルドパイプライン認識"
+      }
+    },
+    "comparison": {
+      "title": "比較",
+      "feature": "機能",
+      "license": "ライセンス",
+      "modelSupport": "モデルサポート",
+      "localModels": "ローカルモデル",
+      "checkpoints": "チェックポイント/巻き戻し",
+      "sandboxing": "サンドボックス",
+      "multiAgent": "マルチエージェント",
+      "price": "価格"
+    },
+    "bestFor": {
+      "title": "どのツールがあなたに最適？",
+      "claudeCode": {
+        "desc": "パフォーマンス、セキュリティ、公式サポートを優先するチームに最適。",
+        "pro1": "最高クラスのClaude性能",
+        "pro2": "ネイティブサンドボックス（84%少ないプロンプト）",
+        "pro3": "公式IDE統合"
+      },
+      "opencode": {
+        "desc": "プロバイダーの柔軟性とコスト管理を求める開発者に最適。",
+        "pro1": "ベンダーロックインなし",
+        "pro2": "Ollama経由のローカルモデル",
+        "pro3": "クライアント/サーバーリモートワークフロー"
+      },
+      "ohmyopencode": {
+        "desc": "特化したエージェントオーケストレーションが必要な複雑なプロジェクトに最適。",
+        "pro1": "特化エージェント",
+        "pro2": "並列実行",
+        "pro3": "20以上のワークフローフック"
+      }
+    },
+    "cta": {
+      "title": "探索する準備はできましたか？",
+      "description": "公式Claude Codeから始めるか、ニーズに応じてオープンソース代替品を探索してください。",
+      "exploreOpenCode": "OpenCodeを探索"
     }
   },
   "footer": {

@@ -141,19 +141,22 @@ export default function PluginsClient({ locale, dictionary }: PluginsClientProps
             </h2>
             <div className="bg-slate-900 dark:bg-slate-800 rounded-lg p-6 mb-6 overflow-x-auto">
               <pre className="text-sm text-green-400 font-mono">
-{`.claude-plugin/
-├── plugin.json          # Plugin metadata and configuration
-├── commands/            # Custom slash commands
+{`my-plugin/
+├── .claude-plugin/
+│   └── plugin.json      # Required: Plugin manifest
+├── commands/            # Optional: Slash commands
 │   ├── review.md
 │   └── deploy.md
-├── agents/              # Specialized subagents
+├── agents/              # Optional: Custom subagents
 │   └── code-reviewer/
 │       └── agent.md
-├── hooks/               # Event hooks
-│   ├── pre-tool-use.js
-│   └── post-tool-use.js
-└── mcp/                 # MCP server configurations
-    └── servers.json`}
+├── skills/              # Optional: Agent Skills (NEW)
+│   └── my-skill/
+│       └── SKILL.md
+├── hooks/               # Optional: Event handlers
+│   └── hooks.json
+├── .mcp.json            # Optional: MCP servers
+└── .lsp.json            # Optional: LSP servers (NEW)`}
               </pre>
             </div>
             <div className="space-y-4">
@@ -306,6 +309,88 @@ Ensure all checks pass before deployment.`}
                   {dictionary.plugins?.distribution?.marketplace?.desc ||
                     'Publish to the community marketplace'}
                 </p>
+              </div>
+            </div>
+
+            {/* Plugin CLI Commands - NEW */}
+            <div className="mt-8 p-4 bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 rounded-lg border-2 border-green-500 dark:border-green-400 relative">
+              <div className="absolute -top-2 -right-2 bg-green-500 text-white text-xs px-2 py-0.5 rounded">NEW</div>
+              <h3 className="text-lg font-semibold text-green-900 dark:text-green-300 mb-4">
+                {dictionary.plugins?.distribution?.cli?.title || 'Plugin Marketplace CLI'}
+              </h3>
+              <div className="grid md:grid-cols-2 gap-4">
+                <div className="bg-slate-900 dark:bg-slate-800 rounded p-3">
+                  <code className="text-green-400 font-mono text-sm">claude plugins search &lt;query&gt;</code>
+                  <p className="text-slate-400 text-xs mt-1">Search plugins</p>
+                </div>
+                <div className="bg-slate-900 dark:bg-slate-800 rounded p-3">
+                  <code className="text-green-400 font-mono text-sm">claude plugins install &lt;name&gt;</code>
+                  <p className="text-slate-400 text-xs mt-1">Install plugin</p>
+                </div>
+                <div className="bg-slate-900 dark:bg-slate-800 rounded p-3">
+                  <code className="text-green-400 font-mono text-sm">claude plugins list</code>
+                  <p className="text-slate-400 text-xs mt-1">List installed</p>
+                </div>
+                <div className="bg-slate-900 dark:bg-slate-800 rounded p-3">
+                  <code className="text-green-400 font-mono text-sm">claude plugins update</code>
+                  <p className="text-slate-400 text-xs mt-1">Update all</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* LSP Server Support - NEW Section */}
+        <section className="mb-16">
+          <div className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-xl border-2 border-blue-500 dark:border-blue-400 p-8 relative">
+            <div className="absolute -top-3 -right-3 bg-blue-500 text-white text-xs px-3 py-1 rounded-full font-medium">NEW</div>
+            <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-6">
+              {dictionary.plugins?.lspSupport?.title || 'LSP Server Support'}
+            </h2>
+            <p className="text-slate-600 dark:text-slate-300 mb-6">
+              {dictionary.plugins?.lspSupport?.description || 'Plugins can now bundle Language Server Protocol (LSP) servers for enhanced language support.'}
+            </p>
+            <div className="bg-slate-900 dark:bg-slate-800 rounded-lg p-4 mb-4">
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-xs text-slate-400 font-mono">.lsp.json</span>
+                <CopyButton text={`{
+  "servers": {
+    "typescript": {
+      "command": "typescript-language-server",
+      "args": ["--stdio"]
+    },
+    "python": {
+      "command": "pylsp"
+    }
+  }
+}`} dictionary={dictionary} />
+              </div>
+              <pre className="text-sm text-green-400 font-mono overflow-x-auto">
+{`{
+  "servers": {
+    "typescript": {
+      "command": "typescript-language-server",
+      "args": ["--stdio"]
+    },
+    "python": {
+      "command": "pylsp"
+    }
+  }
+}`}
+              </pre>
+            </div>
+            <div className="grid md:grid-cols-3 gap-4">
+              <div className="bg-white dark:bg-slate-800 rounded-lg p-4">
+                <h4 className="font-semibold text-blue-900 dark:text-blue-300 mb-2">Auto-completion</h4>
+                <p className="text-sm text-slate-600 dark:text-slate-400">Enhanced code suggestions</p>
+              </div>
+              <div className="bg-white dark:bg-slate-800 rounded-lg p-4">
+                <h4 className="font-semibold text-blue-900 dark:text-blue-300 mb-2">Diagnostics</h4>
+                <p className="text-sm text-slate-600 dark:text-slate-400">Real-time error detection</p>
+              </div>
+              <div className="bg-white dark:bg-slate-800 rounded-lg p-4">
+                <h4 className="font-semibold text-blue-900 dark:text-blue-300 mb-2">Go to Definition</h4>
+                <p className="text-sm text-slate-600 dark:text-slate-400">Navigate codebase easily</p>
               </div>
             </div>
           </div>

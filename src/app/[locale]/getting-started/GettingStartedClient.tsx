@@ -184,14 +184,67 @@ export default function GettingStartedClient({ locale, dictionary }: GettingStar
             </h2>
 
             <div className="space-y-4 sm:space-y-6">
-              <div className="bg-slate-900 dark:bg-slate-800 rounded-lg p-4">
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-slate-400 text-sm">
-                    {dictionary.gettingStarted.installationDetail.installOneCommand}
-                  </span>
-                  <CopyButton text="npm install -g @anthropic-ai/claude-code" dictionary={dictionary} />
+              {/* Native Install - Recommended */}
+              <div className="border-2 border-green-500 dark:border-green-400 rounded-lg overflow-hidden">
+                <div className="bg-green-50 dark:bg-green-900/30 px-4 py-2 flex items-center">
+                  <span className="bg-green-500 text-white text-xs px-2 py-0.5 rounded mr-2">{dictionary.gettingStarted?.installationDetail?.recommended || 'Recommended'}</span>
+                  <span className="font-medium text-green-800 dark:text-green-300">Native Install</span>
                 </div>
-                <code className="text-green-400 font-mono text-sm sm:text-base">npm install -g @anthropic-ai/claude-code</code>
+                <div className="p-4 space-y-3">
+                  <div>
+                    <span className="text-slate-500 dark:text-slate-400 text-xs mb-1 block">macOS / Linux / WSL</span>
+                    <div className="bg-slate-900 dark:bg-slate-800 rounded-lg p-3 flex items-center justify-between">
+                      <code className="text-green-400 font-mono text-xs sm:text-sm">curl -fsSL https://claude.ai/install.sh | bash</code>
+                      <CopyButton text="curl -fsSL https://claude.ai/install.sh | bash" dictionary={dictionary} />
+                    </div>
+                  </div>
+                  <div>
+                    <span className="text-slate-500 dark:text-slate-400 text-xs mb-1 block">Windows PowerShell</span>
+                    <div className="bg-slate-900 dark:bg-slate-800 rounded-lg p-3 flex items-center justify-between">
+                      <code className="text-green-400 font-mono text-xs sm:text-sm">irm https://claude.ai/install.ps1 | iex</code>
+                      <CopyButton text="irm https://claude.ai/install.ps1 | iex" dictionary={dictionary} />
+                    </div>
+                  </div>
+                  <p className="text-xs text-green-700 dark:text-green-300 flex items-center">
+                    <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    {dictionary.gettingStarted?.installationDetail?.autoUpdate || 'Auto-updates in background'}
+                  </p>
+                </div>
+              </div>
+
+              {/* Alternative Methods */}
+              <div className="grid sm:grid-cols-2 gap-4">
+                {/* Homebrew */}
+                <div className="border border-slate-200 dark:border-slate-600 rounded-lg p-4">
+                  <div className="flex items-center mb-2">
+                    <span className="font-medium text-slate-900 dark:text-white">Homebrew</span>
+                    <span className="text-xs text-slate-500 ml-2">(macOS)</span>
+                  </div>
+                  <div className="bg-slate-900 dark:bg-slate-800 rounded-lg p-3 flex items-center justify-between">
+                    <code className="text-green-400 font-mono text-xs">brew install --cask claude-code</code>
+                    <CopyButton text="brew install --cask claude-code" dictionary={dictionary} />
+                  </div>
+                  <p className="text-xs text-slate-500 dark:text-slate-400 mt-2">
+                    {dictionary.gettingStarted?.installationDetail?.manualUpdate || 'Run `brew upgrade claude-code` to update'}
+                  </p>
+                </div>
+
+                {/* WinGet */}
+                <div className="border border-slate-200 dark:border-slate-600 rounded-lg p-4">
+                  <div className="flex items-center mb-2">
+                    <span className="font-medium text-slate-900 dark:text-white">WinGet</span>
+                    <span className="text-xs text-slate-500 ml-2">(Windows)</span>
+                  </div>
+                  <div className="bg-slate-900 dark:bg-slate-800 rounded-lg p-3 flex items-center justify-between">
+                    <code className="text-green-400 font-mono text-xs">winget install Anthropic.ClaudeCode</code>
+                    <CopyButton text="winget install Anthropic.ClaudeCode" dictionary={dictionary} />
+                  </div>
+                  <p className="text-xs text-slate-500 dark:text-slate-400 mt-2">
+                    {dictionary.gettingStarted?.installationDetail?.wingetUpdate || 'Run `winget upgrade` to update'}
+                  </p>
+                </div>
               </div>
 
               <div className="p-3 sm:p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg">
@@ -201,10 +254,26 @@ export default function GettingStartedClient({ locale, dictionary }: GettingStar
                   </svg>
                   <div>
                     <p className="text-blue-800 dark:text-blue-200 font-medium text-sm sm:text-base">
-                      {dictionary.gettingStarted.installationDetail.beforeInstallation}
+                      {dictionary.gettingStarted?.installationDetail?.accountRequired || 'Account Required'}
                     </p>
                     <p className="text-blue-700 dark:text-blue-300 text-xs sm:text-sm mt-1">
-                      {dictionary.gettingStarted.installationDetail.nodeRequirement}
+                      {dictionary.gettingStarted?.installationDetail?.subscriptionInfo || 'Claude Pro, Max, Teams, Enterprise, or Claude Console account required'}
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="p-3 sm:p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg">
+                <div className="flex">
+                  <svg className="w-5 h-5 text-red-600 dark:text-red-400 mt-0.5 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 15.5c-.77.833.192 2.5 1.732 2.5z" />
+                  </svg>
+                  <div>
+                    <p className="text-red-800 dark:text-red-200 font-medium text-sm sm:text-base">
+                      {dictionary.gettingStarted?.installationDetail?.npmDeprecated || 'NPM Install Deprecated'}
+                    </p>
+                    <p className="text-red-700 dark:text-red-300 text-xs sm:text-sm mt-1">
+                      {dictionary.gettingStarted?.installationDetail?.npmDeprecatedInfo || 'npm install -g @anthropic-ai/claude-code is no longer supported. Please use Native Install above.'}
                     </p>
                   </div>
                 </div>

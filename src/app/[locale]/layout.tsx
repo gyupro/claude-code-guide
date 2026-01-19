@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Noto_Sans_KR } from "next/font/google";
+import Script from "next/script";
 import "@/app/globals.css";
 import { i18n, type Locale } from '@/lib/i18n/config';
 import { getDictionary } from '@/lib/i18n/dictionaries';
@@ -212,32 +213,6 @@ export default async function LocaleLayout({
         <link rel="alternate" hrefLang="ko" href="https://claude.develop-on.co.kr/ko" />
         <link rel="alternate" hrefLang="ja" href="https://claude.develop-on.co.kr/ja" />
         <link rel="alternate" hrefLang="zh" href="https://claude.develop-on.co.kr/zh" />
-        {/* Google tag (gtag.js) */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-VX16G6RCVS"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-VX16G6RCVS');
-            `,
-          }}
-        />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              try {
-                const theme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-                if (theme === 'dark') {
-                  document.documentElement.classList.add('dark');
-                }
-              } catch {}
-            `,
-          }}
-        />
-      </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} ${notoSansKR.variable} antialiased`}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -246,6 +221,26 @@ export default async function LocaleLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
         />
+      </head>
+      <body className={`${geistSans.variable} ${geistMono.variable} ${notoSansKR.variable} antialiased`} suppressHydrationWarning>
+        <Script id="theme-script" strategy="beforeInteractive">
+          {`try {
+            const theme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            if (theme === 'dark') {
+              document.documentElement.classList.add('dark');
+            }
+          } catch {}`}
+        </Script>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-VX16G6RCVS"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-VX16G6RCVS');`}
+        </Script>
         <ClientLayout dictionary={dictionary} locale={locale}>
           {children}
         </ClientLayout>

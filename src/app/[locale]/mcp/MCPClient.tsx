@@ -172,6 +172,88 @@ export default function MCPClient({ locale, dictionary }: MCPClientProps) {
                   <strong>💡 {dictionary.mcp?.whatIsMcp?.example?.title || 'Example'}:</strong> {dictionary.mcp?.whatIsMcp?.example?.description || 'Query users from the database and send a report to Slack.'}
                 </p>
               </div>
+
+              {/* MCP Tool Search Auto Mode - NEW in 2.1 */}
+              <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg border-2 border-green-500 dark:border-green-400 relative mt-4">
+                <div className="absolute -top-2 -right-2 bg-green-500 text-white text-xs px-2 py-0.5 rounded">NEW in 2.1</div>
+                <h3 className="text-base sm:text-lg font-semibold text-green-900 dark:text-green-300 mb-2">
+                  🔍 {dictionary.mcp?.whatIsMcp?.mcpSearch?.title || 'MCP Tool Search Auto Mode'}
+                </h3>
+                <p className="text-green-800 dark:text-green-200 text-sm mb-3">
+                  {dictionary.mcp?.whatIsMcp?.mcpSearch?.description || 'When MCP tool descriptions exceed 10% of context window, they are automatically deferred and discovered via MCPSearch tool instead of being loaded upfront.'}
+                </p>
+                <div className="bg-slate-900 dark:bg-slate-800 rounded p-3">
+                  <code className="text-green-400 font-mono text-xs">
+                    {dictionary.mcp?.whatIsMcp?.mcpSearch?.config || '# Configure threshold: auto:N (N = percentage 0-100)'}
+                  </code>
+                </div>
+              </div>
+
+              {/* HTTP Transport - NEW */}
+              <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border-2 border-blue-500 dark:border-blue-400 relative mt-4">
+                <div className="absolute -top-2 -right-2 bg-blue-500 text-white text-xs px-2 py-0.5 rounded">UPDATED</div>
+                <h3 className="text-base sm:text-lg font-semibold text-blue-900 dark:text-blue-300 mb-2">
+                  🔗 {dictionary.mcp?.whatIsMcp?.httpTransport?.title || 'HTTP Transport (Recommended)'}
+                </h3>
+                <p className="text-blue-800 dark:text-blue-200 text-sm mb-3">
+                  {dictionary.mcp?.whatIsMcp?.httpTransport?.description || 'HTTP is now the recommended transport protocol. SSE (Server-Sent Events) is deprecated.'}
+                </p>
+                <div className="bg-slate-900 dark:bg-slate-800 rounded p-3 mb-2">
+                  <code className="text-green-400 font-mono text-xs block">
+                    {`// New HTTP transport (Recommended)`}
+                  </code>
+                  <code className="text-blue-400 font-mono text-xs block mt-1">
+                    {`"url": "http://localhost:3000/mcp"`}
+                  </code>
+                  <code className="text-blue-400 font-mono text-xs block">
+                    {`"transport": "http"`}
+                  </code>
+                </div>
+                <div className="bg-red-900/30 dark:bg-red-900/20 rounded p-2">
+                  <code className="text-red-400 font-mono text-xs">
+                    {`// SSE transport - DEPRECATED`}
+                  </code>
+                </div>
+              </div>
+
+              {/* MCP Resource Mentions - NEW */}
+              <div className="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-lg border-2 border-purple-500 dark:border-purple-400 relative mt-4">
+                <div className="absolute -top-2 -right-2 bg-purple-500 text-white text-xs px-2 py-0.5 rounded">NEW</div>
+                <h3 className="text-base sm:text-lg font-semibold text-purple-900 dark:text-purple-300 mb-2">
+                  @ {dictionary.mcp?.whatIsMcp?.resourceMentions?.title || 'MCP Resource Mentions'}
+                </h3>
+                <p className="text-purple-800 dark:text-purple-200 text-sm mb-3">
+                  {dictionary.mcp?.whatIsMcp?.resourceMentions?.description || 'Reference MCP resources directly in your prompts using @ syntax.'}
+                </p>
+                <div className="space-y-2">
+                  <div className="bg-slate-900 dark:bg-slate-800 rounded p-2">
+                    <code className="text-purple-400 font-mono text-xs">
+                      claude{`>`} @database/users {dictionary.mcp?.whatIsMcp?.resourceMentions?.example1 || 'Analyze table structure'}
+                    </code>
+                  </div>
+                  <div className="bg-slate-900 dark:bg-slate-800 rounded p-2">
+                    <code className="text-purple-400 font-mono text-xs">
+                      claude{`>`} @github/issues {dictionary.mcp?.whatIsMcp?.resourceMentions?.example2 || 'Show recent issues'}
+                    </code>
+                  </div>
+                </div>
+              </div>
+
+              {/* MCP Prompts as Slash Commands - NEW */}
+              <div className="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-lg border-2 border-orange-500 dark:border-orange-400 relative mt-4">
+                <div className="absolute -top-2 -right-2 bg-orange-500 text-white text-xs px-2 py-0.5 rounded">NEW</div>
+                <h3 className="text-base sm:text-lg font-semibold text-orange-900 dark:text-orange-300 mb-2">
+                  / {dictionary.mcp?.whatIsMcp?.slashCommands?.title || 'MCP Prompts as Slash Commands'}
+                </h3>
+                <p className="text-orange-800 dark:text-orange-200 text-sm mb-3">
+                  {dictionary.mcp?.whatIsMcp?.slashCommands?.description || 'MCP server prompts are automatically registered as slash commands.'}
+                </p>
+                <div className="bg-slate-900 dark:bg-slate-800 rounded p-2">
+                  <code className="text-orange-400 font-mono text-xs">
+                    /supabase/create-migration, /github/review-pr
+                  </code>
+                </div>
+              </div>
             </div>
           </div>
         </section>

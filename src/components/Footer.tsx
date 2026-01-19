@@ -65,8 +65,8 @@ export default function Footer({ dictionary, locale }: FooterProps) {
                   </Link>
                 </li>
                 <li>
-                  <Link href={`/${locale}/community`} className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white">
-                    {dictionary.navigation.community}
+                  <Link href={`/${locale}/third-party-tools`} className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white">
+                    {dictionary.navigation.thirdPartyTools}
                   </Link>
                 </li>
               </ul>

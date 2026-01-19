@@ -248,15 +248,20 @@ interface NavigationItem {
    - PreToolUse, PostToolUse events
    - UserPromptSubmit, Notification events
    - SessionStart, SessionEnd lifecycle hooks
-   - SubagentStop for subagent task completion
+   - **PermissionRequest** - Trigger on permission requests (NEW)
+   - **PreCompact** - Trigger before context compaction (NEW)
+   - **SubagentStart** - Trigger when subagent starts (NEW)
+   - **SubagentStop** - Trigger when subagent completes (NEW)
+   - **Prompt-Based Hooks** - LLM-powered decision making (NEW)
    - Security considerations and best practices
 
 4. **Installation Methods**
-   - NPM install: `npm install -g @anthropic-ai/claude-code`
-   - Native install (Beta):
+   - ~~NPM install: `npm install -g @anthropic-ai/claude-code`~~ **(DEPRECATED - Not Recommended)**
+   - **Native Install (Recommended)**:
      - macOS/Linux/WSL: `curl -fsSL https://claude.ai/install.sh | bash`
      - Windows PowerShell: `irm https://claude.ai/install.ps1 | iex`
-     - Windows CMD: `curl -fsSL https://claude.ai/install.cmd -o install.cmd && install.cmd && del install.cmd`
+     - Homebrew: `brew install --cask claude-code`
+     - WinGet: `winget install Anthropic.ClaudeCode`
 
 5. **VS Code Extension (Beta)** - Native IDE integration
    - Graphical interface in VS Code sidebar
@@ -272,6 +277,15 @@ interface NavigationItem {
    - Model Configuration options
    - Status Line Configuration
    - Plugin Marketplaces for team distribution
+
+7. **New Features (2025-2026)**
+   - **Skills** - Domain expertise defined via SKILL.md files
+   - **Desktop App** - Native GUI environment (Preview)
+   - **Chrome Extension (Beta)** - Browser automation and web context
+   - **Slack Integration** - Delegate coding tasks from Slack
+   - **MCP HTTP Transport** - HTTP recommended (SSE deprecated)
+   - **MCP Resource Mentions** - Reference MCP resources with @ syntax
+   - **MCP Tool Search** - Auto-deferred tools for context optimization
 
 ## MCP Integration
 

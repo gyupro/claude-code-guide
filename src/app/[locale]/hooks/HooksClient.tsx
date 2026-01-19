@@ -266,6 +266,203 @@ export default function HooksClient({ locale, dictionary }: HooksClientProps) {
                 {dictionary.hooks?.availableHooks?.sessionEnd?.useCase || 'Use case: Cleanup, analytics, session reports'}
               </div>
             </div>
+
+            {/* Setup - NEW in 2.1 */}
+            <div className="bg-white dark:bg-slate-800 rounded-xl border-2 border-green-500 dark:border-green-400 p-6 relative">
+              <div className="absolute -top-2 -right-2 bg-green-500 text-white text-xs px-2 py-0.5 rounded">NEW</div>
+              <div className="flex items-center mb-4">
+                <div className="w-10 h-10 bg-green-100 dark:bg-green-900 rounded-lg flex items-center justify-center mr-3">
+                  <svg className="w-5 h-5 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+                <h3 className="font-bold text-lg text-slate-900 dark:text-white">
+                  Setup
+                </h3>
+              </div>
+              <p className="text-sm text-slate-600 dark:text-slate-400 mb-3">
+                {dictionary.hooks?.availableHooks?.setup?.desc ||
+                  'Triggered via --init, --init-only, or --maintenance flags. Perfect for repository setup and maintenance operations.'}
+              </p>
+              <div className="text-xs text-slate-500 dark:text-slate-500">
+                {dictionary.hooks?.availableHooks?.setup?.useCase || 'Use case: Environment setup, dependency checks, project initialization'}
+              </div>
+            </div>
+
+            {/* SubagentStop - NEW in 2.1 */}
+            <div className="bg-white dark:bg-slate-800 rounded-xl border-2 border-green-500 dark:border-green-400 p-6 relative">
+              <div className="absolute -top-2 -right-2 bg-green-500 text-white text-xs px-2 py-0.5 rounded">NEW</div>
+              <div className="flex items-center mb-4">
+                <div className="w-10 h-10 bg-indigo-100 dark:bg-indigo-900 rounded-lg flex items-center justify-center mr-3">
+                  <svg className="w-5 h-5 text-indigo-600 dark:text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                </div>
+                <h3 className="font-bold text-lg text-slate-900 dark:text-white">
+                  SubagentStop
+                </h3>
+              </div>
+              <p className="text-sm text-slate-600 dark:text-slate-400 mb-3">
+                {dictionary.hooks?.availableHooks?.subagentStop?.desc ||
+                  'Fired when a subagent completes its task. Process results or trigger follow-up actions.'}
+              </p>
+              <div className="text-xs text-slate-500 dark:text-slate-500">
+                {dictionary.hooks?.availableHooks?.subagentStop?.useCase || 'Use case: Result processing, task chaining, notifications'}
+              </div>
+            </div>
+
+            {/* SubagentStart - NEW */}
+            <div className="bg-white dark:bg-slate-800 rounded-xl border-2 border-green-500 dark:border-green-400 p-6 relative">
+              <div className="absolute -top-2 -right-2 bg-green-500 text-white text-xs px-2 py-0.5 rounded">NEW</div>
+              <div className="flex items-center mb-4">
+                <div className="w-10 h-10 bg-teal-100 dark:bg-teal-900 rounded-lg flex items-center justify-center mr-3">
+                  <svg className="w-5 h-5 text-teal-600 dark:text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h3 className="font-bold text-lg text-slate-900 dark:text-white">
+                  SubagentStart
+                </h3>
+              </div>
+              <p className="text-sm text-slate-600 dark:text-slate-400 mb-3">
+                {dictionary.hooks?.availableHooks?.subagentStart?.desc ||
+                  'Fired when a subagent starts. Monitor subagent launches or inject context.'}
+              </p>
+              <div className="text-xs text-slate-500 dark:text-slate-500">
+                {dictionary.hooks?.availableHooks?.subagentStart?.useCase || 'Use case: Subagent monitoring, logging, context injection'}
+              </div>
+            </div>
+
+            {/* PermissionRequest - NEW */}
+            <div className="bg-white dark:bg-slate-800 rounded-xl border-2 border-green-500 dark:border-green-400 p-6 relative">
+              <div className="absolute -top-2 -right-2 bg-green-500 text-white text-xs px-2 py-0.5 rounded">NEW</div>
+              <div className="flex items-center mb-4">
+                <div className="w-10 h-10 bg-amber-100 dark:bg-amber-900 rounded-lg flex items-center justify-center mr-3">
+                  <svg className="w-5 h-5 text-amber-600 dark:text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+                <h3 className="font-bold text-lg text-slate-900 dark:text-white">
+                  PermissionRequest
+                </h3>
+              </div>
+              <p className="text-sm text-slate-600 dark:text-slate-400 mb-3">
+                {dictionary.hooks?.availableHooks?.permissionRequest?.desc ||
+                  'Fired when permission is requested. Auto-approve/deny or log permission requests.'}
+              </p>
+              <div className="text-xs text-slate-500 dark:text-slate-500">
+                {dictionary.hooks?.availableHooks?.permissionRequest?.useCase || 'Use case: Auto-approval, permission logging, security audit'}
+              </div>
+            </div>
+
+            {/* PreCompact - NEW */}
+            <div className="bg-white dark:bg-slate-800 rounded-xl border-2 border-green-500 dark:border-green-400 p-6 relative">
+              <div className="absolute -top-2 -right-2 bg-green-500 text-white text-xs px-2 py-0.5 rounded">NEW</div>
+              <div className="flex items-center mb-4">
+                <div className="w-10 h-10 bg-rose-100 dark:bg-rose-900 rounded-lg flex items-center justify-center mr-3">
+                  <svg className="w-5 h-5 text-rose-600 dark:text-rose-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                  </svg>
+                </div>
+                <h3 className="font-bold text-lg text-slate-900 dark:text-white">
+                  PreCompact
+                </h3>
+              </div>
+              <p className="text-sm text-slate-600 dark:text-slate-400 mb-3">
+                {dictionary.hooks?.availableHooks?.preCompact?.desc ||
+                  'Fired before context compaction. Save important information before context is compressed.'}
+              </p>
+              <div className="text-xs text-slate-500 dark:text-slate-500">
+                {dictionary.hooks?.availableHooks?.preCompact?.useCase || 'Use case: Context preservation, important data backup'}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Prompt-Based Hooks - NEW Section */}
+        <section className="mb-16">
+          <div className="bg-gradient-to-br from-violet-50 to-purple-50 dark:from-violet-900/20 dark:to-purple-900/20 rounded-xl border-2 border-violet-500 dark:border-violet-400 p-8 relative">
+            <div className="absolute -top-3 -right-3 bg-violet-500 text-white text-xs px-3 py-1 rounded-full font-medium">NEW FEATURE</div>
+            <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-6">
+              {dictionary.hooks?.promptBasedHooks?.title || 'Prompt-Based Hooks'}
+            </h2>
+            <p className="text-lg text-slate-600 dark:text-slate-300 mb-6">
+              {dictionary.hooks?.promptBasedHooks?.description ||
+                'Use LLM-powered decision making in your hooks. Instead of writing JavaScript logic, describe what you want in natural language.'}
+            </p>
+            
+            <div className="bg-slate-900 dark:bg-slate-800 rounded-lg p-4 mb-6">
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-xs text-slate-400 font-mono">.claude/settings.json</span>
+                <CopyButton
+                  text={`{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "type": "prompt",
+        "matcher": { "tool": "Write" },
+        "prompt": "Review this file write operation. Check if it follows our coding standards. Respond with 'allow' or 'deny' and explain why."
+      }
+    ]
+  }
+}`}
+                  dictionary={dictionary}
+                />
+              </div>
+              <pre className="text-sm text-green-400 font-mono overflow-x-auto">
+{`{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "type": "prompt",
+        "matcher": { "tool": "Write" },
+        "prompt": "Review this file write operation. Check if it follows 
+                   our coding standards. Respond with 'allow' or 'deny' 
+                   and explain why."
+      }
+    ]
+  }
+}`}
+              </pre>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-white dark:bg-slate-800 rounded-lg p-4">
+                <h3 className="font-semibold text-violet-900 dark:text-violet-300 mb-2">
+                  {dictionary.hooks?.promptBasedHooks?.whenToUse || 'When to Use'}
+                </h3>
+                <ul className="text-sm text-slate-600 dark:text-slate-400 space-y-2">
+                  <li className="flex items-start">
+                    <span className="text-violet-500 mr-2">+</span>
+                    {dictionary.hooks?.promptBasedHooks?.useCase1 || 'Complex decision logic that\'s hard to code'}
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-violet-500 mr-2">+</span>
+                    {dictionary.hooks?.promptBasedHooks?.useCase2 || 'Code review and quality checks'}
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-violet-500 mr-2">+</span>
+                    {dictionary.hooks?.promptBasedHooks?.useCase3 || 'Context-aware validations'}
+                  </li>
+                </ul>
+              </div>
+              <div className="bg-white dark:bg-slate-800 rounded-lg p-4">
+                <h3 className="font-semibold text-violet-900 dark:text-violet-300 mb-2">
+                  {dictionary.hooks?.promptBasedHooks?.responseFormat || 'Response Format'}
+                </h3>
+                <div className="bg-slate-100 dark:bg-slate-700 rounded p-3">
+                  <pre className="text-xs text-slate-700 dark:text-slate-300 font-mono">
+{`{
+  "decision": "allow" | "deny" | "skip",
+  "reason": "Optional explanation",
+  "modifiedInput": { /* optional */ }
+}`}
+                  </pre>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 

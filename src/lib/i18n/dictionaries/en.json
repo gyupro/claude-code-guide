@@ -11,12 +11,13 @@
     "learn": "Learn",
     "usageGuide": "Usage Guide",
     "subagents": "Subagents",
+    "skills": "Skills",
     "plugins": "Plugins",
     "hooks": "Hooks",
     "tutorials": "Tutorials",
     "tips": "Tips",
     "mcp": "MCP",
-    "community": "Community",
+    "thirdPartyTools": "Third-Party Tools",
     "useCases": "Use Cases",
     "subtitle": "Usage Guide",
     "openMenu": "Open menu",
@@ -103,7 +104,15 @@
     "installationDetail": {
       "installOneCommand": "Install with one command",
       "beforeInstallation": "Before Installation",
-      "nodeRequirement": "Node.js 18+ required. Check with node --version and install from nodejs.org if needed."
+      "nodeRequirement": "Node.js 18+ required. Check with node --version and install from nodejs.org if needed.",
+      "recommended": "Recommended",
+      "autoUpdate": "Auto-updates in background",
+      "manualUpdate": "Run `brew upgrade claude-code` to update",
+      "wingetUpdate": "Run `winget upgrade` to update",
+      "accountRequired": "Account Required",
+      "subscriptionInfo": "Claude Pro, Max, Teams, Enterprise, or Claude Console account required",
+      "npmDeprecated": "NPM Install Deprecated",
+      "npmDeprecatedInfo": "npm install -g @anthropic-ai/claude-code is no longer supported. Please use Native Install above."
     },
     "authenticationDetail": {
       "startInProject": "Start in your project",
@@ -243,6 +252,35 @@
           "description": "Specify project rules and context in CLAUDE.md file to get consistent results."
         }
       }
+    },
+    "newFeatures": {
+      "title": "New in Claude Code 2.1",
+      "items": {
+        "skillHotReload": {
+          "title": "Skill Hot-Reload",
+          "description": "Skills update instantly without session restart"
+        },
+        "asyncAgents": {
+          "title": "Async Subagents",
+          "description": "Run agents in background with Ctrl+B"
+        },
+        "mcpSearch": {
+          "title": "MCP Tool Search",
+          "description": "Auto-deferred MCP tools save 85% context"
+        },
+        "keybindings": {
+          "title": "Custom Keybindings",
+          "description": "Customize shortcuts via /keybindings"
+        },
+        "language": {
+          "title": "Multi-Language",
+          "description": "Set response language: Japanese, Spanish, etc."
+        },
+        "planCommand": {
+          "title": "/plan Command",
+          "description": "Enable plan mode directly from prompt"
+        }
+      }
     }
   },
   "tutorials": {
@@ -379,6 +417,44 @@
     "projectContextText": "Include current epics, project goals, and business context in CLAUDE.md for better decision-making.",
     "toolIntegration": "Tool Integration Guide",
     "toolIntegrationText": "Specify MCP connection methods and usage for tools like Jira, Slack, databases, etc.",
+    "keyboardShortcuts": "Keyboard Shortcuts & Vim Motions",
+    "keyboardShortcutsDescription": "Claude Code 2.1 introduces enhanced keyboard shortcuts and Vim-style motions for power users. Customize keybindings with /keybindings command.",
+    "essentialShortcuts": "Essential Shortcuts",
+    "navigationShortcuts": "Navigation & Control",
+    "cancelGeneration": "Cancel generation",
+    "exitFocusInput": "Exit / Focus input",
+    "promptHistory": "Prompt history",
+    "clearScreen": "Clear screen",
+    "newShortcuts": "New in 2.1",
+    "toggleThinking": "Toggle thinking mode",
+    "switchModel": "Switch model",
+    "backgroundTask": "Background task",
+    "customizeKeys": "Customize keys",
+    "vimMotions": "Vim Motions (NEW)",
+    "vimMotionsDescription": "Navigate and edit like a pro with Vim-style motions in the input area.",
+    "movement": "Movement",
+    "basicMovement": "basic cursor movement",
+    "wordMovement": "word navigation",
+    "lineMovement": "line start/end",
+    "findChar": "find character",
+    "repeatFind": "repeat find next/prev",
+    "editing": "Editing",
+    "yank": "yank (copy)",
+    "paste": "paste after/before",
+    "delete": "delete",
+    "change": "change",
+    "indent": "indent/dedent",
+    "joinLines": "join lines",
+    "textObjects": "Text Objects",
+    "wordObject": "inner/around word",
+    "quoteObject": "inside/around quotes",
+    "bracketObject": "inside/around brackets",
+    "promptSuggestions": "Prompt Suggestions (NEW)",
+    "promptSuggestionsDescription": "Claude Code now offers intelligent prompt suggestions as you type.",
+    "acceptSuggestion": "Accept suggestion",
+    "submitPrompt": "Submit prompt directly",
+    "dismissSuggestion": "Dismiss suggestion",
+    "suggestionTip": "Suggestions are context-aware and learn from your project patterns over time.",
     "conclusion": "Claude Code is a truly powerful tool",
     "conclusionText": "It handles large-scale work easily and is incredibly powerful when used properly. Use these tips to experience amazing productivity yourself.",
     "getStarted": "Get Started",
@@ -407,6 +483,25 @@
       "example": {
         "title": "Example",
         "description": "Connect to GitHub to manage issues, Supabase for database operations, or Slack for team communication - all directly from Claude Code."
+      },
+      "httpTransport": {
+        "title": "HTTP Transport (Recommended)",
+        "description": "HTTP is now the recommended transport protocol. SSE (Server-Sent Events) is deprecated."
+      },
+      "resourceMentions": {
+        "title": "MCP Resource Mentions",
+        "description": "Use @ syntax to reference MCP resources directly in your prompts.",
+        "example1": "Analyze table structure",
+        "example2": "View recent issues"
+      },
+      "slashCommands": {
+        "title": "MCP Prompts as Slash Commands",
+        "description": "MCP server prompts are automatically registered as slash commands."
+      },
+      "mcpSearch": {
+        "title": "MCP Tool Search Auto Mode",
+        "description": "When MCP tool descriptions exceed 10% of the context window, they're automatically deferred and searchable via the MCPSearch tool.",
+        "config": "# Set threshold: auto:N (N = 0-100 percent)"
       }
     },
     "popularServers": {
@@ -565,9 +660,77 @@
       }
     }
   },
+  "skills": {
+    "title": "Agent Skills",
+    "subtitle": "Extend Claude's capabilities with custom markdown-based skills that Claude applies automatically",
+    "whatAreSkills": {
+      "title": "What are Agent Skills?",
+      "description": "A Skill is a markdown file that teaches Claude how to do something specific. Skills are model-invoked: Claude decides which Skills to use based on your request. When you ask Claude something that matches a Skill's description, Claude automatically applies it.",
+      "automatic": "Automatic Activation",
+      "automaticDesc": "Claude detects when a Skill is relevant and applies it automatically",
+      "markdown": "Markdown-Based",
+      "markdownDesc": "Simple SKILL.md files with YAML frontmatter and instructions",
+      "hotReload": "Hot Reload",
+      "hotReloadDesc": "Skills are automatically loaded when created or modified"
+    },
+    "locations": {
+      "title": "Where Skills Live",
+      "location": "Location",
+      "path": "Path",
+      "appliesTo": "Applies To",
+      "priority": "Priority order: Enterprise > Personal > Project > Plugin (higher wins on name conflicts)"
+    },
+    "structure": {
+      "title": "SKILL.md Structure",
+      "simpleExample": "Simple Skill",
+      "advancedExample": "Advanced Skill"
+    },
+    "metadata": {
+      "title": "Available Metadata Fields"
+    },
+    "hooks": {
+      "title": "Skills with Hooks",
+      "description": "Skills can define hooks that run during the Skill's lifecycle. Hooks are scoped to the Skill and automatically cleaned up when it finishes.",
+      "example": "Example: Security Check Hook"
+    },
+    "vsOthers": {
+      "title": "Skills vs Other Options"
+    },
+    "multiFile": {
+      "title": "Multi-File Skills (Progressive Disclosure)",
+      "description": "For complex Skills, use progressive disclosure: put essential info in SKILL.md and detailed docs in separate files that Claude reads only when needed.",
+      "tip": "Keep SKILL.md under 500 lines. Scripts can be executed without loading into context."
+    },
+    "testing": {
+      "title": "Testing Your Skills",
+      "viewSkills": "View Available Skills",
+      "testSkill": "Test a Skill",
+      "testSkillDesc": "Ask a question matching the Skill description:"
+    },
+    "cta": {
+      "title": "Start Building Skills",
+      "description": "Create your first Skill to extend Claude's capabilities with your team's standards and workflows.",
+      "button": "Read Full Documentation"
+    }
+  },
   "subagents": {
     "title": "Subagents",
-    "subtitle": "Specialized AI assistants for task-specific workflows"
+    "subtitle": "Specialized AI assistants for task-specific workflows",
+    "frontmatter": {
+      "title": "Agent Frontmatter Fields",
+      "tableHeaders": {
+        "field": "Field",
+        "description": "Description",
+        "example": "Example"
+      },
+      "model": "Specify the AI model for the agent to use",
+      "skills": "Link skill files to the agent",
+      "hooks": "Define agent-specific hooks",
+      "permissionMode": "Set permission behavior (default, bypassPermissions, etc.)",
+      "apiKeyEnvVar": "Environment variable for the API key",
+      "enableUndo": "Enable/disable undo functionality",
+      "tools": "Specify allowed/disallowed tools"
+    }
   },
   "plugins": {
     "title": "Plugins",
@@ -619,7 +782,18 @@
       "marketplace": {
         "title": "Plugin Marketplace",
         "desc": "Publish to the community marketplace"
+      },
+      "cli": {
+        "title": "Plugin Marketplace CLI",
+        "search": "Search for plugins in the marketplace",
+        "install": "Install a plugin from the marketplace",
+        "list": "List installed plugins",
+        "update": "Update installed plugins"
       }
+    },
+    "lspSupport": {
+      "title": "LSP Server Support",
+      "description": "Plugins can bundle Language Server Protocol (LSP) servers to provide advanced language features and IDE integration."
     },
     "useCases": {
       "title": "Plugin Use Cases",
@@ -700,7 +874,36 @@
       "sessionEnd": {
         "desc": "Fired when a session ends. Clean up resources or save session data.",
         "useCase": "Use case: Cleanup, analytics, session reports"
+      },
+      "setup": {
+        "desc": "Triggered via --init, --init-only, or --maintenance flags. Suitable for repository setup and maintenance tasks.",
+        "useCase": "Use case: Environment setup, dependency checks, project initialization"
+      },
+      "subagentStop": {
+        "desc": "Fired when a subagent completes its work. Process results or trigger follow-up actions.",
+        "useCase": "Use case: Result processing, task chaining, notifications"
+      },
+      "subagentStart": {
+        "desc": "Fired when a subagent is about to start. Monitor subagent launches or inject context.",
+        "useCase": "Use case: Subagent monitoring, logging, context injection"
+      },
+      "permissionRequest": {
+        "desc": "Fired when a permission is requested. Auto-approve/deny or log permission requests.",
+        "useCase": "Use case: Auto-approval, permission logging, security auditing"
+      },
+      "preCompact": {
+        "desc": "Fired before context compaction occurs. Save important information before context is compacted.",
+        "useCase": "Use case: Context preservation, important data backup"
       }
+    },
+    "promptBasedHooks": {
+      "title": "Prompt-Based Hooks",
+      "description": "Use LLM-powered decision making in hooks. Instead of writing JavaScript logic, describe what you want in natural language.",
+      "whenToUse": "When to Use",
+      "useCase1": "Complex decision logic that's hard to write in code",
+      "useCase2": "Code review and quality checks",
+      "useCase3": "Context-aware validation",
+      "responseFormat": "Response Format"
     },
     "examples": {
       "title": "Practical Examples",
@@ -749,51 +952,93 @@
       "description": "Start creating hooks to automate your team workflows and enforce your development standards"
     }
   },
-  "community": {
-    "title": "Claude Code Learning Community",
-    "subtitle": "A space where developers learn Claude Code together and share experiences. We share YouTube lectures, open source projects, and practical tips.",
-    "heroTitle": "Claude Code Learning Community",
-    "heroSubtitle": "A space where developers learn Claude Code together and share experiences. We share YouTube lectures, open source projects, and practical tips.",
-    "videos": {
-      "title": "Educational Content",
-      "featured": {
-        "title": "Claude Code Discussion",
-        "description": "Community discussions and insights about Claude Code usage patterns and best practices."
+  "thirdPartyTools": {
+    "title": "Third-Party Tools",
+    "subtitle": "Explore open-source alternatives and extensions in the Claude Code ecosystem",
+    "badge": "Open Source Ecosystem",
+    "ecosystem": {
+      "title": "The Claude Code Ecosystem",
+      "description": "Beyond the official Claude Code CLI, a vibrant ecosystem of third-party tools has emerged. These tools offer different approaches, model flexibility, and specialized features.",
+      "official": {
+        "title": "Official Tool"
       },
-      "quickStart": {
-        "title": "Master Claude Code in 30 Minutes",
-        "description": "Comprehensive overview of Claude Code's core features and practical applications."
+      "openSource": {
+        "title": "Open Source Alternative"
       },
-      "advanced": {
-        "title": "Claude Code Podcast",
-        "description": "In-depth discussions about advanced Claude Code techniques and real-world implementations."
+      "orchestration": {
+        "title": "Orchestration Layer"
       }
     },
-    "github": {
-      "title": "Open Source Projects",
-      "mainRepo": {
-        "description": "The official Claude Code repository containing the latest updates, documentation, and community contributions.",
-        "features": {
-          "installation": "Installation guides and setup instructions",
-          "issues": "Community support and bug reports",
-          "downloads": "Latest releases and version history"
-        }
+    "opencode": {
+      "description": "An open-source Claude Code alternative that supports 75+ model providers including Claude, OpenAI, Groq, and local models via Ollama.",
+      "features": {
+        "title": "Key Features",
+        "multiProvider": "75+ model providers (Claude, OpenAI, Groq, Ollama)",
+        "localModels": "Native local model support via Ollama",
+        "clientServer": "Client/server architecture for remote workflows",
+        "pluginSystem": "Plugin system with event hooks",
+        "freeTool": "Free tool - only pay for API usage"
       },
-      "actionRepo": {
-        "title": "Claude Code GitHub Action",
-        "description": "Automate your development workflow with Claude Code integration for GitHub Actions.",
-        "features": {
-          "integration": "Seamless CI/CD integration",
-          "automation": "Automated code review and suggestions",
-          "templates": "Ready-to-use workflow templates"
-        }
+      "installation": {
+        "title": "Installation"
+      }
+    },
+    "ohmyopencode": {
+      "tagline": "Batteries-included orchestration for OpenCode",
+      "description": "A powerful orchestration layer built on top of OpenCode, featuring specialized agents, multi-agent parallel execution, and 20+ built-in workflow automation hooks.",
+      "agents": {
+        "title": "Specialized Agents",
+        "sisyphus": "Default planner and executor agent",
+        "librarian": "External docs & GitHub exploration",
+        "explore": "Internal codebase searching",
+        "oracle": "Strategic debugging guidance"
+      },
+      "features": {
+        "title": "Key Features",
+        "multiAgent": "Multi-agent parallel execution",
+        "hooks": "20+ built-in workflow hooks",
+        "mcp": "MCP integration for code search",
+        "lsp": "Full LSP support",
+        "multiModel": "Multi-model support (Claude, GPT, Gemini)",
+        "buildAware": "Build pipeline awareness"
+      }
+    },
+    "comparison": {
+      "title": "Comparison",
+      "feature": "Feature",
+      "license": "License",
+      "modelSupport": "Model Support",
+      "localModels": "Local Models",
+      "checkpoints": "Checkpoints/Rewind",
+      "sandboxing": "Sandboxing",
+      "multiAgent": "Multi-Agent",
+      "price": "Price"
+    },
+    "bestFor": {
+      "title": "Which Tool is Best For You?",
+      "claudeCode": {
+        "desc": "Best for teams prioritizing performance, security, and official support.",
+        "pro1": "Best-in-class Claude performance",
+        "pro2": "Native sandboxing (84% fewer prompts)",
+        "pro3": "Official IDE integrations"
+      },
+      "opencode": {
+        "desc": "Best for developers wanting provider flexibility and cost control.",
+        "pro1": "No vendor lock-in",
+        "pro2": "Local models via Ollama",
+        "pro3": "Client/server remote workflows"
+      },
+      "ohmyopencode": {
+        "desc": "Best for complex projects requiring specialized agent orchestration.",
+        "pro1": "Specialized agents",
+        "pro2": "Parallel execution",
+        "pro3": "20+ workflow hooks"
       }
     },
     "cta": {
-      "title": "Join the Community",
-      "description": "Contribute to the Claude Code ecosystem and help build the future of AI-assisted development.",
-      "contribute": "Contribute on GitHub",
-      "getStarted": "Get Started"
+      "title": "Ready to Explore?",
+      "description": "Start with the official Claude Code, or explore the open-source alternatives based on your needs.",
+      "exploreOpenCode": "Explore OpenCode"
     }
   },
   "useCases": {
