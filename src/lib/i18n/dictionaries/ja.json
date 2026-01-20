@@ -344,120 +344,157 @@
   },
   "tips": {
     "title": "実践のコツ",
-    "subtitle": "実際の開発現場でClaude Codeを使って生産性を最大化する実用的なコツとノウハウを共有します。",
+    "subtitle": "11ヶ月間の集中使用から得た11の核心ヒント",
     "copied": "コピーしました！",
-    "mainTitle": "Claude Code実践的なヒント",
-    "mainSubtitle": "大規模プロジェクトで検証された実証済みClaude Codeテクニック",
-    "detailSubtitle": "実際の本番環境で検証されたヒント",
-    "detailDescription": "Claude Pro MAXサブスクリプションで、1日１２時間、1週間働いた大規模ウェブアプリ再設計プロジェクトを通じて検証された生産性のヒントを共有します。",
-    "planningTitle": "計画、計画、そしてまた計画",
-    "planningDescription": "大きな機能や変更を実装する際は、すぐにコーディングを始めないでください。Claudeに既存のコードやドキュメントを分析させ、マークダウンファイルで計画を作成させましょう。",
-    "planningPractical": "実際の応用を見る",
-    "planningList": {
-      "codebaseAnalysis": "既存のコードベース構造の分析を依頼",
-      "implementationPlan": "マークダウンでステップバイステップの実装計画を作成",
-      "nuanceUnderstanding": "計画フェーズでニュアンスを理解するためにOpenAI o3モデルと一緒に使用",
-      "structuredRoadmap": "構造化されたロードマップに基づいて作業を進める"
+    "mainTitle": "Claude Code 核心11のヒント",
+    "mainSubtitle": "11ヶ月間の毎日の集中使用で検証された実践テクニック",
+    "detailSubtitle": "実際のパワーユーザーからのノウハウ",
+    "detailDescription": "これらのヒントは11ヶ月以上毎日Claude Codeを使用した開発者の経験から生まれ、コミュニティで検証された40以上のテクニックから厳選されました。",
+    "sourceCredit": "ykdojoのコミュニティヒントに基づく",
+    "sourceLink": "元の40+ヒントを見る",
+    "tip1": {
+      "title": "コンテキストを最小化する",
+      "description": "コンテキストが長くなるほどClaudeのパフォーマンスは低下します。AIコンテキストはミルクのようなもの - 新鮮で凝縮された状態が最適です。",
+      "practices": {
+        "freshConversation": "新しいトピックを始めるたびに新しい会話を開始",
+        "splitTasks": "最初の会話：編集するファイルを見つける。2番目の会話：編集方法を決定",
+        "avoidOverload": "コードベース全体をコンテキストに入れない"
+      },
+      "quote": "AIコンテキストはミルクのようなもの。新鮮で凝縮された状態が最適です。"
     },
-    "planningNote": "計画フェーズに投資した時間は、実装中に10倍になって戻ってきます。構造化された計画がある場合とない場合の品質の違いは歴然です。",
-    "rulesTitle": "ルールはあなたの親友",
-    "rulesDescription": "最初は、Claudeが同じミスを繰り返し続けてイライラしましたが、CLAUDE.mdルールファイルを管理し始めてからすべてが変わりました。",
-    "rulesExample": "CLAUDE.md使用例",
-    "rulesExampleContent": {
-      "title": "# パッケージ関連のルール",
-      "breakingChanges": "- 最新パッケージバージョンのブレーキングチェンジに注意",
-      "checkDocs": "- コーディング前に必ず公式ドキュメントを確認",
-      "noFakeSolutions": "- 偽のソリューション（モッキング、一時データ）を作成しない",
-      "focusReal": "- 実際の問題を解決することにのみ集中"
+    "tip2": {
+      "title": "問題をステップバイステップで解決する",
+      "description": "Claudeモデルは長時間のタスクが得意ですが、完璧ではありません。特に大きすぎる問題を与えるとミスをします。",
+      "practices": {
+        "breakDown": "問題を小さなステップに分解する",
+        "furtherBreak": "まだ大きければさらに分解する",
+        "oneAtATime": "一度に小さな一片だけ処理する"
+      },
+      "quote": "問題がClaudeが一度に解決するには大きすぎるなら、さらに分解してください。"
     },
-    "rulesProTip": "プロのヒント",
-    "rulesProTipText": "#コマンドを使用して、CLAUDE.mdファイルに素早くルールを追加できます。",
-    "compactTitle": "/compactを頻繁に、早めに使用する",
-    "compactDescription": "大きな機能の作業中に、Claudeが自動コンパクトの限界に達した場合、重要なコンテキストを失い、管理不能になる可能性があります。",
-    "compactWrong": "間違ったアプローチ",
-    "compactWrongList": {
-      "waitingAuto": "自動コンパクトを待つ",
-      "reworkAfterLoss": "コンテキスト喪失後の再作業",
-      "regenerateCompleted": "完成したファイルの再生成"
+    "tip3": {
+      "title": "常にコード作成から始めない",
+      "description": "AIが低品質コードで悪評を得る理由は、人々が主にコード作成にのみ使用するからです。Claudeは理解、研究、計画に優れています。",
+      "practices": {
+        "understand": "まずコードベースの理解にClaudeを活用",
+        "research": "コーディング前に研究とブレインストーミング",
+        "architecture": "アーキテクチャの議論を行う",
+        "prepare": "十分な準備が品質の鍵"
+      },
+      "quote": "コード作成に飛び込む前の十分な準備が、高品質コード生産の核心です。"
     },
-    "compactCorrect": "正しいアプローチ",
-    "compactCorrectList": {
-      "manualEarly": "手動で早めに/compactを実行",
-      "specifyGoals": "次の目標を明確に指定",
-      "maintainWorkflow": "一貫したワークフローを維持"
+    "tip4": {
+      "title": "GitとGitHubをClaudeでマスターする",
+      "description": "ClaudeにGitとGitHub CLIタスクを任せましょう。コミット（手動でのコミットメッセージ不要！）、ブランチ、プル、プッシュすべて含みます。",
+      "practices": {
+        "autoCommit": "Claudeにコミットメッセージを書かせる",
+        "allowPull": "プルは自動許可、プッシュは注意",
+        "gitBisect": "git bisectで問題を起こした正確なコミットを見つける",
+        "ghCli": "イシューとPRにGitHub CLIを活用"
+      },
+      "warning": "私はプルは自動許可しますが、プッシュは許可しません。プッシュはよりリスクが高いからです。"
     },
-    "compactResult": "これらの3つのルールに従うだけで、全体的なエクスペリエンスが大幅に改善されます。Claude Codeをノンストップで実行しながら、驚くべき結果を得ることができました。",
-    "optimizationTitle": "CLAUDE.mdの継続的な最適化",
-    "optimizationDescription": "CLAUDE.mdファイル自体を継続的に改善する強力な方法を発見しました。`/project:reflection`コマンドを作成して、Claudeに現在の指示を分析させ、改善を提案させます。",
-    "optimizationReflection": "リフレクションプロンプトを表示（コピー可能）",
-    "optimizationReflectionLabel": "リフレクションプロンプト：",
-    "optimizationCopy": "コピー",
-    "optimizationExamples": "リフレクション結果の例",
-    "optimizationExamplesList": {
-      "jiraIntegration": "Jira/Atlassian統合指示の不足",
-      "docGeneration": "ドキュメント生成ガイドラインの欠如",
-      "refactoringStrategy": "リファクタリング戦略ガイドラインの必要性",
-      "projectContext": "プロジェクトコンテキスト情報の不足",
-      "incrementalDev": "漸進的開発プロセスガイドの必要性"
+    "tip5": {
+      "title": "AI出力を様々な方法で検証する",
+      "description": "AI出力を盲目的に信頼しないでください。品質を保証するために複数の検証方法を使用してください。",
+      "practices": {
+        "writeTests": "コード検証のためにテスト作成を依頼",
+        "visualGit": "GitHub Desktopのような視覚的Gitクライアントで変更を素早く確認",
+        "draftPR": "レビュー準備前にすべてを確認できるようドラフトPRを生成",
+        "manualReview": "常に最終手動レビューを実行"
+      },
+      "quote": "ドラフトPRを生成すれば、レビュー準備のマーク前にすべてを確認できます。"
     },
-    "optimizationBenefit": "各リフレクションサイクルごとに、コーディングアシスタントがプロジェクト要件を理解する能力が測定可能に改善されます。",
-    "additionalTips": "追加の実践的なヒント",
-    "clearInstructions": "明確な指示",
-    "clearInstructionsText": "「ファイルを修正して」ではなく、「User.tsxの23行目のuseStateの初期値をnullに変更して」のように具体的にリクエストしてください。",
-    "incrementalDev": "漸進的開発",
-    "incrementalDevText": "一度にすべてを実装しようとせず、小さな単位に分割して漸進的に開発してください。",
-    "trackChanges": "変更の追跡",
-    "trackChangesText": "各ステップで何が変更されるかを確認し、結果が期待と異なる場合はすぐにフィードバックを提供してください。",
-    "continuousImprovement": "CLAUDE.mdの継続的改善",
-    "continuousImprovementText": "定期的に`/project:reflection`コマンドを実行してCLAUDE.mdファイルを分析し、改善点を見つけて適用してください。",
-    "testFirst": "テストファースト",
-    "testFirstText": "機能を実装する前にテストケースを書くと、より安定したコードにつながります。",
-    "codeReview": "コードレビュー",
-    "codeReviewText": "Claudeが生成したコードを常にレビューし、プロジェクトのコーディングスタイルに一致しているか確認してください。",
-    "projectContext": "プロジェクトコンテキスト",
-    "projectContextText": "より良い意思決定のために、現在のエピック、プロジェクト目標、ビジネスコンテキストをCLAUDE.mdに含めてください。",
-    "toolIntegration": "ツール統合ガイド",
-    "toolIntegrationText": "Jira、Slack、データベースなどのツールのMCP接続方法と使用法を指定してください。",
-    "keyboardShortcuts": "キーボードショートカット & Vimモーション",
-    "keyboardShortcutsDescription": "Claude Code 2.1では、パワーユーザー向けに強化されたキーボードショートカットとVimスタイルのモーションが導入されました。/keybindingsコマンドでキーバインドをカスタマイズできます。",
-    "essentialShortcuts": "必須ショートカット",
-    "navigationShortcuts": "ナビゲーション & 制御",
-    "cancelGeneration": "生成をキャンセル",
-    "exitFocusInput": "終了 / 入力にフォーカス",
-    "promptHistory": "プロンプト履歴",
-    "clearScreen": "画面をクリア",
-    "newShortcuts": "2.1の新機能",
-    "toggleThinking": "思考モードの切り替え",
-    "switchModel": "モデルの切り替え",
-    "backgroundTask": "バックグラウンドタスク",
-    "customizeKeys": "キーのカスタマイズ",
-    "vimMotions": "Vimモーション（新機能）",
-    "vimMotionsDescription": "入力エリアでVimスタイルのモーションを使ってプロのようにナビゲート・編集できます。",
-    "movement": "移動",
-    "basicMovement": "基本カーソル移動",
-    "wordMovement": "単語ナビゲーション",
-    "lineMovement": "行の先頭/末尾",
-    "findChar": "文字を検索",
-    "repeatFind": "検索を繰り返す 次/前",
-    "editing": "編集",
-    "yank": "ヤンク（コピー）",
-    "paste": "ペースト 後/前",
-    "delete": "削除",
-    "change": "変更",
-    "indent": "インデント/アウトデント",
-    "joinLines": "行を結合",
-    "textObjects": "テキストオブジェクト",
-    "wordObject": "単語の内側/周囲",
-    "quoteObject": "引用符の内側/周囲",
-    "bracketObject": "括弧の内側/周囲",
-    "promptSuggestions": "プロンプト候補（新機能）",
-    "promptSuggestionsDescription": "Claude Codeは入力中にインテリジェントなプロンプト候補を提供するようになりました。",
-    "acceptSuggestion": "候補を受け入れる",
-    "submitPrompt": "プロンプトを直接送信",
-    "dismissSuggestion": "候補を無視",
-    "suggestionTip": "候補はコンテキストを認識し、時間とともにプロジェクトのパターンを学習します。",
+    "tip6": {
+      "title": "AIに自身の作業を検証させる",
+      "description": "Claudeは自身の作業を確認できます。研究の場合、主張を再確認するよう依頼してください。ウェブアプリの場合、ブラウザ自動化で検証してください。",
+      "practices": {
+        "doubleCheck": "「確実ですか？再確認してください」と言う",
+        "verifyTable": "「すべての主張を再確認して、検証したものを表にして」と依頼",
+        "playwright": "ウェブアプリ検証にPlaywright MCPまたは/chromeを使用",
+        "tmux": "対話型CLI検証にtmuxを使用"
+      },
+      "claudeMdTip": "/chromeの場合、CLAUDE.mdに追加：要素参照にread_pageを使用、要素検索にfindを使用、座標ではなくrefでクリック、要求されない限りスクリーンショットは撮らない。"
+    },
+    "tip7": {
+      "title": "カスタムステータスラインを設定する",
+      "description": "Claude Code下部のステータスラインをカスタマイズして、モデル、ディレクトリ、gitブランチ、コミットされていないファイル、同期状態、トークン使用量を表示しましょう。",
+      "practices": {
+        "showModel": "現在使用中のモデルを表示",
+        "showBranch": "gitブランチとコミットされていないファイル数を表示",
+        "tokenBar": "トークン使用量の視覚的プログレスバーを追加",
+        "syncStatus": "originとの同期状態を表示"
+      },
+      "quote": "コンテキスト使用量を監視し、作業中の内容を覚えておくのに本当に便利です。"
+    },
+    "tip8": {
+      "title": "次のセッションにコンテキストを渡す",
+      "description": "/compactに頼る代わりに、ハンドオフドキュメントでコンテキストを事前に管理しましょう。",
+      "practices": {
+        "handoffDoc": "新しく始める前にHANDOFF.md作成を依頼",
+        "includeTrials": "試したこと、成功したこと、失敗したことを文書化",
+        "freshStart": "ハンドオフファイルパスだけで新しい会話を開始",
+        "halfClone": "最近の会話の半分だけを保持するhalf-cloneを使用"
+      },
+      "handoffPrompt": "残りの計画をHANDOFF.mdに入れてください。試したこと、うまくいったこと、うまくいかなかったことを説明して、次のエージェントがそのファイルだけを読み込んで続けられるようにしてください。"
+    },
+    "tip9": {
+      "title": "音声入力を活用する",
+      "description": "タイピングよりも音声ではるかに速くコミュニケーションできます。音声認識のミスがあってもClaudeは意図を理解します。",
+      "practices": {
+        "localTranscription": "ローカル音声認識を使用（superwhisper、MacWhisper）",
+        "fasterComm": "ほとんどの人にとって音声はタイピングより速い",
+        "likePhoneCall": "友人との素早い電話のように考えてください",
+        "mistakesOk": "Claudeは音声認識の誤字をうまく処理する"
+      },
+      "quote": "より速くコミュニケーションしたいなら、なぜ素早い電話をしないのですか？音声はほとんどの人にとってより速いです。"
+    },
+    "tip10": {
+      "title": "複数のセッションを同時に管理する",
+      "description": "複数のClaude Codeインスタンスを実行する際は、整理が重要です。最初は最大3〜4つのタスクに集中してください。",
+      "practices": {
+        "maxTasks": "開始時は最大3〜4つの同時タスクに制限",
+        "cascadeMethod": "右に新しいタブを開き、左から右にスイープ",
+        "consistentDirection": "一貫した方向を維持",
+        "checkOldest": "古いタスクから最新タスクの順に"
+      },
+      "quote": "新しいタスクを始めるたびに右に新しいタブを開きます。そして最も古いものから最新のものへ左から右にスイープします。"
+    },
+    "tip11": {
+      "title": "'claude'を'c'にエイリアスする",
+      "description": "Claude Codeのおかげでターミナルをより多く使うようになるので、素早い起動のために短いエイリアスを設定しましょう。",
+      "setup": "~/.zshrcまたは~/.bashrcに追加：",
+      "command": "alias c='claude'",
+      "practices": {
+        "shortAlias": "'claude'の代わりに'c'を使用",
+        "continueFlag": "c -cで最後の会話を続行",
+        "resumeFlag": "c -rで最近の会話リストを表示"
+      },
+      "quote": "私が最も使うのはClaude Code用のcです。"
+    },
+    "bonusTips": {
+      "title": "ボーナスクイックヒント",
+      "items": {
+        "clearInstructions": {
+          "title": "具体的に",
+          "text": "「ファイルを修正して」ではなく「User.tsxの23行目のuseStateの初期値をnullに変更して」と言ってください"
+        },
+        "incrementalDev": {
+          "title": "漸進的開発",
+          "text": "一度にすべてを実装しようとしないでください。小さな単位に分けてください。"
+        },
+        "testFirst": {
+          "title": "テストファースト",
+          "text": "機能実装前にテストケースを書くと、より安定したコードが得られます。"
+        },
+        "codeReview": {
+          "title": "常にレビュー",
+          "text": "Claudeが生成したコードをレビューし、プロジェクトスタイルに一致しているか確認してください。"
+        }
+      }
+    },
     "conclusion": "Claude Codeは本当に強力なツールです",
-    "conclusionText": "大規模な作業を簡単に処理し、適切に使用すれば信じられないほど強力です。これらのヒントを使って、あなた自身も驚くべき生産性を体験してください。",
+    "conclusionText": "これらの11のヒントは、Claude Codeと何千時間も過ごした実際の開発者から来ています。ヒント#1（コンテキスト最小化）から始めて、一つずつ適用してください。生産性の向上は実際に起こります。",
     "getStarted": "始める",
     "viewMoreGuides": "もっとガイドを見る"
   },

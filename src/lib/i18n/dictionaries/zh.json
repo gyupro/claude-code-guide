@@ -412,120 +412,157 @@
   },
   "tips": {
     "title": "实用技巧",
-    "subtitle": "在实际开发场景中使用 Claude Code 最大化生产力的实用技巧和诀窍。",
+    "subtitle": "11个月高强度使用中得出的11条核心技巧",
     "copied": "已复制！",
-    "mainTitle": "Claude Code 实用技巧",
-    "mainSubtitle": "在大型项目中验证的 Claude Code 技术",
-    "detailSubtitle": "在真实生产环境中验证的技巧",
-    "detailDescription": "我们分享通过使用 Claude Pro MAX 订阅，每天工作 12 小时，持续一周的大型 Web 应用重新设计项目验证的生产力技巧。",
-    "planningTitle": "计划、计划，再计划",
-    "planningDescription": "实现大型功能或变更时，不要立即开始编码。让 Claude 分析现有代码或文档，并在 markdown 文件中创建计划。",
-    "planningPractical": "查看实际应用",
-    "planningList": {
-      "codebaseAnalysis": "请求分析现有代码库结构",
-      "implementationPlan": "在 markdown 中创建逐步实现计划",
-      "nuanceUnderstanding": "与 OpenAI o3 模型一起使用，在规划阶段理解细微差别",
-      "structuredRoadmap": "基于结构化路线图进行工作"
+    "mainTitle": "Claude Code 核心11条技巧",
+    "mainSubtitle": "11个月每日高强度使用验证的实战技巧",
+    "detailSubtitle": "来自真正高级用户的经验",
+    "detailDescription": "这些技巧来自每天使用Claude Code超过11个月的开发者经验，从社区验证的40多种技术中精选。",
+    "sourceCredit": "基于ykdojo的社区技巧",
+    "sourceLink": "查看原始40+技巧",
+    "tip1": {
+      "title": "最小化上下文",
+      "description": "上下文越长，Claude的性能越差。AI上下文就像牛奶——新鲜浓缩的状态最好。",
+      "practices": {
+        "freshConversation": "每当开始新话题时开启新对话",
+        "splitTasks": "第一个对话：找到要编辑的文件。第二个对话：决定如何编辑",
+        "avoidOverload": "不要把整个代码库放入上下文"
+      },
+      "quote": "AI上下文就像牛奶。新鲜浓缩的状态最好。"
     },
-    "planningNote": "在规划阶段投入的时间在实施期间会带来 10 倍的回报。有无结构化计划的质量差异是明显的。",
-    "rulesTitle": "规则是你最好的朋友",
-    "rulesDescription": "最初，Claude 不断重复同样的错误，这很令人沮丧，但当我开始管理 CLAUDE.md 规则文件后，一切都改变了。",
-    "rulesExample": "CLAUDE.md 使用示例",
-    "rulesExampleContent": {
-      "title": "# 与包相关的规则",
-      "breakingChanges": "- 注意最新版本包中的破坏性更改",
-      "checkDocs": "- 编码前总是检查官方文档",
-      "noFakeSolutions": "- 不要创建虚假解决方案（模拟、临时数据）",
-      "focusReal": "- 仅专注于解决真实问题"
+    "tip2": {
+      "title": "逐步解决问题",
+      "description": "Claude模型擅长长时间任务，但并不完美。特别是当问题太大时会出错。",
+      "practices": {
+        "breakDown": "将问题分解成小步骤",
+        "furtherBreak": "如果还是太大，继续分解",
+        "oneAtATime": "一次只处理一小块"
+      },
+      "quote": "如果问题太大，Claude无法一次解决，那就继续分解。"
     },
-    "rulesProTip": "专业技巧",
-    "rulesProTipText": "使用 # 命令快速向 CLAUDE.md 文件添加规则。",
-    "compactTitle": "经常且早期使用 /compact",
-    "compactDescription": "在大型功能工作期间，如果 Claude 达到自动压缩限制，可能会丢失重要上下文并变得无法管理。",
-    "compactWrong": "错误的方法",
-    "compactWrongList": {
-      "waitingAuto": "等待自动压缩",
-      "reworkAfterLoss": "上下文丢失后重新工作",
-      "regenerateCompleted": "重新生成已完成的文件"
+    "tip3": {
+      "title": "不要总是从写代码开始",
+      "description": "AI因低质量代码而名声不好是因为人们主要用它来写代码。但Claude擅长理解、研究和规划。",
+      "practices": {
+        "understand": "首先用Claude理解代码库",
+        "research": "编码前做研究和头脑风暴",
+        "architecture": "进行架构讨论",
+        "prepare": "充分准备是质量的关键"
+      },
+      "quote": "在开始写代码前做足准备是生产高质量代码的关键。"
     },
-    "compactCorrect": "正确的方法",
-    "compactCorrectList": {
-      "manualEarly": "早期手动运行 /compact",
-      "specifyGoals": "清楚地指定下一个目标",
-      "maintainWorkflow": "保持一致的工作流程"
+    "tip4": {
+      "title": "用Claude掌握Git和GitHub",
+      "description": "让Claude处理Git和GitHub CLI任务。包括提交（不用手写提交信息！）、分支、拉取和推送。",
+      "practices": {
+        "autoCommit": "让Claude写提交信息",
+        "allowPull": "自动允许拉取，推送要小心",
+        "gitBisect": "用git bisect找到导致问题的确切提交",
+        "ghCli": "用GitHub CLI处理issue和PR"
+      },
+      "warning": "我自动允许拉取但不允许推送，因为推送风险更高。"
     },
-    "compactResult": "仅遵循这三条规则就能大大改善整体体验。我能够在不停地运行 Claude Code 的同时取得惊人的成果。",
-    "optimizationTitle": "持续优化 CLAUDE.md",
-    "optimizationDescription": "我发现了一种强大的方法来持续改进 CLAUDE.md 文件本身。创建一个 `/project:reflection` 命令，让 Claude 分析当前指令并提出改进建议。",
-    "optimizationReflection": "查看反思提示（可复制）",
-    "optimizationReflectionLabel": "反思提示：",
-    "optimizationCopy": "复制",
-    "optimizationExamples": "反思结果示例",
-    "optimizationExamplesList": {
-      "jiraIntegration": "缺失 Jira/Atlassian 集成指令",
-      "docGeneration": "缺乏文档生成指南",
-      "refactoringStrategy": "需要重构策略指南",
-      "projectContext": "项目上下文信息不足",
-      "incrementalDev": "需要渐进式开发流程指南"
+    "tip5": {
+      "title": "用多种方式验证AI输出",
+      "description": "不要盲目信任AI输出。使用多种验证方法确保质量。",
+      "practices": {
+        "writeTests": "让它写测试来验证代码",
+        "visualGit": "用GitHub Desktop等可视化Git客户端快速检查更改",
+        "draftPR": "生成草稿PR以便在标记准备就绪前检查一切",
+        "manualReview": "始终做最终手动审查"
+      },
+      "quote": "生成草稿PR是在标记准备就绪前检查一切的好方法。"
     },
-    "optimizationBenefit": "每个反思周期都可以显著提高编码助手理解项目需求的能力。",
-    "additionalTips": "其他实用技巧",
-    "clearInstructions": "清晰的指令",
-    "clearInstructionsText": "不要说“修改文件”，而是具体请求，如“将 User.tsx 第 23 行的 useState 初始值更改为 null”。",
-    "incrementalDev": "渐进式开发",
-    "incrementalDevText": "不要试图一次实现所有内容；将其分解为小单元并逐步开发。",
-    "trackChanges": "跟踪变化",
-    "trackChangesText": "检查每个步骤的变化，如果结果与预期不同，立即提供反馈。",
-    "continuousImprovement": "持续改进 CLAUDE.md",
-    "continuousImprovementText": "定期运行 `/project:reflection` 命令来分析 CLAUDE.md 文件并找到和应用改进。",
-    "testFirst": "测试优先",
-    "testFirstText": "在实现功能之前编写测试用例可以得到更稳定的代码。",
-    "codeReview": "代码审查",
-    "codeReviewText": "始终审查 Claude 生成的代码，确保其符合项目的编码风格。",
-    "projectContext": "项目上下文",
-    "projectContextText": "在 CLAUDE.md 中包含当前史诗、项目目标和业务上下文，以便做出更好的决策。",
-    "toolIntegration": "工具集成指南",
-    "toolIntegrationText": "指定 Jira、Slack、数据库等工具的 MCP 连接方法和用法。",
-    "keyboardShortcuts": "键盘快捷键 & Vim 动作",
-    "keyboardShortcutsDescription": "Claude Code 2.1 为高级用户引入了增强的键盘快捷键和 Vim 风格动作。使用 /keybindings 命令自定义键绑定。",
-    "essentialShortcuts": "必备快捷键",
-    "navigationShortcuts": "导航与控制",
-    "cancelGeneration": "取消生成",
-    "exitFocusInput": "退出 / 聚焦输入",
-    "promptHistory": "提示历史",
-    "clearScreen": "清屏",
-    "newShortcuts": "2.1 新增",
-    "toggleThinking": "切换思考模式",
-    "switchModel": "切换模型",
-    "backgroundTask": "后台任务",
-    "customizeKeys": "自定义按键",
-    "vimMotions": "Vim 动作（新）",
-    "vimMotionsDescription": "在输入区域使用 Vim 风格动作像专业人士一样导航和编辑。",
-    "movement": "移动",
-    "basicMovement": "基本光标移动",
-    "wordMovement": "单词导航",
-    "lineMovement": "行首/行尾",
-    "findChar": "查找字符",
-    "repeatFind": "重复查找 下一个/上一个",
-    "editing": "编辑",
-    "yank": "复制（yank）",
-    "paste": "粘贴 后/前",
-    "delete": "删除",
-    "change": "修改",
-    "indent": "缩进/取消缩进",
-    "joinLines": "合并行",
-    "textObjects": "文本对象",
-    "wordObject": "单词内部/周围",
-    "quoteObject": "引号内部/周围",
-    "bracketObject": "括号内部/周围",
-    "promptSuggestions": "提示建议（新）",
-    "promptSuggestionsDescription": "Claude Code 现在在您输入时提供智能提示建议。",
-    "acceptSuggestion": "接受建议",
-    "submitPrompt": "直接提交提示",
-    "dismissSuggestion": "忽略建议",
-    "suggestionTip": "建议是上下文感知的，会随时间学习您的项目模式。",
-    "conclusion": "Claude Code 是一个真正强大的工具",
-    "conclusionText": "它可以轻松处理大规模工作，正确使用时功能非常强大。使用这些技巧来体验令人惊叹的生产力。",
+    "tip6": {
+      "title": "让AI验证自己的工作",
+      "description": "Claude可以检查自己的工作。对于研究，让它再次确认。对于Web应用，用浏览器自动化验证。",
+      "practices": {
+        "doubleCheck": "说'你确定吗？能再检查一下吗？'",
+        "verifyTable": "要求：'仔细检查每个声明并制作一个验证表格'",
+        "playwright": "用Playwright MCP或/chrome验证Web应用",
+        "tmux": "用tmux验证交互式CLI"
+      },
+      "claudeMdTip": "对于/chrome，在CLAUDE.md中添加：使用read_page获取元素引用，使用find定位元素，使用ref而非坐标点击，除非要求否则不要截图。"
+    },
+    "tip7": {
+      "title": "设置自定义状态栏",
+      "description": "自定义Claude Code底部的状态栏，显示模型、目录、git分支、未提交文件、同步状态和token使用量。",
+      "practices": {
+        "showModel": "显示当前使用的模型",
+        "showBranch": "显示git分支和未提交文件数",
+        "tokenBar": "添加token使用量可视化进度条",
+        "syncStatus": "显示与origin的同步状态"
+      },
+      "quote": "这对于监控上下文使用量和记住你在做什么非常有用。"
+    },
+    "tip8": {
+      "title": "将上下文传递到下一个会话",
+      "description": "不要依赖/compact，而是用交接文档主动管理上下文。",
+      "practices": {
+        "handoffDoc": "在开始新会话前让Claude写HANDOFF.md",
+        "includeTrials": "记录尝试过什么、成功什么、失败什么",
+        "freshStart": "仅用交接文件路径开始新对话",
+        "halfClone": "使用half-clone只保留最近一半的对话"
+      },
+      "handoffPrompt": "把剩余计划放在HANDOFF.md中。解释你尝试了什么，什么有效，什么无效，这样下一个agent可以只加载那个文件就能继续。"
+    },
+    "tip9": {
+      "title": "使用语音输入",
+      "description": "用声音比打字快得多。即使有转录错误，Claude也能理解你的意思。",
+      "practices": {
+        "localTranscription": "使用本地语音转录（superwhisper、MacWhisper）",
+        "fasterComm": "对大多数人来说语音比打字快",
+        "likePhoneCall": "把它想象成和朋友快速通话",
+        "mistakesOk": "Claude能很好地处理转录错误"
+      },
+      "quote": "如果你想更快地沟通，为什么不打个快速电话呢？对大多数人来说语音更快。"
+    },
+    "tip10": {
+      "title": "同时管理多个会话",
+      "description": "运行多个Claude Code实例时，保持组织很重要。开始时最多专注于3-4个任务。",
+      "practices": {
+        "maxTasks": "开始时限制最多3-4个并发任务",
+        "cascadeMethod": "在右边打开新标签，从左到右扫视",
+        "consistentDirection": "保持一致的方向",
+        "checkOldest": "从最旧的任务到最新的任务"
+      },
+      "quote": "每当我开始新任务，我在右边打开新标签。然后从最旧到最新从左到右扫视。"
+    },
+    "tip11": {
+      "title": "将'claude'别名为'c'",
+      "description": "因为Claude Code让你更多地使用终端，设置短别名可以快速启动。",
+      "setup": "添加到~/.zshrc或~/.bashrc：",
+      "command": "alias c='claude'",
+      "practices": {
+        "shortAlias": "用'c'代替'claude'",
+        "continueFlag": "c -c继续上一个对话",
+        "resumeFlag": "c -r显示最近对话列表"
+      },
+      "quote": "我用得最多的是Claude Code的c。"
+    },
+    "bonusTips": {
+      "title": "额外快速技巧",
+      "items": {
+        "clearInstructions": {
+          "title": "具体明确",
+          "text": "不要说'修改文件'，而说'将User.tsx第23行的useState初始值改为null'"
+        },
+        "incrementalDev": {
+          "title": "渐进式开发",
+          "text": "不要试图一次实现所有内容。分解成小单元。"
+        },
+        "testFirst": {
+          "title": "测试优先",
+          "text": "在实现功能前写测试用例会得到更稳定的代码。"
+        },
+        "codeReview": {
+          "title": "始终审查",
+          "text": "审查Claude生成的代码，确保符合项目风格。"
+        }
+      }
+    },
+    "conclusion": "Claude Code是一个真正强大的工具",
+    "conclusionText": "这11条技巧来自与Claude Code共度数千小时的真实开发者。从技巧#1（最小化上下文）开始，逐个应用。生产力的提升是真实的。",
     "getStarted": "开始使用",
     "viewMoreGuides": "查看更多指南"
   },

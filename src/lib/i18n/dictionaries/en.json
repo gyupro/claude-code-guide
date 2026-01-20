@@ -343,120 +343,157 @@
   },
   "tips": {
     "title": "Real-World Tips",
-    "subtitle": "Practical tips and tricks for maximizing productivity with Claude Code in real development scenarios.",
+    "subtitle": "Top 11 tips from 11 months of intense Claude Code usage",
     "copied": "Copied!",
-    "mainTitle": "Claude Code Practical Tips",
-    "mainSubtitle": "Proven Claude Code techniques validated in large-scale projects",
-    "detailSubtitle": "Tips Validated in Real Production Environments",
-    "detailDescription": "We share productivity tips validated through a large-scale web app redesign project with Claude Pro MAX subscription, working 12 hours a day for a week.",
-    "planningTitle": "Plan, Plan, and Plan Again",
-    "planningDescription": "When implementing large features or changes, don't start coding immediately. Have Claude analyze existing code or documentation and create a plan in markdown files.",
-    "planningPractical": "View Practical Application",
-    "planningList": {
-      "codebaseAnalysis": "Request analysis of existing codebase structure",
-      "implementationPlan": "Create step-by-step implementation plan in markdown",
-      "nuanceUnderstanding": "Use alongside OpenAI o3 model to understand nuances in planning phase",
-      "structuredRoadmap": "Proceed with work based on structured roadmap"
+    "mainTitle": "Top 11 Claude Code Tips",
+    "mainSubtitle": "Battle-tested techniques from 11 months of intense daily usage",
+    "detailSubtitle": "From Real Power Users",
+    "detailDescription": "These tips come from developers who've spent 11+ months using Claude Code daily, compiled from 40+ community-validated techniques.",
+    "sourceCredit": "Based on community tips by ykdojo",
+    "sourceLink": "View original 40+ tips",
+    "tip1": {
+      "title": "Minimize the Provided Context",
+      "description": "The longer the given context, the worse Claude performs. AI context is like milk - it's best served fresh and condensed.",
+      "practices": {
+        "freshConversation": "Start a fresh conversation whenever you begin a new topic",
+        "splitTasks": "First conversation: find which files to edit. Second conversation: figure out how to edit them",
+        "avoidOverload": "Don't dump your entire codebase into context"
+      },
+      "quote": "Remember, AI context is like milk; it's best served fresh and condensed."
     },
-    "planningNote": "Time invested in the planning phase returns 10x during implementation. The quality difference between having and not having a structured plan is stark.",
-    "rulesTitle": "Rules Are Your Best Friend",
-    "rulesDescription": "Initially, Claude kept repeating the same mistakes, which was frustrating, but everything changed when I started managing the CLAUDE.md rules file.",
-    "rulesExample": "CLAUDE.md Usage Example",
-    "rulesExampleContent": {
-      "title": "# Package-related Rules",
-      "breakingChanges": "- Watch for breaking changes in latest package versions",
-      "checkDocs": "- Always check official docs before coding",
-      "noFakeSolutions": "- Don't create fake solutions (mocking, temporary data)",
-      "focusReal": "- Focus only on solving real problems"
+    "tip2": {
+      "title": "Solve Problems Step by Step",
+      "description": "Claude models are good at long-lasting tasks, but not perfect. They make mistakes especially when given problems that are too large.",
+      "practices": {
+        "breakDown": "Break your problem down into smaller steps",
+        "furtherBreak": "If steps are still too big, break them down further",
+        "oneAtATime": "Tackle one small piece at a time"
+      },
+      "quote": "If a problem is too big for Claude to solve in one shot, break it down further."
     },
-    "rulesProTip": "Pro Tip",
-    "rulesProTipText": "Use the # command to quickly add rules to your CLAUDE.md file.",
-    "compactTitle": "Use /compact Often and Early",
-    "compactDescription": "During large feature work, if Claude reaches automatic compact limits, it can lose important context and become unmanageable.",
-    "compactWrong": "Wrong Approach",
-    "compactWrongList": {
-      "waitingAuto": "Waiting for automatic compact",
-      "reworkAfterLoss": "Rework after context loss", 
-      "regenerateCompleted": "Regenerating completed files"
+    "tip3": {
+      "title": "Don't Always Jump Into Writing Code",
+      "description": "AI gets a bad rep for low quality code because people primarily use it for writing code. But Claude excels at understanding, research, and planning.",
+      "practices": {
+        "understand": "Use Claude for understanding a codebase first",
+        "research": "Do research and brainstorming before coding",
+        "architecture": "Have architectural discussions",
+        "prepare": "Enough preparation before coding is key for quality"
+      },
+      "quote": "Doing enough preparation before jumping into writing code is one of the essential keys for producing high quality code."
     },
-    "compactCorrect": "Correct Approach",
-    "compactCorrectList": {
-      "manualEarly": "Manually run /compact early",
-      "specifyGoals": "Clearly specify next goals",
-      "maintainWorkflow": "Maintain consistent workflow"
+    "tip4": {
+      "title": "Master Git and GitHub with Claude",
+      "description": "Let Claude handle your Git and GitHub CLI tasks. This includes committing (no manual commit messages!), branching, pulling, and pushing.",
+      "practices": {
+        "autoCommit": "Let Claude write commit messages for you",
+        "allowPull": "Allow pull automatically, but be careful with push",
+        "gitBisect": "Use git bisect to find exact commits that broke something",
+        "ghCli": "Leverage GitHub CLI for issues and PRs"
+      },
+      "warning": "I personally allow pull automatically but not push, because push is riskier."
     },
-    "compactResult": "Following just these three rules greatly improves the overall experience. I was able to achieve amazing results while running Claude Code non-stop.",
-    "optimizationTitle": "Continuous CLAUDE.md Optimization",
-    "optimizationDescription": "I discovered a powerful method for continuously improving the CLAUDE.md file itself. Create a `/project:reflection` command to have Claude analyze current instructions and suggest improvements.",
-    "optimizationReflection": "View Reflection Prompt (Copyable)",
-    "optimizationReflectionLabel": "Reflection Prompt:",
-    "optimizationCopy": "Copy",
-    "optimizationExamples": "Example Reflection Results",
-    "optimizationExamplesList": {
-      "jiraIntegration": "Missing Jira/Atlassian integration instructions",
-      "docGeneration": "Lack of documentation generation guidelines",
-      "refactoringStrategy": "Need for refactoring strategy guidelines",
-      "projectContext": "Insufficient project context information",
-      "incrementalDev": "Need for incremental development process guide"
+    "tip5": {
+      "title": "Verify AI Output in Multiple Ways",
+      "description": "Don't blindly trust AI output. Use multiple verification methods to ensure quality.",
+      "practices": {
+        "writeTests": "Have Claude write tests to verify code",
+        "visualGit": "Use a visual Git client like GitHub Desktop to check changes quickly",
+        "draftPR": "Generate draft PRs to review everything before marking ready",
+        "manualReview": "Always do a final manual review"
+      },
+      "quote": "Having it generate a draft PR is a great way to review everything before marking it ready."
     },
-    "optimizationBenefit": "Each reflection cycle measurably improves the coding assistant's ability to understand project requirements.",
-    "additionalTips": "Additional Practical Tips",
-    "clearInstructions": "Clear Instructions",
-    "clearInstructionsText": "Instead of \"modify the file\", request specifically like \"change the useState initial value to null on line 23 of User.tsx\".",
-    "incrementalDev": "Incremental Development", 
-    "incrementalDevText": "Don't try to implement everything at once; break it down into small units and develop incrementally.",
-    "trackChanges": "Track Changes",
-    "trackChangesText": "Check what changes at each step, and provide immediate feedback if results differ from expectations.",
-    "continuousImprovement": "Continuous CLAUDE.md Improvement",
-    "continuousImprovementText": "Regularly run `/project:reflection` commands to analyze the CLAUDE.md file and find and apply improvements.",
-    "testFirst": "Test First",
-    "testFirstText": "Writing test cases before implementing features leads to more stable code.",
-    "codeReview": "Code Review",
-    "codeReviewText": "Always review Claude-generated code and ensure it matches your project's coding style.",
-    "projectContext": "Project Context",
-    "projectContextText": "Include current epics, project goals, and business context in CLAUDE.md for better decision-making.",
-    "toolIntegration": "Tool Integration Guide",
-    "toolIntegrationText": "Specify MCP connection methods and usage for tools like Jira, Slack, databases, etc.",
-    "keyboardShortcuts": "Keyboard Shortcuts & Vim Motions",
-    "keyboardShortcutsDescription": "Claude Code 2.1 introduces enhanced keyboard shortcuts and Vim-style motions for power users. Customize keybindings with /keybindings command.",
-    "essentialShortcuts": "Essential Shortcuts",
-    "navigationShortcuts": "Navigation & Control",
-    "cancelGeneration": "Cancel generation",
-    "exitFocusInput": "Exit / Focus input",
-    "promptHistory": "Prompt history",
-    "clearScreen": "Clear screen",
-    "newShortcuts": "New in 2.1",
-    "toggleThinking": "Toggle thinking mode",
-    "switchModel": "Switch model",
-    "backgroundTask": "Background task",
-    "customizeKeys": "Customize keys",
-    "vimMotions": "Vim Motions (NEW)",
-    "vimMotionsDescription": "Navigate and edit like a pro with Vim-style motions in the input area.",
-    "movement": "Movement",
-    "basicMovement": "basic cursor movement",
-    "wordMovement": "word navigation",
-    "lineMovement": "line start/end",
-    "findChar": "find character",
-    "repeatFind": "repeat find next/prev",
-    "editing": "Editing",
-    "yank": "yank (copy)",
-    "paste": "paste after/before",
-    "delete": "delete",
-    "change": "change",
-    "indent": "indent/dedent",
-    "joinLines": "join lines",
-    "textObjects": "Text Objects",
-    "wordObject": "inner/around word",
-    "quoteObject": "inside/around quotes",
-    "bracketObject": "inside/around brackets",
-    "promptSuggestions": "Prompt Suggestions (NEW)",
-    "promptSuggestionsDescription": "Claude Code now offers intelligent prompt suggestions as you type.",
-    "acceptSuggestion": "Accept suggestion",
-    "submitPrompt": "Submit prompt directly",
-    "dismissSuggestion": "Dismiss suggestion",
-    "suggestionTip": "Suggestions are context-aware and learn from your project patterns over time.",
+    "tip6": {
+      "title": "Let AI Verify Its Own Work",
+      "description": "Claude can check its own work. For research, ask it to double-check claims. For web apps, use browser automation to verify.",
+      "practices": {
+        "doubleCheck": "Say 'Are you sure? Can you double check?'",
+        "verifyTable": "Ask: 'Double check every claim and make a table of what you verified'",
+        "playwright": "Use Playwright MCP or /chrome for web app verification",
+        "tmux": "Use tmux for interactive CLI verification"
+      },
+      "claudeMdTip": "For /chrome, add this to CLAUDE.md: Use read_page for element refs, use find to locate elements, click using ref not coordinates, NEVER take screenshots unless requested."
+    },
+    "tip7": {
+      "title": "Set Up a Custom Status Line",
+      "description": "Customize the status line at the bottom of Claude Code to show model, directory, git branch, uncommitted files, sync status, and token usage.",
+      "practices": {
+        "showModel": "Display current model being used",
+        "showBranch": "Show git branch and uncommitted file count",
+        "tokenBar": "Add visual progress bar for token usage",
+        "syncStatus": "Show sync status with origin"
+      },
+      "quote": "It's really helpful for keeping an eye on your context usage and remembering what you were working on."
+    },
+    "tip8": {
+      "title": "Pass Context to the Next Session",
+      "description": "Instead of relying on /compact, proactively manage context with handoff documents.",
+      "practices": {
+        "handoffDoc": "Ask Claude to write a HANDOFF.md before starting fresh",
+        "includeTrials": "Document what was tried, what worked, what didn't",
+        "freshStart": "Start fresh conversation with just the handoff file path",
+        "halfClone": "Use half-clone to keep only recent conversation half"
+      },
+      "handoffPrompt": "Put the rest of the plan in HANDOFF.md. Explain what you tried, what worked, what didn't, so the next agent can load just that file and continue."
+    },
+    "tip9": {
+      "title": "Use Voice Input",
+      "description": "Communicate much faster with voice than typing. Even with transcription mistakes, Claude understands what you mean.",
+      "practices": {
+        "localTranscription": "Use local voice transcription (superwhisper, MacWhisper)",
+        "fasterComm": "Voice is faster than typing for most people",
+        "likePhoneCall": "Think of it like getting on a quick phone call with a friend",
+        "mistakesOk": "Claude handles transcription typos well"
+      },
+      "quote": "If you want to communicate faster, why wouldn't you get on a quick phone call? Voice is faster for the majority of people."
+    },
+    "tip10": {
+      "title": "Juggle Multiple Sessions",
+      "description": "When running multiple Claude Code instances, staying organized matters. Focus on 3-4 tasks max at the beginning.",
+      "practices": {
+        "maxTasks": "Limit to 3-4 concurrent tasks when starting out",
+        "cascadeMethod": "Open new tabs on the right, sweep left to right",
+        "consistentDirection": "Keep general direction consistent",
+        "checkOldest": "Go from oldest tasks to newest"
+      },
+      "quote": "Whenever I start a new task, I open a new tab on the right. Then I sweep left to right, going from oldest to newest."
+    },
+    "tip11": {
+      "title": "Alias 'claude' to 'c'",
+      "description": "Since you'll use the terminal more with Claude Code, set up short aliases to launch things quickly.",
+      "setup": "Add to ~/.zshrc or ~/.bashrc:",
+      "command": "alias c='claude'",
+      "practices": {
+        "shortAlias": "Use 'c' instead of 'claude'",
+        "continueFlag": "c -c continues your last conversation",
+        "resumeFlag": "c -r shows recent conversations to resume"
+      },
+      "quote": "The one I use the most is c for Claude Code."
+    },
+    "bonusTips": {
+      "title": "Bonus Quick Tips",
+      "items": {
+        "clearInstructions": {
+          "title": "Be Specific",
+          "text": "Instead of 'modify the file', say 'change useState initial value to null on line 23 of User.tsx'"
+        },
+        "incrementalDev": {
+          "title": "Incremental Development",
+          "text": "Don't try to implement everything at once. Break it into small units."
+        },
+        "testFirst": {
+          "title": "Test First",
+          "text": "Writing test cases before implementing features leads to more stable code."
+        },
+        "codeReview": {
+          "title": "Always Review",
+          "text": "Review Claude-generated code and ensure it matches your project's style."
+        }
+      }
+    },
     "conclusion": "Claude Code is a truly powerful tool",
-    "conclusionText": "It handles large-scale work easily and is incredibly powerful when used properly. Use these tips to experience amazing productivity yourself.",
+    "conclusionText": "These 11 tips come from real developers who've spent thousands of hours with Claude Code. Start with tip #1 (minimize context) and work your way through. The productivity gains are real.",
     "getStarted": "Get Started",
     "viewMoreGuides": "View More Guides"
   },
