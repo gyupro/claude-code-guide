@@ -65,7 +65,7 @@ export default function UsageGuideClient({ locale, dictionary }: UsageGuideClien
         />
       </NavigationHeader>
 
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8 sm:pb-12">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-8 sm:pb-12">
         {/* Hero Section */}
         <div className="text-center mb-8 sm:mb-16">
           <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 dark:text-white mb-4">

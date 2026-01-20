@@ -133,7 +133,7 @@ Remember, your goal is to enhance Claude's performance and consistency while mai
         />
       </NavigationHeader>
 
-      <main className="pt-16 pb-8 sm:pb-12 px-4 sm:px-6 lg:px-8">
+      <main className="pt-24 pb-8 sm:pb-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-8 sm:mb-12">
             <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 dark:text-white mb-4">

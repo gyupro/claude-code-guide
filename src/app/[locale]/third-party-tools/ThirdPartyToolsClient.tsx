@@ -81,7 +81,7 @@ export default function ThirdPartyToolsClient({ locale, dictionary }: ThirdParty
         />
       </NavigationHeader>
 
-      <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8 sm:pb-12">
+      <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-8 sm:pb-12">
         {/* Hero Section */}
         <div className="text-center mb-8 sm:mb-16">
           <div className="inline-flex items-center px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-gradient-to-r from-emerald-100 to-teal-100 dark:from-emerald-900/30 dark:to-teal-900/30 text-emerald-700 dark:text-emerald-300 text-xs sm:text-sm font-medium mb-4 sm:mb-6">
