@@ -86,7 +86,7 @@
     "copyError": "コピー失敗:",
     "copied": "コピーしました!",
     "bannerAlt": "Claude Code バナー",
-    "copyright": "© 2025 Claude Code 使用ガイド. MIT License.",
+    "copyright": "© 2026 Claude Code 使用ガイド. MIT License.",
     "email": "gyupro89@gmail.com",
     "keyTip": "重要なヒント",
     "switchToDarkMode": "ダークモードに切り替え",
@@ -1349,6 +1349,6 @@
       "title": "お問い合わせ",
       "email": "メール"
     },
-    "copyright": "© 2025 Claude Code使用ガイド. All rights reserved."
+    "copyright": "© 2026 Claude Code使用ガイド. All rights reserved."
   }
 }

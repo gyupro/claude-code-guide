@@ -1307,7 +1307,7 @@
     "copyError": "클립보드 복사 실패:",
     "copied": "복사됨!",
     "bannerAlt": "Claude Code 배너",
-    "copyright": "© 2025 Claude Code 사용 가이드. MIT License.",
+    "copyright": "© 2026 Claude Code 사용 가이드. MIT License.",
     "email": "gyupro89@gmail.com",
     "keyTip": "핵심 팁",
     "switchToDarkMode": "다크 모드로 전환",
@@ -1330,6 +1330,6 @@
       "title": "문의",
       "email": "이메일"
     },
-    "copyright": "© 2025 Claude Code 사용 가이드. All rights reserved."
+    "copyright": "© 2026 Claude Code 사용 가이드. All rights reserved."
   }
 }
