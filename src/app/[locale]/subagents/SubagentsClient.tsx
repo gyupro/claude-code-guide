@@ -65,7 +65,7 @@ export default function SubagentsClient({ locale, dictionary }: SubagentsClientP
         />
       </NavigationHeader>
 
-      <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12">
+      <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-12">
         {/* Hero Section */}
         <div className="text-center mb-16">
           <h1 className="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white mb-4">

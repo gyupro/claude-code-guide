@@ -111,7 +111,7 @@ Security-first operations with automatic validation.`;
         />
       </NavigationHeader>
 
-      <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12">
+      <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-12">
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-3 mb-4">
             <h1 className="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white">
