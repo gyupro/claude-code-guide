@@ -62,7 +62,7 @@ When explaining code, always include:
 name: pdf-processing
 description: Extract text, fill forms, merge PDFs. Use when working with PDF files.
 allowed-tools: Read, Bash(python:*)
-model: claude-sonnet-4-20250514
+model: claude-4.5-opus-20260120
 context: fork
 ---
 
@@ -295,7 +295,7 @@ Security-first operations with automatic validation.`;
                 <tr>
                   <td className="px-6 py-4 text-sm font-mono text-blue-600 dark:text-blue-400">model</td>
                   <td className="px-6 py-4"><span className="text-slate-500 text-sm">No</span></td>
-                  <td className="px-6 py-4 text-sm text-slate-600 dark:text-slate-300">Override model (e.g., claude-sonnet-4-20250514)</td>
+                  <td className="px-6 py-4 text-sm text-slate-600 dark:text-slate-300">Override model (e.g., claude-4.5-opus-20260120)</td>
                 </tr>
                 <tr>
                   <td className="px-6 py-4 text-sm font-mono text-blue-600 dark:text-blue-400">context</td>
