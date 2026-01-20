@@ -797,6 +797,49 @@
   "subagents": {
     "title": "子代理",
     "subtitle": "用于特定任务工作流的专业AI助手",
+    "whatAreSubagents": {
+      "title": "什么是子代理？",
+      "description": "子代理是Claude Code中处理特定类型任务的专业AI助手。每个子代理都有自己的上下文窗口、自定义系统提示和特定的工具访问权限。",
+      "specificPurpose": "特定目的",
+      "specificPurposeDesc": "每个子代理都有定义的专业领域",
+      "ownContext": "独立上下文窗口",
+      "ownContextDesc": "与主对话分离的上下文",
+      "configurableTools": "可配置工具",
+      "configurableToolsDesc": "每个子代理的特定工具访问",
+      "customPrompt": "自定义系统提示",
+      "customPromptDesc": "为每个代理定制的指令",
+      "newFeatures": {
+        "title": "新的子代理功能",
+        "async": {
+          "title": "异步子代理",
+          "desc": "使用Ctrl+B在后台异步运行子代理"
+        },
+        "fork": {
+          "title": "上下文分叉",
+          "desc": "在技能frontmatter中使用context: fork进行隔离执行"
+        },
+        "hooks": {
+          "title": "代理钩子",
+          "desc": "在代理frontmatter中定义PreToolUse、PostToolUse、Stop钩子"
+        },
+        "disable": {
+          "title": "禁用代理",
+          "desc": "在disallowedTools中使用Task(AgentName)语法禁用特定代理"
+        }
+      }
+    },
+    "builtIn": {
+      "title": "内置子代理",
+      "explore": {
+        "desc": "用于代码库搜索和分析的快速只读代理"
+      },
+      "plan": {
+        "desc": "在计划模式下收集上下文的研究代理"
+      },
+      "general": {
+        "desc": "用于复杂多步骤任务的通用代理"
+      }
+    },
     "frontmatter": {
       "title": "代理 Frontmatter 字段",
       "tableHeaders": {
@@ -811,6 +854,55 @@
       "apiKeyEnvVar": "API密钥的环境变量",
       "enableUndo": "启用/禁用撤销功能",
       "tools": "指定允许/禁止的工具"
+    },
+    "quickStart": {
+      "title": "快速开始",
+      "step1": "1. 打开子代理界面",
+      "step2": "2. 创建新代理",
+      "step2Desc": "选择"创建新代理"并选择项目级别或用户级别",
+      "step3": "3. 定义代理",
+      "step3a": "描述代理的目的",
+      "step3b": "选择要授予访问权限的工具",
+      "step3c": "自定义系统提示",
+      "step4": "4. 使用代理"
+    },
+    "examples": {
+      "title": "子代理示例",
+      "codeReviewer": {
+        "title": "代码审查器",
+        "desc": "用于质量、安全性和最佳实践的代码审查"
+      },
+      "debugger": {
+        "title": "调试器",
+        "desc": "错误分析和修复实现"
+      },
+      "tester": {
+        "title": "测试自动化",
+        "desc": "自动生成和运行测试"
+      }
+    },
+    "bestPractices": {
+      "title": "最佳实践",
+      "focused": {
+        "title": "设计专注的代理",
+        "desc": "创建具有单一明确责任的子代理"
+      },
+      "detailed": {
+        "title": "编写详细的提示",
+        "desc": "包含具体的指令和示例"
+      },
+      "limitTools": {
+        "title": "限制工具访问",
+        "desc": "为了更好的安全性只授予必要的工具"
+      },
+      "versionControl": {
+        "title": "版本控制",
+        "desc": "将项目子代理纳入版本控制"
+      }
+    },
+    "cta": {
+      "title": "准备好创建您的第一个子代理了吗？",
+      "description": "使用适合您工作流的自定义AI助手自动化专业任务"
     }
   },
   "plugins": {

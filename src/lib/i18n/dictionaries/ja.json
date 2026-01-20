@@ -877,8 +877,51 @@
     }
   },
   "subagents": {
-    "title": "Subagents",
+    "title": "サブエージェント",
     "subtitle": "タスク固有のワークフロー向けの特化したAIアシスタント",
+    "whatAreSubagents": {
+      "title": "サブエージェントとは？",
+      "description": "サブエージェントは、Claude Code内で特定のタイプのタスクを処理する特化したAIアシスタントです。各サブエージェントは独自のコンテキストウィンドウ、カスタムシステムプロンプト、特定のツールアクセス権を持っています。",
+      "specificPurpose": "特定の目的",
+      "specificPurposeDesc": "各サブエージェントには定義された専門分野があります",
+      "ownContext": "独立したコンテキストウィンドウ",
+      "ownContextDesc": "メイン会話とは分離されたコンテキスト",
+      "configurableTools": "設定可能なツール",
+      "configurableToolsDesc": "サブエージェントごとの特定ツールアクセス",
+      "customPrompt": "カスタムシステムプロンプト",
+      "customPromptDesc": "各エージェント向けにカスタマイズされた指示",
+      "newFeatures": {
+        "title": "新しいサブエージェント機能",
+        "async": {
+          "title": "非同期サブエージェント",
+          "desc": "Ctrl+Bでサブエージェントをバックグラウンドで非同期実行"
+        },
+        "fork": {
+          "title": "コンテキストフォーク",
+          "desc": "スキルfrontmatterでcontext: forkを使用して分離実行"
+        },
+        "hooks": {
+          "title": "エージェントフック",
+          "desc": "エージェントfrontmatterでPreToolUse、PostToolUse、Stopフックを定義"
+        },
+        "disable": {
+          "title": "エージェント無効化",
+          "desc": "disallowedToolsでTask(AgentName)構文を使用して特定エージェントを無効化"
+        }
+      }
+    },
+    "builtIn": {
+      "title": "内蔵サブエージェント",
+      "explore": {
+        "desc": "コードベース検索・分析用の高速読み取り専用エージェント"
+      },
+      "plan": {
+        "desc": "プランモードでコンテキストを収集するリサーチエージェント"
+      },
+      "general": {
+        "desc": "複雑なマルチステップタスク用の汎用エージェント"
+      }
+    },
     "frontmatter": {
       "title": "エージェント Frontmatter フィールド",
       "tableHeaders": {
@@ -893,6 +936,55 @@
       "apiKeyEnvVar": "APIキーの環境変数を指定します",
       "enableUndo": "元に戻す機能を有効/無効にします",
       "tools": "許可/禁止するツールを指定します"
+    },
+    "quickStart": {
+      "title": "クイックスタート",
+      "step1": "1. サブエージェントインターフェースを開く",
+      "step2": "2. 新しいエージェントを作成",
+      "step2Desc": "「新しいエージェントを作成」を選択し、プロジェクトレベルまたはユーザーレベルを選択",
+      "step3": "3. エージェントを定義",
+      "step3a": "エージェントの目的を説明する",
+      "step3b": "アクセス権を付与するツールを選択",
+      "step3c": "システムプロンプトをカスタマイズ",
+      "step4": "4. エージェントを使用"
+    },
+    "examples": {
+      "title": "サブエージェントの例",
+      "codeReviewer": {
+        "title": "コードレビュアー",
+        "desc": "品質、セキュリティ、ベストプラクティスのためのコードレビュー"
+      },
+      "debugger": {
+        "title": "デバッガー",
+        "desc": "エラー分析と修正の実装"
+      },
+      "tester": {
+        "title": "テスト自動化",
+        "desc": "テストの自動生成と実行"
+      }
+    },
+    "bestPractices": {
+      "title": "ベストプラクティス",
+      "focused": {
+        "title": "集中したエージェント設計",
+        "desc": "単一で明確な責任を持つサブエージェントを作成"
+      },
+      "detailed": {
+        "title": "詳細なプロンプトを書く",
+        "desc": "具体的な指示と例を含める"
+      },
+      "limitTools": {
+        "title": "ツールアクセスを制限",
+        "desc": "セキュリティ向上のため必要なツールのみを付与"
+      },
+      "versionControl": {
+        "title": "バージョン管理",
+        "desc": "プロジェクトサブエージェントをバージョン管理に含める"
+      }
+    },
+    "cta": {
+      "title": "最初のサブエージェントを作成する準備はできましたか？",
+      "description": "ワークフローに合わせたカスタムAIアシスタントで特化したタスクを自動化しましょう"
     }
   },
   "plugins": {
