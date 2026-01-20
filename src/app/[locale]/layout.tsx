@@ -232,6 +232,12 @@ export default async function LocaleLayout({
           } catch {}`}
         </Script>
         <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6992232389489218"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
+        <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-VX16G6RCVS"
           strategy="afterInteractive"
         />
