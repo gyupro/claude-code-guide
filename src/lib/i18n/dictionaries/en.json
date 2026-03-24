@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "title": "Claude Code Usage Guide | AI Coding Assistant in Terminal",
-    "description": "Master Claude Code with comprehensive guides, practical tutorials, and real-world examples. Learn how to boost your development productivity with AI in the terminal.",
-    "keywords": "Claude Code, AI coding, terminal, development tools, programming, artificial intelligence, coding assistant"
+    "title": "Claude Code Usage Guide | AI Coding Agent for Terminal, IDE & Web",
+    "description": "Master Claude Code with comprehensive guides, practical tutorials, and real-world examples. Available in Terminal, VS Code, JetBrains, Desktop App, and the Web.",
+    "keywords": "Claude Code, AI coding, terminal, VS Code, JetBrains, Desktop App, development tools, programming, artificial intelligence, coding agent, MCP, subagents, skills, hooks"
   },
   "navigation": {
     "home": "Home",
@@ -19,72 +19,90 @@
     "mcp": "MCP",
     "thirdPartyTools": "Third-Party Tools",
     "useCases": "Use Cases",
+    "platforms": "Platforms",
+    "agentTeams": "Agent Teams",
+    "desktopApp": "Desktop App",
+    "webApp": "Web App",
+    "bestPractices": "Best Practices",
     "subtitle": "Usage Guide",
     "openMenu": "Open menu",
     "closeMenu": "Close menu"
   },
   "home": {
-    "title": "AI Coding Assistant in Your Terminal",
-    "subtitle": "Master Claude Code with comprehensive Korean guides, practical tutorials, and real-world examples. Learn how to boost your development productivity with AI.",
+    "title": "Claude Code is Available Everywhere",
+    "subtitle": "Terminal, VS Code, JetBrains, Desktop App, and Web. Build features, fix bugs, create PRs, connect tools via MCP, customize with skills and hooks, run agent teams, and automate everything.",
     "getStarted": "Get Started",
     "learnMore": "Learn More",
     "features": {
-      "title": "Core Features of Claude Code",
-      "subtitle": "Maximize your development productivity with AI-powered coding in the terminal",
+      "title": "What You Can Do with Claude Code",
+      "subtitle": "A full-featured AI coding agent that works wherever you do",
       "aiPowered": {
-        "title": "AI-Powered Development",
-        "description": "Leverage Claude's intelligence directly in your terminal for smarter coding workflows."
+        "title": "Build & Ship Features",
+        "description": "Build entire features, fix bugs, refactor code, create pull requests, and generate documentation — all from natural language instructions."
       },
       "terminalIntegration": {
-        "title": "Terminal Integration",
-        "description": "Work seamlessly within your existing development environment without switching contexts."
+        "title": "Works Everywhere",
+        "description": "Terminal CLI, VS Code extension, JetBrains plugin, standalone Desktop App, and the Web at claude.ai/code. Use it however you prefer."
       },
       "multilingual": {
-        "title": "Multilingual Support",
-        "description": "Comprehensive guides available in Korean, English, Japanese, and Chinese."
+        "title": "Extensible & Customizable",
+        "description": "Connect tools via MCP, create custom skills and hooks, build plugin packages, run parallel agent teams, and pipe/script/automate workflows."
       }
     },
     "quickStart": {
-      "title": "Quick Start Guide",
-      "subtitle": "Get started with Claude Code in just 2 simple steps",
+      "title": "Quick Start",
+      "subtitle": "Get Claude Code running in seconds",
       "installation": {
-        "title": "Installation",
-        "description": "Install Claude Code CLI using npm"
+        "title": "Install",
+        "description": "curl -fsSL https://claude.ai/install.sh | bash"
       },
       "startCoding": {
         "title": "Start Coding",
-        "description": "Run Claude Code in your project folder"
+        "description": "Run 'claude' in your project directory"
       }
     },
     "useCases": {
-      "title": "Real-World Use Cases",
-      "subtitle": "Discover various ways to develop smarter with Claude Code",
+      "title": "Key Capabilities",
+      "subtitle": "From everyday coding tasks to complex multi-agent workflows",
       "codeReview": {
         "title": "Code Review & Refactoring",
-        "description": "AI analyzes code quality and suggests improvements. Automatically helps with performance optimization and best practices.",
+        "description": "Analyze code quality, suggest improvements, perform large-scale refactors. Use subagents for parallel review across multiple files.",
         "linkText": "Learn More →"
       },
       "testGeneration": {
-        "title": "Test Code Generation",
-        "description": "Automatically generates unit tests for functions and classes. Supports various testing frameworks like Jest, Pytest, and more.",
+        "title": "Test Generation & Bug Fixing",
+        "description": "Generate unit tests, integration tests, and E2E tests. Debug issues with extended thinking and automatic verification.",
         "linkText": "View Tutorial →"
       },
       "documentation": {
-        "title": "Documentation Generation",
-        "description": "Automatically generates README, API docs, and comments. Updates documentation in real-time as code changes.",
+        "title": "PRs, Docs & Git Automation",
+        "description": "Create pull requests with summaries, generate documentation, write commit messages, and automate your entire Git workflow.",
         "linkText": "View Tips →"
       },
       "debugging": {
-        "title": "Debugging & Error Fixing",
-        "description": "Analyzes error messages and provides solutions. Reads log files and quickly identifies the root cause of bugs.",
+        "title": "MCP Tools & Integrations",
+        "description": "Connect to databases, GitHub, Slack, browsers, and 100+ tools via Model Context Protocol. Extend Claude's reach beyond the filesystem.",
         "linkText": "Get Started →"
       }
+    },
+    "platforms": {
+      "title": "Available Platforms",
+      "terminal": "Terminal CLI",
+      "terminalDesc": "The original command-line experience with full power",
+      "vscode": "VS Code Extension",
+      "vscodeDesc": "Native sidebar integration in Visual Studio Code",
+      "jetbrains": "JetBrains Plugin",
+      "jetbrainsDesc": "IntelliJ, PyCharm, WebStorm, and all JetBrains IDEs",
+      "desktop": "Desktop App",
+      "desktopDesc": "Standalone application for macOS and Windows",
+      "web": "Web (claude.ai/code)",
+      "webDesc": "No local setup needed — runs in your browser"
     }
   },
   "gettingStarted": {
     "title": "Getting Started with Claude Code",
-    "subtitle": "Complete installation guide from system requirements to your first project setup.",
-    "systemRequirements": "Check System Requirements",
+    "subtitle": "Choose your platform and get coding with Claude in minutes.",
+    "systemRequirements": "System Requirements",
     "installation": "Install Claude Code",
     "authentication": "Authentication Setup",
     "firstProject": "First Project",
@@ -95,245 +113,419 @@
       "requirements": "Requirements",
       "network": "Network",
       "stableConnection": "Stable internet connection",
-      "windowsNote": "Windows Users Note",
-      "windowsWarning": "Claude Code does not run directly on Windows. Please use WSL (Windows Subsystem for Linux).",
-      "osRequirements": "macOS, Linux, Windows (WSL)",
-      "techRequirements": "Node.js 18+, 4GB RAM",
+      "windowsNote": "Windows Users",
+      "windowsWarning": "Claude Code runs natively on Windows. Git for Windows is required. You can also use WSL.",
+      "osRequirements": "macOS, Linux, Windows (native or WSL)",
+      "techRequirements": "Git installed, 4GB RAM",
       "cloudServices": "AWS/GCP"
     },
     "installationDetail": {
-      "installOneCommand": "Install with one command",
+      "installOneCommand": "Install with One Command",
       "beforeInstallation": "Before Installation",
-      "nodeRequirement": "Node.js 18+ required. Check with node --version and install from nodejs.org if needed.",
+      "nodeRequirement": "Git must be installed. On Windows, install Git for Windows. Node.js is no longer required for installation.",
       "recommended": "Recommended",
+      "nativeInstall": "Native Install (macOS / Linux / WSL)",
+      "nativeInstallCommand": "curl -fsSL https://claude.ai/install.sh | bash",
+      "windowsPowerShell": "Windows PowerShell",
+      "windowsPowerShellCommand": "irm https://claude.ai/install.ps1 | iex",
+      "windowsCMD": "Windows CMD",
+      "windowsCMDCommand": "curl -fsSL https://claude.ai/install.sh | bash",
+      "homebrew": "Homebrew (macOS / Linux)",
+      "homebrewCommand": "brew install --cask claude-code",
+      "winget": "WinGet (Windows)",
+      "wingetCommand": "winget install Anthropic.ClaudeCode",
       "autoUpdate": "Auto-updates in background",
-      "manualUpdate": "Run `brew upgrade claude-code` to update",
-      "wingetUpdate": "Run `winget upgrade` to update",
+      "manualUpdate": "Run 'brew upgrade claude-code' to update",
+      "wingetUpdate": "Run 'winget upgrade' to update",
       "accountRequired": "Account Required",
-      "subscriptionInfo": "Claude Pro, Max, Teams, Enterprise, or Claude Console account required",
-      "npmDeprecated": "NPM Install Deprecated",
-      "npmDeprecatedInfo": "npm install -g @anthropic-ai/claude-code is no longer supported. Please use Native Install above."
+      "subscriptionInfo": "Claude Pro, Max, Teams, Enterprise, or API Console account required",
+      "npmDeprecated": "NPM Install (Deprecated)",
+      "npmDeprecatedInfo": "npm install -g @anthropic-ai/claude-code is no longer recommended. Use the native install methods above.",
+      "otherPlatforms": "Other Platforms",
+      "vscodeExtension": "VS Code Extension: Install from the VS Code Marketplace (search 'Claude Code')",
+      "jetbrainsPlugin": "JetBrains Plugin: Install from the JetBrains Marketplace",
+      "desktopApp": "Desktop App: Download from claude.ai/download for macOS and Windows",
+      "webApp": "Web App: Visit claude.ai/code — no installation needed"
     },
     "authenticationDetail": {
       "startInProject": "Start in your project",
       "recommended": "Recommended",
       "subscription": "Subscription",
-      "enterprise": "Enterprise"
+      "enterprise": "Enterprise",
+      "authMethods": "Authentication Methods",
+      "oauthLogin": "Run 'claude' and follow the browser-based OAuth login",
+      "apiKey": "Or set ANTHROPIC_API_KEY environment variable for API access",
+      "enterpriseSetup": "Enterprise users: your admin configures SSO and managed policies"
     },
     "firstProjectDetail": {
-      "understandingProject": "Understanding project",
+      "understandingProject": "Understanding your project",
       "projectInitialization": "Project initialization",
       "setupComplete": "Setup Complete!",
-      "readyToStart": "You can now start smart development with Claude Code."
+      "readyToStart": "You're ready to start building with Claude Code.",
+      "firstCommands": "Try These First",
+      "exploreCodebase": "Ask Claude to explain the project structure",
+      "makeChange": "Ask Claude to make a small change and review the diff",
+      "runTests": "Ask Claude to run tests and fix any failures"
     },
     "nextSteps": {
       "title": "Next Steps",
-      "learnBasicUsage": "Learn Basic Usage",
-      "exploreAdvanced": "Explore Advanced Features",
+      "learnBasicUsage": "Learn the CLI",
+      "exploreAdvanced": "Explore Features",
       "backToHome": "Back to Home",
       "examples": {
-        "askCode": "Ask about code: \"explain how authentication works\"",
-        "editFiles": "Edit files: \"add input validation to the form\"",
-        "runTests": "Run tests: \"run tests and fix failures\"",
-        "extendedThinking": "Extended thinking: \"think deeply about this feature's architecture\"",
-        "gitAutomation": "Git automation: \"create a PR for this feature\"",
-        "webSearch": "Web search: Claude automatically finds and references documentation"
+        "askCode": "Explore code: 'explain how authentication works in this project'",
+        "editFiles": "Edit files: 'add input validation to the signup form'",
+        "runTests": "Run tests: 'run tests and fix any failures'",
+        "extendedThinking": "Deep thinking: 'think deeply about this architecture' or 'ultrathink'",
+        "gitAutomation": "Git automation: 'create a PR for these changes'",
+        "webSearch": "Use tools: Claude auto-searches docs, browses the web, and uses MCP servers"
       }
     }
   },
   "usageGuide": {
-    "title": "Complete Claude Code Usage Guide",
-    "subtitle": "Learn how to develop with AI in the terminal. From basic commands to advanced automation, we guide you step by step.",
-    "basicCommands": "Basic Commands",
-    "coreWorkflows": "Development Workflows",
+    "title": "Complete Claude Code CLI Reference",
+    "subtitle": "Every command, flag, keyboard shortcut, and interactive feature in Claude Code.",
+    "basicCommands": "CLI Commands",
+    "coreWorkflows": "Interactive Mode",
     "advancedFeatures": "Advanced Features",
-    "cliOptions": "CLI Options & Settings",
+    "cliOptions": "CLI Flags & Options",
     "copyToClipboard": "Copy to clipboard",
     "basicCommandsDetail": {
-      "description": "Learn the basic ways to interact with Claude in the terminal.",
+      "description": "Core commands to interact with Claude Code from the terminal.",
       "items": {
         "interactiveSession": {
           "title": "Interactive Session",
-          "description": "Start conversation with claude command"
+          "description": "claude — Start an interactive conversation"
         },
         "quickQuestions": {
-          "title": "Quick Questions",
-          "description": "Get instant answers with claude -p \"question\""
+          "title": "One-Shot Query",
+          "description": "claude \"your question\" — Quick inline query"
         },
         "fileAnalysis": {
-          "title": "File Analysis",
-          "description": "Analyze file content with cat file.js | claude"
+          "title": "Print Mode (Non-Interactive)",
+          "description": "claude -p \"query\" — Output response and exit. Perfect for scripts and piping."
+        },
+        "printMode": {
+          "title": "Print Mode (Non-Interactive)",
+          "description": "claude -p \"query\" — Output response and exit. Perfect for scripts and piping."
+        },
+        "continueSession": {
+          "title": "Continue Session",
+          "description": "claude -c — Continue your most recent conversation"
+        },
+        "resumeSession": {
+          "title": "Resume Session",
+          "description": "claude -r — Pick from recent conversations to resume"
+        },
+        "updateClaude": {
+          "title": "Update",
+          "description": "claude update — Update Claude Code to the latest version"
+        },
+        "authCommand": {
+          "title": "Authentication",
+          "description": "claude auth login/logout/status — Manage authentication"
+        },
+        "agentsCommand": {
+          "title": "Agents",
+          "description": "claude agents — List available subagents"
+        },
+        "mcpCommand": {
+          "title": "MCP",
+          "description": "claude mcp add/remove/list — Manage MCP servers"
+        },
+        "remoteControl": {
+          "title": "Remote Control",
+          "description": "claude remote-control — Enable remote control for external integrations"
         }
       }
     },
     "coreWorkflowsDetail": {
-      "description": "Learn patterns frequently used in real development processes.",
+      "description": "Keyboard shortcuts and interactive features available during a Claude session.",
       "items": {
         "projectExploration": {
-          "title": "Project Exploration",
-          "description": "\"explain this project\" - comprehensive codebase analysis"
+          "title": "Plan Mode (Shift+Tab)",
+          "description": "Toggle Plan Mode to make Claude think and plan before writing code. Claude explores, analyzes, and proposes a plan for your approval."
         },
         "smartEditing": {
-          "title": "Smart Editing",
-          "description": "\"fix the bug\" - context-based code modifications"
+          "title": "Voice Dictation & Bash Mode",
+          "description": "Hold Space for voice dictation. Type ! for inline shell commands. Use @ for file references."
         },
         "gitWorkflow": {
-          "title": "Git Workflow",
-          "description": "\"create a PR\" - automatic commit messages and pull requests"
+          "title": "Keyboard Shortcuts",
+          "description": "Ctrl+C: Cancel. Ctrl+G: Fuzzy search. Ctrl+B: Background agent. Ctrl+T: Task list. Shift+Tab: Plan Mode."
+        },
+        "keyboardShortcuts": {
+          "title": "Keyboard Shortcuts",
+          "description": "Ctrl+C: Cancel current generation. Ctrl+G: Fuzzy search for files. Ctrl+O: Open output in editor. Ctrl+R: Redo last prompt. Ctrl+B: Run subagent in background. Ctrl+T: Open task list. Shift+Tab: Toggle Plan Mode. Esc: Cancel input or interrupt."
+        },
+        "planMode": {
+          "title": "Plan Mode (Shift+Tab)",
+          "description": "Toggle Plan Mode to make Claude think and plan before writing code. Claude explores, analyzes, and proposes a plan for your approval before making changes."
+        },
+        "vimMode": {
+          "title": "Vim Mode",
+          "description": "Enable Vim-style keybindings for the input area via /vim command or settings."
+        },
+        "multilineInput": {
+          "title": "Multiline Input",
+          "description": "Use \\\\ at end of line to continue, or paste multiline text directly. Shift+Enter also works in some terminals."
+        },
+        "voiceDictation": {
+          "title": "Voice Dictation",
+          "description": "Hold Space to dictate voice input. Claude handles transcription typos gracefully."
+        },
+        "btw": {
+          "title": "Side Questions with /btw",
+          "description": "Use /btw to ask a side question without losing the main conversation context."
+        },
+        "bashMode": {
+          "title": "Bash Mode (! prefix)",
+          "description": "Type ! followed by a shell command to run it directly without leaving Claude. Example: !git status"
+        },
+        "fileReferences": {
+          "title": "File References with @",
+          "description": "Use @ to reference files directly in your prompt. Claude reads the file content automatically."
+        },
+        "promptSuggestions": {
+          "title": "Prompt Suggestions",
+          "description": "Claude offers contextual suggestions based on your project and recent actions."
         }
       }
     },
     "advancedFeaturesDetail": {
-      "description": "Maximize development productivity with Claude Code's advanced features.",
+      "description": "Power features for advanced workflows and automation.",
       "items": {
         "deepThinking": {
-          "title": "Deep Thinking Mode",
-          "description": "Complex architecture design and problem solving"
+          "title": "Extended Thinking",
+          "description": "Use 'think', 'think hard', 'think harder', or 'ultrathink' to activate deeper reasoning. More thinking budget = more thorough analysis for complex problems."
         },
         "projectMemory": {
-          "title": "Project Memory",
-          "description": "Manage project rules and context with CLAUDE.md"
+          "title": "Project Memory (CLAUDE.md)",
+          "description": "Create CLAUDE.md files to store project rules, conventions, and context. Claude reads these automatically. Keep them short, specific, and regularly pruned."
         },
         "realtimeSearch": {
-          "title": "Real-time Documentation Search",
-          "description": "Automatic reference to latest library documentation"
+          "title": "Checkpoints & Rewind",
+          "description": "Claude automatically creates checkpoints. Use /rewind to go back to any previous state if something goes wrong."
+        },
+        "checkpoints": {
+          "title": "Checkpoints & Rewind",
+          "description": "Claude automatically creates checkpoints. Use /rewind to go back to any previous state if something goes wrong."
+        },
+        "imageAnalysis": {
+          "title": "Image & Screenshot Analysis",
+          "description": "Paste images or screenshots directly into Claude. Drag and drop, or use @ to reference image files. Claude can analyze UIs and generate code from designs."
+        },
+        "worktrees": {
+          "title": "Git Worktrees",
+          "description": "Use --worktree flag to run Claude in a separate git worktree for isolated parallel sessions. Each session gets its own working directory."
+        },
+        "backgroundCommands": {
+          "title": "Background Bash Commands",
+          "description": "Long-running shell commands run in the background. Claude continues working while commands execute and checks results when ready."
+        },
+        "prReview": {
+          "title": "PR Review Status",
+          "description": "When working on a PR, Claude shows review status in the footer. See pending reviews, approvals, and requested changes at a glance."
         }
       }
     },
     "cliOptionsDetail": {
-      "description": "Learn about various CLI options and environment configuration methods.",
+      "description": "Comprehensive list of CLI flags and options for customizing Claude Code behavior.",
       "items": {
         "builtinCommands": {
-          "title": "Built-in Commands",
-          "description": "/init, /help, /compact, /memory and other utilities"
+          "title": "Model & Execution Flags",
+          "description": "--model (-m): Select model. --effort: Set thinking effort. --max-turns: Limit turns. --max-budget-usd: Set spending cap. --agent: Use a subagent."
         },
         "executionOptions": {
-          "title": "Execution Options",
-          "description": "Utilizing flags like --allowedTools, --model"
+          "title": "System Prompt & Output Flags",
+          "description": "--system-prompt: Override prompt. --output-format (text/json/stream-json): Control output. --json-schema: Validate JSON."
         },
         "environmentSetup": {
-          "title": "Environment Setup",
-          "description": "API keys, model selection, proxy configuration"
+          "title": "Tool & Session Flags",
+          "description": "--allowedTools/--disallowedTools: Control tools. --worktree: Git isolation. --chrome: Chrome integration. --plugin-dir: Load plugins."
+        },
+        "modelFlags": {
+          "title": "Model & Execution Flags",
+          "description": "--model (-m): Select model. --effort: Set thinking effort (low/medium/high). --max-turns: Limit conversation turns. --max-budget-usd: Set spending cap. --agent: Use a specific subagent for entire session."
+        },
+        "directoryFlags": {
+          "title": "Directory & Scope Flags",
+          "description": "--add-dir: Add extra directories to context. --worktree: Run in git worktree. --remote: Run remotely. --remote-control: Enable remote control."
+        },
+        "systemPromptFlags": {
+          "title": "System Prompt Flags",
+          "description": "--system-prompt: Override system prompt. --system-prompt-file: Load from file. --append-system-prompt: Append to default. --append-system-prompt-file: Append from file."
+        },
+        "outputFlags": {
+          "title": "Output & Format Flags",
+          "description": "--output-format (text/json/stream-json): Control output format. --json-schema: Validate JSON output. --verbose: Show detailed logging."
+        },
+        "toolFlags": {
+          "title": "Tool & Permission Flags",
+          "description": "--allowedTools: Restrict available tools. --disallowedTools: Block specific tools. --tools: Specify tool configuration. --permission-mode: Set permission behavior. --teleport: Enable IDE teleporting."
+        },
+        "sessionFlags": {
+          "title": "Session Flags",
+          "description": "--chrome: Launch with Chrome integration. --teammate-mode: Enable teammate mode. --agents: Load additional agent definitions. --plugin-dir: Load plugins from directory."
         }
+      }
+    },
+    "slashCommands": {
+      "title": "Slash Commands",
+      "description": "Built-in commands available during an interactive session.",
+      "items": {
+        "help": "/help — Show available commands",
+        "init": "/init — Initialize CLAUDE.md for your project",
+        "memory": "/memory — View and edit project memory",
+        "compact": "/compact — Compress conversation context",
+        "clear": "/clear — Clear conversation and start fresh",
+        "rewind": "/rewind — Rewind to a previous checkpoint",
+        "vim": "/vim — Toggle Vim mode",
+        "hooks": "/hooks — Browse and manage hooks",
+        "agents": "/agents — Create and manage subagents",
+        "keybindings": "/keybindings — Customize keyboard shortcuts",
+        "plan": "/plan — Toggle plan mode",
+        "btw": "/btw — Ask a side question",
+        "reloadPlugins": "/reload-plugins — Hot reload plugins"
       }
     },
     "quickExamples": {
       "title": "Practical Command Examples",
-      "projectAnalysis": "Project Analysis",
-      "developmentWork": "Development Work",
+      "projectAnalysis": "Exploration",
+      "developmentWork": "Development",
       "labels": {
-        "projectUnderstanding": "Project Understanding",
-        "apiDocumentation": "API Documentation",
-        "featureAddition": "Feature Addition",
-        "testAutomation": "Test Automation"
+        "projectUnderstanding": "Codebase Overview",
+        "apiDocumentation": "Find Features",
+        "featureAddition": "Build Features",
+        "testAutomation": "Test & Debug"
       },
       "commands": {
         "overview": "give me an overview of this codebase",
         "authFiles": "find the files that handle user authentication",
-        "npmTestError": "I'm seeing an error when I run npm test",
-        "fixTsIgnore": "suggest a few ways to fix the @ts-ignore",
-        "findDeprecated": "find deprecated API usage in our codebase",
-        "refactorUtils": "refactor utils.js to use ES2024 features"
+        "npmTestError": "run the tests and fix any failures",
+        "fixTsIgnore": "fix all the @ts-ignore comments with proper types",
+        "findDeprecated": "find deprecated API usage and suggest replacements",
+        "refactorUtils": "refactor utils.js to use modern ES2024 features"
       }
     },
     "bestPractices": {
-      "title": "Practical Tips to Increase Productivity",
+      "title": "CLI Tips",
       "items": {
         "specificInstructions": {
-          "title": "Specific Instructions",
-          "description": "Instead of \"fix the error\", request specifically like \"fix the null reference error on line 34 of user.tsx\"."
+          "title": "Be Specific",
+          "description": "Instead of 'fix the error', say 'fix the null reference error in the handleSubmit function in user.tsx'."
         },
         "incrementalDevelopment": {
-          "title": "Incremental Development",
-          "description": "Don't implement entire features at once; divide into small units and build incrementally."
+          "title": "Use Plan Mode First",
+          "description": "Press Shift+Tab to enable Plan Mode. Let Claude explore and plan before making changes."
         },
         "projectMemoryTip": {
-          "title": "Project Memory",
-          "description": "Specify project rules and context in CLAUDE.md file to get consistent results."
+          "title": "Manage Context",
+          "description": "Use /clear to start fresh, /compact to compress, and /btw for side questions. Keep CLAUDE.md short and specific."
         }
       }
     },
     "newFeatures": {
-      "title": "New in Claude Code 2.1",
+      "title": "Latest in Claude Code",
       "items": {
         "skillHotReload": {
-          "title": "Skill Hot-Reload",
-          "description": "Skills update instantly without session restart"
+          "title": "Agent Teams",
+          "description": "Run parallel agent teams with shared task lists and mailboxes"
         },
         "asyncAgents": {
-          "title": "Async Subagents",
-          "description": "Run agents in background with Ctrl+B"
+          "title": "Background Subagents",
+          "description": "Run agents in background with Ctrl+B, check results later"
         },
         "mcpSearch": {
           "title": "MCP Tool Search",
-          "description": "Auto-deferred MCP tools save 85% context"
+          "description": "Auto-deferred MCP tools save context window space"
         },
         "keybindings": {
           "title": "Custom Keybindings",
-          "description": "Customize shortcuts via /keybindings"
+          "description": "Customize all keyboard shortcuts via /keybindings"
         },
         "language": {
-          "title": "Multi-Language",
-          "description": "Set response language: Japanese, Spanish, etc."
+          "title": "Desktop & Web",
+          "description": "Desktop App for macOS/Windows and Web at claude.ai/code"
         },
         "planCommand": {
-          "title": "/plan Command",
-          "description": "Enable plan mode directly from prompt"
+          "title": "Worktree Isolation",
+          "description": "Run agents in isolated git worktrees with --worktree flag"
         }
       }
     }
   },
   "tutorials": {
     "title": "Claude Code Practical Tutorials",
-    "subtitle": "Master Claude Code's powerful features through step-by-step guides and real examples. Learn systematically from daily workflows to advanced automation.",
+    "subtitle": "Step-by-step guides for real-world development workflows with Claude Code.",
     "quickStart": "Quick Start Tutorials",
     "quickStartTutorials": {
       "resumeConversations": {
         "title": "Resume Conversations",
-        "description": "Learn how to efficiently resume and continue previous conversations with Claude Code.",
-        "continueLatest": "Continue Latest Conversation",
-        "useSelector": "Use Conversation Selector",
-        "tip": "Use /memory command to check conversation context before resuming."
+        "description": "Continue where you left off or resume any previous session.",
+        "continueLatest": "claude -c to continue latest session",
+        "useSelector": "claude -r to pick from recent sessions",
+        "tip": "Use /memory to review session context before resuming. Use /compact to compress long conversations."
       },
       "understandingCodebases": {
-        "title": "Understanding Codebases",
-        "description": "Learn how to quickly grasp new projects or complex codebases.",
-        "getOverview": "Get Overall Overview",
-        "findFeatures": "Find Specific Features",
-        "tip": "Understand the project structure first, then explore detailed features."
+        "title": "Exploring Codebases",
+        "description": "Quickly understand new projects or complex codebases with Claude.",
+        "getOverview": "Ask for an overview of the project",
+        "findFeatures": "Use Ctrl+G to fuzzy-search for files",
+        "tip": "Start broad ('explain this project') then narrow down ('how does authentication work'). Use @ to reference specific files."
       }
     },
     "coreWorkflows": {
       "title": "Core Workflows",
       "bugFixing": {
         "title": "Bug Fixing Workflow",
-        "description": "How to efficiently find and fix bugs using Claude Code."
+        "description": "Describe the bug. Claude explores the codebase, identifies the root cause, proposes a fix, writes tests to verify, and creates a PR."
       },
       "codeRefactoring": {
         "title": "Code Refactoring",
-        "description": "How to improve existing code and update to modern patterns."
+        "description": "Use Plan Mode (Shift+Tab) first to explore and plan. Claude analyzes the code, proposes a refactoring strategy, and executes it incrementally."
       },
       "testing": {
-        "title": "Test Automation",
-        "description": "How to automatically generate and run unit tests and integration tests."
+        "title": "Test Writing",
+        "description": "Ask Claude to write tests for your code. It analyzes the implementation, generates comprehensive test cases, and runs them to verify they pass."
       },
       "prCreation": {
         "title": "Pull Request Creation",
-        "description": "How to improve collaboration with automated commit messages and PR descriptions."
+        "description": "After making changes, ask Claude to create a PR. It writes a summary, adds test plans, and opens the PR via GitHub CLI."
       },
       "documentation": {
-        "title": "Documentation Automation",
-        "description": "How to automatically generate and update README, API docs, and code comments."
+        "title": "Documentation Generation",
+        "description": "Generate README files, API docs, and inline comments. Claude reads your code and produces accurate, up-to-date documentation."
       },
       "imageWork": {
-        "title": "Image Work",
-        "description": "How to analyze screenshots or design images to generate code.",
-        "dragDrop": "Drag and drop images and request code generation"
+        "title": "Image & Screenshot Analysis",
+        "description": "Paste screenshots of UIs, error messages, or design mockups. Claude analyzes them and generates code or debugging steps.",
+        "dragDrop": "Drag and drop images directly into the terminal, or use @ to reference image files"
+      },
+      "planMode": {
+        "title": "Plan Mode Workflow",
+        "description": "Press Shift+Tab to toggle Plan Mode. Claude explores the codebase, analyzes the problem, and proposes a plan for your approval before writing any code."
+      },
+      "extendedThinking": {
+        "title": "Extended Thinking",
+        "description": "Use keywords like 'think', 'think hard', or 'ultrathink' to give Claude more thinking budget for complex architectural decisions and deep analysis."
+      },
+      "worktrees": {
+        "title": "Git Worktrees for Parallel Sessions",
+        "description": "Use --worktree flag to run multiple Claude sessions on the same repo without conflicts. Each session gets an isolated working directory."
+      },
+      "nonInteractive": {
+        "title": "Non-Interactive Mode",
+        "description": "Use claude -p for scripting and automation. Pipe input, chain commands, and integrate Claude into CI/CD pipelines."
+      },
+      "fanOut": {
+        "title": "Fan-Out Patterns",
+        "description": "Use subagents to process multiple files or tasks in parallel. The main agent coordinates while subagents handle individual pieces."
       }
     },
     "startNow": {
       "title": "Start Now",
-      "description": "Experience Claude Code's powerful features firsthand.",
+      "description": "Get hands-on with Claude Code's powerful features.",
       "installButton": "Install and Get Started",
       "learnButton": "View More Guides"
     },
@@ -343,170 +535,170 @@
   },
   "tips": {
     "title": "Real-World Tips",
-    "subtitle": "Top 11 tips from 11 months of intense Claude Code usage",
+    "subtitle": "Battle-tested techniques for getting the most out of Claude Code",
     "copied": "Copied!",
-    "mainTitle": "Top 11 Claude Code Tips",
-    "mainSubtitle": "Battle-tested techniques from 11 months of intense daily usage",
-    "detailSubtitle": "From Real Power Users",
-    "detailDescription": "These tips come from developers who've spent 11+ months using Claude Code daily, compiled from 40+ community-validated techniques.",
-    "sourceCredit": "Based on community tips by ykdojo",
-    "sourceLink": "View original 40+ tips",
+    "mainTitle": "Essential Claude Code Tips",
+    "mainSubtitle": "Proven techniques from power users and the official best practices guide",
+    "detailSubtitle": "From Power Users & Official Docs",
+    "detailDescription": "These tips combine community-tested techniques with official Anthropic guidance for maximum productivity.",
+    "sourceCredit": "Based on community tips and official documentation",
+    "sourceLink": "View official docs",
     "tip1": {
-      "title": "Minimize the Provided Context",
-      "description": "The longer the given context, the worse Claude performs. AI context is like milk - it's best served fresh and condensed.",
+      "title": "Give Claude Verification Criteria",
+      "description": "The single most impactful thing you can do: tell Claude how to verify its own work. Tests, type checks, screenshots, linting — give Claude a way to confirm success.",
       "practices": {
-        "freshConversation": "Start a fresh conversation whenever you begin a new topic",
-        "splitTasks": "First conversation: find which files to edit. Second conversation: figure out how to edit them",
-        "avoidOverload": "Don't dump your entire codebase into context"
+        "freshConversation": "Include test commands: 'fix the bug and make sure all tests pass'",
+        "splitTasks": "Provide verification steps: 'run the linter after making changes'",
+        "avoidOverload": "Use screenshots for visual verification with /chrome or Playwright MCP"
       },
-      "quote": "Remember, AI context is like milk; it's best served fresh and condensed."
+      "quote": "The most effective prompts include success criteria, not just instructions."
     },
     "tip2": {
-      "title": "Solve Problems Step by Step",
-      "description": "Claude models are good at long-lasting tasks, but not perfect. They make mistakes especially when given problems that are too large.",
+      "title": "Explore First, Then Plan, Then Code",
+      "description": "Don't jump straight into code changes. Let Claude understand the codebase first, then plan the approach, then execute.",
       "practices": {
-        "breakDown": "Break your problem down into smaller steps",
-        "furtherBreak": "If steps are still too big, break them down further",
-        "oneAtATime": "Tackle one small piece at a time"
+        "breakDown": "Start with 'explore this codebase and explain the architecture'",
+        "furtherBreak": "Use Plan Mode (Shift+Tab) for complex tasks",
+        "oneAtATime": "Review the plan before letting Claude write code"
       },
-      "quote": "If a problem is too big for Claude to solve in one shot, break it down further."
+      "quote": "The explore-plan-code workflow prevents most failures before they happen."
     },
     "tip3": {
-      "title": "Don't Always Jump Into Writing Code",
-      "description": "AI gets a bad rep for low quality code because people primarily use it for writing code. But Claude excels at understanding, research, and planning.",
+      "title": "Provide Specific Context with @ and Images",
+      "description": "Reference specific files with @filename, paste screenshots and error images, and give Claude exactly the context it needs.",
       "practices": {
-        "understand": "Use Claude for understanding a codebase first",
-        "research": "Do research and brainstorming before coding",
-        "architecture": "Have architectural discussions",
-        "prepare": "Enough preparation before coding is key for quality"
+        "understand": "Use @ to reference specific files in your prompts",
+        "research": "Paste screenshots of errors, UIs, or designs",
+        "architecture": "Copy-paste error messages and stack traces directly",
+        "prepare": "Reference documentation URLs for Claude to fetch"
       },
-      "quote": "Doing enough preparation before jumping into writing code is one of the essential keys for producing high quality code."
+      "quote": "The more specific your context, the more accurate Claude's response."
     },
     "tip4": {
-      "title": "Master Git and GitHub with Claude",
-      "description": "Let Claude handle your Git and GitHub CLI tasks. This includes committing (no manual commit messages!), branching, pulling, and pushing.",
+      "title": "Write Effective CLAUDE.md Files",
+      "description": "Your CLAUDE.md is the single most important configuration. Keep it short, specific, and regularly pruned. Bad CLAUDE.md = bad results.",
       "practices": {
-        "autoCommit": "Let Claude write commit messages for you",
-        "allowPull": "Allow pull automatically, but be careful with push",
-        "gitBisect": "Use git bisect to find exact commits that broke something",
-        "ghCli": "Leverage GitHub CLI for issues and PRs"
+        "autoCommit": "Keep it concise — under 500 lines for project-level",
+        "allowPull": "Include build/test/lint commands Claude should use",
+        "gitBisect": "Add code style preferences and conventions",
+        "ghCli": "Prune regularly — remove outdated or redundant instructions"
       },
-      "warning": "I personally allow pull automatically but not push, because push is riskier."
+      "warning": "A long, unfocused CLAUDE.md hurts more than it helps. Quality over quantity."
     },
     "tip5": {
-      "title": "Verify AI Output in Multiple Ways",
-      "description": "Don't blindly trust AI output. Use multiple verification methods to ensure quality.",
+      "title": "Manage Context Aggressively",
+      "description": "Context window management is critical. Use /clear, /compact, /btw, and fresh sessions to keep Claude performing at its best.",
       "practices": {
-        "writeTests": "Have Claude write tests to verify code",
-        "visualGit": "Use a visual Git client like GitHub Desktop to check changes quickly",
-        "draftPR": "Generate draft PRs to review everything before marking ready",
-        "manualReview": "Always do a final manual review"
+        "writeTests": "Start fresh conversations for new topics (/clear)",
+        "visualGit": "Use /compact to compress long conversations",
+        "draftPR": "Use /btw for side questions that don't pollute main context",
+        "manualReview": "Use subagents for isolated investigation tasks"
       },
-      "quote": "Having it generate a draft PR is a great way to review everything before marking it ready."
+      "quote": "AI context is like milk — best served fresh and condensed."
     },
     "tip6": {
-      "title": "Let AI Verify Its Own Work",
-      "description": "Claude can check its own work. For research, ask it to double-check claims. For web apps, use browser automation to verify.",
+      "title": "Use Subagents for Investigation",
+      "description": "Spawn subagents to explore, investigate, and research without consuming your main session's context. Results come back summarized.",
       "practices": {
-        "doubleCheck": "Say 'Are you sure? Can you double check?'",
-        "verifyTable": "Ask: 'Double check every claim and make a table of what you verified'",
-        "playwright": "Use Playwright MCP or /chrome for web app verification",
-        "tmux": "Use tmux for interactive CLI verification"
+        "doubleCheck": "Use the Explore subagent (Haiku, read-only) for quick lookups",
+        "verifyTable": "Use the Plan subagent for complex analysis without code changes",
+        "playwright": "Create custom subagents for recurring investigation patterns",
+        "tmux": "Run subagents in background with Ctrl+B"
       },
-      "claudeMdTip": "For /chrome, add this to CLAUDE.md: Use read_page for element refs, use find to locate elements, click using ref not coordinates, NEVER take screenshots unless requested."
+      "claudeMdTip": "Subagents have their own context windows, so they don't consume tokens from your main session."
     },
     "tip7": {
-      "title": "Set Up a Custom Status Line",
-      "description": "Customize the status line at the bottom of Claude Code to show model, directory, git branch, uncommitted files, sync status, and token usage.",
+      "title": "Rewind with Checkpoints",
+      "description": "Claude automatically creates git checkpoints. Use /rewind to go back if something goes wrong. Course-correct early with Esc.",
       "practices": {
-        "showModel": "Display current model being used",
-        "showBranch": "Show git branch and uncommitted file count",
-        "tokenBar": "Add visual progress bar for token usage",
-        "syncStatus": "Show sync status with origin"
+        "showModel": "Use /rewind to restore previous state",
+        "showBranch": "Press Esc early if Claude is going in the wrong direction",
+        "tokenBar": "Check git diff after changes to verify correctness",
+        "syncStatus": "Use /clear to reset if the conversation derails"
       },
-      "quote": "It's really helpful for keeping an eye on your context usage and remembering what you were working on."
+      "quote": "Course-correct early. The cost of rewinding goes up with every additional change."
     },
     "tip8": {
-      "title": "Pass Context to the Next Session",
-      "description": "Instead of relying on /compact, proactively manage context with handoff documents.",
+      "title": "Configure Permissions and Hooks",
+      "description": "Set up permission modes and hooks to automate repetitive approvals and enforce team standards.",
       "practices": {
-        "handoffDoc": "Ask Claude to write a HANDOFF.md before starting fresh",
-        "includeTrials": "Document what was tried, what worked, what didn't",
-        "freshStart": "Start fresh conversation with just the handoff file path",
-        "halfClone": "Use half-clone to keep only recent conversation half"
+        "handoffDoc": "Use permission modes: default, acceptEdits, dontAsk, plan",
+        "includeTrials": "Set up hooks for auto-formatting after edits",
+        "freshStart": "Use hooks to enforce security policies on tool usage",
+        "halfClone": "Configure allowed/disallowed tools per project"
       },
-      "handoffPrompt": "Put the rest of the plan in HANDOFF.md. Explain what you tried, what worked, what didn't, so the next agent can load just that file and continue."
+      "handoffPrompt": "Hooks turn repetitive manual approvals into automated guardrails."
     },
     "tip9": {
-      "title": "Use Voice Input",
-      "description": "Communicate much faster with voice than typing. Even with transcription mistakes, Claude understands what you mean.",
+      "title": "Use CLI Tools and MCP Servers",
+      "description": "Claude works best when it has access to the right tools. Connect GitHub CLI, AWS CLI, database tools, and MCP servers.",
       "practices": {
-        "localTranscription": "Use local voice transcription (superwhisper, MacWhisper)",
-        "fasterComm": "Voice is faster than typing for most people",
-        "likePhoneCall": "Think of it like getting on a quick phone call with a friend",
-        "mistakesOk": "Claude handles transcription typos well"
+        "localTranscription": "Install gh (GitHub CLI) for PR and issue management",
+        "fasterComm": "Connect MCP servers for databases, Slack, and more",
+        "likePhoneCall": "Use claude mcp add to register new servers",
+        "mistakesOk": "Create custom skills to teach Claude your tool workflows"
       },
-      "quote": "If you want to communicate faster, why wouldn't you get on a quick phone call? Voice is faster for the majority of people."
+      "quote": "Claude + CLI tools + MCP = a development workflow that covers everything."
     },
     "tip10": {
-      "title": "Juggle Multiple Sessions",
-      "description": "When running multiple Claude Code instances, staying organized matters. Focus on 3-4 tasks max at the beginning.",
+      "title": "Create Custom Skills and Subagents",
+      "description": "Build reusable skills (SKILL.md files) for domain knowledge and custom subagents for specialized tasks.",
       "practices": {
-        "maxTasks": "Limit to 3-4 concurrent tasks when starting out",
-        "cascadeMethod": "Open new tabs on the right, sweep left to right",
-        "consistentDirection": "Keep general direction consistent",
-        "checkOldest": "Go from oldest tasks to newest"
+        "maxTasks": "Create skills for team conventions and code standards",
+        "cascadeMethod": "Build subagents for code review, debugging, data analysis",
+        "consistentDirection": "Share skills and agents across your team via plugins",
+        "checkOldest": "Use /agents command to create subagents interactively"
       },
-      "quote": "Whenever I start a new task, I open a new tab on the right. Then I sweep left to right, going from oldest to newest."
+      "quote": "Skills and subagents turn Claude from a generic assistant into a domain expert."
     },
     "tip11": {
-      "title": "Alias 'claude' to 'c'",
-      "description": "Since you'll use the terminal more with Claude Code, set up short aliases to launch things quickly.",
-      "setup": "Add to ~/.zshrc or ~/.bashrc:",
-      "command": "alias c='claude'",
+      "title": "Avoid Common Failure Patterns",
+      "description": "Know the anti-patterns that lead to poor results and avoid them proactively.",
+      "setup": "Common failures to avoid:",
+      "command": "Too much context, vague instructions, no verification, ignoring Plan Mode for complex tasks",
       "practices": {
-        "shortAlias": "Use 'c' instead of 'claude'",
-        "continueFlag": "c -c continues your last conversation",
-        "resumeFlag": "c -r shows recent conversations to resume"
+        "shortAlias": "Don't dump entire codebases into context",
+        "continueFlag": "Don't give vague instructions like 'make it better'",
+        "resumeFlag": "Don't skip verification — always include test/lint/check commands"
       },
-      "quote": "The one I use the most is c for Claude Code."
+      "quote": "Most failures come from too much context, not too little."
     },
     "bonusTips": {
-      "title": "Bonus Quick Tips",
+      "title": "Quick Tips",
       "items": {
         "clearInstructions": {
-          "title": "Be Specific",
-          "text": "Instead of 'modify the file', say 'change useState initial value to null on line 23 of User.tsx'"
+          "title": "Alias 'claude' to 'c'",
+          "text": "Add 'alias c=claude' to your shell config. Use 'c -c' to continue, 'c -r' to resume."
         },
         "incrementalDev": {
-          "title": "Incremental Development",
-          "text": "Don't try to implement everything at once. Break it into small units."
+          "title": "Use Voice Input",
+          "text": "Hold Space to dictate. Claude handles transcription mistakes gracefully."
         },
         "testFirst": {
-          "title": "Test First",
-          "text": "Writing test cases before implementing features leads to more stable code."
+          "title": "Multiple Sessions",
+          "text": "Run multiple Claude instances for parallel tasks. Use git worktrees for isolation."
         },
         "codeReview": {
-          "title": "Always Review",
-          "text": "Review Claude-generated code and ensure it matches your project's style."
+          "title": "Pass Context Between Sessions",
+          "text": "Ask Claude to write a HANDOFF.md before starting fresh. Load it in the next session."
         }
       }
     },
-    "conclusion": "Claude Code is a truly powerful tool",
-    "conclusionText": "These 11 tips come from real developers who've spent thousands of hours with Claude Code. Start with tip #1 (minimize context) and work your way through. The productivity gains are real.",
+    "conclusion": "Claude Code is a genuinely transformative tool",
+    "conclusionText": "These tips come from real developers and official best practices. Start with verification criteria (tip #1) and context management (tip #5). The productivity gains compound as you master each technique.",
     "getStarted": "Get Started",
     "viewMoreGuides": "View More Guides"
   },
   "mcp": {
     "title": "MCP Protocol Guide",
-    "subtitle": "Learn how to extend Claude Code's capabilities with Model Context Protocol (MCP) servers.",
+    "subtitle": "Connect Claude Code to external tools and services with Model Context Protocol.",
     "heroTitle": "MCP Protocol Guide",
-    "heroSubtitle": "Learn how to extend Claude Code's capabilities with Model Context Protocol (MCP) servers.",
+    "heroSubtitle": "Connect Claude Code to external tools and services with Model Context Protocol.",
     "copyToClipboard": "Copy to clipboard",
     "whatIsMcp": {
       "title": "What is MCP?",
-      "description": "Model Context Protocol (MCP) is a revolutionary protocol that allows Claude Code to connect with external services and tools, dramatically expanding its capabilities beyond basic code assistance.",
-      "possibleTitle": "What's Possible",
+      "description": "Model Context Protocol (MCP) is an open protocol that connects Claude Code to external tools and data sources. Think of it as a USB port for AI — plug in databases, APIs, browsers, and any custom tool to extend Claude's capabilities.",
+      "possibleTitle": "What You Can Connect",
       "features": {
         "supabase": "Supabase database operations",
         "github": "GitHub issues and PR management",
@@ -515,44 +707,51 @@
         "postgresql": "PostgreSQL database management",
         "notion": "Notion pages and document management",
         "browser": "Web browser automation",
-        "monitoring": "System monitoring and alerts"
+        "monitoring": "Any tool with an MCP server"
       },
       "example": {
-        "title": "Example",
-        "description": "Connect to GitHub to manage issues, Supabase for database operations, or Slack for team communication - all directly from Claude Code."
+        "title": "How It Works",
+        "description": "Use 'claude mcp add' to connect servers, or configure .mcp.json in your project. Claude discovers available tools and uses them when relevant to your request."
       },
       "httpTransport": {
-        "title": "HTTP Transport (Recommended)",
-        "description": "HTTP is now the recommended transport protocol. SSE (Server-Sent Events) is deprecated."
+        "title": "Transport Protocols",
+        "description": "HTTP is the recommended transport. SSE (Server-Sent Events) is deprecated. Also supports stdio for local processes and WebSocket (ws) for real-time connections."
       },
       "resourceMentions": {
         "title": "MCP Resource Mentions",
-        "description": "Use @ syntax to reference MCP resources directly in your prompts.",
-        "example1": "Analyze table structure",
-        "example2": "View recent issues"
+        "description": "Use @ syntax to reference MCP resources directly in your prompts. Claude resolves the resource and includes its content.",
+        "example1": "@supabase://tables/users — analyze table structure",
+        "example2": "@github://issues?state=open — view recent issues"
       },
       "slashCommands": {
         "title": "MCP Prompts as Slash Commands",
-        "description": "MCP server prompts are automatically registered as slash commands."
+        "description": "MCP server prompts are automatically registered as slash commands. Type / to see available commands from connected servers."
       },
       "mcpSearch": {
-        "title": "MCP Tool Search Auto Mode",
-        "description": "When MCP tool descriptions exceed 10% of the context window, they're automatically deferred and searchable via the MCPSearch tool.",
-        "config": "# Set threshold: auto:N (N = 0-100 percent)"
+        "title": "MCP Tool Search (Auto Mode)",
+        "description": "When MCP tools exceed 10% of context, they are automatically deferred. Claude searches for the right tool when needed, saving significant context window space.",
+        "config": "Configure threshold: mcpToolSearch: 'auto:N' where N = 0-100 percent"
       }
+    },
+    "configuration": {
+      "title": "Configuration Methods",
+      "cliAdd": "CLI: claude mcp add <name> <command> [args...]",
+      "projectConfig": "Project: .mcp.json in project root",
+      "flagConfig": "Flag: --mcp-config path/to/config.json",
+      "subagentConfig": "Subagent: mcpServers in agent frontmatter (scoped to agent)"
     },
     "popularServers": {
       "title": "Popular MCP Servers",
-      "subtitle": "Here are the most useful and popular MCP servers that can enhance your Claude Code experience:",
+      "subtitle": "The most useful MCP servers for development workflows:",
       "essential": {
         "title": "Essential MCP Servers",
         "supabase": {
           "title": "Supabase MCP",
-          "description": "Direct database operations, schema management, and real-time data queries.",
+          "description": "Direct database operations, schema management, Edge Functions, and real-time subscriptions.",
           "features": {
             "queries": "Execute SQL queries",
             "schema": "Schema management",
-            "realtime": "Real-time subscriptions"
+            "realtime": "Edge Functions & Realtime"
           },
           "examples": {
             "createTable": "Create tables and design schemas",
@@ -561,15 +760,15 @@
         },
         "github": {
           "title": "GitHub MCP",
-          "description": "Complete GitHub integration for repository management, issues, and pull requests.",
+          "description": "Complete GitHub integration for repositories, issues, pull requests, and actions.",
           "features": {
             "repos": "Repository management",
             "issues": "Issue tracking",
             "prs": "Pull request management"
           },
           "examples": {
-            "issueToPr": "Auto-convert issues to PRs",
-            "releaseNotes": "Generate release notes automatically"
+            "issueToPr": "Convert issues to PRs automatically",
+            "releaseNotes": "Generate release notes from commits"
           }
         }
       },
@@ -584,8 +783,8 @@
             "notifications": "Automated alerts"
           },
           "examples": {
-            "deployNotify": "Send deployment completion notifications",
-            "shareErrors": "Share errors with team when they occur"
+            "deployNotify": "Send deployment notifications",
+            "shareErrors": "Share error reports with team"
           }
         },
         "postgresql": {
@@ -602,14 +801,18 @@
           }
         }
       },
+      "registry": {
+        "title": "MCP Server Registry",
+        "description": "Browse hundreds of community MCP servers at the official registry. Find servers for any tool or service."
+      },
       "proTip": {
         "title": "Pro Tip",
-        "description": "Start with GitHub and Supabase MCPs as they provide the most immediate value for development workflows."
+        "description": "Start with GitHub and Supabase MCPs for immediate value. Use MCP Tool Search to keep context lean when connecting many servers."
       }
     },
     "practicalUsage": {
       "title": "Ready to Get Started with MCP?",
-      "description": "Explore our comprehensive tutorials and guides to set up and use MCP servers effectively.",
+      "description": "Explore our tutorials to set up MCP servers and build powerful automated workflows.",
       "startTutorials": "Start Tutorials",
       "viewMoreServers": "View More Servers"
     },
@@ -617,46 +820,46 @@
       "title": "MCP Protocol Tutorials",
       "supabaseTutorial": {
         "title": "Master Supabase MCP",
-        "description": "Connect the most popular MCP server, Supabase, to Claude Code and fully automate your backend development.",
+        "description": "Connect Supabase to Claude Code and automate your entire backend development workflow.",
         "quickSetup": {
           "title": "Quick Setup",
-          "command": "claude mcp add supabase -e SUPABASE_ACCESS_TOKEN=your_token npx -y @supabase/mcp-server-supabase@latest",
-          "description": "Connect MCP server with Supabase personal access token (generate from Settings → Access Tokens)"
+          "command": "claude mcp add supabase -e SUPABASE_ACCESS_TOKEN=your_token -- npx -y @supabase/mcp-server-supabase@latest",
+          "description": "Connect with your Supabase personal access token (generate from Settings > Access Tokens)"
         },
         "practicalExamples": {
           "title": "Practical Usage Examples",
           "example1": {
             "command": "Create a table to store blog posts",
-            "result": "→ Schema design → Table creation → RLS policy setup"
+            "result": "Schema design > Table creation > RLS policy setup"
           },
           "example2": {
             "command": "Create and deploy user authentication Edge Function",
-            "result": "→ Function writing → Testing → Live deployment"
+            "result": "Function writing > Testing > Live deployment"
           },
           "example3": {
             "command": "Analyze current database usage and costs",
-            "result": "→ Usage query → Cost calculation → Optimization suggestions"
+            "result": "Usage query > Cost calculation > Optimization suggestions"
           },
           "example4": {
             "command": "Set up real-time subscriptions for users table",
-            "result": "→ Enable Realtime → Configure subscription → Create event listeners"
+            "result": "Enable Realtime > Configure subscription > Create event listeners"
           }
         },
         "proTip": {
           "title": "Pro Tip",
-          "description": "Advanced commands like \"Analyze database costs\" and \"Optimize slow queries\" are also available!"
+          "description": "Advanced commands like 'Analyze database costs' and 'Optimize slow queries' are also available!"
         }
       },
       "workflowAutomation": {
         "title": "Complete Workflow Automation",
-        "description": "Connect GitHub + Supabase + Slack to automate \"Issue received → Code fix → Deploy → Team notification\" all at once!",
+        "description": "Connect GitHub + Supabase + Slack to automate the full cycle: Issue > Code Fix > Deploy > Team Notification.",
         "steps": {
           "step1": {
             "title": "Connect GitHub",
             "command": "claude mcp add github"
           },
           "step2": {
-            "title": "Connect Supabase", 
+            "title": "Connect Supabase",
             "command": "claude mcp add supabase"
           },
           "step3": {
@@ -665,14 +868,14 @@
           }
         },
         "magicCommand": {
-          "title": "Magic One-Line Command",
+          "title": "Full Automation Example",
           "command": "Analyze GitHub issue #42, fix it, deploy, and notify Slack #dev",
           "workflow": [
-            "→ Analyze issue content and find related code files",
-            "→ Write bug fix code and test", 
-            "→ Create PR on GitHub and merge",
-            "→ Deploy Edge Function to Supabase",
-            "→ Send completion notification to Slack channel"
+            "Analyze issue content and find related code files",
+            "Write bug fix code and tests",
+            "Create PR on GitHub and merge",
+            "Deploy Edge Function to Supabase",
+            "Send completion notification to Slack channel"
           ]
         },
         "additionalExamples": {
@@ -692,42 +895,84 @@
         },
         "realWorldExample": {
           "title": "Real-World Case",
-          "description": "A startup reduced bug fix time from 3 hours to 15 minutes using this workflow!"
+          "description": "Teams report reducing bug fix time from hours to minutes using MCP-powered automation workflows."
         }
       }
     }
   },
   "skills": {
-    "title": "Agent Skills",
-    "subtitle": "Extend Claude's capabilities with custom markdown-based skills that Claude applies automatically",
+    "title": "Skills",
+    "subtitle": "Domain expertise defined via SKILL.md files that Claude applies automatically",
     "whatAreSkills": {
-      "title": "What are Agent Skills?",
-      "description": "A Skill is a markdown file that teaches Claude how to do something specific. Skills are model-invoked: Claude decides which Skills to use based on your request. When you ask Claude something that matches a Skill's description, Claude automatically applies it.",
-      "automatic": "Automatic Activation",
-      "automaticDesc": "Claude detects when a Skill is relevant and applies it automatically",
-      "markdown": "Markdown-Based",
-      "markdownDesc": "Simple SKILL.md files with YAML frontmatter and instructions",
+      "title": "What are Skills?",
+      "description": "A Skill is a SKILL.md file with YAML frontmatter that teaches Claude how to do something specific. When you ask Claude something matching a Skill's description, it automatically applies the skill's instructions, tools, and context.",
+      "automatic": "Automatic Invocation",
+      "automaticDesc": "Claude detects when a Skill is relevant and applies it automatically based on the description",
+      "markdown": "SKILL.md Format",
+      "markdownDesc": "YAML frontmatter for metadata + markdown body for instructions and context",
       "hotReload": "Hot Reload",
-      "hotReloadDesc": "Skills are automatically loaded when created or modified"
+      "hotReloadDesc": "Skills reload automatically when modified — no session restart needed"
+    },
+    "bundledSkills": {
+      "title": "Bundled Skills",
+      "description": "Claude Code comes with built-in skills:",
+      "batch": "/batch — Process multiple files or tasks in parallel using subagents",
+      "claudeApi": "/claude-api — Work with the Anthropic API using best practices",
+      "debug": "/debug — Systematic debugging workflow",
+      "loop": "/loop — Iterative development loop with verification",
+      "simplify": "/simplify — Simplify complex code while preserving behavior"
     },
     "locations": {
       "title": "Where Skills Live",
       "location": "Location",
       "path": "Path",
       "appliesTo": "Applies To",
-      "priority": "Priority order: Enterprise > Personal > Project > Plugin (higher wins on name conflicts)"
+      "priority": "Priority order: Enterprise > Personal > Project > Plugin (higher wins on name conflicts)",
+      "enterprise": "Enterprise: Managed by organization admin",
+      "personal": "Personal: ~/.claude/skills/ — applies to all your projects",
+      "project": "Project: .claude/skills/ — applies to the project (shared with team)",
+      "plugin": "Plugin: Bundled in plugin packages"
     },
     "structure": {
       "title": "SKILL.md Structure",
       "simpleExample": "Simple Skill",
-      "advancedExample": "Advanced Skill"
+      "advancedExample": "Advanced Skill with Full Frontmatter"
     },
     "metadata": {
-      "title": "Available Metadata Fields"
+      "title": "Frontmatter Fields",
+      "fields": {
+        "name": "name — Display name of the skill",
+        "description": "description — What the skill does (used for automatic matching)",
+        "argumentHint": "argument-hint — Hint for expected arguments",
+        "disableModelInvocation": "disable-model-invocation — Prevent Claude from auto-invoking (manual /skill-name only)",
+        "userInvocable": "user-invocable — Whether users can invoke with /skill-name",
+        "allowedTools": "allowed-tools — List of tools the skill can use",
+        "model": "model — Override the model for this skill",
+        "context": "context — 'fork' to run in a subagent with separate context",
+        "agent": "agent — Reference a subagent to execute the skill",
+        "hooks": "hooks — Hook definitions scoped to this skill's lifecycle"
+      }
+    },
+    "substitutions": {
+      "title": "String Substitutions",
+      "description": "Use dynamic values in your skill instructions:",
+      "arguments": "$ARGUMENTS — Full argument string passed to the skill",
+      "argumentsN": "$ARGUMENTS[N] — Nth argument (0-indexed)",
+      "positional": "$N — Shorthand for $ARGUMENTS[N]",
+      "sessionId": "${CLAUDE_SESSION_ID} — Current session identifier",
+      "skillDir": "${CLAUDE_SKILL_DIR} — Directory containing the SKILL.md file"
+    },
+    "dynamicContext": {
+      "title": "Dynamic Context Injection",
+      "description": "Use !`command` syntax to inject command output into skill instructions at load time. Example: !`cat package.json` inserts your package.json contents."
+    },
+    "permissions": {
+      "title": "Permission Control",
+      "description": "Control who can invoke skills: Skill(name) for specific skill, Skill(name *) for skill with any arguments."
     },
     "hooks": {
       "title": "Skills with Hooks",
-      "description": "Skills can define hooks that run during the Skill's lifecycle. Hooks are scoped to the Skill and automatically cleaned up when it finishes.",
+      "description": "Skills can define hooks that run during the skill's lifecycle. Hooks are scoped to the skill and automatically cleaned up when it finishes.",
       "example": "Example: Security Check Hook"
     },
     "vsOthers": {
@@ -735,24 +980,60 @@
     },
     "multiFile": {
       "title": "Multi-File Skills (Progressive Disclosure)",
-      "description": "For complex Skills, use progressive disclosure: put essential info in SKILL.md and detailed docs in separate files that Claude reads only when needed.",
-      "tip": "Keep SKILL.md under 500 lines. Scripts can be executed without loading into context."
+      "description": "For complex skills, put essential info in SKILL.md and detailed docs in separate files. Claude reads the supporting files only when needed, keeping context lean.",
+      "tip": "Keep SKILL.md under 500 lines. Scripts in the skill directory can be executed without loading into context."
     },
     "testing": {
       "title": "Testing Your Skills",
       "viewSkills": "View Available Skills",
       "testSkill": "Test a Skill",
-      "testSkillDesc": "Ask a question matching the Skill description:"
+      "testSkillDesc": "Ask a question matching the skill description, or invoke directly with /skill-name:"
     },
     "cta": {
       "title": "Start Building Skills",
-      "description": "Create your first Skill to extend Claude's capabilities with your team's standards and workflows.",
+      "description": "Create your first skill to encode your team's standards, workflows, and domain knowledge.",
       "button": "Read Full Documentation"
     }
   },
   "subagents": {
     "title": "Subagents",
-    "subtitle": "Specialized AI assistants for task-specific workflows",
+    "subtitle": "Specialized AI assistants with independent context for task-specific workflows",
+    "whatAreSubagents": {
+      "title": "What are Subagents?",
+      "description": "Subagents are independent Claude instances with their own context windows, tool access, and specialized instructions. They can explore code, execute plans, run in the background, and return summarized results without consuming your main session's context.",
+      "independent": "Independent Context",
+      "independentDesc": "Each subagent has its own context window — they don't consume your main session's tokens",
+      "specialized": "Specialized Tasks",
+      "specializedDesc": "Configure model, tools, permissions, and instructions for specific workflows",
+      "parallel": "Background Execution",
+      "parallelDesc": "Run subagents in the background (Ctrl+B) and check results when ready"
+    },
+    "builtIn": {
+      "title": "Built-in Subagents",
+      "explore": {
+        "title": "Explore",
+        "description": "Uses Haiku model, read-only tools. Fast, cheap exploration and code search."
+      },
+      "plan": {
+        "title": "Plan",
+        "description": "Inherits current model, read-only tools. Analyzes code and creates plans without making changes."
+      },
+      "general": {
+        "title": "General-Purpose",
+        "description": "Has access to all tools. Used when you need a subagent that can read and write code."
+      },
+      "bash": {
+        "title": "Bash",
+        "description": "Specialized for shell command execution and system operations."
+      }
+    },
+    "creation": {
+      "title": "Creating Custom Subagents",
+      "interactive": "Use /agents command to create subagents interactively",
+      "markdown": "Or create markdown files directly in .claude/agents/ (project) or ~/.claude/agents/ (user)",
+      "cliFlag": "Load additional agents with --agents CLI flag (session scope)",
+      "pluginAgents": "Bundle agents in plugins for team distribution"
+    },
     "frontmatter": {
       "title": "Agent Frontmatter Fields",
       "tableHeaders": {
@@ -760,50 +1041,94 @@
         "description": "Description",
         "example": "Example"
       },
-      "model": "Specify the AI model for the agent to use",
-      "skills": "Link skill files to the agent",
-      "hooks": "Define agent-specific hooks",
-      "permissionMode": "Set permission behavior (default, bypassPermissions, etc.)",
-      "apiKeyEnvVar": "Environment variable for the API key",
-      "enableUndo": "Enable/disable undo functionality",
-      "tools": "Specify allowed/disallowed tools"
+      "name": "name — Display name of the subagent",
+      "description": "description — What the agent does (used for automatic selection)",
+      "model": "model — AI model: sonnet, opus, haiku, inherit, or full model ID",
+      "tools": "tools — Allowed tools list. Use Agent(worker, researcher) syntax for nested agents",
+      "disallowedTools": "disallowedTools — Tools to block",
+      "permissionMode": "permissionMode — default, acceptEdits, dontAsk, bypassPermissions, plan",
+      "maxTurns": "maxTurns — Maximum conversation turns before stopping",
+      "skills": "skills — Preload specific skills into the subagent",
+      "mcpServers": "mcpServers — MCP servers scoped to this agent (inline config or reference)",
+      "hooks": "hooks — Agent-specific hooks",
+      "memory": "memory — Persistent memory: user, project, or local scope",
+      "background": "background — Run in background by default",
+      "effort": "effort — Thinking effort level",
+      "isolation": "isolation — 'worktree' for git worktree isolation"
+    },
+    "mcpScoping": {
+      "title": "MCP Servers Scoped to Subagents",
+      "description": "Define MCP servers in agent frontmatter. The servers are only available to that specific subagent, keeping tool access controlled and context lean."
+    },
+    "execution": {
+      "title": "Running Subagents",
+      "mention": "@agent-name to invoke a subagent inline",
+      "flag": "--agent flag to use a subagent for the entire session",
+      "background": "Ctrl+B to run a subagent in the background",
+      "resume": "Use SendMessage to resume or continue a subagent",
+      "autoCompaction": "Subagents support auto-compaction for long-running tasks"
+    },
+    "examples": {
+      "title": "Example Subagents",
+      "codeReviewer": {
+        "title": "Code Reviewer",
+        "description": "Reviews code changes, checks for bugs, style issues, and security vulnerabilities. Uses read-only tools and plan permission mode."
+      },
+      "debugger": {
+        "title": "Debugger",
+        "description": "Systematic debugging with access to bash, file reading, and test execution. Follows a structured debug workflow."
+      },
+      "dataScientist": {
+        "title": "Data Scientist",
+        "description": "Analyzes data, generates visualizations, and runs statistical tests. Scoped MCP server for database access."
+      },
+      "dbReader": {
+        "title": "DB Reader with Hooks",
+        "description": "Read-only database agent with hooks that log all queries for audit purposes."
+      }
     }
   },
   "plugins": {
     "title": "Plugins",
-    "subtitle": "Extend Claude Code with custom commands, agents, hooks, and MCP servers",
+    "subtitle": "Package and distribute skills, agents, hooks, and MCP servers as reusable plugin bundles",
     "whatArePlugins": {
       "title": "What are Plugins?",
-      "description": "Plugins allow you to extend Claude Code with custom functionality that can be shared across your team or the entire community. Create reusable commands, specialized agents, event hooks, and MCP server integrations.",
-      "customCommands": "Custom Commands",
-      "customCommandsDesc": "Create reusable slash commands for common workflows",
-      "teamSharing": "Team Sharing",
-      "teamSharingDesc": "Share plugins across your organization",
+      "description": "Plugins are self-contained packages that bundle skills, agents, hooks, MCP configurations, and settings into a distributable unit. Share across your team or publish to the community marketplace.",
+      "customCommands": "Namespaced Skills",
+      "customCommandsDesc": "Skills are namespaced as /plugin-name:skill-name to avoid conflicts",
+      "teamSharing": "Team Distribution",
+      "teamSharingDesc": "Share plugins via Git repos, registries, or the official marketplace",
       "eventHooks": "Event Hooks",
-      "eventHooksDesc": "Respond to events in Claude Code lifecycle",
-      "mcpIntegration": "MCP Integration",
-      "mcpIntegrationDesc": "Bundle MCP servers with your plugins"
+      "eventHooksDesc": "Bundle hooks that respond to Claude Code lifecycle events",
+      "mcpIntegration": "MCP & LSP Servers",
+      "mcpIntegrationDesc": "Include MCP server configurations and LSP server support"
     },
     "pluginStructure": {
       "title": "Plugin Structure",
-      "step1": "plugin.json - Plugin Manifest",
-      "step1Desc": "Define your plugin name, version, description, and what it provides",
-      "step2": "commands/ - Reusable Commands",
-      "step2Desc": "Create markdown files that define custom slash commands",
-      "step3": "agents/ - Specialized Agents",
-      "step3Desc": "Bundle pre-configured subagents with specific expertise",
-      "step4": "hooks/ - Event Handlers",
-      "step4Desc": "JavaScript files that respond to Claude Code events"
+      "step1": ".claude-plugin/plugin.json — Plugin Manifest",
+      "step1Desc": "Define name, version, description, author, homepage, repository, and license",
+      "step2": "skills/ — Skill Files",
+      "step2Desc": "SKILL.md files that are namespaced under the plugin name",
+      "step3": "agents/ — Subagent Definitions",
+      "step3Desc": "Markdown files defining specialized subagents",
+      "step4": "hooks/ — Event Handlers",
+      "step4Desc": "Hook scripts that respond to Claude Code events",
+      "step5": ".mcp.json — MCP Server Configuration",
+      "step5Desc": "MCP servers bundled with the plugin",
+      "step6": ".lsp.json — LSP Server Configuration",
+      "step6Desc": "Language Server Protocol servers for advanced language features",
+      "step7": "settings.json — Default Settings",
+      "step7Desc": "Default configuration including the default agent for the plugin"
     },
     "creatingPlugin": {
-      "title": "Creating Your First Plugin",
+      "title": "Creating a Plugin",
       "customCommand": {
-        "title": "Custom Command",
-        "desc": "Create a /deploy command for your team"
+        "title": "Plugin Manifest",
+        "desc": "Create .claude-plugin/plugin.json with name, description, version, author, homepage, repository, license"
       },
       "manifest": {
-        "title": "Plugin Manifest",
-        "desc": "Define plugin metadata in plugin.json"
+        "title": "Testing Locally",
+        "desc": "Use --plugin-dir to load your plugin during development. Use /reload-plugins for hot reload."
       }
     },
     "distribution": {
@@ -814,11 +1139,11 @@
       },
       "team": {
         "title": "Team Registry",
-        "desc": "Share across your organization"
+        "desc": "Share across your organization via Git or internal registry"
       },
       "marketplace": {
-        "title": "Plugin Marketplace",
-        "desc": "Publish to the community marketplace"
+        "title": "Official Marketplace",
+        "desc": "Submit to the official marketplace at claude.ai/settings/plugins/submit"
       },
       "cli": {
         "title": "Plugin Marketplace CLI",
@@ -830,15 +1155,19 @@
     },
     "lspSupport": {
       "title": "LSP Server Support",
-      "description": "Plugins can bundle Language Server Protocol (LSP) servers to provide advanced language features and IDE integration."
+      "description": "Plugins can bundle Language Server Protocol (LSP) servers via .lsp.json. Provides advanced language features, diagnostics, and IDE integration capabilities."
+    },
+    "converting": {
+      "title": "Converting Standalone Configs to Plugins",
+      "description": "Already have skills, agents, or hooks in your project? Package them into a plugin for easy distribution. Move files into the plugin structure and create a manifest."
     },
     "useCases": {
       "title": "Plugin Use Cases",
       "teamWorkflows": {
         "title": "Team Workflows",
         "item1": "Standardized deployment procedures",
-        "item2": "Code review templates",
-        "item3": "Documentation generation"
+        "item2": "Code review templates and agents",
+        "item3": "Documentation generation pipelines"
       },
       "domainExperts": {
         "title": "Domain Experts",
@@ -855,11 +1184,11 @@
       },
       "versioning": {
         "title": "Use Semantic Versioning",
-        "desc": "Follow semantic versioning (major.minor.patch) for better compatibility management"
+        "desc": "Follow semantic versioning (major.minor.patch) for compatibility management"
       },
       "testing": {
-        "title": "Test Your Plugins",
-        "desc": "Validate plugins in different scenarios before sharing with your team"
+        "title": "Test with --plugin-dir",
+        "desc": "Use --plugin-dir flag to load and test plugins locally before distribution"
       },
       "security": {
         "title": "Security First",
@@ -868,74 +1197,167 @@
     },
     "cta": {
       "title": "Ready to Create Your First Plugin?",
-      "description": "Start building custom functionality and share it with your team or the entire community"
+      "description": "Package your skills, agents, hooks, and MCP configs into a distributable plugin."
     }
   },
   "hooks": {
     "title": "Hooks",
-    "subtitle": "Customize Claude Code behavior by responding to lifecycle events",
+    "subtitle": "Event-driven automation for Claude Code's entire lifecycle",
     "whatAreHooks": {
       "title": "What are Hooks?",
-      "description": "Hooks are JavaScript functions that execute in response to specific events in Claude Code. They allow you to customize behavior, enforce policies, integrate external tools, and automate workflows.",
+      "description": "Hooks are scripts or prompts that execute in response to specific events in Claude Code. They support four types: command (shell scripts), HTTP (webhook calls), prompt (LLM-powered decisions), and agent (subagent verification). Use them to enforce policies, automate workflows, and integrate external tools.",
       "eventDriven": "Event-Driven",
-      "eventDrivenDesc": "Respond to specific lifecycle events automatically",
-      "customizable": "Fully Customizable",
-      "customizableDesc": "Write JavaScript to customize any behavior",
+      "eventDrivenDesc": "Respond to 20+ lifecycle events automatically",
+      "customizable": "Four Hook Types",
+      "customizableDesc": "Command, HTTP, Prompt, and Agent hooks for different needs",
       "policiesEnforcement": "Policy Enforcement",
-      "policiesEnforcementDesc": "Enforce team standards and security policies",
+      "policiesEnforcementDesc": "Enforce team standards, security policies, and code quality rules",
       "integrations": "External Integrations",
-      "integrationsDesc": "Connect to external services and tools"
+      "integrationsDesc": "Call webhooks, run scripts, and connect to external services"
+    },
+    "hookTypes": {
+      "title": "Hook Types",
+      "command": {
+        "title": "Command Hooks",
+        "description": "Execute shell commands. Exit code 0 = success, 2 = blocking error, other = non-blocking warning."
+      },
+      "http": {
+        "title": "HTTP Hooks",
+        "description": "Send HTTP requests to webhooks or APIs. Configure headers and allowedEnvVars for authentication."
+      },
+      "prompt": {
+        "title": "Prompt Hooks (LLM-Powered)",
+        "description": "Describe what you want in natural language. An LLM evaluates the condition and returns a decision. Great for complex logic that's hard to code."
+      },
+      "agent": {
+        "title": "Agent Hooks",
+        "description": "Spawn a subagent to verify or analyze. The subagent runs independently and returns its assessment."
+      }
     },
     "availableHooks": {
-      "title": "Available Hook Events",
+      "title": "Available Hook Events (20+)",
+      "sessionStart": {
+        "desc": "Fired when a Claude session starts. Initialize resources, check environment, load context.",
+        "useCase": "Use case: Environment setup, dependency checks"
+      },
+      "sessionEnd": {
+        "desc": "Fired when a session ends. Clean up resources, save state, generate reports.",
+        "useCase": "Use case: Cleanup, analytics, session summaries"
+      },
+      "instructionsLoaded": {
+        "desc": "Fired when CLAUDE.md and instructions are loaded. Modify or augment instructions.",
+        "useCase": "Use case: Dynamic instruction injection"
+      },
+      "userPromptSubmit": {
+        "desc": "Fired when user submits a prompt. Modify, augment, or intercept prompts.",
+        "useCase": "Use case: Context injection, prompt enhancement"
+      },
       "preToolUse": {
         "desc": "Fired before Claude uses any tool. Validate, modify, or block tool usage.",
         "useCase": "Use case: Security validation, file protection"
       },
+      "permissionRequest": {
+        "desc": "Fired when a permission is requested. Auto-approve, deny, or log requests.",
+        "useCase": "Use case: Auto-approval policies, audit logging"
+      },
       "postToolUse": {
-        "desc": "Fired after a tool completes. Process results, trigger notifications, or log actions.",
+        "desc": "Fired after a tool completes successfully. Process results, trigger notifications.",
         "useCase": "Use case: Auto-formatting, logging, metrics"
       },
-      "userPromptSubmit": {
-        "desc": "Fired when user submits a prompt. Modify prompts, add context, or trigger workflows.",
-        "useCase": "Use case: Context injection, prompt enhancement"
+      "postToolUseFailure": {
+        "desc": "Fired after a tool fails. Handle errors, retry, or alert.",
+        "useCase": "Use case: Error recovery, failure alerts"
+      },
+      "subagentStart": {
+        "desc": "Fired when a subagent is about to start. Monitor, inject context, or block.",
+        "useCase": "Use case: Subagent monitoring, context injection"
+      },
+      "subagentStop": {
+        "desc": "Fired when a subagent completes. Process results, chain tasks, notify.",
+        "useCase": "Use case: Result processing, task chaining"
       },
       "notification": {
         "desc": "Fired when Claude sends a notification. Customize notification behavior.",
         "useCase": "Use case: Custom alerts, team notifications"
       },
-      "sessionStart": {
-        "desc": "Fired when a Claude session starts. Initialize resources or load context.",
-        "useCase": "Use case: Session setup, environment checks"
+      "stop": {
+        "desc": "Fired when Claude stops generating. Final checks and validations.",
+        "useCase": "Use case: Final verification, quality checks"
       },
-      "sessionEnd": {
-        "desc": "Fired when a session ends. Clean up resources or save session data.",
-        "useCase": "Use case: Cleanup, analytics, session reports"
-      },
-      "setup": {
-        "desc": "Triggered via --init, --init-only, or --maintenance flags. Suitable for repository setup and maintenance tasks.",
-        "useCase": "Use case: Environment setup, dependency checks, project initialization"
-      },
-      "subagentStop": {
-        "desc": "Fired when a subagent completes its work. Process results or trigger follow-up actions.",
-        "useCase": "Use case: Result processing, task chaining, notifications"
-      },
-      "subagentStart": {
-        "desc": "Fired when a subagent is about to start. Monitor subagent launches or inject context.",
-        "useCase": "Use case: Subagent monitoring, logging, context injection"
-      },
-      "permissionRequest": {
-        "desc": "Fired when a permission is requested. Auto-approve/deny or log permission requests.",
-        "useCase": "Use case: Auto-approval, permission logging, security auditing"
+      "stopFailure": {
+        "desc": "Fired when Claude fails to stop cleanly. Error recovery.",
+        "useCase": "Use case: Graceful error handling"
       },
       "preCompact": {
-        "desc": "Fired before context compaction occurs. Save important information before context is compacted.",
+        "desc": "Fired before context compaction. Save important information before context is compressed.",
         "useCase": "Use case: Context preservation, important data backup"
+      },
+      "postCompact": {
+        "desc": "Fired after context compaction. Restore or inject critical context.",
+        "useCase": "Use case: Context restoration, re-injection"
+      },
+      "teammateIdle": {
+        "desc": "Fired when a teammate in Agent Teams becomes idle.",
+        "useCase": "Use case: Task assignment, load balancing"
+      },
+      "taskCompleted": {
+        "desc": "Fired when a task is completed in Agent Teams.",
+        "useCase": "Use case: Progress tracking, notifications"
+      },
+      "configChange": {
+        "desc": "Fired when configuration changes. React to setting updates.",
+        "useCase": "Use case: Dynamic reconfiguration"
+      },
+      "worktreeCreate": {
+        "desc": "Fired when a git worktree is created.",
+        "useCase": "Use case: Worktree setup, environment initialization"
+      },
+      "worktreeRemove": {
+        "desc": "Fired when a git worktree is removed.",
+        "useCase": "Use case: Cleanup, resource deallocation"
+      },
+      "elicitation": {
+        "desc": "Fired when Claude asks the user a question.",
+        "useCase": "Use case: Auto-response, logging"
+      },
+      "elicitationResult": {
+        "desc": "Fired when the user responds to an elicitation.",
+        "useCase": "Use case: Response processing, analytics"
+      },
+      "setup": {
+        "desc": "Triggered via --init, --init-only, or --maintenance flags. For repository setup and maintenance.",
+        "useCase": "Use case: Environment setup, dependency checks, project initialization"
       }
+    },
+    "configuration": {
+      "title": "Configuration Locations",
+      "user": "~/.claude/settings.json — User-level hooks (apply everywhere)",
+      "project": ".claude/settings.json — Project-level hooks (shared with team)",
+      "local": ".claude/settings.local.json — Local hooks (not committed)",
+      "plugin": "Plugin hooks/ directory — Bundled in plugins",
+      "skillAgent": "Skill/agent frontmatter — Scoped to skill or agent lifecycle",
+      "managed": "Managed policy — Enterprise-managed hooks"
+    },
+    "exitCodes": {
+      "title": "Exit Codes (Command Hooks)",
+      "success": "Exit 0 — Success, continue normally",
+      "blocking": "Exit 2 — Blocking error, stop the action",
+      "warning": "Other codes — Non-blocking warning, continue with message"
+    },
+    "envVars": {
+      "title": "Environment Variables",
+      "projectDir": "$CLAUDE_PROJECT_DIR — Current project directory",
+      "pluginRoot": "${CLAUDE_PLUGIN_ROOT} — Plugin root directory",
+      "pluginData": "${CLAUDE_PLUGIN_DATA} — Plugin data directory",
+      "envFile": "CLAUDE_ENV_FILE — Path to write environment variables for Claude to read"
+    },
+    "matchers": {
+      "title": "Matcher Patterns",
+      "description": "Each event supports matcher patterns to filter when hooks fire. For example, PreToolUse matchers filter by tool name, PostToolUse matchers filter by tool name and result."
     },
     "promptBasedHooks": {
       "title": "Prompt-Based Hooks",
-      "description": "Use LLM-powered decision making in hooks. Instead of writing JavaScript logic, describe what you want in natural language.",
+      "description": "Use LLM-powered decision making in hooks. Describe what you want in natural language instead of writing code. The LLM evaluates the condition and returns a structured decision.",
       "whenToUse": "When to Use",
       "useCase1": "Complex decision logic that's hard to write in code",
       "useCase2": "Code review and quality checks",
@@ -953,17 +1375,22 @@
         "desc": "Prevent Claude from editing critical configuration files"
       },
       "slackNotify": {
-        "title": "Send Slack Notifications",
-        "desc": "Notify team when deployment happens"
+        "title": "Send Slack Notifications via HTTP Hook",
+        "desc": "Call a webhook when deployment happens"
+      },
+      "agentVerification": {
+        "title": "Agent Verification Hook",
+        "desc": "Spawn a subagent to review code changes before they are committed"
       }
     },
     "security": {
       "title": "Security Considerations",
-      "description": "Hooks execute arbitrary JavaScript code. Follow these security best practices:",
-      "item1": "Never store secrets in hook files - use environment variables",
+      "description": "Hooks execute code on your system. Follow these security best practices:",
+      "item1": "Never store secrets in hook files — use environment variables",
       "item2": "Validate all inputs before executing external commands",
       "item3": "Review hooks from external sources before using them",
-      "item4": "Use try-catch blocks to handle errors gracefully"
+      "item4": "Use try-catch blocks to handle errors gracefully",
+      "item5": "Use exit code 2 for security-critical blocking hooks"
     },
     "bestPractices": {
       "title": "Best Practices",
@@ -976,17 +1403,341 @@
         "desc": "Always use try-catch blocks and provide meaningful error messages."
       },
       "async": {
-        "title": "Use Async/Await",
-        "desc": "Hooks support async functions for external API calls and file operations."
+        "title": "Use Async Hooks",
+        "desc": "Hooks support async execution for external API calls and long-running operations."
       },
       "testing": {
         "title": "Test Your Hooks",
-        "desc": "Test hooks thoroughly before deploying to avoid disrupting workflows."
+        "desc": "Use /hooks command to browse and test hooks interactively."
       }
     },
     "cta": {
-      "title": "Ready to Customize Your Workflow?",
-      "description": "Start creating hooks to automate your team workflows and enforce your development standards"
+      "title": "Ready to Automate Your Workflow?",
+      "description": "Start creating hooks to enforce standards, automate tasks, and integrate external tools."
+    }
+  },
+  "agentTeams": {
+    "title": "Agent Teams",
+    "subtitle": "Coordinate multiple Claude Code agents working together on complex tasks",
+    "experimental": "Experimental Feature",
+    "experimentalNote": "Agent Teams requires the CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS environment variable to be enabled.",
+    "whatAreTeams": {
+      "title": "What are Agent Teams?",
+      "description": "Agent Teams is an experimental feature that allows multiple Claude Code agents to collaborate on complex tasks. A lead agent orchestrates teammates, distributing work through a shared task list and mailbox system.",
+      "experimental": "Experimental",
+      "experimentalDesc": "Agent Teams is currently experimental and may change significantly",
+      "teamLead": "Team Lead",
+      "teamLeadDesc": "One agent coordinates the team, assigns tasks, and synthesizes results",
+      "teammates": "Teammates",
+      "teammatesDesc": "Independent agents that work in parallel on assigned tasks",
+      "taskList": "Shared Task List",
+      "taskListDesc": "All agents see and update a shared task list for coordination",
+      "mailbox": "Mailbox Communication",
+      "mailboxDesc": "Agents communicate via a shared mailbox for questions and updates"
+    },
+    "architecture": {
+      "title": "Team Architecture",
+      "lead": "Lead Agent",
+      "leadDesc": "The orchestrator that breaks down tasks, assigns work to teammates, and synthesizes results",
+      "teammates": "Teammates",
+      "teammatesDesc": "Independent agent instances that work on assigned subtasks in parallel",
+      "taskList": "Task List",
+      "taskListDesc": "A shared list of tasks that the lead creates and teammates pick up",
+      "mailbox": "Mailbox",
+      "mailboxDesc": "Communication channel between the lead and teammates for status updates and results"
+    },
+    "setup": {
+      "title": "Setting Up Teams",
+      "description": "Configure agent teams using the /teams command or programmatically through the SDK.",
+      "step1": "Define team composition",
+      "step2": "Configure communication patterns",
+      "step3": "Set task distribution strategy",
+      "step4": "Launch and monitor"
+    },
+    "displayModes": {
+      "title": "Display Modes",
+      "inProcess": "In-Process Mode",
+      "inProcessDesc": "All agents run within a single terminal session. Best for simpler coordination tasks with fewer agents.",
+      "tmux": "Tmux Mode",
+      "tmuxDesc": "Each agent runs in a separate tmux pane, providing visual oversight of all agents working simultaneously. Recommended for complex multi-agent workflows.",
+      "iterm2": "iTerm2 Split Panes: Native iTerm2 split panes for macOS users"
+    },
+    "useCasesSection": {
+      "title": "Use Cases",
+      "largeRefactoring": "Large-Scale Refactoring",
+      "largeRefactoringDesc": "Coordinate agents to refactor different modules simultaneously while maintaining consistency",
+      "parallelTesting": "Parallel Testing",
+      "parallelTestingDesc": "Run test suites across multiple environments or configurations in parallel",
+      "codeReview": "Comprehensive Code Review",
+      "codeReviewDesc": "Assign different reviewers for security, performance, style, and correctness",
+      "multiService": "Multi-Service Development",
+      "multiServiceDesc": "Develop frontend and backend services simultaneously with coordinated APIs"
+    },
+    "bestPracticesSection": {
+      "title": "Best Practices",
+      "tip1": "Start with small teams (2-3 agents) and scale up as needed",
+      "tip2": "Give each teammate a clear, focused task with well-defined boundaries",
+      "tip3": "Use tmux mode for better visibility when running more than 2 agents",
+      "tip4": "Monitor the mailbox regularly for coordination issues",
+      "tip5": "Set appropriate timeouts for long-running tasks",
+      "tip6": "Use the lead agent to verify and integrate teammate outputs"
+    },
+    "creating": {
+      "title": "Creating a Team",
+      "description": "Define a team lead agent with teammate definitions. Each teammate has its own model, tools, and instructions.",
+      "teamSize": "Recommended team size: 3-5 agents",
+      "tasksPerAgent": "Aim for 5-6 tasks per teammate for optimal throughput"
+    },
+    "controlling": {
+      "title": "Controlling Teammates",
+      "description": "The team lead assigns tasks, monitors progress, and can redirect teammates. Teammates report back via the mailbox when tasks are complete or when they need help.",
+      "permissions": "Teammates inherit permission settings from the team lead by default"
+    },
+    "useCases": {
+      "title": "Use Cases",
+      "parallelReview": {
+        "title": "Parallel Code Review",
+        "description": "Multiple agents review different parts of a codebase simultaneously — one checks security, another checks performance, another checks style."
+      },
+      "competingHypotheses": {
+        "title": "Competing Hypotheses Debugging",
+        "description": "Spawn multiple agents to investigate different theories about a bug in parallel. The first to find the root cause wins."
+      },
+      "largeRefactor": {
+        "title": "Large-Scale Refactoring",
+        "description": "Split a large refactoring task across agents, each handling a different module or file group."
+      }
+    },
+    "bestPractices": {
+      "title": "Best Practices",
+      "teamSize": "Keep teams small (3-5 agents) — larger teams have more coordination overhead",
+      "taskGranularity": "Make tasks independent — agents work best when they don't need to coordinate frequently",
+      "clearInstructions": "Give each teammate clear, self-contained instructions",
+      "monitorProgress": "Use the task list to monitor progress and adjust assignments",
+      "worktrees": "Use git worktrees for isolation when agents modify the same files"
+    },
+    "limitations": {
+      "title": "Limitations",
+      "items": {
+        "experimental": "Feature is experimental and may change",
+        "contextIndependent": "Each agent has independent context — no shared memory",
+        "coordination": "Complex inter-agent coordination can be unreliable",
+        "cost": "Running multiple agents increases API costs proportionally"
+      }
+    }
+  },
+  "desktopApp": {
+    "title": "Desktop App",
+    "subtitle": "Claude Code in a native desktop experience with visual diffs, multiple sessions, and more",
+    "overview": {
+      "title": "Overview",
+      "description": "The Claude Code Desktop App provides a native GUI environment with visual diffs, multiple concurrent sessions, scheduled tasks, and a more accessible interface for developers who prefer graphical tools."
+    },
+    "download": {
+      "title": "Download",
+      "description": "Available for macOS, Windows, and Linux",
+      "macos": "Download for macOS",
+      "windows": "Download for Windows",
+      "linux": "Download for Linux",
+      "systemReqs": "System Requirements",
+      "systemReqsList": "macOS 12+, Windows 10+, or Ubuntu 20.04+ with 4GB RAM minimum"
+    },
+    "features": {
+      "title": "Key Features",
+      "visualDiffs": "Visual Diffs",
+      "visualDiffsDesc": "See code changes with rich side-by-side visual diffs before accepting",
+      "multipleSessions": "Multiple Sessions",
+      "multipleSessionsDesc": "Run multiple Claude Code sessions simultaneously in separate tabs",
+      "scheduling": "Task Scheduling",
+      "schedulingDesc": "Schedule recurring tasks like code reviews, dependency updates, and report generation",
+      "fileExplorer": "File Explorer",
+      "fileExplorerDesc": "Browse your project files with an integrated file explorer",
+      "history": "Session History",
+      "historyDesc": "Access complete history of past sessions with search and filtering",
+      "themes": "Customizable Themes",
+      "themesDesc": "Choose from light, dark, and custom themes for your preferred look"
+    },
+    "gettingStartedSection": {
+      "title": "Getting Started",
+      "step1": "Download and install the Desktop App for your platform",
+      "step2": "Sign in with your Anthropic account",
+      "step3": "Open a project folder or create a new workspace",
+      "step4": "Start coding with Claude in the visual interface"
+    },
+    "cliVsDesktop": {
+      "title": "CLI vs Desktop App",
+      "description": "Both the CLI and Desktop App run the same Claude Code engine. Choose based on your workflow preferences.",
+      "headerFeature": "Feature",
+      "headerCli": "CLI",
+      "headerDesktop": "Desktop App",
+      "rows": [
+        { "feature": "Interface", "cli": "Terminal-based text UI", "desktop": "Native GUI with panels and tabs" },
+        { "feature": "Code Diffs", "cli": "Inline text diffs in terminal", "desktop": "Rich side-by-side visual diffs" },
+        { "feature": "Multiple Sessions", "cli": "Multiple terminal windows/tmux", "desktop": "Built-in tabbed sessions" },
+        { "feature": "Task Scheduling", "cli": "Cron jobs or external tools", "desktop": "Built-in scheduler with UI" },
+        { "feature": "File Browsing", "cli": "ls, tree, or external tools", "desktop": "Integrated file explorer panel" },
+        { "feature": "Session History", "cli": "claude --resume to list sessions", "desktop": "Searchable history with filters" },
+        { "feature": "Scripting & Piping", "cli": "Full shell piping and scripting", "desktop": "Not available" },
+        { "feature": "Headless / CI Mode", "cli": "Supported (--print flag)", "desktop": "Not available" },
+        { "feature": "Resource Usage", "cli": "Minimal (terminal only)", "desktop": "More RAM for GUI rendering" }
+      ],
+      "recommendation": "Use the CLI for scripting, CI/CD pipelines, and headless automation. Use the Desktop App for day-to-day development where visual feedback and session management matter."
+    },
+    "uniqueCapabilities": {
+      "title": "Desktop-Exclusive Capabilities",
+      "description": "Features available only in the Desktop App that enhance the visual development experience.",
+      "items": [
+        {
+          "title": "Visual Diff Review",
+          "description": "Review every code change in a rich side-by-side diff viewer. Accept, reject, or edit individual hunks before they are applied to your files."
+        },
+        {
+          "title": "Tabbed Session Management",
+          "description": "Open multiple Claude Code sessions in separate tabs. Work on a feature in one tab while debugging in another, each with independent context."
+        },
+        {
+          "title": "Built-in Task Scheduler",
+          "description": "Schedule tasks like daily dependency updates, weekly code reviews, or nightly test runs directly from the UI without external cron jobs."
+        },
+        {
+          "title": "Drag-and-Drop File Context",
+          "description": "Drag files or folders from your OS file manager directly into the chat to add them as context. No need to type file paths."
+        },
+        {
+          "title": "Integrated File Explorer",
+          "description": "Browse your project tree in a sidebar panel. Click any file to view it or add it to context without leaving the app."
+        },
+        {
+          "title": "Session History Browser",
+          "description": "Search, filter, and revisit past sessions with full conversation history. Resume any previous session with one click."
+        }
+      ]
+    },
+    "installation": {
+      "title": "Installation Methods",
+      "description": "Multiple ways to install the Claude Code Desktop App on your system.",
+      "macos": "macOS",
+      "macosDirectDownload": "Direct Download",
+      "macosDirectDownloadDesc": "Download the .dmg installer from the official site",
+      "macosHomebrew": "Homebrew",
+      "macosHomebrewDesc": "Install via Homebrew cask",
+      "windows": "Windows",
+      "windowsDirectDownload": "Direct Download",
+      "windowsDirectDownloadDesc": "Download the .exe installer from the official site",
+      "windowsWinget": "WinGet",
+      "windowsWingetDesc": "Install via Windows Package Manager",
+      "linux": "Linux",
+      "linuxDirectDownload": "Direct Download",
+      "linuxDirectDownloadDesc": "Download the .deb or .AppImage from the official site",
+      "linuxShellInstall": "Shell Install",
+      "linuxShellInstallDesc": "Install via the official install script",
+      "copied": "Copied!"
+    },
+    "keyboardShortcuts": {
+      "title": "Keyboard Shortcuts",
+      "description": "Speed up your workflow with these essential keyboard shortcuts.",
+      "shortcuts": [
+        { "keys": "Ctrl/Cmd + N", "action": "New session tab" },
+        { "keys": "Ctrl/Cmd + W", "action": "Close current tab" },
+        { "keys": "Ctrl/Cmd + Tab", "action": "Switch to next tab" },
+        { "keys": "Ctrl/Cmd + Shift + Tab", "action": "Switch to previous tab" },
+        { "keys": "Ctrl/Cmd + Enter", "action": "Send message" },
+        { "keys": "Ctrl/Cmd + Shift + V", "action": "Toggle diff viewer" },
+        { "keys": "Ctrl/Cmd + B", "action": "Toggle file explorer sidebar" },
+        { "keys": "Ctrl/Cmd + H", "action": "Open session history" },
+        { "keys": "Ctrl/Cmd + ,", "action": "Open settings" },
+        { "keys": "Escape", "action": "Cancel current operation" }
+      ]
+    }
+  },
+  "webApp": {
+    "title": "Web App",
+    "subtitle": "Use Claude Code directly in your browser without any installation",
+    "overview": {
+      "title": "Overview",
+      "description": "Claude Code on the web brings all the capabilities of Claude Code to your browser. No installation needed — just open your browser and start AI-assisted coding. Perfect for quick tasks, remote machines, or environments where local installation isn't possible."
+    },
+    "features": {
+      "title": "Key Features",
+      "noInstall": "No Installation Required",
+      "noInstallDesc": "Access Claude Code from any browser without installing anything locally",
+      "cloudWorkspaces": "Cloud Workspaces",
+      "cloudWorkspacesDesc": "Create and manage workspaces in the cloud with persistent storage",
+      "collaboration": "Real-Time Collaboration",
+      "collaborationDesc": "Share sessions with team members for AI-assisted pair programming",
+      "gitIntegration": "Git Integration",
+      "gitIntegrationDesc": "Connect directly to GitHub, GitLab, and Bitbucket repositories",
+      "terminalAccess": "Terminal Access",
+      "terminalAccessDesc": "Full terminal access for running commands and scripts in the browser",
+      "mobileFriendly": "Mobile Friendly",
+      "mobileFriendlyDesc": "Responsive design that works on tablets and mobile devices"
+    },
+    "gettingStartedSection": {
+      "title": "Getting Started",
+      "step1": "Visit claude.ai/code in your browser",
+      "step2": "Sign in with your Anthropic account",
+      "step3": "Create a new workspace or connect an existing repository",
+      "step4": "Start coding with Claude in the browser"
+    },
+    "limitations": {
+      "title": "Considerations",
+      "note1": "Requires a stable internet connection",
+      "note2": "Some filesystem operations may be slower than local installation",
+      "note3": "Large project support depends on internet speed"
+    }
+  },
+  "bestPractices": {
+    "title": "Best Practices",
+    "subtitle": "Proven strategies and techniques for getting the most out of Claude Code",
+    "contextManagement": {
+      "title": "Context Management",
+      "description": "Effective context management is the key to getting accurate and relevant responses from Claude Code.",
+      "tip1Title": "Keep Context Focused",
+      "tip1Desc": "Only include relevant files and information in your context window. Use CLAUDE.md to provide project-specific guidance. Start fresh sessions for new topics with /clear.",
+      "tip2Title": "Use Compact Mode",
+      "tip2Desc": "Use /compact to summarize the conversation while preserving key information when context gets large. Use /btw for side questions that don't pollute main context.",
+      "tip3Title": "Leverage Memory and Handoffs",
+      "tip3Desc": "Use CLAUDE.md at project and user level to persist important context across sessions. Write HANDOFF.md before starting fresh to migrate context between sessions."
+    },
+    "verification": {
+      "title": "Verification & Testing",
+      "description": "Always verify Claude Code output to ensure correctness and quality.",
+      "tip1Title": "Review Before Accepting",
+      "tip1Desc": "Always review code changes before accepting them. Use visual diffs to understand what changed. Create draft PRs to review everything before merging.",
+      "tip2Title": "Run Tests Frequently",
+      "tip2Desc": "Ask Claude to run tests after making changes. Set up autotest hooks for automatic verification. Include test commands in your prompts.",
+      "tip3Title": "Use Checkpoints and Self-Verification",
+      "tip3Desc": "Leverage git checkpoints to safely experiment and roll back with /rewind. Ask Claude to double-check its claims and use /chrome for visual verification of web apps."
+    },
+    "planMode": {
+      "title": "Plan Mode & Structured Thinking",
+      "description": "Use Plan Mode for complex tasks that benefit from structured analysis before implementation.",
+      "tip1Title": "Start with Planning",
+      "tip1Desc": "For complex features, press Shift+Tab to enter Plan Mode. Let Claude analyze the problem before writing code. Review the plan before approving execution.",
+      "tip2Title": "Break Down Large Tasks",
+      "tip2Desc": "Divide complex work into smaller, manageable steps. This improves accuracy and makes it easier to verify each piece. Use subagents for isolated investigation.",
+      "tip3Title": "Use Extended Thinking",
+      "tip3Desc": "Enable extended thinking for complex architectural decisions that require deep reasoning. Use 'think', 'think hard', or 'ultrathink' keywords."
+    },
+    "promptEngineering": {
+      "title": "Prompt Engineering",
+      "description": "How you communicate with Claude Code significantly affects the quality of results.",
+      "tip1Title": "Be Specific",
+      "tip1Desc": "Provide clear, specific instructions including file paths, function names, and expected behavior. Say 'fix the null reference in handleSubmit in user.tsx' not 'fix the error'.",
+      "tip2Title": "Provide Examples and Context",
+      "tip2Desc": "Show Claude examples of the pattern or style you want. Use @ to reference specific files. Paste screenshots of errors, UIs, or designs. Include success criteria.",
+      "tip3Title": "Set Constraints and Standards",
+      "tip3Desc": "Tell Claude about project constraints, coding standards, and patterns to follow. Include verification steps: 'all tests should pass and the linter should be clean'."
+    },
+    "scaling": {
+      "title": "Scaling with Claude Code",
+      "description": "Techniques for using Claude Code effectively on larger projects and teams.",
+      "tip1Title": "Use Headless Mode for CI/CD",
+      "tip1Desc": "Integrate Claude Code into your CI/CD pipeline with claude -p for automated code reviews, test generation, and documentation updates.",
+      "tip2Title": "Configure Team Standards",
+      "tip2Desc": "Use shared CLAUDE.md files for consistent behavior across team members. Create custom skills and subagents. Share via plugins for team distribution.",
+      "tip3Title": "Leverage Subagents and Teams",
+      "tip3Desc": "Use subagents to fan out across files. Use Agent Teams (experimental) for coordinated parallel work. Use git worktrees for isolation between agents."
     }
   },
   "thirdPartyTools": {
@@ -1014,7 +1765,7 @@
         "localModels": "Native local model support via Ollama",
         "clientServer": "Client/server architecture for remote workflows",
         "pluginSystem": "Plugin system with event hooks",
-        "freeTool": "Free tool - only pay for API usage"
+        "freeTool": "Free tool — only pay for API usage"
       },
       "installation": {
         "title": "Installation"
@@ -1026,7 +1777,7 @@
       "agents": {
         "title": "Specialized Agents",
         "sisyphus": "Default planner and executor agent",
-        "librarian": "External docs & GitHub exploration",
+        "librarian": "External docs and GitHub exploration",
         "explore": "Internal codebase searching",
         "oracle": "Strategic debugging guidance"
       },
@@ -1056,8 +1807,8 @@
       "claudeCode": {
         "desc": "Best for teams prioritizing performance, security, and official support.",
         "pro1": "Best-in-class Claude performance",
-        "pro2": "Native sandboxing (84% fewer prompts)",
-        "pro3": "Official IDE integrations"
+        "pro2": "Native sandboxing and permissions",
+        "pro3": "Official IDE integrations (VS Code, JetBrains)"
       },
       "opencode": {
         "desc": "Best for developers wanting provider flexibility and cost control.",
@@ -1080,53 +1831,53 @@
   },
   "useCases": {
     "title": "Real-World Use Cases",
-    "subtitle": "Discover how various teams and projects use Claude Code to maximize development productivity and work efficiency with real case studies.",
+    "subtitle": "Discover how teams and individuals use Claude Code to maximize development productivity with real case studies.",
     "heroTitle": "Real-World Use Cases",
-    "heroSubtitle": "Discover how various teams and projects use Claude Code to maximize development productivity and work efficiency with real case studies.",
+    "heroSubtitle": "Discover how teams and individuals use Claude Code to maximize development productivity with real case studies.",
     "teams": {
       "backend": {
         "title": "Backend Development Team",
-        "description": "How backend teams leverage Claude Code for API development, database management, and system architecture.",
+        "description": "API development, database management, and system architecture with Claude Code. Use MCP servers for direct database access and subagents for parallel code review.",
         "achievements": {
           "title": "Key Achievements",
-          "sql": "50% faster SQL query optimization",
-          "api": "Automated API documentation generation",
-          "logs": "Intelligent log analysis and error detection"
+          "sql": "50% faster SQL query optimization via MCP",
+          "api": "Automated API documentation with custom skills",
+          "logs": "Intelligent log analysis with extended thinking"
         },
-        "tip": "Use Claude Code to analyze complex database schemas and automatically generate optimized queries for better performance."
+        "tip": "Connect PostgreSQL or Supabase MCP for direct database operations. Use Plan Mode for complex schema migrations."
       },
       "frontend": {
         "title": "Frontend Development Team",
-        "description": "How frontend teams leverage Claude Code for UI component development, responsive design, and performance optimization.",
+        "description": "UI component development, responsive design, and performance optimization. Paste screenshots to generate code from designs.",
         "achievements": {
           "title": "Key Achievements",
           "design": "60% reduction in design system build time",
-          "responsive": "Automated responsive layout generation",
-          "components": "Reusable component library creation"
+          "responsive": "Automated responsive layout from screenshots",
+          "components": "Component library generation with test suites"
         },
-        "tip": "Show screenshots or design images to Claude Code and automatically generate React components."
+        "tip": "Paste screenshots or design mockups directly into Claude. Use /chrome for visual verification of generated UI."
       },
       "devops": {
         "title": "DevOps Team",
-        "description": "How DevOps teams leverage Claude Code for CI/CD pipelines, infrastructure automation, and monitoring.",
+        "description": "CI/CD pipelines, infrastructure automation, and monitoring. Use hooks for deployment automation and MCP for Slack notifications.",
         "achievements": {
           "title": "Key Achievements",
           "kubernetes": "Kubernetes configuration automation",
-          "monitoring": "Intelligent alerting system implementation",
-          "security": "Automated security vulnerability detection and fixes"
+          "monitoring": "Intelligent alerting system with hooks",
+          "security": "Automated security vulnerability detection with subagents"
         },
-        "tip": "Use Claude Code to generate complex deployment scripts and quickly diagnose infrastructure issues."
+        "tip": "Set up hooks for deployment notifications and use Agent Teams for parallel infrastructure review."
       },
       "data": {
         "title": "Data Engineering Team",
-        "description": "How data teams leverage Claude Code for ETL pipelines, data analysis, and machine learning model development.",
+        "description": "ETL pipelines, data analysis, and ML model development. Create custom data-scientist subagents with scoped database MCP access.",
         "achievements": {
           "title": "Key Achievements",
           "pipeline": "70% reduction in data pipeline development time",
-          "analysis": "Complex SQL query auto-optimization",
-          "ml": "Accelerated machine learning model prototyping"
+          "analysis": "Complex SQL query optimization via MCP",
+          "ml": "Accelerated ML model prototyping with custom skills"
         },
-        "tip": "Describe your data schema and requirements to Claude Code and automatically generate optimized ETL pipelines."
+        "tip": "Create a data-scientist subagent with read-only database MCP access and custom analysis skills."
       }
     },
     "roles": {
@@ -1137,32 +1888,32 @@
       },
       "qa": {
         "title": "QA Engineer",
-        "description": "How to use Claude Code for test automation, bug reproduction, and quality assurance.",
+        "description": "Test automation, bug reproduction, and quality assurance with Claude Code. Use the /loop skill for iterative test refinement.",
         "achievement": "Test coverage increased to 85%, bug discovery time reduced by 60%"
       },
       "documentation": {
         "title": "Technical Writer",
-        "description": "How to use Claude Code for API documentation, user guides, and tutorial creation.",
-        "achievement": "Documentation time reduced by 70%, consistent document quality maintained"
+        "description": "API documentation, user guides, and tutorial creation. Create custom documentation skills for consistent output.",
+        "achievement": "Documentation time reduced by 70%, consistent quality across all docs"
       },
       "startup": {
         "title": "Startup Founder",
-        "description": "How to use Claude Code for MVP development, prototyping, and rapid feature implementation.",
+        "description": "MVP development, prototyping, and rapid feature implementation. Use Agent Teams for parallel development across features.",
         "achievement": "MVP development time reduced from 2 months to 3 weeks"
       },
       "ux": {
         "title": "UX Designer",
-        "description": "How to use Claude Code for prototype implementation, usability testing, and design system creation.",
-        "achievement": "Design-development communication time reduced by 50%"
+        "description": "Prototype implementation, usability testing, and design system creation. Paste mockups and get working code.",
+        "achievement": "Design-to-code time reduced by 50% with screenshot-based workflows"
       },
       "individual": {
         "title": "Individual Developer",
-        "description": "How to use Claude Code for side projects, learning, and portfolio building.",
+        "description": "Side projects, learning, and portfolio building. Use skills and subagents to build your personal development toolkit.",
         "achievement": "Weekly development time reduced from 20 hours to 8 hours"
       },
       "education": {
         "title": "Educational Institution",
-        "description": "How educational institutions use Claude Code for teaching programming and collaborative learning.",
+        "description": "Teaching programming, collaborative learning, and code review. Use Plan Mode for teaching problem decomposition.",
         "achievement": "Student engagement increased by 80%, learning outcomes improved significantly"
       }
     },
@@ -1170,23 +1921,23 @@
       "title": "Productivity Maximization Strategies",
       "productivity": {
         "title": "Core Productivity Strategies",
-        "goals": "Clear Goal Setting: Provide clear objectives and context to Claude Code before starting work",
-        "progress": "Step-by-Step Progress: Break large tasks into smaller units and proceed incrementally",
-        "feedback": "Immediate Feedback: Verify results and provide feedback at each step",
-        "documentation": "Continuous Documentation: Accumulate project rules and knowledge with CLAUDE.md file"
+        "goals": "Clear Goals: Provide specific objectives and success criteria before starting",
+        "progress": "Explore First: Use Plan Mode to understand and plan before coding",
+        "feedback": "Verify Always: Include tests, linting, and type checking in every request",
+        "documentation": "Manage Context: Use /clear, /compact, and subagents to keep context fresh"
       },
       "teamStrategies": {
         "title": "Team-Specific Strategies",
-        "development": "Development Team: Automated code review and pair programming sessions",
-        "design": "Design Team: Design system building and component library creation",
-        "data": "Data Team: Complex query optimization and data pipeline automation",
-        "qa": "QA Team: Test scenario generation and automation script writing",
-        "individual": "Individual Developer: Accelerated learning and portfolio project building"
+        "development": "Development Team: Custom subagents for code review, shared skills for standards",
+        "design": "Design Team: Screenshot-to-code workflows, /chrome for visual verification",
+        "data": "Data Team: MCP servers for databases, custom data analysis skills",
+        "qa": "QA Team: /loop skill for iterative testing, hooks for CI/CD integration",
+        "individual": "Individual Dev: Custom aliases, personal skills in ~/.claude/skills/"
       }
     },
     "cta": {
       "title": "Boost Your Productivity with Claude Code Today",
-      "description": "Double your team's development speed, improve code quality, and focus on more creative problem solving.",
+      "description": "Build features faster, fix bugs quicker, and automate everything from PRs to deployments.",
       "getStarted": "Get Started",
       "usageGuide": "View Usage Guide"
     }
@@ -1215,17 +1966,18 @@
     "copyError": "Copy failed:",
     "copied": "Copied!",
     "bannerAlt": "Claude Code Banner",
-    "copyright": "© 2026 Claude Code Usage Guide. MIT License.",
+    "copyright": "\u00a9 2026 Claude Code Usage Guide. MIT License.",
     "email": "gyupro89@gmail.com",
     "keyTip": "Key Tip",
     "switchToDarkMode": "Switch to dark mode",
     "switchToLightMode": "Switch to light mode",
-    "toggleTheme": "Toggle theme"
+    "toggleTheme": "Toggle theme",
+    "experimental": "Experimental"
   },
   "footer": {
     "about": {
       "title": "About Claude Code Guide",
-      "description": "Claude Code Usage Guide is a comprehensive learning resource that helps developers worldwide master AI-assisted coding with Claude Code. We provide guides, tutorials, and practical tips in multiple languages."
+      "description": "Claude Code Usage Guide is a comprehensive learning resource that helps developers worldwide master AI-assisted coding with Claude Code. Guides, tutorials, and practical tips in multiple languages."
     },
     "links": {
       "title": "Quick Links"
@@ -1238,6 +1990,6 @@
       "title": "Contact",
       "email": "Email"
     },
-    "copyright": "© 2026 Claude Code Usage Guide. All rights reserved."
+    "copyright": "\u00a9 2026 Claude Code Usage Guide. All rights reserved."
   }
 }

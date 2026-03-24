@@ -19,6 +19,16 @@ export const NAVIGATION_ITEMS: NavigationItem[] = [
       { href: '/skills', label: 'Skills', key: 'skills' },
       { href: '/plugins', label: 'Plugins', key: 'plugins' },
       { href: '/hooks', label: 'Hooks', key: 'hooks' },
+      { href: '/agent-teams', label: 'Agent Teams', key: 'agentTeams' },
+    ]
+  },
+  {
+    href: '#',
+    label: 'Platforms',
+    key: 'platforms',
+    children: [
+      { href: '/desktop-app', label: 'Desktop App', key: 'desktopApp' },
+      { href: '/web-app', label: 'Web App', key: 'webApp' },
     ]
   },
   {
@@ -29,10 +39,11 @@ export const NAVIGATION_ITEMS: NavigationItem[] = [
       { href: '/usage-guide', label: 'Usage Guide', key: 'usageGuide' },
       { href: '/tutorials', label: 'Tutorials', key: 'tutorials' },
       { href: '/tips', label: 'Tips', key: 'tips' },
+      { href: '/best-practices', label: 'Best Practices', key: 'bestPractices' },
     ]
   },
   { href: '/mcp', label: 'MCP', key: 'mcp' },
-  { href: '/third-party-tools', label: 'Third-Party Tools', key: 'thirdPartyTools' },
+  { href: '/use-cases', label: 'Use Cases', key: 'useCases' },
 ] as const;
 
 export const EXTERNAL_LINKS = {

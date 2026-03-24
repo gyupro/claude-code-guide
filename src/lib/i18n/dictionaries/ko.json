@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "title": "Claude Code 사용 가이드 | 터미널 AI 코딩 어시스턴트",
-    "description": "체계적인 가이드와 실전 튜토리얼, 실제 활용 사례로 Claude Code를 마스터하세요. 터미널에서 AI와 함께 개발 생산성을 높이는 방법을 배워보세요.",
-    "keywords": "Claude Code, AI 코딩, 터미널, 개발 도구, 프로그래밍, 인공지능, 코딩 어시스턴트"
+    "title": "Claude Code 사용 가이드 | 터미널, IDE & 웹을 위한 AI 코딩 에이전트",
+    "description": "체계적인 가이드, 실전 튜토리얼, 실제 활용 사례로 Claude Code를 마스터하세요. 터미널, VS Code, JetBrains, 데스크톱 앱, 웹에서 사용 가능합니다.",
+    "keywords": "Claude Code, AI 코딩, 터미널, VS Code, JetBrains, 데스크톱 앱, 개발 도구, 프로그래밍, 인공지능, 코딩 에이전트, MCP, 서브에이전트, 스킬, 훅스"
   },
   "navigation": {
     "home": "홈",
@@ -19,74 +19,92 @@
     "mcp": "MCP",
     "thirdPartyTools": "서드파티 도구",
     "useCases": "활용 사례",
+    "platforms": "플랫폼",
+    "agentTeams": "에이전트 팀",
+    "desktopApp": "데스크톱 앱",
+    "webApp": "웹 앱",
+    "bestPractices": "모범 사례",
     "subtitle": "사용 가이드",
     "openMenu": "메뉴 열기",
     "closeMenu": "메뉴 닫기"
   },
   "home": {
-    "title": "터미널에서 만나는 AI 코딩 어시스턴트",
-    "subtitle": "체계적인 한국어 가이드와 실전 튜토리얼, 실제 활용 사례로 Claude Code를 마스터하세요. AI와 함께 개발 생산성을 높이는 방법을 배워보세요.",
+    "title": "Claude Code는 어디서나 사용할 수 있습니다",
+    "subtitle": "터미널, VS Code, JetBrains, 데스크톱 앱, 웹. 기능 개발, 버그 수정, PR 생성, MCP로 도구 연결, 스킬과 훅으로 커스터마이즈, 에이전트 팀 운영, 모든 것을 자동화하세요.",
     "getStarted": "시작하기",
     "learnMore": "더 알아보기",
     "features": {
-      "title": "Claude Code의 핵심 기능",
-      "subtitle": "터미널에서 AI와 함께 코딩하며 개발 생산성을 극대화하세요",
+      "title": "Claude Code로 할 수 있는 것들",
+      "subtitle": "당신이 일하는 곳 어디서나 동작하는 풀 기능 AI 코딩 에이전트",
       "aiPowered": {
-        "title": "AI 기반 개발",
-        "description": "터미널에서 Claude의 지능을 직접 활용하여 더 스마트한 코딩 워크플로우를 경험하세요."
+        "title": "기능 개발 & 배포",
+        "description": "전체 기능 구현, 버그 수정, 코드 리팩토링, Pull Request 생성, 문서 생성까지 — 모두 자연어 지시만으로 가능합니다."
       },
       "terminalIntegration": {
-        "title": "터미널 통합",
-        "description": "기존 개발 환경에서 컨텍스트 전환 없이 원활하게 작업하세요."
+        "title": "어디서든 작동",
+        "description": "터미널 CLI, VS Code 확장, JetBrains 플러그인, 독립형 데스크톱 앱, 그리고 claude.ai/code의 웹. 원하는 방식으로 사용하세요."
       },
       "multilingual": {
-        "title": "다국어 지원",
-        "description": "한국어, 영어, 일본어, 중국어로 제공되는 포괄적인 가이드."
+        "title": "확장 가능 & 커스터마이즈",
+        "description": "MCP로 도구를 연결하고, 커스텀 스킬과 훅을 만들고, 플러그인 패키지를 빌드하고, 병렬 에이전트 팀을 운영하고, 워크플로우를 파이프/스크립팅/자동화하세요."
       }
     },
     "quickStart": {
-      "title": "빠른 시작 가이드",
-      "subtitle": "2단계로 Claude Code를 설치하고 바로 사용해보세요",
+      "title": "빠른 시작",
+      "subtitle": "몇 초 만에 Claude Code를 시작하세요",
       "installation": {
         "title": "설치하기",
-        "description": "npm을 사용하여 Claude Code CLI를 설치하세요"
+        "description": "curl -fsSL https://claude.ai/install.sh | bash"
       },
       "startCoding": {
-        "title": "시작하기",
-        "description": "프로젝트 폴더에서 Claude Code를 실행하세요"
+        "title": "코딩 시작",
+        "description": "프로젝트 디렉토리에서 'claude'를 실행하세요"
       }
     },
     "useCases": {
-      "title": "실제 활용 사례",
-      "subtitle": "Claude Code로 더 스마트하게 개발하는 다양한 방법들을 확인해보세요",
+      "title": "핵심 기능",
+      "subtitle": "일상적인 코딩 작업부터 복잡한 멀티 에이전트 워크플로우까지",
       "codeReview": {
-        "title": "코드 리뷰 및 리팩토링",
-        "description": "AI가 코드 품질을 분석하고 개선점을 제안합니다. 성능 최적화와 모범 사례 적용을 자동으로 도와줍니다.",
+        "title": "코드 리뷰 & 리팩토링",
+        "description": "코드 품질을 분석하고, 개선점을 제안하고, 대규모 리팩토링을 수행합니다. 서브에이전트를 사용하여 여러 파일에 걸쳐 병렬 리뷰를 진행하세요.",
         "linkText": "자세히 보기 →"
       },
       "testGeneration": {
-        "title": "테스트 코드 생성",
-        "description": "함수와 클래스에 대한 유닛 테스트를 자동으로 생성합니다. Jest, Pytest 등 다양한 테스트 프레임워크를 지원합니다.",
+        "title": "테스트 생성 & 버그 수정",
+        "description": "유닛 테스트, 통합 테스트, E2E 테스트를 생성합니다. 확장 사고와 자동 검증으로 이슈를 디버깅하세요.",
         "linkText": "튜토리얼 보기 →"
       },
       "documentation": {
-        "title": "문서화 자동 생성",
-        "description": "README, API 문서, 주석을 자동으로 생성합니다. 코드 변경사항에 맞춰 문서를 실시간으로 업데이트합니다.",
+        "title": "PR, 문서 & Git 자동화",
+        "description": "요약이 포함된 Pull Request 생성, 문서 생성, 커밋 메시지 작성, 전체 Git 워크플로우를 자동화합니다.",
         "linkText": "실전 팁 보기 →"
       },
       "debugging": {
-        "title": "디버깅 및 오류 수정",
-        "description": "에러 메시지를 분석하고 해결책을 제시합니다. 로그 파일을 읽고 버그의 원인을 빠르게 찾아줍니다.",
+        "title": "MCP 도구 & 통합",
+        "description": "데이터베이스, GitHub, Slack, 브라우저 및 100개 이상의 도구를 Model Context Protocol로 연결합니다. Claude의 범위를 파일시스템 너머로 확장하세요.",
         "linkText": "시작하기 →"
       }
+    },
+    "platforms": {
+      "title": "사용 가능한 플랫폼",
+      "terminal": "터미널 CLI",
+      "terminalDesc": "모든 기능을 갖춘 원조 커맨드라인 환경",
+      "vscode": "VS Code 확장",
+      "vscodeDesc": "Visual Studio Code에 네이티브 사이드바 통합",
+      "jetbrains": "JetBrains 플러그인",
+      "jetbrainsDesc": "IntelliJ, PyCharm, WebStorm 등 모든 JetBrains IDE",
+      "desktop": "데스크톱 앱",
+      "desktopDesc": "macOS와 Windows를 위한 독립형 애플리케이션",
+      "web": "웹 (claude.ai/code)",
+      "webDesc": "로컬 설정 필요 없이 브라우저에서 바로 실행"
     }
   },
   "gettingStarted": {
     "title": "Claude Code 시작하기",
-    "subtitle": "시스템 요구사항부터 첫 프로젝트 설정까지 완전한 설치 가이드.",
-    "systemRequirements": "시스템 요구사항 확인",
+    "subtitle": "플랫폼을 선택하고 몇 분 만에 Claude와 코딩을 시작하세요.",
+    "systemRequirements": "시스템 요구사항",
     "installation": "Claude Code 설치",
-    "authentication": "인증 설정", 
+    "authentication": "인증 설정",
     "firstProject": "첫 프로젝트",
     "copyToClipboard": "클립보드에 복사",
     "copied": "복사됨!",
@@ -95,240 +113,414 @@
       "requirements": "필수 요구사항",
       "network": "네트워크",
       "stableConnection": "안정적인 인터넷 연결",
-      "windowsNote": "Windows 사용자 주의사항",
-      "windowsWarning": "Claude Code는 Windows에서 직접 실행되지 않습니다. WSL(Windows Subsystem for Linux) 환경에서 실행해주세요.",
-      "osRequirements": "macOS, Linux, Windows (WSL)",
-      "techRequirements": "Node.js 18+, 4GB RAM",
+      "windowsNote": "Windows 사용자",
+      "windowsWarning": "Claude Code는 Windows에서 네이티브로 실행됩니다. Git for Windows가 필요합니다. WSL도 사용할 수 있습니다.",
+      "osRequirements": "macOS, Linux, Windows (네이티브 또는 WSL)",
+      "techRequirements": "Git 설치 필요, 4GB RAM",
       "cloudServices": "AWS/GCP"
     },
     "installationDetail": {
-      "installOneCommand": "한 번에 설치하기",
+      "installOneCommand": "한 줄로 설치하기",
       "beforeInstallation": "설치 전 확인사항",
-      "nodeRequirement": "Node.js 18+ 필요. node --version로 확인 후 nodejs.org에서 설치하세요.",
+      "nodeRequirement": "Git이 설치되어 있어야 합니다. Windows에서는 Git for Windows를 설치하세요. Node.js는 더 이상 설치에 필요하지 않습니다.",
       "recommended": "권장",
+      "nativeInstall": "네이티브 설치 (macOS / Linux / WSL)",
+      "nativeInstallCommand": "curl -fsSL https://claude.ai/install.sh | bash",
+      "windowsPowerShell": "Windows PowerShell",
+      "windowsPowerShellCommand": "irm https://claude.ai/install.ps1 | iex",
+      "windowsCMD": "Windows CMD",
+      "windowsCMDCommand": "curl -fsSL https://claude.ai/install.sh | bash",
+      "homebrew": "Homebrew (macOS / Linux)",
+      "homebrewCommand": "brew install --cask claude-code",
+      "winget": "WinGet (Windows)",
+      "wingetCommand": "winget install Anthropic.ClaudeCode",
       "autoUpdate": "백그라운드에서 자동 업데이트",
-      "manualUpdate": "`brew upgrade claude-code`로 업데이트",
-      "wingetUpdate": "`winget upgrade`로 업데이트",
+      "manualUpdate": "'brew upgrade claude-code'로 업데이트",
+      "wingetUpdate": "'winget upgrade'로 업데이트",
       "accountRequired": "계정 필요",
-      "subscriptionInfo": "Claude Pro, Max, Teams, Enterprise 또는 Claude Console 계정이 필요합니다",
-      "npmDeprecated": "NPM 설치 지원 중단",
-      "npmDeprecatedInfo": "npm install -g @anthropic-ai/claude-code는 더 이상 지원되지 않습니다. 위의 네이티브 설치를 사용하세요."
+      "subscriptionInfo": "Claude Pro, Max, Teams, Enterprise 또는 API Console 계정이 필요합니다",
+      "npmDeprecated": "NPM 설치 (지원 중단)",
+      "npmDeprecatedInfo": "npm install -g @anthropic-ai/claude-code는 더 이상 권장되지 않습니다. 위의 네이티브 설치 방법을 사용하세요.",
+      "otherPlatforms": "다른 플랫폼",
+      "vscodeExtension": "VS Code 확장: VS Code 마켓플레이스에서 설치 ('Claude Code' 검색)",
+      "jetbrainsPlugin": "JetBrains 플러그인: JetBrains 마켓플레이스에서 설치",
+      "desktopApp": "데스크톱 앱: macOS와 Windows용 claude.ai/download에서 다운로드",
+      "webApp": "웹 앱: claude.ai/code 방문 — 설치 필요 없음"
     },
     "authenticationDetail": {
       "startInProject": "프로젝트에서 시작하기",
-      "recommended": "권장 방법",
-      "subscription": "구독 연동",
-      "enterprise": "기업용"
+      "recommended": "권장",
+      "subscription": "구독",
+      "enterprise": "기업용",
+      "authMethods": "인증 방법",
+      "oauthLogin": "'claude'를 실행하고 브라우저 기반 OAuth 로그인을 따르세요",
+      "apiKey": "또는 API 접근을 위해 ANTHROPIC_API_KEY 환경 변수를 설정하세요",
+      "enterpriseSetup": "기업 사용자: 관리자가 SSO 및 관리형 정책을 설정합니다"
     },
     "firstProjectDetail": {
       "understandingProject": "프로젝트 이해하기",
       "projectInitialization": "프로젝트 초기화",
       "setupComplete": "설정 완료!",
-      "readyToStart": "이제 Claude Code와 함께 스마트한 개발을 시작할 수 있습니다."
+      "readyToStart": "Claude Code와 함께 개발을 시작할 준비가 되었습니다.",
+      "firstCommands": "먼저 이것부터 해보세요",
+      "exploreCodebase": "Claude에게 프로젝트 구조를 설명해달라고 요청하세요",
+      "makeChange": "Claude에게 작은 변경을 하고 diff를 검토하도록 요청하세요",
+      "runTests": "Claude에게 테스트를 실행하고 실패를 수정하도록 요청하세요"
     },
     "nextSteps": {
       "title": "다음 단계",
-      "learnBasicUsage": "기본 사용법 익히기",
-      "exploreAdvanced": "고급 기능 탐험",
+      "learnBasicUsage": "CLI 배우기",
+      "exploreAdvanced": "기능 탐색",
       "backToHome": "홈으로 돌아가기",
       "examples": {
-        "askCode": "코드 질문하기: \"인증이 어떻게 작동하는지 설명해줘\"",
-        "editFiles": "파일 편집하기: \"폼에 입력 검증을 추가해줘\"",
-        "runTests": "테스트 실행하기: \"테스트를 실행하고 실패한 부분을 수정해줘\"",
-        "extendedThinking": "확장된 사고: \"이 기능의 아키텍처에 대해 깊이 생각해봐\"",
-        "gitAutomation": "Git 자동화: \"이 기능에 대한 PR을 생성해줘\"",
-        "webSearch": "웹 검색: Claude가 자동으로 문서를 찾아 참조"
+        "askCode": "코드 탐색: '이 프로젝트에서 인증이 어떻게 작동하는지 설명해줘'",
+        "editFiles": "파일 편집: '회원가입 폼에 입력 검증을 추가해줘'",
+        "runTests": "테스트 실행: '테스트를 실행하고 실패한 부분을 수정해줘'",
+        "extendedThinking": "깊은 사고: '이 아키텍처에 대해 깊이 생각해봐' 또는 'ultrathink'",
+        "gitAutomation": "Git 자동화: '이 변경사항에 대한 PR을 생성해줘'",
+        "webSearch": "도구 사용: Claude가 자동으로 문서를 검색하고, 웹을 탐색하고, MCP 서버를 활용합니다"
       }
     }
   },
   "usageGuide": {
-    "title": "Claude Code 완벽 활용 가이드",
-    "subtitle": "터미널에서 AI와 함께 개발하는 새로운 방법을 배워보세요. 기본 명령어부터 고급 자동화까지 단계별로 안내합니다.",
-    "basicCommands": "기본 명령어",
-    "coreWorkflows": "개발 워크플로우", 
-    "advancedFeatures": "고급 활용법",
-    "cliOptions": "CLI 옵션 & 설정",
+    "title": "Claude Code CLI 완벽 레퍼런스",
+    "subtitle": "Claude Code의 모든 명령어, 플래그, 키보드 단축키, 인터랙티브 기능을 소개합니다.",
+    "basicCommands": "CLI 명령어",
+    "coreWorkflows": "인터랙티브 모드",
+    "advancedFeatures": "고급 기능",
+    "cliOptions": "CLI 플래그 & 옵션",
     "copyToClipboard": "클립보드에 복사",
     "basicCommandsDetail": {
-      "description": "터미널에서 Claude와 대화하는 기본적인 방법들을 익혀보세요.",
+      "description": "터미널에서 Claude Code와 상호작용하기 위한 핵심 명령어.",
       "items": {
         "interactiveSession": {
-          "title": "대화형 세션",
-          "description": "claude 명령어로 대화 시작"
+          "title": "인터랙티브 세션",
+          "description": "claude — 대화형 세션 시작"
         },
         "quickQuestions": {
-          "title": "빠른 질문",
-          "description": "claude -p \"질문내용\"으로 즉시 답변 받기"
+          "title": "원샷 쿼리",
+          "description": "claude \"질문\" — 빠른 인라인 쿼리"
         },
         "fileAnalysis": {
-          "title": "파일 분석",
-          "description": "cat file.js | claude로 파일 내용 분석"
+          "title": "출력 모드 (비대화형)",
+          "description": "claude -p \"쿼리\" — 응답을 출력하고 종료. 스크립트와 파이핑에 적합."
+        },
+        "printMode": {
+          "title": "출력 모드 (비대화형)",
+          "description": "claude -p \"쿼리\" — 응답을 출력하고 종료. 스크립트와 파이핑에 적합."
+        },
+        "continueSession": {
+          "title": "세션 이어가기",
+          "description": "claude -c — 가장 최근 대화를 이어서 진행"
+        },
+        "resumeSession": {
+          "title": "세션 재개",
+          "description": "claude -r — 최근 대화 목록에서 선택하여 재개"
+        },
+        "updateClaude": {
+          "title": "업데이트",
+          "description": "claude update — Claude Code를 최신 버전으로 업데이트"
+        },
+        "authCommand": {
+          "title": "인증",
+          "description": "claude auth login/logout/status — 인증 관리"
+        },
+        "agentsCommand": {
+          "title": "에이전트",
+          "description": "claude agents — 사용 가능한 서브에이전트 목록 보기"
+        },
+        "mcpCommand": {
+          "title": "MCP",
+          "description": "claude mcp add/remove/list — MCP 서버 관리"
+        },
+        "remoteControl": {
+          "title": "원격 제어",
+          "description": "claude remote-control — 외부 통합을 위한 원격 제어 활성화"
         }
       }
     },
     "coreWorkflowsDetail": {
-      "description": "실제 개발 과정에서 자주 사용하는 패턴들을 익혀보세요.",
+      "description": "Claude 세션 중 사용할 수 있는 키보드 단축키와 인터랙티브 기능.",
       "items": {
         "projectExploration": {
-          "title": "프로젝트 탐색",
-          "description": "\"이 프로젝트에 대해 설명해줘\" - 코드베이스 전체 분석"
+          "title": "플랜 모드 (Shift+Tab)",
+          "description": "플랜 모드를 전환하여 Claude가 코드를 작성하기 전에 먼저 생각하고 계획하도록 합니다. Claude가 탐색하고, 분석하고, 승인을 위한 계획을 제안합니다."
         },
         "smartEditing": {
-          "title": "스마트 편집",
-          "description": "\"버그 수정해줘\" - 컨텍스트 기반 코드 수정"
+          "title": "음성 입력 & Bash 모드",
+          "description": "Space 길게 누르기로 음성 입력. !를 입력하면 인라인 셸 명령어. @로 파일 참조."
         },
         "gitWorkflow": {
-          "title": "Git 워크플로우",
-          "description": "\"PR 생성해줘\" - 자동 커밋 메시지 및 풀 리퀘스트"
+          "title": "키보드 단축키",
+          "description": "Ctrl+C: 취소. Ctrl+G: 퍼지 검색. Ctrl+B: 백그라운드 에이전트. Ctrl+T: 태스크 리스트. Shift+Tab: 플랜 모드."
+        },
+        "keyboardShortcuts": {
+          "title": "키보드 단축키",
+          "description": "Ctrl+C: 현재 생성 취소. Ctrl+G: 파일 퍼지 검색. Ctrl+O: 에디터에서 출력 열기. Ctrl+R: 마지막 프롬프트 다시 실행. Ctrl+B: 서브에이전트를 백그라운드에서 실행. Ctrl+T: 태스크 리스트 열기. Shift+Tab: 플랜 모드 전환. Esc: 입력 취소 또는 중단."
+        },
+        "planMode": {
+          "title": "플랜 모드 (Shift+Tab)",
+          "description": "플랜 모드를 전환하여 Claude가 코드를 작성하기 전에 먼저 생각하고 계획하도록 합니다. Claude가 탐색하고, 분석하고, 변경 전에 승인을 위한 계획을 제안합니다."
+        },
+        "vimMode": {
+          "title": "Vim 모드",
+          "description": "/vim 명령어 또는 설정을 통해 입력 영역에서 Vim 스타일 키바인딩을 활성화합니다."
+        },
+        "multilineInput": {
+          "title": "멀티라인 입력",
+          "description": "줄 끝에 \\\\를 사용하여 계속 입력하거나, 여러 줄 텍스트를 직접 붙여넣으세요. 일부 터미널에서는 Shift+Enter도 작동합니다."
+        },
+        "voiceDictation": {
+          "title": "음성 입력",
+          "description": "Space를 길게 눌러 음성으로 입력하세요. Claude는 음성 인식 오타도 잘 처리합니다."
+        },
+        "btw": {
+          "title": "/btw로 곁다리 질문하기",
+          "description": "/btw를 사용하여 메인 대화 컨텍스트를 잃지 않고 곁다리 질문을 하세요."
+        },
+        "bashMode": {
+          "title": "Bash 모드 (! 접두사)",
+          "description": "!를 입력한 후 셸 명령어를 입력하면 Claude를 떠나지 않고 바로 실행됩니다. 예: !git status"
+        },
+        "fileReferences": {
+          "title": "@로 파일 참조",
+          "description": "@를 사용하여 프롬프트에서 파일을 직접 참조하세요. Claude가 자동으로 파일 내용을 읽습니다."
+        },
+        "promptSuggestions": {
+          "title": "프롬프트 제안",
+          "description": "Claude가 프로젝트와 최근 작업을 기반으로 맥락에 맞는 제안을 제공합니다."
         }
       }
     },
     "advancedFeaturesDetail": {
-      "description": "Claude Code의 고급 기능들로 개발 생산성을 극대화하세요.",
+      "description": "고급 워크플로우와 자동화를 위한 파워 기능.",
       "items": {
         "deepThinking": {
-          "title": "딥 씽킹 모드",
-          "description": "복잡한 아키텍처 설계와 문제 해결"
+          "title": "확장 사고",
+          "description": "'think', 'think hard', 'think harder', 또는 'ultrathink'를 사용하여 더 깊은 추론을 활성화합니다. 더 많은 사고 예산 = 복잡한 문제에 대한 더 철저한 분석."
         },
         "projectMemory": {
-          "title": "프로젝트 메모리",
-          "description": "CLAUDE.md로 프로젝트 규칙과 컨텍스트 관리"
+          "title": "프로젝트 메모리 (CLAUDE.md)",
+          "description": "CLAUDE.md 파일을 만들어 프로젝트 규칙, 컨벤션, 컨텍스트를 저장하세요. Claude가 자동으로 읽습니다. 짧고, 구체적으로, 정기적으로 정리하세요."
         },
         "realtimeSearch": {
-          "title": "실시간 문서 검색",
-          "description": "최신 라이브러리 문서 자동 참조"
+          "title": "체크포인트 & 되감기",
+          "description": "Claude가 자동으로 체크포인트를 생성합니다. 문제가 발생하면 /rewind를 사용하여 이전 상태로 돌아가세요."
+        },
+        "checkpoints": {
+          "title": "체크포인트 & 되감기",
+          "description": "Claude가 자동으로 체크포인트를 생성합니다. 문제가 발생하면 /rewind를 사용하여 이전 상태로 돌아가세요."
+        },
+        "imageAnalysis": {
+          "title": "이미지 & 스크린샷 분석",
+          "description": "이미지나 스크린샷을 Claude에 직접 붙여넣으세요. 드래그 앤 드롭하거나, @를 사용하여 이미지 파일을 참조하세요. Claude가 UI를 분석하고 디자인으로부터 코드를 생성할 수 있습니다."
+        },
+        "worktrees": {
+          "title": "Git Worktree",
+          "description": "--worktree 플래그를 사용하여 격리된 병렬 세션을 위해 별도의 git worktree에서 Claude를 실행하세요. 각 세션이 자체 작업 디렉토리를 갖습니다."
+        },
+        "backgroundCommands": {
+          "title": "백그라운드 Bash 명령어",
+          "description": "오래 실행되는 셸 명령어는 백그라운드에서 실행됩니다. Claude가 작업을 계속하면서 명령어가 실행되고 준비되면 결과를 확인합니다."
+        },
+        "prReview": {
+          "title": "PR 리뷰 상태",
+          "description": "PR 작업 중일 때, Claude가 하단에 리뷰 상태를 표시합니다. 대기 중인 리뷰, 승인, 요청된 변경 사항을 한눈에 확인하세요."
         }
       }
     },
     "cliOptionsDetail": {
-      "description": "명령행 도구의 다양한 옵션과 환경 설정 방법을 알아보세요.",
+      "description": "Claude Code 동작을 커스터마이즈하기 위한 CLI 플래그와 옵션 전체 목록.",
       "items": {
         "builtinCommands": {
-          "title": "내장 명령어",
-          "description": "/init, /help, /compact, /memory 등 유틸리티"
+          "title": "모델 & 실행 플래그",
+          "description": "--model (-m): 모델 선택. --effort: 사고 강도 설정. --max-turns: 턴 제한. --max-budget-usd: 비용 상한 설정. --agent: 서브에이전트 사용."
         },
         "executionOptions": {
-          "title": "실행 옵션",
-          "description": "--allowedTools, --model 등 플래그 활용"
+          "title": "시스템 프롬프트 & 출력 플래그",
+          "description": "--system-prompt: 프롬프트 오버라이드. --output-format (text/json/stream-json): 출력 제어. --json-schema: JSON 검증."
         },
         "environmentSetup": {
-          "title": "환경 설정",
-          "description": "API 키, 모델 선택, 프록시 설정"
+          "title": "도구 & 세션 플래그",
+          "description": "--allowedTools/--disallowedTools: 도구 제어. --worktree: Git 격리. --chrome: Chrome 통합. --plugin-dir: 플러그인 로드."
+        },
+        "modelFlags": {
+          "title": "모델 & 실행 플래그",
+          "description": "--model (-m): 모델 선택. --effort: 사고 강도 설정 (low/medium/high). --max-turns: 대화 턴 제한. --max-budget-usd: 비용 상한 설정. --agent: 전체 세션에 특정 서브에이전트 사용."
+        },
+        "directoryFlags": {
+          "title": "디렉토리 & 범위 플래그",
+          "description": "--add-dir: 추가 디렉토리를 컨텍스트에 포함. --worktree: git worktree에서 실행. --remote: 원격 실행. --remote-control: 원격 제어 활성화."
+        },
+        "systemPromptFlags": {
+          "title": "시스템 프롬프트 플래그",
+          "description": "--system-prompt: 시스템 프롬프트 오버라이드. --system-prompt-file: 파일에서 로드. --append-system-prompt: 기본 프롬프트에 추가. --append-system-prompt-file: 파일에서 추가."
+        },
+        "outputFlags": {
+          "title": "출력 & 포맷 플래그",
+          "description": "--output-format (text/json/stream-json): 출력 형식 제어. --json-schema: JSON 출력 검증. --verbose: 상세 로깅 표시."
+        },
+        "toolFlags": {
+          "title": "도구 & 권한 플래그",
+          "description": "--allowedTools: 사용 가능한 도구 제한. --disallowedTools: 특정 도구 차단. --tools: 도구 설정 지정. --permission-mode: 권한 동작 설정. --teleport: IDE 텔레포팅 활성화."
+        },
+        "sessionFlags": {
+          "title": "세션 플래그",
+          "description": "--chrome: Chrome 통합과 함께 실행. --teammate-mode: 팀메이트 모드 활성화. --agents: 추가 에이전트 정의 로드. --plugin-dir: 디렉토리에서 플러그인 로드."
         }
+      }
+    },
+    "slashCommands": {
+      "title": "슬래시 명령어",
+      "description": "인터랙티브 세션 중 사용할 수 있는 내장 명령어.",
+      "items": {
+        "help": "/help — 사용 가능한 명령어 표시",
+        "init": "/init — 프로젝트에 CLAUDE.md 초기화",
+        "memory": "/memory — 프로젝트 메모리 보기 및 편집",
+        "compact": "/compact — 대화 컨텍스트 압축",
+        "clear": "/clear — 대화를 초기화하고 새로 시작",
+        "rewind": "/rewind — 이전 체크포인트로 되감기",
+        "vim": "/vim — Vim 모드 전환",
+        "hooks": "/hooks — 훅 탐색 및 관리",
+        "agents": "/agents — 서브에이전트 생성 및 관리",
+        "keybindings": "/keybindings — 키보드 단축키 커스터마이즈",
+        "plan": "/plan — 플랜 모드 전환",
+        "btw": "/btw — 곁다리 질문하기",
+        "reloadPlugins": "/reload-plugins — 플러그인 핫 리로드"
       }
     },
     "quickExamples": {
       "title": "실전 명령어 예제",
-      "projectAnalysis": "프로젝트 분석",
-      "developmentWork": "개발 작업",
+      "projectAnalysis": "탐색",
+      "developmentWork": "개발",
       "labels": {
-        "projectUnderstanding": "프로젝트 이해",
-        "apiDocumentation": "API 문서화",
-        "featureAddition": "기능 추가",
-        "testAutomation": "테스트 자동화"
+        "projectUnderstanding": "코드베이스 개요",
+        "apiDocumentation": "기능 찾기",
+        "featureAddition": "기능 구현",
+        "testAutomation": "테스트 & 디버그"
       },
       "commands": {
         "overview": "이 코드베이스에 대한 개요를 알려줘",
         "authFiles": "사용자 인증을 처리하는 파일들을 찾아줘",
-        "npmTestError": "npm test를 실행할 때 오류가 발생하고 있어",
-        "fixTsIgnore": "@ts-ignore를 수정하는 몇 가지 방법을 제안해줘",
-        "findDeprecated": "코드베이스에서 사용되지 않는 API 사용법을 찾아줘",
-        "refactorUtils": "utils.js를 ES2024 기능을 사용해서 리팩토링해줘"
+        "npmTestError": "테스트를 실행하고 실패한 부분을 수정해줘",
+        "fixTsIgnore": "모든 @ts-ignore 주석을 적절한 타입으로 수정해줘",
+        "findDeprecated": "사용 중단된 API 사용을 찾고 대체를 제안해줘",
+        "refactorUtils": "utils.js를 최신 ES2024 기능으로 리팩토링해줘"
       }
     },
     "bestPractices": {
-      "title": "생산성을 높이는 실전 팁",
+      "title": "CLI 팁",
       "items": {
         "specificInstructions": {
-          "title": "구체적인 지시",
-          "description": "\"에러 수정해줘\" 대신 \"user.tsx 34번째 줄의 null 참조 에러를 수정해줘\"처럼 구체적으로 요청하세요."
+          "title": "구체적으로 요청하세요",
+          "description": "'에러 수정해줘' 대신 'user.tsx의 handleSubmit 함수에서 발생하는 null 참조 에러를 수정해줘'라고 말하세요."
         },
         "incrementalDevelopment": {
-          "title": "점진적 개발",
-          "description": "전체 기능을 한 번에 구현하지 말고, 작은 단위로 나누어 점진적으로 구축하세요."
+          "title": "플랜 모드를 먼저 사용하세요",
+          "description": "Shift+Tab을 눌러 플랜 모드를 활성화하세요. Claude가 변경하기 전에 먼저 탐색하고 계획하도록 하세요."
         },
         "projectMemoryTip": {
-          "title": "프로젝트 메모리",
-          "description": "CLAUDE.md 파일에 프로젝트 규칙과 컨텍스트를 명시하여 일관된 결과를 얻으세요."
+          "title": "컨텍스트를 관리하세요",
+          "description": "/clear로 새로 시작, /compact로 압축, /btw로 곁다리 질문. CLAUDE.md는 짧고 구체적으로 유지하세요."
         }
       }
     },
     "newFeatures": {
-      "title": "Claude Code 2.1 신기능",
+      "title": "Claude Code 최신 기능",
       "items": {
         "skillHotReload": {
-          "title": "스킬 핫 리로드",
-          "description": "세션 재시작 없이 스킬이 즉시 업데이트됩니다"
+          "title": "에이전트 팀",
+          "description": "공유 태스크 리스트와 메일박스로 병렬 에이전트 팀 실행"
         },
         "asyncAgents": {
-          "title": "비동기 서브에이전트",
-          "description": "Ctrl+B로 백그라운드에서 에이전트 실행"
+          "title": "백그라운드 서브에이전트",
+          "description": "Ctrl+B로 백그라운드에서 에이전트 실행, 나중에 결과 확인"
         },
         "mcpSearch": {
           "title": "MCP 도구 검색",
-          "description": "자동 지연 MCP 도구로 컨텍스트 85% 절약"
+          "description": "자동 지연 MCP 도구로 컨텍스트 윈도우 공간 절약"
         },
         "keybindings": {
           "title": "커스텀 단축키",
-          "description": "/keybindings로 단축키 커스터마이즈"
+          "description": "/keybindings로 모든 키보드 단축키 커스터마이즈"
         },
         "language": {
-          "title": "다국어 지원",
-          "description": "응답 언어 설정: 일본어, 스페인어 등"
+          "title": "데스크톱 & 웹",
+          "description": "macOS/Windows용 데스크톱 앱과 claude.ai/code의 웹"
         },
         "planCommand": {
-          "title": "/plan 명령어",
-          "description": "프롬프트에서 직접 계획 모드 활성화"
+          "title": "Worktree 격리",
+          "description": "--worktree 플래그로 격리된 git worktree에서 에이전트 실행"
         }
       }
     }
   },
   "tutorials": {
     "title": "Claude Code 실전 튜토리얼",
-    "subtitle": "단계별 가이드와 실제 예제를 통해 Claude Code의 강력한 기능들을 마스터해보세요. 일상 워크플로우부터 고급 자동화까지 체계적으로 학습할 수 있습니다.",
+    "subtitle": "실제 개발 워크플로우를 위한 단계별 가이드.",
     "quickStart": "빠른 시작 튜토리얼",
     "quickStartTutorials": {
       "resumeConversations": {
         "title": "대화 이어가기",
-        "description": "Claude Code와의 이전 대화를 효율적으로 재개하고 지속하는 방법을 배워보세요.",
-        "continueLatest": "최근 대화 계속하기",
-        "useSelector": "대화 선택기 사용하기",
-        "tip": "대화를 재개하기 전에 /memory 명령어를 사용하여 대화 컨텍스트를 확인하세요."
+        "description": "이전에 멈춘 곳에서 이어가거나 이전 세션을 재개합니다.",
+        "continueLatest": "claude -c로 최근 세션 이어가기",
+        "useSelector": "claude -r로 최근 세션 목록에서 선택",
+        "tip": "재개하기 전에 /memory로 세션 컨텍스트를 확인하세요. /compact로 긴 대화를 압축하세요."
       },
       "understandingCodebases": {
-        "title": "코드베이스 이해하기",
-        "description": "새로운 프로젝트나 복잡한 코드베이스를 빠르게 파악하는 방법을 배워보세요.",
-        "getOverview": "전체 개요 파악하기",
-        "findFeatures": "특정 기능 찾기",
-        "tip": "프로젝트 구조를 먼저 파악한 후 세부 기능을 탐색하세요."
+        "title": "코드베이스 탐색",
+        "description": "Claude와 함께 새 프로젝트나 복잡한 코드베이스를 빠르게 이해하세요.",
+        "getOverview": "프로젝트의 전체적인 개요를 요청하세요",
+        "findFeatures": "Ctrl+G로 파일을 퍼지 검색하세요",
+        "tip": "넓게 시작하고('이 프로젝트 설명해줘') 좁혀가세요('인증은 어떻게 작동해?'). 특정 파일을 참조하려면 @를 사용하세요."
       }
     },
     "coreWorkflows": {
       "title": "핵심 워크플로우",
       "bugFixing": {
         "title": "버그 수정 워크플로우",
-        "description": "Claude Code를 사용하여 효율적으로 버그를 찾고 수정하는 방법."
+        "description": "버그를 설명하세요. Claude가 코드베이스를 탐색하고, 근본 원인을 파악하고, 수정을 제안하고, 검증 테스트를 작성하고, PR을 생성합니다."
       },
       "codeRefactoring": {
         "title": "코드 리팩토링",
-        "description": "기존 코드를 개선하고 최신 패턴으로 업데이트하는 방법."
+        "description": "플랜 모드(Shift+Tab)를 먼저 사용하여 탐색하고 계획하세요. Claude가 코드를 분석하고, 리팩토링 전략을 제안하고, 점진적으로 실행합니다."
       },
       "testing": {
-        "title": "테스트 자동화",
-        "description": "단위 테스트와 통합 테스트를 자동으로 생성하고 실행하는 방법."
+        "title": "테스트 작성",
+        "description": "Claude에게 코드에 대한 테스트를 작성해달라고 요청하세요. 구현을 분석하고, 포괄적인 테스트 케이스를 생성하고, 실행하여 통과를 확인합니다."
       },
       "prCreation": {
         "title": "Pull Request 생성",
-        "description": "자동화된 커밋 메시지와 PR 설명으로 협업을 개선하는 방법."
+        "description": "변경 후 Claude에게 PR 생성을 요청하세요. 요약을 작성하고, 테스트 계획을 추가하고, GitHub CLI를 통해 PR을 열어줍니다."
       },
       "documentation": {
-        "title": "문서화 자동화",
-        "description": "README, API 문서, 코드 주석을 자동으로 생성하고 업데이트하는 방법."
+        "title": "문서 생성",
+        "description": "README, API 문서, 인라인 주석을 생성합니다. Claude가 코드를 읽고 정확하고 최신의 문서를 작성합니다."
       },
       "imageWork": {
-        "title": "이미지 작업",
-        "description": "스크린샷이나 디자인 이미지를 분석하여 코드를 생성하는 방법.",
-        "dragDrop": "이미지를 끌어다 놓고 코드 생성 요청하기"
+        "title": "이미지 & 스크린샷 분석",
+        "description": "UI 스크린샷, 에러 메시지, 디자인 목업을 붙여넣으세요. Claude가 분석하고 코드나 디버깅 단계를 생성합니다.",
+        "dragDrop": "이미지를 터미널에 직접 드래그 앤 드롭하거나, @를 사용하여 이미지 파일을 참조하세요"
+      },
+      "planMode": {
+        "title": "플랜 모드 워크플로우",
+        "description": "Shift+Tab을 눌러 플랜 모드를 전환하세요. Claude가 코드베이스를 탐색하고, 문제를 분석하고, 코드를 작성하기 전에 승인을 위한 계획을 제안합니다."
+      },
+      "extendedThinking": {
+        "title": "확장 사고",
+        "description": "'think', 'think hard', 또는 'ultrathink' 키워드를 사용하여 복잡한 아키텍처 결정과 깊은 분석을 위해 Claude에게 더 많은 사고 예산을 부여하세요."
+      },
+      "worktrees": {
+        "title": "병렬 세션을 위한 Git Worktree",
+        "description": "--worktree 플래그를 사용하여 충돌 없이 같은 레포에서 여러 Claude 세션을 실행하세요. 각 세션이 격리된 작업 디렉토리를 갖습니다."
+      },
+      "nonInteractive": {
+        "title": "비대화형 모드",
+        "description": "스크립팅과 자동화를 위해 claude -p를 사용하세요. 입력을 파이프하고, 명령어를 체이닝하고, Claude를 CI/CD 파이프라인에 통합하세요."
+      },
+      "fanOut": {
+        "title": "팬아웃 패턴",
+        "description": "서브에이전트를 사용하여 여러 파일이나 작업을 병렬로 처리하세요. 메인 에이전트가 조율하고 서브에이전트가 개별 부분을 처리합니다."
       }
     },
     "startNow": {
@@ -343,170 +535,170 @@
   },
   "tips": {
     "title": "실전 팁",
-    "subtitle": "11개월간의 집중 사용에서 얻은 11가지 핵심 팁",
+    "subtitle": "Claude Code를 최대한 활용하기 위한 실전 검증 기법",
     "copied": "복사됨!",
-    "mainTitle": "Claude Code 핵심 11가지 팁",
-    "mainSubtitle": "11개월간 매일 집중 사용하며 검증된 실전 기법들",
-    "detailSubtitle": "실제 파워 유저들의 노하우",
-    "detailDescription": "이 팁들은 11개월 이상 매일 Claude Code를 사용한 개발자들의 경험에서 나왔으며, 커뮤니티에서 검증된 40가지 이상의 기법 중 엄선되었습니다.",
-    "sourceCredit": "ykdojo의 커뮤니티 팁 기반",
-    "sourceLink": "원본 40+ 팁 보기",
+    "mainTitle": "Claude Code 핵심 팁",
+    "mainSubtitle": "파워 유저와 공식 모범 사례 가이드에서 검증된 기법",
+    "detailSubtitle": "파워 유저 & 공식 문서에서",
+    "detailDescription": "이 팁들은 커뮤니티에서 검증된 기법과 Anthropic 공식 가이드를 결합하여 최대의 생산성을 제공합니다.",
+    "sourceCredit": "커뮤니티 팁과 공식 문서 기반",
+    "sourceLink": "공식 문서 보기",
     "tip1": {
-      "title": "컨텍스트를 최소화하라",
-      "description": "컨텍스트가 길어질수록 Claude의 성능이 저하됩니다. AI 컨텍스트는 우유와 같습니다 - 신선하고 농축된 상태가 가장 좋습니다.",
+      "title": "Claude에게 검증 기준을 알려주세요",
+      "description": "가장 영향력 있는 한 가지: Claude에게 자기 작업을 검증하는 방법을 알려주세요. 테스트, 타입 체크, 스크린샷, 린팅 — Claude가 성공을 확인할 방법을 제공하세요.",
       "practices": {
-        "freshConversation": "새로운 주제를 시작할 때마다 새 대화 시작",
-        "splitTasks": "첫 대화: 수정할 파일 찾기. 두 번째 대화: 수정 방법 결정",
-        "avoidOverload": "전체 코드베이스를 컨텍스트에 넣지 마세요"
+        "freshConversation": "테스트 명령어를 포함하세요: '버그를 수정하고 모든 테스트가 통과하는지 확인해줘'",
+        "splitTasks": "검증 단계를 제공하세요: '변경 후 린터를 실행해줘'",
+        "avoidOverload": "시각적 검증을 위해 /chrome 또는 Playwright MCP로 스크린샷을 사용하세요"
       },
-      "quote": "AI 컨텍스트는 우유와 같습니다. 신선하고 농축된 상태가 가장 좋습니다."
+      "quote": "가장 효과적인 프롬프트는 지시뿐만 아니라 성공 기준을 포함합니다."
     },
     "tip2": {
-      "title": "문제를 단계별로 해결하라",
-      "description": "Claude 모델은 장시간 작업에 능숙하지만 완벽하지 않습니다. 특히 너무 큰 문제가 주어지면 실수를 합니다.",
+      "title": "먼저 탐색하고, 계획하고, 그 다음에 코딩하세요",
+      "description": "바로 코드 변경에 뛰어들지 마세요. Claude가 먼저 코드베이스를 이해하고, 접근 방식을 계획한 다음 실행하도록 하세요.",
       "practices": {
-        "breakDown": "문제를 작은 단계로 분해하세요",
-        "furtherBreak": "여전히 크다면 더 작게 분해하세요",
-        "oneAtATime": "한 번에 하나의 작은 조각만 처리하세요"
+        "breakDown": "'이 코드베이스를 탐색하고 아키텍처를 설명해줘'로 시작하세요",
+        "furtherBreak": "복잡한 작업에는 플랜 모드(Shift+Tab)를 사용하세요",
+        "oneAtATime": "Claude가 코드를 작성하기 전에 계획을 검토하세요"
       },
-      "quote": "문제가 Claude가 한 번에 해결하기에 너무 크다면, 더 작게 분해하세요."
+      "quote": "탐색-계획-코딩 워크플로우는 대부분의 실패를 사전에 방지합니다."
     },
     "tip3": {
-      "title": "항상 코드 작성부터 시작하지 마라",
-      "description": "AI가 저품질 코드로 악평을 받는 이유는 사람들이 주로 코드 작성에만 사용하기 때문입니다. Claude는 이해, 연구, 계획에 뛰어납니다.",
+      "title": "@와 이미지로 구체적인 컨텍스트를 제공하세요",
+      "description": "@filename으로 특정 파일을 참조하고, 스크린샷과 에러 이미지를 붙여넣고, Claude에게 정확히 필요한 컨텍스트를 제공하세요.",
       "practices": {
-        "understand": "먼저 코드베이스 이해에 Claude 활용",
-        "research": "코딩 전에 연구와 브레인스토밍",
-        "architecture": "아키텍처 토론 진행",
-        "prepare": "충분한 준비가 품질의 핵심"
+        "understand": "@를 사용하여 프롬프트에서 특정 파일을 참조하세요",
+        "research": "에러, UI, 디자인의 스크린샷을 붙여넣으세요",
+        "architecture": "에러 메시지와 스택 트레이스를 직접 복사-붙여넣기하세요",
+        "prepare": "Claude가 가져올 문서 URL을 참조하세요"
       },
-      "quote": "코드 작성에 뛰어들기 전 충분한 준비가 고품질 코드 생산의 핵심입니다."
+      "quote": "컨텍스트가 구체적일수록 Claude의 응답이 정확해집니다."
     },
     "tip4": {
-      "title": "Git과 GitHub를 Claude로 마스터하라",
-      "description": "Claude에게 Git과 GitHub CLI 작업을 맡기세요. 커밋(수동 커밋 메시지 작성 불필요!), 브랜치, 풀, 푸시 모두 포함됩니다.",
+      "title": "효과적인 CLAUDE.md 파일을 작성하세요",
+      "description": "CLAUDE.md는 가장 중요한 설정입니다. 짧고, 구체적으로, 정기적으로 정리하세요. 나쁜 CLAUDE.md = 나쁜 결과.",
       "practices": {
-        "autoCommit": "Claude가 커밋 메시지를 작성하게 하세요",
-        "allowPull": "풀은 자동 허용, 푸시는 주의",
-        "gitBisect": "git bisect로 문제를 일으킨 정확한 커밋 찾기",
-        "ghCli": "이슈와 PR에 GitHub CLI 활용"
+        "autoCommit": "간결하게 유지하세요 — 프로젝트 레벨은 500줄 이하로",
+        "allowPull": "Claude가 사용해야 할 빌드/테스트/린트 명령어를 포함하세요",
+        "gitBisect": "코드 스타일 선호와 컨벤션을 추가하세요",
+        "ghCli": "정기적으로 정리하세요 — 오래되거나 중복된 지시를 제거하세요"
       },
-      "warning": "저는 풀은 자동 허용하지만 푸시는 허용하지 않습니다. 푸시가 더 위험하기 때문이죠."
+      "warning": "길고 초점 없는 CLAUDE.md는 도움보다 해가 됩니다. 양보다 질입니다."
     },
     "tip5": {
-      "title": "AI 출력을 다양한 방법으로 검증하라",
-      "description": "AI 출력을 맹목적으로 신뢰하지 마세요. 다양한 검증 방법을 사용하여 품질을 보장하세요.",
+      "title": "컨텍스트를 적극적으로 관리하세요",
+      "description": "컨텍스트 윈도우 관리가 핵심입니다. /clear, /compact, /btw, 새 세션을 사용하여 Claude가 최상의 성능을 발휘하도록 하세요.",
       "practices": {
-        "writeTests": "코드 검증을 위해 테스트 작성 요청",
-        "visualGit": "GitHub Desktop 같은 시각적 Git 클라이언트로 변경사항 빠르게 확인",
-        "draftPR": "검토 준비 전 모든 것을 확인할 수 있도록 드래프트 PR 생성",
-        "manualReview": "항상 최종 수동 검토 수행"
+        "writeTests": "새 주제에는 새 대화를 시작하세요 (/clear)",
+        "visualGit": "/compact를 사용하여 긴 대화를 압축하세요",
+        "draftPR": "메인 컨텍스트를 오염시키지 않는 곁다리 질문에 /btw를 사용하세요",
+        "manualReview": "격리된 조사 작업에 서브에이전트를 사용하세요"
       },
-      "quote": "드래프트 PR을 생성하면 검토 준비 표시 전에 모든 것을 검토할 수 있습니다."
+      "quote": "AI 컨텍스트는 우유와 같습니다 — 신선하고 농축된 상태가 가장 좋습니다."
     },
     "tip6": {
-      "title": "AI가 스스로 작업을 검증하게 하라",
-      "description": "Claude는 자신의 작업을 확인할 수 있습니다. 연구의 경우 주장을 재확인하도록 요청하세요. 웹 앱의 경우 브라우저 자동화로 검증하세요.",
+      "title": "조사에 서브에이전트를 활용하세요",
+      "description": "메인 세션의 컨텍스트를 소비하지 않고 탐색, 조사, 리서치를 위해 서브에이전트를 생성하세요. 결과가 요약되어 돌아옵니다.",
       "practices": {
-        "doubleCheck": "'확실해요? 다시 확인해줄래요?'라고 말하세요",
-        "verifyTable": "'모든 주장을 다시 확인하고 검증된 것을 표로 만들어줘'라고 요청",
-        "playwright": "웹 앱 검증에 Playwright MCP 또는 /chrome 사용",
-        "tmux": "대화형 CLI 검증에 tmux 사용"
+        "doubleCheck": "빠른 조회를 위해 Explore 서브에이전트(Haiku, 읽기 전용)를 사용하세요",
+        "verifyTable": "코드 변경 없이 복잡한 분석을 위해 Plan 서브에이전트를 사용하세요",
+        "playwright": "반복되는 조사 패턴을 위해 커스텀 서브에이전트를 만드세요",
+        "tmux": "Ctrl+B로 서브에이전트를 백그라운드에서 실행하세요"
       },
-      "claudeMdTip": "/chrome의 경우 CLAUDE.md에 추가: 요소 참조에 read_page 사용, 요소 찾기에 find 사용, 좌표 대신 ref로 클릭, 요청하지 않는 한 스크린샷 금지."
+      "claudeMdTip": "서브에이전트는 자체 컨텍스트 윈도우를 가지므로 메인 세션의 토큰을 소비하지 않습니다."
     },
     "tip7": {
-      "title": "커스텀 상태 표시줄을 설정하라",
-      "description": "Claude Code 하단의 상태 표시줄을 커스터마이즈하여 모델, 디렉토리, git 브랜치, 커밋되지 않은 파일, 동기화 상태, 토큰 사용량을 표시하세요.",
+      "title": "체크포인트로 되감기하세요",
+      "description": "Claude가 자동으로 git 체크포인트를 생성합니다. 문제가 발생하면 /rewind를 사용하세요. Esc로 일찍 방향을 수정하세요.",
       "practices": {
-        "showModel": "현재 사용 중인 모델 표시",
-        "showBranch": "git 브랜치와 커밋되지 않은 파일 수 표시",
-        "tokenBar": "토큰 사용량 시각적 진행 바 추가",
-        "syncStatus": "origin과의 동기화 상태 표시"
+        "showModel": "/rewind로 이전 상태를 복원하세요",
+        "showBranch": "Claude가 잘못된 방향으로 가고 있다면 일찍 Esc를 누르세요",
+        "tokenBar": "변경 후 git diff를 확인하여 정확성을 검증하세요",
+        "syncStatus": "대화가 탈선하면 /clear로 리셋하세요"
       },
-      "quote": "컨텍스트 사용량을 주시하고 작업 중인 내용을 기억하는 데 정말 유용합니다."
+      "quote": "일찍 방향을 수정하세요. 되감기의 비용은 추가 변경이 있을 때마다 증가합니다."
     },
     "tip8": {
-      "title": "다음 세션에 컨텍스트를 전달하라",
-      "description": "/compact에 의존하는 대신, 핸드오프 문서로 컨텍스트를 사전에 관리하세요.",
+      "title": "권한과 훅을 설정하세요",
+      "description": "반복적인 승인을 자동화하고 팀 표준을 강제하기 위해 권한 모드와 훅을 설정하세요.",
       "practices": {
-        "handoffDoc": "새로 시작하기 전에 HANDOFF.md 작성 요청",
-        "includeTrials": "시도한 것, 성공한 것, 실패한 것 문서화",
-        "freshStart": "핸드오프 파일 경로만으로 새 대화 시작",
-        "halfClone": "최근 대화 절반만 유지하는 half-clone 사용"
+        "handoffDoc": "권한 모드 사용: default, acceptEdits, dontAsk, plan",
+        "includeTrials": "편집 후 자동 포맷팅을 위한 훅 설정",
+        "freshStart": "도구 사용에 보안 정책을 적용하기 위해 훅 사용",
+        "halfClone": "프로젝트별 허용/차단 도구 설정"
       },
-      "handoffPrompt": "나머지 계획을 HANDOFF.md에 넣어줘. 시도한 것, 성공한 것, 실패한 것을 설명해서 다음 에이전트가 그 파일만 로드하고 계속할 수 있게 해줘."
+      "handoffPrompt": "훅은 반복적인 수동 승인을 자동화된 가드레일로 바꿔줍니다."
     },
     "tip9": {
-      "title": "음성 입력을 활용하라",
-      "description": "타이핑보다 음성으로 훨씬 빠르게 소통할 수 있습니다. 음성 인식 오류가 있어도 Claude는 의도를 이해합니다.",
+      "title": "CLI 도구와 MCP 서버를 활용하세요",
+      "description": "Claude는 올바른 도구에 접근할 수 있을 때 가장 잘 작동합니다. GitHub CLI, AWS CLI, 데이터베이스 도구, MCP 서버를 연결하세요.",
       "practices": {
-        "localTranscription": "로컬 음성 인식 사용 (superwhisper, MacWhisper)",
-        "fasterComm": "대부분의 사람에게 음성이 타이핑보다 빠름",
-        "likePhoneCall": "친구와 빠른 전화 통화하는 것처럼 생각하세요",
-        "mistakesOk": "Claude는 음성 인식 오타를 잘 처리함"
+        "localTranscription": "PR 및 이슈 관리를 위해 gh(GitHub CLI)를 설치하세요",
+        "fasterComm": "데이터베이스, Slack 등을 위해 MCP 서버를 연결하세요",
+        "likePhoneCall": "claude mcp add로 새 서버를 등록하세요",
+        "mistakesOk": "커스텀 스킬을 만들어 Claude에게 도구 워크플로우를 가르치세요"
       },
-      "quote": "더 빠르게 소통하고 싶다면 왜 빠른 전화 통화를 하지 않겠어요? 음성이 대부분의 사람에게 더 빠릅니다."
+      "quote": "Claude + CLI 도구 + MCP = 모든 것을 커버하는 개발 워크플로우."
     },
     "tip10": {
-      "title": "여러 세션을 동시에 관리하라",
-      "description": "여러 Claude Code 인스턴스를 실행할 때는 정리가 중요합니다. 처음에는 최대 3-4개 작업에 집중하세요.",
+      "title": "커스텀 스킬과 서브에이전트를 만드세요",
+      "description": "도메인 지식을 위한 재사용 가능한 스킬(SKILL.md 파일)과 전문 작업을 위한 커스텀 서브에이전트를 구축하세요.",
       "practices": {
-        "maxTasks": "시작할 때 최대 3-4개 동시 작업으로 제한",
-        "cascadeMethod": "오른쪽에 새 탭 열기, 왼쪽에서 오른쪽으로 스윕",
-        "consistentDirection": "일관된 방향 유지",
-        "checkOldest": "오래된 작업에서 최신 작업 순으로"
+        "maxTasks": "팀 컨벤션과 코드 표준을 위한 스킬을 만드세요",
+        "cascadeMethod": "코드 리뷰, 디버깅, 데이터 분석을 위한 서브에이전트를 만드세요",
+        "consistentDirection": "플러그인을 통해 팀 전체에 스킬과 에이전트를 공유하세요",
+        "checkOldest": "/agents 명령어로 서브에이전트를 인터랙티브하게 생성하세요"
       },
-      "quote": "새 작업을 시작할 때마다 오른쪽에 새 탭을 엽니다. 그런 다음 가장 오래된 것에서 최신 것으로 왼쪽에서 오른쪽으로 스윕합니다."
+      "quote": "스킬과 서브에이전트는 Claude를 범용 어시스턴트에서 도메인 전문가로 변환합니다."
     },
     "tip11": {
-      "title": "'claude'를 'c'로 단축하라",
-      "description": "Claude Code 때문에 터미널을 더 많이 사용하게 되므로, 빠른 실행을 위해 짧은 별칭을 설정하세요.",
-      "setup": "~/.zshrc 또는 ~/.bashrc에 추가:",
-      "command": "alias c='claude'",
+      "title": "흔한 실패 패턴을 피하세요",
+      "description": "나쁜 결과로 이어지는 안티 패턴을 알고 사전에 피하세요.",
+      "setup": "피해야 할 흔한 실패:",
+      "command": "과도한 컨텍스트, 모호한 지시, 검증 없음, 복잡한 작업에서 플랜 모드 무시",
       "practices": {
-        "shortAlias": "'claude' 대신 'c' 사용",
-        "continueFlag": "c -c로 마지막 대화 계속",
-        "resumeFlag": "c -r로 최근 대화 목록 표시"
+        "shortAlias": "전체 코드베이스를 컨텍스트에 넣지 마세요",
+        "continueFlag": "'더 좋게 만들어줘' 같은 모호한 지시를 하지 마세요",
+        "resumeFlag": "검증을 생략하지 마세요 — 항상 테스트/린트/체크 명령어를 포함하세요"
       },
-      "quote": "제가 가장 많이 사용하는 것은 Claude Code용 c입니다."
+      "quote": "대부분의 실패는 컨텍스트가 너무 적어서가 아니라 너무 많아서 발생합니다."
     },
     "bonusTips": {
-      "title": "보너스 빠른 팁",
+      "title": "빠른 팁",
       "items": {
         "clearInstructions": {
-          "title": "구체적으로",
-          "text": "'파일 수정해줘' 대신 'User.tsx 23번 줄의 useState 초기값을 null로 변경해줘'라고 말하세요"
+          "title": "'claude'를 'c'로 단축",
+          "text": "셸 설정에 'alias c=claude'를 추가하세요. 'c -c'로 이어가기, 'c -r'로 재개."
         },
         "incrementalDev": {
-          "title": "점진적 개발",
-          "text": "한 번에 모든 것을 구현하려 하지 마세요. 작은 단위로 나누세요."
+          "title": "음성 입력 활용",
+          "text": "Space를 길게 눌러 음성으로 입력하세요. Claude는 음성 인식 오류도 잘 처리합니다."
         },
         "testFirst": {
-          "title": "테스트 우선",
-          "text": "기능 구현 전 테스트 케이스를 먼저 작성하면 더 안정적인 코드를 얻습니다."
+          "title": "다중 세션",
+          "text": "병렬 작업을 위해 여러 Claude 인스턴스를 실행하세요. 격리를 위해 git worktree를 사용하세요."
         },
         "codeReview": {
-          "title": "항상 검토",
-          "text": "Claude가 생성한 코드를 검토하고 프로젝트 스타일과 일치하는지 확인하세요."
+          "title": "세션 간 컨텍스트 전달",
+          "text": "새로 시작하기 전에 Claude에게 HANDOFF.md를 작성하게 하세요. 다음 세션에서 로드하세요."
         }
       }
     },
-    "conclusion": "Claude Code는 정말 강력한 도구입니다",
-    "conclusionText": "이 11가지 팁은 Claude Code와 수천 시간을 보낸 실제 개발자들에게서 나왔습니다. 팁 #1(컨텍스트 최소화)부터 시작해서 하나씩 적용해보세요. 생산성 향상은 실제로 일어납니다.",
-    "getStarted": "바로 시작하기",
+    "conclusion": "Claude Code는 정말 혁신적인 도구입니다",
+    "conclusionText": "이 팁들은 실제 개발자들과 공식 모범 사례에서 나왔습니다. 검증 기준(팁 #1)과 컨텍스트 관리(팁 #5)부터 시작하세요. 각 기법을 마스터할수록 생산성 향상이 복리로 쌓입니다.",
+    "getStarted": "시작하기",
     "viewMoreGuides": "더 많은 가이드 보기"
   },
   "mcp": {
-    "title": "MCP 프로토콜 가이드", 
-    "subtitle": "MCP(Model Context Protocol) 서버로 Claude Code의 기능을 확장하는 방법을 배워보세요.",
+    "title": "MCP 프로토콜 가이드",
+    "subtitle": "Model Context Protocol로 Claude Code를 외부 도구 및 서비스에 연결하세요.",
     "heroTitle": "MCP 프로토콜 가이드",
-    "heroSubtitle": "MCP(Model Context Protocol) 서버로 Claude Code의 기능을 확장하는 방법을 배워보세요.",
+    "heroSubtitle": "Model Context Protocol로 Claude Code를 외부 도구 및 서비스에 연결하세요.",
     "copyToClipboard": "클립보드에 복사",
     "whatIsMcp": {
-      "title": "MCP란 무엇인가?",
-      "description": "Model Context Protocol(MCP)은 Claude Code가 외부 서비스 및 도구와 연결할 수 있게 해주는 혁신적인 프로토콜로, 기본 코드 지원을 넘어 기능을 극적으로 확장합니다.",
-      "possibleTitle": "가능한 것들",
+      "title": "MCP란?",
+      "description": "Model Context Protocol(MCP)은 Claude Code를 외부 도구 및 데이터 소스에 연결하는 오픈 프로토콜입니다. AI를 위한 USB 포트라고 생각하세요 — 데이터베이스, API, 브라우저 및 모든 커스텀 도구를 연결하여 Claude의 기능을 확장합니다.",
+      "possibleTitle": "연결할 수 있는 것들",
       "features": {
         "supabase": "Supabase 데이터베이스 작업",
         "github": "GitHub 이슈 및 PR 관리",
@@ -515,44 +707,51 @@
         "postgresql": "PostgreSQL 데이터베이스 관리",
         "notion": "Notion 페이지 및 문서 관리",
         "browser": "웹 브라우저 자동화",
-        "monitoring": "시스템 모니터링 및 알림"
+        "monitoring": "MCP 서버가 있는 모든 도구"
       },
       "example": {
-        "title": "예시",
-        "description": "GitHub과 연결하여 이슈를 관리하거나, Supabase로 데이터베이스 작업을 하거나, Slack으로 팀 커뮤니케이션을 하는 것 - 모두 Claude Code에서 직접 가능합니다."
+        "title": "작동 방식",
+        "description": "'claude mcp add'로 서버를 연결하거나, 프로젝트에 .mcp.json을 설정하세요. Claude가 사용 가능한 도구를 발견하고 요청에 관련될 때 사용합니다."
       },
       "httpTransport": {
-        "title": "HTTP 전송 (권장)",
-        "description": "HTTP는 이제 권장되는 전송 프로토콜입니다. SSE(Server-Sent Events)는 더 이상 권장되지 않습니다."
+        "title": "전송 프로토콜",
+        "description": "HTTP가 권장 전송 프로토콜입니다. SSE(Server-Sent Events)는 지원 중단되었습니다. 로컬 프로세스를 위한 stdio와 실시간 연결을 위한 WebSocket(ws)도 지원합니다."
       },
       "resourceMentions": {
         "title": "MCP 리소스 멘션",
-        "description": "@ 구문을 사용하여 프롬프트에서 MCP 리소스를 직접 참조하세요.",
-        "example1": "테이블 구조 분석",
-        "example2": "최근 이슈 보기"
+        "description": "@ 구문을 사용하여 프롬프트에서 MCP 리소스를 직접 참조하세요. Claude가 리소스를 해석하고 내용을 포함합니다.",
+        "example1": "@supabase://tables/users — 테이블 구조 분석",
+        "example2": "@github://issues?state=open — 최근 이슈 보기"
       },
       "slashCommands": {
         "title": "MCP 프롬프트를 슬래시 명령어로",
-        "description": "MCP 서버 프롬프트가 자동으로 슬래시 명령어로 등록됩니다."
+        "description": "MCP 서버 프롬프트가 자동으로 슬래시 명령어로 등록됩니다. /를 입력하면 연결된 서버의 사용 가능한 명령어를 볼 수 있습니다."
       },
       "mcpSearch": {
-        "title": "MCP 도구 검색 자동 모드",
-        "description": "MCP 도구 설명이 컨텍스트 창의 10%를 초과하면 자동으로 지연 로드되고 MCPSearch 도구를 통해 검색됩니다.",
-        "config": "# 임계값 설정: auto:N (N = 0-100 퍼센트)"
+        "title": "MCP 도구 검색 (자동 모드)",
+        "description": "MCP 도구가 컨텍스트의 10%를 초과하면 자동으로 지연 로드됩니다. Claude가 필요할 때 적절한 도구를 검색하여 상당한 컨텍스트 윈도우 공간을 절약합니다.",
+        "config": "임계값 설정: mcpToolSearch: 'auto:N' (N = 0-100 퍼센트)"
       }
+    },
+    "configuration": {
+      "title": "설정 방법",
+      "cliAdd": "CLI: claude mcp add <name> <command> [args...]",
+      "projectConfig": "프로젝트: 프로젝트 루트에 .mcp.json",
+      "flagConfig": "플래그: --mcp-config path/to/config.json",
+      "subagentConfig": "서브에이전트: 에이전트 frontmatter에 mcpServers (에이전트에 범위 지정)"
     },
     "popularServers": {
       "title": "인기 MCP 서버",
-      "subtitle": "Claude Code 경험을 향상시킬 수 있는 가장 유용하고 인기 있는 MCP 서버들입니다:",
+      "subtitle": "개발 워크플로우에 가장 유용한 MCP 서버들:",
       "essential": {
         "title": "필수 MCP 서버",
         "supabase": {
           "title": "Supabase MCP",
-          "description": "직접적인 데이터베이스 작업, 스키마 관리, 실시간 데이터 쿼리.",
+          "description": "직접적인 데이터베이스 작업, 스키마 관리, Edge Function, 실시간 구독.",
           "features": {
             "queries": "SQL 쿼리 실행",
             "schema": "스키마 관리",
-            "realtime": "실시간 구독"
+            "realtime": "Edge Function & 실시간"
           },
           "examples": {
             "createTable": "테이블 생성 및 스키마 설계",
@@ -561,15 +760,15 @@
         },
         "github": {
           "title": "GitHub MCP",
-          "description": "레포지토리 관리, 이슈, 풀 리퀘스트를 위한 완전한 GitHub 통합.",
+          "description": "리포지토리, 이슈, Pull Request, Actions를 위한 완전한 GitHub 통합.",
           "features": {
-            "repos": "레포지토리 관리",
+            "repos": "리포지토리 관리",
             "issues": "이슈 추적",
-            "prs": "풀 리퀘스트 관리"
+            "prs": "Pull Request 관리"
           },
           "examples": {
             "issueToPr": "이슈에서 PR로 자동 전환",
-            "releaseNotes": "릴리스 노트 자동 생성"
+            "releaseNotes": "커밋에서 릴리스 노트 생성"
           }
         }
       },
@@ -584,8 +783,8 @@
             "notifications": "자동화된 알림"
           },
           "examples": {
-            "deployNotify": "배포 완료 알림 전송",
-            "shareErrors": "오류 발생 시 팀에 공유"
+            "deployNotify": "배포 알림 전송",
+            "shareErrors": "팀에 에러 보고서 공유"
           }
         },
         "postgresql": {
@@ -602,61 +801,65 @@
           }
         }
       },
+      "registry": {
+        "title": "MCP 서버 레지스트리",
+        "description": "공식 레지스트리에서 수백 개의 커뮤니티 MCP 서버를 탐색하세요. 어떤 도구나 서비스든 서버를 찾을 수 있습니다."
+      },
       "proTip": {
         "title": "프로 팁",
-        "description": "개발 워크플로우에 가장 즉각적인 가치를 제공하는 GitHub과 Supabase MCP부터 시작하세요."
+        "description": "즉각적인 가치를 위해 GitHub과 Supabase MCP부터 시작하세요. 많은 서버를 연결할 때는 MCP 도구 검색으로 컨텍스트를 가볍게 유지하세요."
       }
     },
     "practicalUsage": {
       "title": "MCP를 시작할 준비가 되셨나요?",
-      "description": "MCP 서버를 효과적으로 설정하고 사용하는 방법에 대한 포괄적인 튜토리얼과 가이드를 탐색해보세요.",
+      "description": "MCP 서버를 설정하고 강력한 자동화 워크플로우를 구축하기 위한 튜토리얼을 탐색하세요.",
       "startTutorials": "튜토리얼 시작하기",
       "viewMoreServers": "더 많은 서버 보기"
     },
     "tutorials": {
       "title": "MCP 프로토콜 튜토리얼",
       "supabaseTutorial": {
-        "title": "Supabase MCP 완전 정복",
-        "description": "가장 인기 있는 MCP 서버인 Supabase를 Claude Code에 연결하여 백엔드 개발을 완전 자동화해보세요.",
+        "title": "Supabase MCP 마스터하기",
+        "description": "Supabase를 Claude Code에 연결하여 전체 백엔드 개발 워크플로우를 자동화하세요.",
         "quickSetup": {
           "title": "빠른 설정",
-          "command": "claude mcp add supabase -e SUPABASE_ACCESS_TOKEN=your_token npx -y @supabase/mcp-server-supabase@latest",
-          "description": "Supabase 개인 액세스 토큰으로 MCP 서버 연결 (설정 → 액세스 토큰에서 생성)"
+          "command": "claude mcp add supabase -e SUPABASE_ACCESS_TOKEN=your_token -- npx -y @supabase/mcp-server-supabase@latest",
+          "description": "Supabase 개인 액세스 토큰으로 연결 (설정 > 액세스 토큰에서 생성)"
         },
         "practicalExamples": {
           "title": "실전 사용 예시",
           "example1": {
             "command": "블로그 포스트를 저장할 테이블을 만들어줘",
-            "result": "→ 스키마 설계 → 테이블 생성 → RLS 정책 설정"
+            "result": "스키마 설계 > 테이블 생성 > RLS 정책 설정"
           },
           "example2": {
             "command": "사용자 인증 Edge Function을 만들고 배포해줘",
-            "result": "→ 함수 작성 → 테스트 → 실시간 배포"
+            "result": "함수 작성 > 테스트 > 실시간 배포"
           },
           "example3": {
             "command": "현재 데이터베이스 사용량과 비용을 분석해줘",
-            "result": "→ 사용량 조회 → 비용 계산 → 최적화 제안"
+            "result": "사용량 조회 > 비용 계산 > 최적화 제안"
           },
           "example4": {
             "command": "users 테이블에 실시간 구독을 설정해줘",
-            "result": "→ Realtime 활성화 → 구독 설정 → 이벤트 리스너 생성"
+            "result": "Realtime 활성화 > 구독 설정 > 이벤트 리스너 생성"
           }
         },
         "proTip": {
           "title": "프로 팁",
-          "description": "\"데이터베이스 비용을 분석해줘\", \"느린 쿼리를 최적화해줘\" 같은 고급 명령도 사용 가능합니다!"
+          "description": "'데이터베이스 비용 분석해줘', '느린 쿼리 최적화해줘' 같은 고급 명령도 사용 가능합니다!"
         }
       },
       "workflowAutomation": {
         "title": "완전 자동화 워크플로우",
-        "description": "GitHub + Supabase + Slack을 연결하여 \"이슈 접수 → 코드 수정 → 배포 → 팀 알림\"까지 한 번에!",
+        "description": "GitHub + Supabase + Slack을 연결하여 전체 사이클을 자동화: 이슈 > 코드 수정 > 배포 > 팀 알림.",
         "steps": {
           "step1": {
             "title": "GitHub 연결",
             "command": "claude mcp add github"
           },
           "step2": {
-            "title": "Supabase 연결", 
+            "title": "Supabase 연결",
             "command": "claude mcp add supabase"
           },
           "step3": {
@@ -665,14 +868,14 @@
           }
         },
         "magicCommand": {
-          "title": "마법의 한 줄 명령어",
+          "title": "전체 자동화 예시",
           "command": "GitHub 이슈 #42를 분석해서 수정하고, 배포 후 Slack #dev에 알려줘",
           "workflow": [
-            "→ 이슈 내용 분석 및 관련 코드 파일 찾기",
-            "→ 버그 수정 코드 작성 및 테스트", 
-            "→ GitHub에 PR 생성 및 머지",
-            "→ Supabase에 Edge Function 배포",
-            "→ Slack 채널에 완료 알림 전송"
+            "이슈 내용 분석 및 관련 코드 파일 찾기",
+            "버그 수정 코드 작성 및 테스트",
+            "GitHub에 PR 생성 및 머지",
+            "Supabase에 Edge Function 배포",
+            "Slack 채널에 완료 알림 전송"
           ]
         },
         "additionalExamples": {
@@ -692,109 +895,144 @@
         },
         "realWorldExample": {
           "title": "실제 사례",
-          "description": "스타트업에서 이 워크플로우로 버그 수정 시간을 3시간에서 15분으로 단축했습니다!"
+          "description": "팀들이 MCP 기반 자동화 워크플로우를 사용하여 버그 수정 시간을 수 시간에서 수 분으로 단축했다고 보고합니다."
         }
       }
     }
   },
   "skills": {
-    "title": "에이전트 스킬",
-    "subtitle": "Claude가 자동으로 적용하는 마크다운 기반 커스텀 스킬로 Claude의 기능을 확장하세요",
+    "title": "스킬",
+    "subtitle": "Claude가 자동으로 적용하는 SKILL.md 파일로 정의된 도메인 전문 지식",
     "whatAreSkills": {
-      "title": "에이전트 스킬이란?",
-      "description": "스킬은 Claude에게 특정 작업 방법을 가르치는 마크다운 파일입니다. 스킬은 모델 호출 방식입니다: Claude가 요청에 따라 어떤 스킬을 사용할지 결정합니다. 스킬의 설명과 일치하는 질문을 하면 Claude가 자동으로 해당 스킬을 적용합니다.",
-      "automatic": "자동 활성화",
-      "automaticDesc": "Claude가 스킬이 관련 있을 때 감지하여 자동으로 적용합니다",
-      "markdown": "마크다운 기반",
-      "markdownDesc": "YAML 프론트매터와 지시사항이 포함된 간단한 SKILL.md 파일",
+      "title": "스킬이란?",
+      "description": "스킬은 Claude에게 특정 작업 방법을 가르치는 YAML frontmatter가 포함된 SKILL.md 파일입니다. 스킬의 설명과 일치하는 질문을 하면 Claude가 자동으로 해당 스킬의 지시, 도구, 컨텍스트를 적용합니다.",
+      "automatic": "자동 호출",
+      "automaticDesc": "Claude가 스킬이 관련 있을 때 감지하여 설명을 기반으로 자동 적용합니다",
+      "markdown": "SKILL.md 형식",
+      "markdownDesc": "메타데이터를 위한 YAML frontmatter + 지시와 컨텍스트를 위한 마크다운 본문",
       "hotReload": "핫 리로드",
-      "hotReloadDesc": "스킬은 생성되거나 수정될 때 자동으로 로드됩니다"
+      "hotReloadDesc": "스킬이 수정되면 자동으로 리로드 — 세션 재시작 필요 없음"
+    },
+    "bundledSkills": {
+      "title": "내장 스킬",
+      "description": "Claude Code에 내장된 스킬들:",
+      "batch": "/batch — 서브에이전트를 사용하여 여러 파일이나 작업을 병렬로 처리",
+      "claudeApi": "/claude-api — 모범 사례로 Anthropic API 작업",
+      "debug": "/debug — 체계적인 디버깅 워크플로우",
+      "loop": "/loop — 검증이 포함된 반복적 개발 루프",
+      "simplify": "/simplify — 동작을 유지하면서 복잡한 코드를 단순화"
     },
     "locations": {
       "title": "스킬이 위치하는 곳",
       "location": "위치",
       "path": "경로",
       "appliesTo": "적용 대상",
-      "priority": "우선순위: Enterprise > Personal > Project > Plugin (이름 충돌 시 높은 것이 우선)"
+      "priority": "우선순위: Enterprise > Personal > Project > Plugin (이름 충돌 시 높은 것이 우선)",
+      "enterprise": "Enterprise: 조직 관리자가 관리",
+      "personal": "Personal: ~/.claude/skills/ — 모든 프로젝트에 적용",
+      "project": "Project: .claude/skills/ — 프로젝트에 적용 (팀과 공유)",
+      "plugin": "Plugin: 플러그인 패키지에 번들"
     },
     "structure": {
       "title": "SKILL.md 구조",
       "simpleExample": "간단한 스킬",
-      "advancedExample": "고급 스킬"
+      "advancedExample": "전체 Frontmatter가 포함된 고급 스킬"
     },
     "metadata": {
-      "title": "사용 가능한 메타데이터 필드"
+      "title": "Frontmatter 필드",
+      "fields": {
+        "name": "name — 스킬의 표시 이름",
+        "description": "description — 스킬이 하는 일 (자동 매칭에 사용)",
+        "argumentHint": "argument-hint — 예상 인자에 대한 힌트",
+        "disableModelInvocation": "disable-model-invocation — Claude의 자동 호출 방지 (수동 /skill-name만 가능)",
+        "userInvocable": "user-invocable — 사용자가 /skill-name으로 호출 가능 여부",
+        "allowedTools": "allowed-tools — 스킬이 사용할 수 있는 도구 목록",
+        "model": "model — 이 스킬을 위한 모델 오버라이드",
+        "context": "context — 별도 컨텍스트로 서브에이전트에서 실행하려면 'fork'",
+        "agent": "agent — 스킬을 실행할 서브에이전트 참조",
+        "hooks": "hooks — 이 스킬의 라이프사이클에 범위가 지정된 훅 정의"
+      }
+    },
+    "substitutions": {
+      "title": "문자열 치환",
+      "description": "스킬 지시에서 동적 값을 사용하세요:",
+      "arguments": "$ARGUMENTS — 스킬에 전달된 전체 인자 문자열",
+      "argumentsN": "$ARGUMENTS[N] — N번째 인자 (0부터 시작)",
+      "positional": "$N — $ARGUMENTS[N]의 축약형",
+      "sessionId": "${CLAUDE_SESSION_ID} — 현재 세션 식별자",
+      "skillDir": "${CLAUDE_SKILL_DIR} — SKILL.md 파일이 있는 디렉토리"
+    },
+    "dynamicContext": {
+      "title": "동적 컨텍스트 주입",
+      "description": "!`command` 구문을 사용하여 로드 시 명령어 출력을 스킬 지시에 주입하세요. 예: !`cat package.json`은 package.json 내용을 삽입합니다."
+    },
+    "permissions": {
+      "title": "권한 제어",
+      "description": "스킬 호출 권한을 제어하세요: 특정 스킬은 Skill(name), 인자가 있는 스킬은 Skill(name *)."
     },
     "hooks": {
       "title": "훅이 있는 스킬",
-      "description": "스킬은 스킬의 라이프사이클 동안 실행되는 훅을 정의할 수 있습니다. 훅은 스킬에 범위가 지정되며 스킬이 완료되면 자동으로 정리됩니다.",
+      "description": "스킬은 스킬의 라이프사이클 동안 실행되는 훅을 정의할 수 있습니다. 훅은 스킬에 범위가 지정되며 완료되면 자동으로 정리됩니다.",
       "example": "예시: 보안 검사 훅"
     },
     "vsOthers": {
-      "title": "스킬 vs 다른 옵션들"
+      "title": "스킬 vs 다른 옵션"
     },
     "multiFile": {
       "title": "멀티 파일 스킬 (점진적 공개)",
-      "description": "복잡한 스킬의 경우 점진적 공개를 사용하세요: SKILL.md에 필수 정보를 넣고 상세 문서는 필요할 때만 Claude가 읽는 별도 파일에 넣으세요.",
-      "tip": "SKILL.md는 500줄 미만으로 유지하세요. 스크립트는 컨텍스트에 로드하지 않고 실행할 수 있습니다."
+      "description": "복잡한 스킬의 경우 SKILL.md에 필수 정보를 넣고 상세 문서는 별도 파일에 넣으세요. Claude가 필요할 때만 지원 파일을 읽어 컨텍스트를 가볍게 유지합니다.",
+      "tip": "SKILL.md는 500줄 미만으로 유지하세요. 스킬 디렉토리의 스크립트는 컨텍스트에 로드하지 않고 실행할 수 있습니다."
     },
     "testing": {
       "title": "스킬 테스트하기",
       "viewSkills": "사용 가능한 스킬 보기",
       "testSkill": "스킬 테스트하기",
-      "testSkillDesc": "스킬 설명과 일치하는 질문을 해보세요:"
+      "testSkillDesc": "스킬 설명과 일치하는 질문을 하거나, /skill-name으로 직접 호출하세요:"
     },
     "cta": {
-      "title": "스킬 만들기 시작하기",
-      "description": "팀의 표준과 워크플로우로 Claude의 기능을 확장하는 첫 스킬을 만들어보세요.",
+      "title": "스킬 만들기 시작",
+      "description": "팀의 표준, 워크플로우, 도메인 지식을 인코딩하는 첫 스킬을 만들어보세요.",
       "button": "전체 문서 읽기"
     }
   },
   "subagents": {
     "title": "서브에이전트",
-    "subtitle": "특화된 AI 작업을 자동화하는 서브에이전트 시스템",
+    "subtitle": "작업별 워크플로우를 위한 독립 컨텍스트를 가진 특화된 AI 어시스턴트",
     "whatAreSubagents": {
       "title": "서브에이전트란?",
-      "description": "서브에이전트는 Claude Code 내에서 특정 유형의 작업을 처리하는 특화된 AI 어시스턴트입니다. 각 서브에이전트는 자체 컨텍스트 윈도우, 커스텀 시스템 프롬프트, 특정 도구 접근 권한을 가집니다.",
-      "specificPurpose": "특정 목적",
-      "specificPurposeDesc": "각 서브에이전트는 정의된 전문 분야가 있습니다",
-      "ownContext": "독립 컨텍스트 윈도우",
-      "ownContextDesc": "메인 대화와 분리된 컨텍스트",
-      "configurableTools": "구성 가능한 도구",
-      "configurableToolsDesc": "서브에이전트별 특정 도구 접근",
-      "customPrompt": "커스텀 시스템 프롬프트",
-      "customPromptDesc": "각 에이전트에 맞춤화된 지시사항",
-      "newFeatures": {
-        "title": "새로운 서브에이전트 기능",
-        "async": {
-          "title": "비동기 서브에이전트",
-          "desc": "Ctrl+B로 서브에이전트를 백그라운드에서 비동기 실행"
-        },
-        "fork": {
-          "title": "컨텍스트 포크",
-          "desc": "스킬 frontmatter에서 context: fork를 사용하여 격리된 실행"
-        },
-        "hooks": {
-          "title": "에이전트 훅",
-          "desc": "에이전트 frontmatter에서 PreToolUse, PostToolUse, Stop 훅 정의"
-        },
-        "disable": {
-          "title": "에이전트 비활성화",
-          "desc": "disallowedTools에서 Task(AgentName) 구문으로 특정 에이전트 비활성화"
-        }
-      }
+      "description": "서브에이전트는 자체 컨텍스트 윈도우, 도구 접근 권한, 특화된 지시를 가진 독립적인 Claude 인스턴스입니다. 코드를 탐색하고, 계획을 실행하고, 백그라운드에서 실행하고, 메인 세션의 컨텍스트를 소비하지 않고 요약된 결과를 반환할 수 있습니다.",
+      "independent": "독립 컨텍스트",
+      "independentDesc": "각 서브에이전트가 자체 컨텍스트 윈도우를 가져 메인 세션의 토큰을 소비하지 않습니다",
+      "specialized": "특화된 작업",
+      "specializedDesc": "특정 워크플로우에 맞게 모델, 도구, 권한, 지시를 설정하세요",
+      "parallel": "백그라운드 실행",
+      "parallelDesc": "Ctrl+B로 서브에이전트를 백그라운드에서 실행하고 준비되면 결과를 확인하세요"
     },
     "builtIn": {
       "title": "내장 서브에이전트",
       "explore": {
-        "desc": "코드베이스 검색 및 분석을 위한 빠른 읽기 전용 에이전트"
+        "title": "Explore",
+        "description": "Haiku 모델, 읽기 전용 도구 사용. 빠르고 저렴한 탐색 및 코드 검색."
       },
       "plan": {
-        "desc": "계획 모드에서 컨텍스트를 수집하는 리서치 에이전트"
+        "title": "Plan",
+        "description": "현재 모델 상속, 읽기 전용 도구. 코드를 분석하고 변경 없이 계획을 작성."
       },
       "general": {
-        "desc": "복잡한 다단계 작업을 위한 범용 에이전트"
+        "title": "범용",
+        "description": "모든 도구에 접근 가능. 코드를 읽고 쓸 수 있는 서브에이전트가 필요할 때 사용."
+      },
+      "bash": {
+        "title": "Bash",
+        "description": "셸 명령어 실행 및 시스템 작업에 특화."
       }
+    },
+    "creation": {
+      "title": "커스텀 서브에이전트 생성",
+      "interactive": "/agents 명령어로 인터랙티브하게 서브에이전트를 생성하세요",
+      "markdown": "또는 .claude/agents/ (프로젝트) 또는 ~/.claude/agents/ (사용자)에 마크다운 파일을 직접 생성",
+      "cliFlag": "--agents CLI 플래그로 추가 에이전트 로드 (세션 범위)",
+      "pluginAgents": "팀 배포를 위해 플러그인에 에이전트를 번들"
     },
     "frontmatter": {
       "title": "에이전트 Frontmatter 필드",
@@ -803,99 +1041,94 @@
         "description": "설명",
         "example": "예시"
       },
-      "model": "에이전트가 사용할 AI 모델을 지정합니다",
-      "skills": "에이전트에 스킬 파일을 연결합니다",
-      "hooks": "에이전트별 훅을 정의합니다",
-      "permissionMode": "권한 동작을 설정합니다 (default, bypassPermissions 등)",
-      "apiKeyEnvVar": "API 키에 대한 환경 변수를 지정합니다",
-      "enableUndo": "실행 취소 기능을 활성화/비활성화합니다",
-      "tools": "허용/차단할 도구를 지정합니다"
+      "name": "name — 서브에이전트의 표시 이름",
+      "description": "description — 에이전트가 하는 일 (자동 선택에 사용)",
+      "model": "model — AI 모델: sonnet, opus, haiku, inherit, 또는 전체 모델 ID",
+      "tools": "tools — 허용된 도구 목록. 중첩 에이전트는 Agent(worker, researcher) 구문 사용",
+      "disallowedTools": "disallowedTools — 차단할 도구",
+      "permissionMode": "permissionMode — default, acceptEdits, dontAsk, bypassPermissions, plan",
+      "maxTurns": "maxTurns — 중지 전 최대 대화 턴",
+      "skills": "skills — 서브에이전트에 특정 스킬 사전 로드",
+      "mcpServers": "mcpServers — 이 에이전트에 범위가 지정된 MCP 서버 (인라인 설정 또는 참조)",
+      "hooks": "hooks — 에이전트별 훅",
+      "memory": "memory — 영구 메모리: user, project, 또는 local 범위",
+      "background": "background — 기본적으로 백그라운드에서 실행",
+      "effort": "effort — 사고 강도 수준",
+      "isolation": "isolation — git worktree 격리를 위해 'worktree'"
     },
-    "quickStart": {
-      "title": "빠른 시작",
-      "step1": "1. 서브에이전트 인터페이스 열기",
-      "step2": "2. 새 에이전트 생성",
-      "step2Desc": "\"새 에이전트 생성\"을 선택하고 프로젝트 레벨 또는 사용자 레벨을 선택하세요",
-      "step3": "3. 에이전트 정의",
-      "step3a": "에이전트의 목적을 설명하세요",
-      "step3b": "접근 권한을 부여할 도구를 선택하세요",
-      "step3c": "시스템 프롬프트를 커스터마이즈하세요",
-      "step4": "4. 에이전트 사용"
+    "mcpScoping": {
+      "title": "서브에이전트에 범위가 지정된 MCP 서버",
+      "description": "에이전트 frontmatter에서 MCP 서버를 정의하세요. 해당 서브에이전트에서만 사용 가능하여 도구 접근을 제어하고 컨텍스트를 가볍게 유지합니다."
+    },
+    "execution": {
+      "title": "서브에이전트 실행",
+      "mention": "@agent-name으로 서브에이전트를 인라인 호출",
+      "flag": "--agent 플래그로 전체 세션에 서브에이전트 사용",
+      "background": "Ctrl+B로 서브에이전트를 백그라운드에서 실행",
+      "resume": "SendMessage로 서브에이전트를 재개하거나 계속",
+      "autoCompaction": "서브에이전트는 장시간 작업을 위한 자동 컴팩션을 지원"
     },
     "examples": {
       "title": "서브에이전트 예시",
       "codeReviewer": {
         "title": "코드 리뷰어",
-        "desc": "품질, 보안, 모범 사례를 위한 코드 리뷰"
+        "description": "코드 변경사항을 리뷰하고, 버그, 스타일 이슈, 보안 취약점을 확인합니다. 읽기 전용 도구와 plan 권한 모드를 사용합니다."
       },
       "debugger": {
         "title": "디버거",
-        "desc": "오류 분석 및 수정 구현"
+        "description": "bash, 파일 읽기, 테스트 실행에 접근하여 체계적으로 디버깅합니다. 구조화된 디버그 워크플로우를 따릅니다."
       },
-      "tester": {
-        "title": "테스트 자동화",
-        "desc": "테스트 자동 생성 및 실행"
+      "dataScientist": {
+        "title": "데이터 사이언티스트",
+        "description": "데이터를 분석하고, 시각화를 생성하고, 통계 테스트를 실행합니다. 데이터베이스 접근을 위한 범위 지정 MCP 서버 포함."
+      },
+      "dbReader": {
+        "title": "훅이 있는 DB Reader",
+        "description": "감사 목적으로 모든 쿼리를 로깅하는 훅이 포함된 읽기 전용 데이터베이스 에이전트."
       }
-    },
-    "bestPractices": {
-      "title": "모범 사례",
-      "focused": {
-        "title": "집중된 에이전트 설계",
-        "desc": "단일하고 명확한 책임을 가진 서브에이전트 생성"
-      },
-      "detailed": {
-        "title": "상세한 프롬프트 작성",
-        "desc": "구체적인 지시사항과 예시 포함"
-      },
-      "limitTools": {
-        "title": "도구 접근 제한",
-        "desc": "보안 강화를 위해 필요한 도구만 부여"
-      },
-      "versionControl": {
-        "title": "버전 관리",
-        "desc": "프로젝트 서브에이전트를 버전 관리에 포함"
-      }
-    },
-    "cta": {
-      "title": "첫 서브에이전트를 만들 준비가 되셨나요?",
-      "description": "워크플로우에 맞춤화된 커스텀 AI 어시스턴트로 특화된 작업을 자동화하세요"
     }
   },
   "plugins": {
     "title": "플러그인",
-    "subtitle": "커스텀 명령어, 에이전트, 훅스, MCP 서버로 Claude Code를 확장하세요",
+    "subtitle": "스킬, 에이전트, 훅, MCP 서버를 재사용 가능한 플러그인 번들로 패키징 및 배포",
     "whatArePlugins": {
       "title": "플러그인이란?",
-      "description": "플러그인을 사용하면 팀 전체 또는 커뮤니티와 공유할 수 있는 커스텀 기능으로 Claude Code를 확장할 수 있습니다. 재사용 가능한 명령어, 전문 에이전트, 이벤트 훅, MCP 서버 통합을 만들어보세요.",
-      "customCommands": "커스텀 명령어",
-      "customCommandsDesc": "일반적인 워크플로우를 위한 재사용 가능한 슬래시 명령어 생성",
-      "teamSharing": "팀 공유",
-      "teamSharingDesc": "조직 전체에 플러그인 공유",
+      "description": "플러그인은 스킬, 에이전트, 훅, MCP 설정, 세팅을 배포 가능한 단위로 번들링하는 독립적인 패키지입니다. 팀 전체에 공유하거나 커뮤니티 마켓플레이스에 게시하세요.",
+      "customCommands": "네임스페이스 스킬",
+      "customCommandsDesc": "스킬이 충돌을 피하기 위해 /plugin-name:skill-name으로 네임스페이스됩니다",
+      "teamSharing": "팀 배포",
+      "teamSharingDesc": "Git 리포, 레지스트리, 또는 공식 마켓플레이스를 통해 플러그인을 공유",
       "eventHooks": "이벤트 훅",
-      "eventHooksDesc": "Claude Code 라이프사이클의 이벤트에 응답",
-      "mcpIntegration": "MCP 통합",
-      "mcpIntegrationDesc": "플러그인에 MCP 서버를 번들로 제공"
+      "eventHooksDesc": "Claude Code 라이프사이클 이벤트에 응답하는 훅을 번들",
+      "mcpIntegration": "MCP & LSP 서버",
+      "mcpIntegrationDesc": "MCP 서버 설정과 LSP 서버 지원을 포함"
     },
     "pluginStructure": {
       "title": "플러그인 구조",
-      "step1": "plugin.json - 플러그인 매니페스트",
-      "step1Desc": "플러그인 이름, 버전, 설명, 제공하는 기능을 정의합니다",
-      "step2": "commands/ - 재사용 가능한 명령어",
-      "step2Desc": "커스텀 슬래시 명령어를 정의하는 마크다운 파일 생성",
-      "step3": "agents/ - 전문 에이전트",
-      "step3Desc": "특정 전문 지식을 가진 사전 구성된 서브에이전트를 번들로 제공",
-      "step4": "hooks/ - 이벤트 핸들러",
-      "step4Desc": "Claude Code 이벤트에 응답하는 JavaScript 파일"
+      "step1": ".claude-plugin/plugin.json — 플러그인 매니페스트",
+      "step1Desc": "이름, 버전, 설명, 작성자, 홈페이지, 리포지토리, 라이선스를 정의",
+      "step2": "skills/ — 스킬 파일",
+      "step2Desc": "플러그인 이름 아래 네임스페이스되는 SKILL.md 파일",
+      "step3": "agents/ — 서브에이전트 정의",
+      "step3Desc": "특화된 서브에이전트를 정의하는 마크다운 파일",
+      "step4": "hooks/ — 이벤트 핸들러",
+      "step4Desc": "Claude Code 이벤트에 응답하는 훅 스크립트",
+      "step5": ".mcp.json — MCP 서버 설정",
+      "step5Desc": "플러그인에 번들된 MCP 서버",
+      "step6": ".lsp.json — LSP 서버 설정",
+      "step6Desc": "고급 언어 기능을 위한 Language Server Protocol 서버",
+      "step7": "settings.json — 기본 설정",
+      "step7Desc": "플러그인의 기본 에이전트를 포함한 기본 설정"
     },
     "creatingPlugin": {
-      "title": "첫 플러그인 만들기",
+      "title": "플러그인 만들기",
       "customCommand": {
-        "title": "커스텀 명령어",
-        "desc": "팀을 위한 /deploy 명령어 만들기"
+        "title": "플러그인 매니페스트",
+        "desc": "이름, 설명, 버전, 작성자, 홈페이지, 리포지토리, 라이선스가 포함된 .claude-plugin/plugin.json 생성"
       },
       "manifest": {
-        "title": "플러그인 매니페스트",
-        "desc": "plugin.json에서 플러그인 메타데이터 정의"
+        "title": "로컬 테스트",
+        "desc": "--plugin-dir을 사용하여 개발 중 플러그인을 로드. /reload-plugins로 핫 리로드."
       }
     },
     "distribution": {
@@ -906,11 +1139,11 @@
       },
       "team": {
         "title": "팀 레지스트리",
-        "desc": "조직 전체에 공유"
+        "desc": "Git 또는 내부 레지스트리를 통해 조직 전체에 공유"
       },
       "marketplace": {
-        "title": "플러그인 마켓플레이스",
-        "desc": "커뮤니티 마켓플레이스에 게시"
+        "title": "공식 마켓플레이스",
+        "desc": "claude.ai/settings/plugins/submit에서 공식 마켓플레이스에 제출"
       },
       "cli": {
         "title": "플러그인 마켓플레이스 CLI",
@@ -922,15 +1155,19 @@
     },
     "lspSupport": {
       "title": "LSP 서버 지원",
-      "description": "플러그인은 언어 서버 프로토콜(LSP) 서버를 번들로 포함하여 고급 언어 기능과 IDE 통합을 제공할 수 있습니다."
+      "description": "플러그인은 .lsp.json을 통해 Language Server Protocol(LSP) 서버를 번들할 수 있습니다. 고급 언어 기능, 진단, IDE 통합 기능을 제공합니다."
+    },
+    "converting": {
+      "title": "독립 설정을 플러그인으로 변환",
+      "description": "프로젝트에 이미 스킬, 에이전트, 훅이 있나요? 쉬운 배포를 위해 플러그인으로 패키징하세요. 파일을 플러그인 구조로 이동하고 매니페스트를 생성하세요."
     },
     "useCases": {
       "title": "플러그인 활용 사례",
       "teamWorkflows": {
         "title": "팀 워크플로우",
         "item1": "표준화된 배포 절차",
-        "item2": "코드 리뷰 템플릿",
-        "item3": "문서 자동 생성"
+        "item2": "코드 리뷰 템플릿과 에이전트",
+        "item3": "문서 생성 파이프라인"
       },
       "domainExperts": {
         "title": "도메인 전문가",
@@ -947,11 +1184,11 @@
       },
       "versioning": {
         "title": "시맨틱 버저닝 사용",
-        "desc": "더 나은 호환성 관리를 위해 시맨틱 버저닝(major.minor.patch)을 따르세요"
+        "desc": "호환성 관리를 위해 시맨틱 버저닝(major.minor.patch)을 따르세요"
       },
       "testing": {
-        "title": "플러그인 테스트",
-        "desc": "팀과 공유하기 전에 다양한 시나리오에서 플러그인을 검증하세요"
+        "title": "--plugin-dir로 테스트",
+        "desc": "배포 전에 --plugin-dir 플래그를 사용하여 플러그인을 로컬에서 로드하고 테스트하세요"
       },
       "security": {
         "title": "보안 우선",
@@ -960,74 +1197,167 @@
     },
     "cta": {
       "title": "첫 플러그인을 만들 준비가 되셨나요?",
-      "description": "커스텀 기능을 구축하고 팀이나 전체 커뮤니티와 공유해보세요"
+      "description": "스킬, 에이전트, 훅, MCP 설정을 배포 가능한 플러그인으로 패키징하세요."
     }
   },
   "hooks": {
     "title": "훅스",
-    "subtitle": "라이프사이클 이벤트에 응답하여 Claude Code 동작을 커스터마이즈하세요",
+    "subtitle": "Claude Code의 전체 라이프사이클을 위한 이벤트 기반 자동화",
     "whatAreHooks": {
-      "title": "훅스란 무엇인가요?",
-      "description": "훅스는 Claude Code의 특정 이벤트에 응답하여 실행되는 JavaScript 함수입니다. 동작을 커스터마이즈하고, 정책을 적용하며, 외부 도구를 통합하고, 워크플로우를 자동화할 수 있습니다.",
+      "title": "훅스란?",
+      "description": "훅은 Claude Code의 특정 이벤트에 응답하여 실행되는 스크립트 또는 프롬프트입니다. 네 가지 유형을 지원합니다: command(셸 스크립트), HTTP(웹훅 호출), prompt(LLM 기반 결정), agent(서브에이전트 검증). 정책 적용, 워크플로우 자동화, 외부 도구 통합에 사용하세요.",
       "eventDriven": "이벤트 기반",
-      "eventDrivenDesc": "특정 라이프사이클 이벤트에 자동으로 응답",
-      "customizable": "완전히 커스터마이즈 가능",
-      "customizableDesc": "JavaScript로 모든 동작을 커스터마이즈",
+      "eventDrivenDesc": "20개 이상의 라이프사이클 이벤트에 자동 응답",
+      "customizable": "네 가지 훅 유형",
+      "customizableDesc": "각기 다른 필요에 맞는 Command, HTTP, Prompt, Agent 훅",
       "policiesEnforcement": "정책 적용",
-      "policiesEnforcementDesc": "팀 표준과 보안 정책 적용",
+      "policiesEnforcementDesc": "팀 표준, 보안 정책, 코드 품질 규칙 적용",
       "integrations": "외부 통합",
-      "integrationsDesc": "외부 서비스 및 도구와 연결"
+      "integrationsDesc": "웹훅 호출, 스크립트 실행, 외부 서비스 연결"
+    },
+    "hookTypes": {
+      "title": "훅 유형",
+      "command": {
+        "title": "Command 훅",
+        "description": "셸 명령어를 실행합니다. 종료 코드 0 = 성공, 2 = 차단 에러, 기타 = 비차단 경고."
+      },
+      "http": {
+        "title": "HTTP 훅",
+        "description": "웹훅이나 API에 HTTP 요청을 전송합니다. 인증을 위해 headers와 allowedEnvVars를 설정하세요."
+      },
+      "prompt": {
+        "title": "Prompt 훅 (LLM 기반)",
+        "description": "원하는 것을 자연어로 설명하세요. LLM이 조건을 평가하고 결정을 반환합니다. 코드로 작성하기 어려운 복잡한 로직에 적합합니다."
+      },
+      "agent": {
+        "title": "Agent 훅",
+        "description": "검증이나 분석을 위해 서브에이전트를 생성합니다. 서브에이전트가 독립적으로 실행되고 평가를 반환합니다."
+      }
     },
     "availableHooks": {
-      "title": "사용 가능한 훅 이벤트",
-      "preToolUse": {
-        "desc": "Claude가 도구를 사용하기 전에 실행됩니다. 도구 사용을 검증, 수정 또는 차단할 수 있습니다.",
-        "useCase": "활용 사례: 보안 검증, 파일 보호"
-      },
-      "postToolUse": {
-        "desc": "도구가 완료된 후 실행됩니다. 결과를 처리하거나, 알림을 트리거하거나, 작업을 로깅할 수 있습니다.",
-        "useCase": "활용 사례: 자동 포맷팅, 로깅, 메트릭"
-      },
-      "userPromptSubmit": {
-        "desc": "사용자가 프롬프트를 제출할 때 실행됩니다. 프롬프트를 수정하거나, 컨텍스트를 추가하거나, 워크플로우를 트리거할 수 있습니다.",
-        "useCase": "활용 사례: 컨텍스트 주입, 프롬프트 향상"
-      },
-      "notification": {
-        "desc": "Claude가 알림을 보낼 때 실행됩니다. 알림 동작을 커스터마이즈할 수 있습니다.",
-        "useCase": "활용 사례: 커스텀 경고, 팀 알림"
-      },
+      "title": "사용 가능한 훅 이벤트 (20개 이상)",
       "sessionStart": {
-        "desc": "Claude 세션이 시작될 때 실행됩니다. 리소스를 초기화하거나 컨텍스트를 로드할 수 있습니다.",
-        "useCase": "활용 사례: 세션 설정, 환경 확인"
+        "desc": "Claude 세션이 시작될 때 실행됩니다. 리소스를 초기화하고, 환경을 확인하고, 컨텍스트를 로드합니다.",
+        "useCase": "활용 사례: 환경 설정, 의존성 확인"
       },
       "sessionEnd": {
-        "desc": "세션이 종료될 때 실행됩니다. 리소스를 정리하거나 세션 데이터를 저장할 수 있습니다.",
-        "useCase": "활용 사례: 정리, 분석, 세션 보고서"
+        "desc": "세션이 종료될 때 실행됩니다. 리소스를 정리하고, 상태를 저장하고, 보고서를 생성합니다.",
+        "useCase": "활용 사례: 정리, 분석, 세션 요약"
       },
-      "setup": {
-        "desc": "--init, --init-only, --maintenance 플래그를 통해 트리거됩니다. 리포지토리 설정과 유지 보수 작업에 적합합니다.",
-        "useCase": "활용 사례: 환경 설정, 의존성 체크, 프로젝트 초기화"
+      "instructionsLoaded": {
+        "desc": "CLAUDE.md와 지시사항이 로드될 때 실행됩니다. 지시를 수정하거나 보강합니다.",
+        "useCase": "활용 사례: 동적 지시 주입"
       },
-      "subagentStop": {
-        "desc": "서브에이전트가 작업을 완료했을 때 실행됩니다. 결과를 처리하거나 후속 작업을 트리거할 수 있습니다.",
-        "useCase": "활용 사례: 결과 처리, 작업 체이닝, 알림"
+      "userPromptSubmit": {
+        "desc": "사용자가 프롬프트를 제출할 때 실행됩니다. 프롬프트를 수정, 보강, 또는 가로챕니다.",
+        "useCase": "활용 사례: 컨텍스트 주입, 프롬프트 향상"
       },
-      "subagentStart": {
-        "desc": "서브에이전트가 시작할 때 실행됩니다. 서브에이전트 시작을 모니터링하거나 컨텍스트를 주입할 수 있습니다.",
-        "useCase": "활용 사례: 서브에이전트 모니터링, 로깅, 컨텍스트 주입"
+      "preToolUse": {
+        "desc": "Claude가 도구를 사용하기 전에 실행됩니다. 도구 사용을 검증, 수정, 또는 차단합니다.",
+        "useCase": "활용 사례: 보안 검증, 파일 보호"
       },
       "permissionRequest": {
-        "desc": "권한이 요청될 때 실행됩니다. 자동 승인/거부하거나 권한 요청을 로깅할 수 있습니다.",
-        "useCase": "활용 사례: 자동 승인, 권한 로깅, 보안 감사"
+        "desc": "권한이 요청될 때 실행됩니다. 자동 승인, 거부, 또는 요청을 로깅합니다.",
+        "useCase": "활용 사례: 자동 승인 정책, 감사 로깅"
+      },
+      "postToolUse": {
+        "desc": "도구가 성공적으로 완료된 후 실행됩니다. 결과를 처리하고 알림을 트리거합니다.",
+        "useCase": "활용 사례: 자동 포맷팅, 로깅, 메트릭"
+      },
+      "postToolUseFailure": {
+        "desc": "도구가 실패한 후 실행됩니다. 에러를 처리하거나 재시도하거나 알림을 보냅니다.",
+        "useCase": "활용 사례: 에러 복구, 실패 알림"
+      },
+      "subagentStart": {
+        "desc": "서브에이전트가 시작하려 할 때 실행됩니다. 모니터링, 컨텍스트 주입, 또는 차단.",
+        "useCase": "활용 사례: 서브에이전트 모니터링, 컨텍스트 주입"
+      },
+      "subagentStop": {
+        "desc": "서브에이전트가 완료될 때 실행됩니다. 결과를 처리하고, 작업을 연결하고, 알림을 보냅니다.",
+        "useCase": "활용 사례: 결과 처리, 작업 체이닝"
+      },
+      "notification": {
+        "desc": "Claude가 알림을 보낼 때 실행됩니다. 알림 동작을 커스터마이즈합니다.",
+        "useCase": "활용 사례: 커스텀 알림, 팀 알림"
+      },
+      "stop": {
+        "desc": "Claude가 생성을 멈출 때 실행됩니다. 최종 검사와 검증.",
+        "useCase": "활용 사례: 최종 검증, 품질 검사"
+      },
+      "stopFailure": {
+        "desc": "Claude가 깔끔하게 멈추지 못했을 때 실행됩니다. 에러 복구.",
+        "useCase": "활용 사례: 우아한 에러 처리"
       },
       "preCompact": {
-        "desc": "컨텍스트 압축 전에 실행됩니다. 컨텍스트가 압축되기 전에 중요한 정보를 저장할 수 있습니다.",
+        "desc": "컨텍스트 압축 전에 실행됩니다. 압축 전에 중요한 정보를 저장합니다.",
         "useCase": "활용 사례: 컨텍스트 보존, 중요 데이터 백업"
+      },
+      "postCompact": {
+        "desc": "컨텍스트 압축 후에 실행됩니다. 중요한 컨텍스트를 복원하거나 주입합니다.",
+        "useCase": "활용 사례: 컨텍스트 복원, 재주입"
+      },
+      "teammateIdle": {
+        "desc": "에이전트 팀에서 팀원이 유휴 상태가 될 때 실행됩니다.",
+        "useCase": "활용 사례: 작업 할당, 로드 밸런싱"
+      },
+      "taskCompleted": {
+        "desc": "에이전트 팀에서 작업이 완료될 때 실행됩니다.",
+        "useCase": "활용 사례: 진행 추적, 알림"
+      },
+      "configChange": {
+        "desc": "설정이 변경될 때 실행됩니다. 설정 업데이트에 반응합니다.",
+        "useCase": "활용 사례: 동적 재설정"
+      },
+      "worktreeCreate": {
+        "desc": "git worktree가 생성될 때 실행됩니다.",
+        "useCase": "활용 사례: Worktree 설정, 환경 초기화"
+      },
+      "worktreeRemove": {
+        "desc": "git worktree가 제거될 때 실행됩니다.",
+        "useCase": "활용 사례: 정리, 리소스 해제"
+      },
+      "elicitation": {
+        "desc": "Claude가 사용자에게 질문할 때 실행됩니다.",
+        "useCase": "활용 사례: 자동 응답, 로깅"
+      },
+      "elicitationResult": {
+        "desc": "사용자가 질문에 응답할 때 실행됩니다.",
+        "useCase": "활용 사례: 응답 처리, 분석"
+      },
+      "setup": {
+        "desc": "--init, --init-only, 또는 --maintenance 플래그로 트리거됩니다. 리포지토리 설정과 유지 보수용.",
+        "useCase": "활용 사례: 환경 설정, 의존성 확인, 프로젝트 초기화"
       }
+    },
+    "configuration": {
+      "title": "설정 위치",
+      "user": "~/.claude/settings.json — 사용자 레벨 훅 (모든 곳에 적용)",
+      "project": ".claude/settings.json — 프로젝트 레벨 훅 (팀과 공유)",
+      "local": ".claude/settings.local.json — 로컬 훅 (커밋 안 됨)",
+      "plugin": "플러그인 hooks/ 디렉토리 — 플러그인에 번들",
+      "skillAgent": "스킬/에이전트 frontmatter — 스킬 또는 에이전트 라이프사이클에 범위 지정",
+      "managed": "관리형 정책 — 기업 관리형 훅"
+    },
+    "exitCodes": {
+      "title": "종료 코드 (Command 훅)",
+      "success": "종료 0 — 성공, 정상 진행",
+      "blocking": "종료 2 — 차단 에러, 작업 중지",
+      "warning": "기타 코드 — 비차단 경고, 메시지와 함께 계속"
+    },
+    "envVars": {
+      "title": "환경 변수",
+      "projectDir": "$CLAUDE_PROJECT_DIR — 현재 프로젝트 디렉토리",
+      "pluginRoot": "${CLAUDE_PLUGIN_ROOT} — 플러그인 루트 디렉토리",
+      "pluginData": "${CLAUDE_PLUGIN_DATA} — 플러그인 데이터 디렉토리",
+      "envFile": "CLAUDE_ENV_FILE — Claude가 읽을 환경 변수를 기록할 경로"
+    },
+    "matchers": {
+      "title": "매처 패턴",
+      "description": "각 이벤트는 훅이 실행되는 시점을 필터링하는 매처 패턴을 지원합니다. 예를 들어, PreToolUse 매처는 도구 이름으로 필터링하고, PostToolUse 매처는 도구 이름과 결과로 필터링합니다."
     },
     "promptBasedHooks": {
       "title": "프롬프트 기반 훅",
-      "description": "훅에서 LLM 기반 의사 결정을 사용하세요. JavaScript 로직을 작성하는 대신 원하는 것을 자연어로 설명합니다.",
+      "description": "훅에서 LLM 기반 의사 결정을 사용하세요. 코드를 작성하는 대신 원하는 것을 자연어로 설명합니다. LLM이 조건을 평가하고 구조화된 결정을 반환합니다.",
       "whenToUse": "사용 시점",
       "useCase1": "코드로 작성하기 어려운 복잡한 결정 로직",
       "useCase2": "코드 리뷰 및 품질 검사",
@@ -1038,24 +1368,29 @@
       "title": "실전 예제",
       "autoFormat": {
         "title": "편집 후 코드 자동 포맷팅",
-        "desc": "Claude가 파일을 편집한 후 자동으로 Prettier 실행"
+        "desc": "Claude가 파일을 편집한 후 자동으로 Prettier를 실행"
       },
       "fileProtection": {
         "title": "민감한 파일 보호",
         "desc": "Claude가 중요한 설정 파일을 편집하지 못하도록 방지"
       },
       "slackNotify": {
-        "title": "Slack 알림 전송",
-        "desc": "배포가 발생할 때 팀에 알림"
+        "title": "HTTP 훅으로 Slack 알림 전송",
+        "desc": "배포가 발생할 때 웹훅을 호출"
+      },
+      "agentVerification": {
+        "title": "Agent 검증 훅",
+        "desc": "코드 변경이 커밋되기 전에 서브에이전트를 생성하여 리뷰"
       }
     },
     "security": {
       "title": "보안 고려사항",
-      "description": "훅스는 임의의 JavaScript 코드를 실행합니다. 다음 보안 모범 사례를 따르세요:",
-      "item1": "훅 파일에 시크릿을 저장하지 마세요 - 환경 변수를 사용하세요",
+      "description": "훅은 시스템에서 코드를 실행합니다. 다음 보안 모범 사례를 따르세요:",
+      "item1": "훅 파일에 시크릿을 저장하지 마세요 — 환경 변수를 사용하세요",
       "item2": "외부 명령을 실행하기 전에 모든 입력을 검증하세요",
       "item3": "외부 소스의 훅을 사용하기 전에 검토하세요",
-      "item4": "오류를 우아하게 처리하기 위해 try-catch 블록을 사용하세요"
+      "item4": "에러를 우아하게 처리하기 위해 try-catch 블록을 사용하세요",
+      "item5": "보안에 중요한 차단 훅에는 종료 코드 2를 사용하세요"
     },
     "bestPractices": {
       "title": "모범 사례",
@@ -1064,21 +1399,345 @@
         "desc": "각 훅은 한 가지 일을 잘 수행해야 합니다. 복잡한 로직은 Claude를 느리게 만들 수 있습니다."
       },
       "errorHandling": {
-        "title": "오류를 우아하게 처리",
-        "desc": "항상 try-catch 블록을 사용하고 의미 있는 오류 메시지를 제공하세요."
+        "title": "에러를 우아하게 처리",
+        "desc": "항상 try-catch 블록을 사용하고 의미 있는 에러 메시지를 제공하세요."
       },
       "async": {
-        "title": "Async/Await 사용",
-        "desc": "훅은 외부 API 호출 및 파일 작업을 위한 비동기 함수를 지원합니다."
+        "title": "비동기 훅 사용",
+        "desc": "훅은 외부 API 호출 및 장시간 실행 작업을 위한 비동기 실행을 지원합니다."
       },
       "testing": {
         "title": "훅 테스트",
-        "desc": "워크플로우를 방해하지 않도록 배포 전에 훅을 철저히 테스트하세요."
+        "desc": "/hooks 명령어로 훅을 인터랙티브하게 탐색하고 테스트하세요."
       }
     },
     "cta": {
-      "title": "워크플로우를 커스터마이즈할 준비가 되셨나요?",
-      "description": "팀 워크플로우를 자동화하고 개발 표준을 적용하는 훅 만들기를 시작하세요"
+      "title": "워크플로우를 자동화할 준비가 되셨나요?",
+      "description": "표준을 적용하고, 작업을 자동화하고, 외부 도구를 통합하는 훅을 만들기 시작하세요."
+    }
+  },
+  "agentTeams": {
+    "title": "에이전트 팀",
+    "subtitle": "복잡한 작업을 위해 여러 Claude Code 에이전트가 함께 협업합니다",
+    "experimental": "실험적 기능",
+    "experimentalNote": "에이전트 팀은 CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS 환경 변수를 활성화해야 합니다.",
+    "whatAreTeams": {
+      "title": "에이전트 팀이란?",
+      "description": "에이전트 팀은 여러 Claude Code 에이전트가 복잡한 작업에서 협업할 수 있는 실험적 기능입니다. 리드 에이전트가 팀원들을 조율하며, 공유 태스크 리스트와 메일박스 시스템을 통해 작업을 분배합니다.",
+      "experimental": "실험적",
+      "experimentalDesc": "에이전트 팀은 현재 실험적이며 크게 변경될 수 있습니다",
+      "teamLead": "팀 리드",
+      "teamLeadDesc": "한 에이전트가 팀을 조율하고, 작업을 할당하고, 결과를 종합합니다",
+      "teammates": "팀원",
+      "teammatesDesc": "할당된 작업을 병렬로 처리하는 독립적인 에이전트",
+      "taskList": "공유 태스크 리스트",
+      "taskListDesc": "모든 에이전트가 조율을 위해 공유 태스크 리스트를 보고 업데이트",
+      "mailbox": "메일박스 통신",
+      "mailboxDesc": "질문과 업데이트를 위해 에이전트들이 공유 메일박스를 통해 통신"
+    },
+    "architecture": {
+      "title": "팀 아키텍처",
+      "lead": "리드 에이전트",
+      "leadDesc": "작업을 분해하고, 팀원에게 할당하며, 결과를 종합하는 오케스트레이터",
+      "teammates": "팀원",
+      "teammatesDesc": "할당된 하위 작업을 병렬로 처리하는 독립적인 에이전트 인스턴스",
+      "taskList": "태스크 리스트",
+      "taskListDesc": "리드가 생성하고 팀원들이 선택하는 공유 작업 목록",
+      "mailbox": "메일박스",
+      "mailboxDesc": "상태 업데이트와 결과를 위한 리드와 팀원 간 통신 채널"
+    },
+    "setup": {
+      "title": "팀 설정",
+      "description": "/teams 명령어 또는 SDK를 통해 프로그래밍 방식으로 에이전트 팀을 구성합니다.",
+      "step1": "팀 구성 정의",
+      "step2": "통신 패턴 구성",
+      "step3": "작업 배분 전략 설정",
+      "step4": "실행 및 모니터링"
+    },
+    "displayModes": {
+      "title": "디스플레이 모드",
+      "inProcess": "인프로세스 모드",
+      "inProcessDesc": "모든 에이전트가 단일 터미널 세션에서 실행됩니다. 적은 수의 에이전트로 간단한 조율 작업에 적합합니다.",
+      "tmux": "Tmux 모드",
+      "tmuxDesc": "각 에이전트가 별도의 tmux 패널에서 실행되어, 동시에 작업하는 모든 에이전트를 시각적으로 확인할 수 있습니다. 복잡한 멀티 에이전트 워크플로우에 권장됩니다.",
+      "iterm2": "iTerm2 분할 패널: macOS 사용자를 위한 네이티브 iTerm2 분할 패널"
+    },
+    "useCasesSection": {
+      "title": "활용 사례",
+      "largeRefactoring": "대규모 리팩토링",
+      "largeRefactoringDesc": "일관성을 유지하면서 여러 모듈을 동시에 리팩토링하도록 에이전트를 조율",
+      "parallelTesting": "병렬 테스트",
+      "parallelTestingDesc": "여러 환경 또는 구성에서 테스트 스위트를 병렬로 실행",
+      "codeReview": "종합 코드 리뷰",
+      "codeReviewDesc": "보안, 성능, 스타일, 정확성에 대해 각각 다른 리뷰어를 배정",
+      "multiService": "멀티서비스 개발",
+      "multiServiceDesc": "조율된 API로 프론트엔드와 백엔드 서비스를 동시에 개발"
+    },
+    "bestPracticesSection": {
+      "title": "모범 사례",
+      "tip1": "소규모 팀(2-3 에이전트)으로 시작하고 필요에 따라 확장하세요",
+      "tip2": "각 팀원에게 명확하고 집중된 작업과 잘 정의된 경계를 부여하세요",
+      "tip3": "2개 이상의 에이전트를 실행할 때는 tmux 모드를 사용하여 가시성을 높이세요",
+      "tip4": "조율 문제를 위해 메일박스를 정기적으로 모니터링하세요",
+      "tip5": "장시간 실행되는 작업에 적절한 타임아웃을 설정하세요",
+      "tip6": "리드 에이전트를 사용하여 팀원 출력을 검증하고 통합하세요"
+    },
+    "creating": {
+      "title": "팀 만들기",
+      "description": "팀원 정의가 포함된 팀 리드 에이전트를 정의하세요. 각 팀원은 자체 모델, 도구, 지시를 가집니다.",
+      "teamSize": "권장 팀 크기: 3-5 에이전트",
+      "tasksPerAgent": "팀원당 5-6개 작업이 최적 처리량"
+    },
+    "controlling": {
+      "title": "팀원 제어",
+      "description": "팀 리드가 작업을 할당하고, 진행을 모니터링하며, 팀원을 리디렉트할 수 있습니다. 팀원은 작업이 완료되거나 도움이 필요할 때 메일박스를 통해 보고합니다.",
+      "permissions": "팀원은 기본적으로 팀 리드의 권한 설정을 상속합니다"
+    },
+    "useCases": {
+      "title": "활용 사례",
+      "parallelReview": {
+        "title": "병렬 코드 리뷰",
+        "description": "여러 에이전트가 코드베이스의 다른 부분을 동시에 리뷰 — 하나는 보안, 다른 하나는 성능, 또 다른 하나는 스타일을 확인."
+      },
+      "competingHypotheses": {
+        "title": "경쟁 가설 디버깅",
+        "description": "버그에 대한 다른 가설을 병렬로 조사하기 위해 여러 에이전트를 생성. 근본 원인을 먼저 찾는 에이전트가 승리."
+      },
+      "largeRefactor": {
+        "title": "대규모 리팩토링",
+        "description": "대규모 리팩토링 작업을 에이전트에 분배, 각각 다른 모듈이나 파일 그룹을 처리."
+      }
+    },
+    "bestPractices": {
+      "title": "모범 사례",
+      "teamSize": "팀을 작게 유지하세요 (3-5 에이전트) — 큰 팀은 조율 오버헤드가 더 큽니다",
+      "taskGranularity": "작업을 독립적으로 만드세요 — 에이전트는 자주 조율할 필요가 없을 때 가장 잘 작동합니다",
+      "clearInstructions": "각 팀원에게 명확하고 자체 완결적인 지시를 주세요",
+      "monitorProgress": "태스크 리스트를 사용하여 진행을 모니터링하고 할당을 조정하세요",
+      "worktrees": "에이전트가 같은 파일을 수정할 때 격리를 위해 git worktree를 사용하세요"
+    },
+    "limitations": {
+      "title": "제한사항",
+      "items": {
+        "experimental": "실험적 기능이며 변경될 수 있음",
+        "contextIndependent": "각 에이전트가 독립적인 컨텍스트를 가짐 — 공유 메모리 없음",
+        "coordination": "복잡한 에이전트 간 조율은 불안정할 수 있음",
+        "cost": "여러 에이전트 실행은 비례적으로 API 비용이 증가"
+      }
+    }
+  },
+  "desktopApp": {
+    "title": "데스크톱 앱",
+    "subtitle": "비주얼 디프, 다중 세션 등을 갖춘 네이티브 데스크톱 환경의 Claude Code",
+    "overview": {
+      "title": "개요",
+      "description": "Claude Code 데스크톱 앱은 비주얼 디프, 다중 동시 세션, 예약 작업, 그래픽 도구를 선호하는 개발자를 위한 더 접근하기 쉬운 인터페이스를 갖춘 네이티브 GUI 환경을 제공합니다."
+    },
+    "download": {
+      "title": "다운로드",
+      "description": "macOS, Windows, Linux에서 사용 가능",
+      "macos": "macOS용 다운로드",
+      "windows": "Windows용 다운로드",
+      "linux": "Linux용 다운로드",
+      "systemReqs": "시스템 요구사항",
+      "systemReqsList": "macOS 12+, Windows 10+, 또는 Ubuntu 20.04+ (최소 4GB RAM)"
+    },
+    "features": {
+      "title": "주요 기능",
+      "visualDiffs": "비주얼 디프",
+      "visualDiffsDesc": "코드 변경 사항을 수락하기 전에 풍부한 나란히 비교 화면으로 확인",
+      "multipleSessions": "다중 세션",
+      "multipleSessionsDesc": "별도 탭에서 여러 Claude Code 세션을 동시에 실행",
+      "scheduling": "작업 스케줄링",
+      "schedulingDesc": "코드 리뷰, 의존성 업데이트, 보고서 생성 등 반복 작업을 예약",
+      "fileExplorer": "파일 탐색기",
+      "fileExplorerDesc": "통합 파일 탐색기로 프로젝트 파일을 탐색",
+      "history": "세션 기록",
+      "historyDesc": "검색 및 필터링이 가능한 과거 세션의 전체 기록에 접근",
+      "themes": "커스텀 테마",
+      "themesDesc": "라이트, 다크, 커스텀 테마 중 원하는 모양을 선택"
+    },
+    "gettingStartedSection": {
+      "title": "시작하기",
+      "step1": "플랫폼에 맞는 데스크톱 앱을 다운로드하고 설치",
+      "step2": "Anthropic 계정으로 로그인",
+      "step3": "프로젝트 폴더를 열거나 새 워크스페이스 생성",
+      "step4": "비주얼 인터페이스에서 Claude와 코딩 시작"
+    },
+    "cliVsDesktop": {
+      "title": "CLI vs 데스크톱 앱",
+      "description": "CLI와 데스크톱 앱 모두 동일한 Claude Code 엔진을 실행합니다. 워크플로우 선호도에 따라 선택하세요.",
+      "headerFeature": "기능",
+      "headerCli": "CLI",
+      "headerDesktop": "데스크톱 앱",
+      "rows": [
+        { "feature": "인터페이스", "cli": "터미널 기반 텍스트 UI", "desktop": "패널과 탭이 있는 네이티브 GUI" },
+        { "feature": "코드 디프", "cli": "터미널 내 인라인 텍스트 디프", "desktop": "풍부한 나란히 비주얼 디프" },
+        { "feature": "다중 세션", "cli": "여러 터미널 창/tmux", "desktop": "내장 탭 세션" },
+        { "feature": "작업 스케줄링", "cli": "Cron 작업 또는 외부 도구", "desktop": "UI가 있는 내장 스케줄러" },
+        { "feature": "파일 탐색", "cli": "ls, tree 또는 외부 도구", "desktop": "통합 파일 탐색기 패널" },
+        { "feature": "세션 기록", "cli": "claude --resume으로 세션 목록", "desktop": "필터가 있는 검색 가능한 기록" },
+        { "feature": "스크립팅 및 파이핑", "cli": "전체 쉘 파이핑 및 스크립팅", "desktop": "지원되지 않음" },
+        { "feature": "헤드리스 / CI 모드", "cli": "지원됨 (--print 플래그)", "desktop": "지원되지 않음" },
+        { "feature": "리소스 사용량", "cli": "최소 (터미널만)", "desktop": "GUI 렌더링에 더 많은 RAM" }
+      ],
+      "recommendation": "스크립팅, CI/CD 파이프라인, 헤드리스 자동화에는 CLI를 사용하세요. 시각적 피드백과 세션 관리가 중요한 일상 개발에는 데스크톱 앱을 사용하세요."
+    },
+    "uniqueCapabilities": {
+      "title": "데스크톱 전용 기능",
+      "description": "비주얼 개발 경험을 향상시키는 데스크톱 앱에서만 사용 가능한 기능입니다.",
+      "items": [
+        {
+          "title": "비주얼 디프 리뷰",
+          "description": "풍부한 나란히 비교 뷰어에서 모든 코드 변경 사항을 검토하세요. 파일에 적용되기 전에 개별 헝크를 수락, 거부 또는 편집할 수 있습니다."
+        },
+        {
+          "title": "탭 세션 관리",
+          "description": "별도 탭에서 여러 Claude Code 세션을 열어보세요. 한 탭에서 기능을 작업하면서 다른 탭에서 디버깅할 수 있으며, 각각 독립적인 컨텍스트를 가집니다."
+        },
+        {
+          "title": "내장 작업 스케줄러",
+          "description": "일일 의존성 업데이트, 주간 코드 리뷰 또는 야간 테스트 실행과 같은 작업을 외부 cron 작업 없이 UI에서 직접 예약하세요."
+        },
+        {
+          "title": "드래그 앤 드롭 파일 컨텍스트",
+          "description": "OS 파일 관리자에서 파일이나 폴더를 채팅으로 직접 드래그하여 컨텍스트로 추가하세요. 파일 경로를 입력할 필요가 없습니다."
+        },
+        {
+          "title": "통합 파일 탐색기",
+          "description": "사이드바 패널에서 프로젝트 트리를 탐색하세요. 앱을 떠나지 않고 파일을 클릭하여 보거나 컨텍스트에 추가할 수 있습니다."
+        },
+        {
+          "title": "세션 기록 브라우저",
+          "description": "전체 대화 기록과 함께 과거 세션을 검색, 필터링 및 다시 방문하세요. 한 번의 클릭으로 이전 세션을 재개할 수 있습니다."
+        }
+      ]
+    },
+    "installation": {
+      "title": "설치 방법",
+      "description": "시스템에 Claude Code 데스크톱 앱을 설치하는 여러 가지 방법입니다.",
+      "macos": "macOS",
+      "macosDirectDownload": "직접 다운로드",
+      "macosDirectDownloadDesc": "공식 사이트에서 .dmg 설치 파일 다운로드",
+      "macosHomebrew": "Homebrew",
+      "macosHomebrewDesc": "Homebrew cask로 설치",
+      "windows": "Windows",
+      "windowsDirectDownload": "직접 다운로드",
+      "windowsDirectDownloadDesc": "공식 사이트에서 .exe 설치 파일 다운로드",
+      "windowsWinget": "WinGet",
+      "windowsWingetDesc": "Windows 패키지 관리자로 설치",
+      "linux": "Linux",
+      "linuxDirectDownload": "직접 다운로드",
+      "linuxDirectDownloadDesc": "공식 사이트에서 .deb 또는 .AppImage 다운로드",
+      "linuxShellInstall": "쉘 설치",
+      "linuxShellInstallDesc": "공식 설치 스크립트로 설치",
+      "copied": "복사됨!"
+    },
+    "keyboardShortcuts": {
+      "title": "키보드 단축키",
+      "description": "필수 키보드 단축키로 워크플로우를 가속화하세요.",
+      "shortcuts": [
+        { "keys": "Ctrl/Cmd + N", "action": "새 세션 탭" },
+        { "keys": "Ctrl/Cmd + W", "action": "현재 탭 닫기" },
+        { "keys": "Ctrl/Cmd + Tab", "action": "다음 탭으로 전환" },
+        { "keys": "Ctrl/Cmd + Shift + Tab", "action": "이전 탭으로 전환" },
+        { "keys": "Ctrl/Cmd + Enter", "action": "메시지 전송" },
+        { "keys": "Ctrl/Cmd + Shift + V", "action": "디프 뷰어 토글" },
+        { "keys": "Ctrl/Cmd + B", "action": "파일 탐색기 사이드바 토글" },
+        { "keys": "Ctrl/Cmd + H", "action": "세션 기록 열기" },
+        { "keys": "Ctrl/Cmd + ,", "action": "설정 열기" },
+        { "keys": "Escape", "action": "현재 작업 취소" }
+      ]
+    }
+  },
+  "webApp": {
+    "title": "웹 앱",
+    "subtitle": "설치 없이 브라우저에서 바로 Claude Code 사용",
+    "overview": {
+      "title": "개요",
+      "description": "웹의 Claude Code는 브라우저에서 Claude Code의 모든 기능을 제공합니다. 설치가 필요 없으며, 브라우저를 열고 바로 AI 지원 코딩을 시작할 수 있습니다. 빠른 작업, 원격 머신, 또는 로컬 설치가 불가능한 환경에 적합합니다."
+    },
+    "features": {
+      "title": "주요 기능",
+      "noInstall": "설치 불필요",
+      "noInstallDesc": "로컬에 아무것도 설치하지 않고 모든 브라우저에서 Claude Code에 접근",
+      "cloudWorkspaces": "클라우드 워크스페이스",
+      "cloudWorkspacesDesc": "영구 스토리지가 있는 클라우드에서 워크스페이스 생성 및 관리",
+      "collaboration": "실시간 협업",
+      "collaborationDesc": "AI와 함께하는 페어 프로그래밍을 위해 팀원과 세션 공유",
+      "gitIntegration": "Git 통합",
+      "gitIntegrationDesc": "GitHub, GitLab, Bitbucket 리포지토리에 직접 연결",
+      "terminalAccess": "터미널 접근",
+      "terminalAccessDesc": "브라우저에서 명령어와 스크립트를 실행하기 위한 전체 터미널 접근",
+      "mobileFriendly": "모바일 친화적",
+      "mobileFriendlyDesc": "태블릿과 모바일 장치에서 작동하는 반응형 디자인"
+    },
+    "gettingStartedSection": {
+      "title": "시작하기",
+      "step1": "브라우저에서 claude.ai/code 방문",
+      "step2": "Anthropic 계정으로 로그인",
+      "step3": "새 워크스페이스를 생성하거나 기존 리포지토리 연결",
+      "step4": "브라우저에서 Claude와 코딩 시작"
+    },
+    "limitations": {
+      "title": "고려사항",
+      "note1": "안정적인 인터넷 연결 필요",
+      "note2": "일부 파일시스템 작업은 로컬 설치보다 느릴 수 있음",
+      "note3": "대규모 프로젝트 지원은 인터넷 속도에 따라 다름"
+    }
+  },
+  "bestPractices": {
+    "title": "모범 사례",
+    "subtitle": "Claude Code를 최대한 활용하기 위한 검증된 전략과 기법",
+    "contextManagement": {
+      "title": "컨텍스트 관리",
+      "description": "효과적인 컨텍스트 관리는 Claude Code에서 정확하고 관련성 높은 응답을 얻는 핵심입니다.",
+      "tip1Title": "컨텍스트를 집중적으로 유지",
+      "tip1Desc": "컨텍스트 윈도우에 관련 파일과 정보만 포함하세요. CLAUDE.md로 프로젝트별 가이드를 제공하세요. 새 주제는 /clear로 새 세션을 시작하세요.",
+      "tip2Title": "컴팩트 모드 사용",
+      "tip2Desc": "컨텍스트가 커지면 /compact로 핵심 정보를 보존하면서 대화를 요약하세요. 곁다리 질문에는 /btw를 사용하여 메인 컨텍스트를 오염시키지 마세요.",
+      "tip3Title": "메모리와 핸드오프 활용",
+      "tip3Desc": "프로젝트와 사용자 수준에서 CLAUDE.md를 사용하여 세션 간 중요한 컨텍스트를 유지하세요. 새로 시작하기 전에 HANDOFF.md를 작성하여 세션 간 컨텍스트를 이전하세요."
+    },
+    "verification": {
+      "title": "검증 & 테스트",
+      "description": "정확성과 품질을 보장하기 위해 항상 Claude Code의 출력을 검증하세요.",
+      "tip1Title": "수락 전 검토",
+      "tip1Desc": "코드 변경을 수락하기 전에 항상 검토하세요. 비주얼 디프로 변경 내용을 파악하세요. 머지 전에 모든 것을 검토하기 위해 드래프트 PR을 만드세요.",
+      "tip2Title": "자주 테스트 실행",
+      "tip2Desc": "변경 후 Claude에게 테스트를 실행하도록 요청하세요. 자동 검증을 위해 autotest 훅을 설정하세요. 프롬프트에 테스트 명령어를 포함하세요.",
+      "tip3Title": "체크포인트와 자가 검증 사용",
+      "tip3Desc": "안전하게 실험하고 /rewind로 롤백하기 위해 git 체크포인트를 활용하세요. Claude에게 주장을 재확인하도록 요청하고 웹 앱의 시각적 검증에는 /chrome을 사용하세요."
+    },
+    "planMode": {
+      "title": "플랜 모드 & 구조적 사고",
+      "description": "구현 전 구조적 분석이 필요한 복잡한 작업에 플랜 모드를 사용하세요.",
+      "tip1Title": "계획부터 시작",
+      "tip1Desc": "복잡한 기능의 경우 Shift+Tab을 눌러 플랜 모드에 진입하세요. Claude가 코드를 작성하기 전에 문제를 분석하도록 하세요. 실행을 승인하기 전에 계획을 검토하세요.",
+      "tip2Title": "대규모 작업 분해",
+      "tip2Desc": "복잡한 작업을 더 작고 관리 가능한 단계로 나누세요. 이는 정확성을 향상시키고 각 부분의 검증을 쉽게 만듭니다. 격리된 조사에 서브에이전트를 사용하세요.",
+      "tip3Title": "확장 사고 사용",
+      "tip3Desc": "깊은 추론이 필요한 복잡한 아키텍처 결정에 확장 사고를 활성화하세요. 'think', 'think hard', 또는 'ultrathink' 키워드를 사용하세요."
+    },
+    "promptEngineering": {
+      "title": "프롬프트 엔지니어링",
+      "description": "Claude Code와 소통하는 방식은 결과의 품질에 큰 영향을 미칩니다.",
+      "tip1Title": "구체적으로 작성",
+      "tip1Desc": "파일 경로, 함수 이름, 예상 동작을 포함한 명확하고 구체적인 지시를 제공하세요. '에러 수정해줘'가 아니라 'user.tsx의 handleSubmit에서 null 참조를 수정해줘'라고 말하세요.",
+      "tip2Title": "예시와 컨텍스트 제공",
+      "tip2Desc": "Claude에게 원하는 패턴이나 스타일의 예시를 보여주세요. @로 특정 파일을 참조하세요. 에러, UI, 디자인의 스크린샷을 붙여넣으세요. 성공 기준을 포함하세요.",
+      "tip3Title": "제약 조건과 표준 설정",
+      "tip3Desc": "프로젝트 제약 조건, 코딩 표준, 따라야 할 패턴에 대해 Claude에게 알려주세요. 검증 단계를 포함하세요: '모든 테스트가 통과하고 린터가 깨끗해야 해'."
+    },
+    "scaling": {
+      "title": "Claude Code 확장",
+      "description": "대규모 프로젝트와 팀에서 Claude Code를 효과적으로 사용하는 기법.",
+      "tip1Title": "CI/CD에 헤드리스 모드 사용",
+      "tip1Desc": "자동화된 코드 리뷰, 테스트 생성, 문서 업데이트를 위해 claude -p로 CI/CD 파이프라인에 Claude Code를 통합하세요.",
+      "tip2Title": "팀 표준 구성",
+      "tip2Desc": "팀 멤버 간 일관된 동작을 위해 공유 CLAUDE.md 파일을 사용하세요. 커스텀 스킬과 서브에이전트를 만드세요. 팀 배포를 위해 플러그인으로 공유하세요.",
+      "tip3Title": "서브에이전트와 팀 활용",
+      "tip3Desc": "서브에이전트로 파일 간 팬아웃하세요. 조율된 병렬 작업에 에이전트 팀(실험적)을 사용하세요. 에이전트 간 격리를 위해 git worktree를 사용하세요."
     }
   },
   "thirdPartyTools": {
@@ -1106,7 +1765,7 @@
         "localModels": "Ollama를 통한 네이티브 로컬 모델 지원",
         "clientServer": "원격 워크플로우를 위한 클라이언트/서버 아키텍처",
         "pluginSystem": "이벤트 훅이 있는 플러그인 시스템",
-        "freeTool": "무료 도구 - API 사용량만 지불"
+        "freeTool": "무료 도구 — API 사용량만 지불"
       },
       "installation": {
         "title": "설치"
@@ -1144,12 +1803,12 @@
       "price": "가격"
     },
     "bestFor": {
-      "title": "어떤 도구가 당신에게 적합할까요?",
+      "title": "어떤 도구가 적합할까요?",
       "claudeCode": {
         "desc": "성능, 보안, 공식 지원을 우선시하는 팀에 적합합니다.",
         "pro1": "최고 수준의 Claude 성능",
-        "pro2": "네이티브 샌드박싱 (84% 적은 프롬프트)",
-        "pro3": "공식 IDE 통합"
+        "pro2": "네이티브 샌드박싱과 권한",
+        "pro3": "공식 IDE 통합 (VS Code, JetBrains)"
       },
       "opencode": {
         "desc": "제공자 유연성과 비용 관리를 원하는 개발자에게 적합합니다.",
@@ -1171,54 +1830,54 @@
     }
   },
   "useCases": {
-    "title": "실전 활용 사례 모음",
-    "subtitle": "다양한 팀과 프로젝트에서 Claude Code를 활용하여 개발 생산성과 업무 효율성을 극대화한 실제 사례들을 소개합니다.",
-    "heroTitle": "실전 활용 사례 모음",
-    "heroSubtitle": "다양한 팀과 프로젝트에서 Claude Code를 활용하여 개발 생산성과 업무 효율성을 극대화한 실제 사례들을 소개합니다.",
+    "title": "실전 활용 사례",
+    "subtitle": "실제 사례로 팀과 개인이 Claude Code를 활용하여 개발 생산성을 극대화하는 방법을 알아보세요.",
+    "heroTitle": "실전 활용 사례",
+    "heroSubtitle": "실제 사례로 팀과 개인이 Claude Code를 활용하여 개발 생산성을 극대화하는 방법을 알아보세요.",
     "teams": {
       "backend": {
         "title": "백엔드 개발팀",
-        "description": "백엔드 팀이 API 개발, 데이터베이스 관리, 시스템 아키텍처를 위해 Claude Code를 활용하는 방법.",
+        "description": "Claude Code를 활용한 API 개발, 데이터베이스 관리, 시스템 아키텍처. 직접 데이터베이스 접근을 위해 MCP 서버를, 병렬 코드 리뷰를 위해 서브에이전트를 사용하세요.",
         "achievements": {
           "title": "주요 성과",
-          "sql": "SQL 쿼리 최적화 50% 향상",
-          "api": "API 문서 자동 생성",
-          "logs": "지능형 로그 분석 및 오류 감지"
+          "sql": "MCP를 통한 SQL 쿼리 최적화 50% 향상",
+          "api": "커스텀 스킬로 API 문서 자동 생성",
+          "logs": "확장 사고로 지능형 로그 분석"
         },
-        "tip": "Claude Code를 사용하여 복잡한 데이터베이스 스키마를 분석하고 더 나은 성능을 위해 최적화된 쿼리를 자동으로 생성하세요."
+        "tip": "직접 데이터베이스 작업을 위해 PostgreSQL 또는 Supabase MCP를 연결하세요. 복잡한 스키마 마이그레이션에는 플랜 모드를 사용하세요."
       },
       "frontend": {
         "title": "프론트엔드 개발팀",
-        "description": "프론트엔드 팀이 UI 컴포넌트 개발, 반응형 디자인, 성능 최적화를 위해 Claude Code를 활용하는 방법.",
+        "description": "UI 컴포넌트 개발, 반응형 디자인, 성능 최적화. 스크린샷을 붙여넣어 디자인에서 코드를 생성하세요.",
         "achievements": {
           "title": "주요 성과",
           "design": "디자인 시스템 구축 시간 60% 단축",
-          "responsive": "반응형 레이아웃 자동 생성",
-          "components": "재사용 가능한 컴포넌트 라이브러리 구축"
+          "responsive": "스크린샷에서 반응형 레이아웃 자동 생성",
+          "components": "테스트 스위트 포함 컴포넌트 라이브러리 생성"
         },
-        "tip": "스크린샷이나 디자인 이미지를 Claude Code에 보여주고 React 컴포넌트를 자동으로 생성하세요."
+        "tip": "스크린샷이나 디자인 목업을 Claude에 직접 붙여넣으세요. 생성된 UI의 시각적 검증에는 /chrome을 사용하세요."
       },
       "devops": {
         "title": "DevOps 팀",
-        "description": "DevOps 팀이 CI/CD 파이프라인, 인프라 자동화, 모니터링을 위해 Claude Code를 활용하는 방법.",
+        "description": "CI/CD 파이프라인, 인프라 자동화, 모니터링. 배포 자동화를 위해 훅을, Slack 알림을 위해 MCP를 사용하세요.",
         "achievements": {
           "title": "주요 성과",
           "kubernetes": "Kubernetes 설정 자동화",
-          "monitoring": "지능형 알림 시스템 구축",
-          "security": "보안 취약점 자동 감지 및 수정"
+          "monitoring": "훅을 활용한 지능형 알림 시스템",
+          "security": "서브에이전트를 활용한 보안 취약점 자동 감지"
         },
-        "tip": "Claude Code를 사용하여 복잡한 배포 스크립트를 생성하고 인프라 문제를 빠르게 진단하세요."
+        "tip": "배포 알림을 위한 훅을 설정하고 병렬 인프라 리뷰를 위해 에이전트 팀을 사용하세요."
       },
       "data": {
         "title": "데이터 엔지니어링 팀",
-        "description": "데이터 팀이 ETL 파이프라인, 데이터 분석, 머신러닝 모델 개발을 위해 Claude Code를 활용하는 방법.",
+        "description": "ETL 파이프라인, 데이터 분석, ML 모델 개발. 범위 지정 데이터베이스 MCP 접근 권한을 가진 커스텀 데이터 사이언티스트 서브에이전트를 만드세요.",
         "achievements": {
           "title": "주요 성과",
           "pipeline": "데이터 파이프라인 개발 시간 70% 단축",
-          "analysis": "복잡한 SQL 쿼리 자동 최적화",
-          "ml": "머신러닝 모델 프로토타이핑 가속화"
+          "analysis": "MCP를 통한 복잡한 SQL 쿼리 최적화",
+          "ml": "커스텀 스킬로 ML 모델 프로토타이핑 가속화"
         },
-        "tip": "데이터 스키마와 요구사항을 Claude Code에 설명하고 최적화된 ETL 파이프라인을 자동으로 생성하세요."
+        "tip": "읽기 전용 데이터베이스 MCP 접근과 커스텀 분석 스킬을 가진 데이터 사이언티스트 서브에이전트를 만드세요."
       }
     },
     "roles": {
@@ -1229,63 +1888,63 @@
       },
       "qa": {
         "title": "QA 엔지니어",
-        "description": "테스트 자동화, 버그 재현, 품질 보증을 위한 Claude Code 활용법.",
+        "description": "Claude Code를 활용한 테스트 자동화, 버그 재현, 품질 보증. 반복적 테스트 개선을 위해 /loop 스킬을 사용하세요.",
         "achievement": "테스트 커버리지 85%까지 향상, 버그 발견 시간 60% 단축"
       },
       "documentation": {
         "title": "기술 문서 작성자",
-        "description": "API 문서, 사용자 가이드, 튜토리얼 작성을 위한 Claude Code 활용법.",
-        "achievement": "문서 작성 시간 70% 단축, 일관성 있는 문서 품질 유지"
+        "description": "API 문서, 사용자 가이드, 튜토리얼 작성. 일관된 출력을 위해 커스텀 문서 스킬을 만드세요.",
+        "achievement": "문서 작성 시간 70% 단축, 모든 문서에서 일관된 품질"
       },
       "startup": {
         "title": "스타트업 창업자",
-        "description": "MVP 개발, 프로토타이핑, 빠른 기능 구현을 위한 Claude Code 활용법.",
+        "description": "MVP 개발, 프로토타이핑, 빠른 기능 구현. 기능 간 병렬 개발을 위해 에이전트 팀을 사용하세요.",
         "achievement": "MVP 개발 기간 2개월에서 3주로 단축"
       },
       "ux": {
         "title": "UX 디자이너",
-        "description": "프로토타입 구현, 사용성 테스트, 디자인 시스템 구축을 위한 Claude Code 활용법.",
-        "achievement": "디자인-개발 간 소통 시간 50% 감소"
+        "description": "프로토타입 구현, 사용성 테스트, 디자인 시스템 구축. 목업을 붙여넣고 작동하는 코드를 받으세요.",
+        "achievement": "스크린샷 기반 워크플로우로 디자인-코드 시간 50% 단축"
       },
       "individual": {
         "title": "개인 개발자",
-        "description": "사이드 프로젝트, 학습, 포트폴리오 구축을 위한 Claude Code 활용법.",
+        "description": "사이드 프로젝트, 학습, 포트폴리오 구축. 스킬과 서브에이전트를 사용하여 개인 개발 툴킷을 만드세요.",
         "achievement": "주당 개발 시간 20시간에서 8시간으로 단축"
       },
       "education": {
         "title": "교육 기관",
-        "description": "교육 기관에서 프로그래밍 교육과 협업 학습을 위한 Claude Code 활용법.",
+        "description": "프로그래밍 교육, 협업 학습, 코드 리뷰. 문제 분해 교육에 플랜 모드를 사용하세요.",
         "achievement": "학생 참여도 80% 증가, 학습 성과 크게 향상"
       }
     },
     "strategies": {
       "title": "생산성 극대화 전략",
       "productivity": {
-        "title": "생산성 향상 핵심 전략",
-        "goals": "명확한 목표 설정: 작업 시작 전 Claude Code에게 명확한 목표와 컨텍스트 제공",
-        "progress": "단계별 진행: 큰 작업을 작은 단위로 나누어 점진적으로 진행",
-        "feedback": "즉각적인 피드백: 각 단계마다 결과를 검증하고 피드백 제공",
-        "documentation": "지속적인 문서화: CLAUDE.md 파일로 프로젝트 규칙과 지식 축적"
+        "title": "핵심 생산성 전략",
+        "goals": "명확한 목표: 시작 전 구체적인 목표와 성공 기준을 제공",
+        "progress": "먼저 탐색: 코딩 전 플랜 모드로 이해하고 계획",
+        "feedback": "항상 검증: 모든 요청에 테스트, 린팅, 타입 체크를 포함",
+        "documentation": "컨텍스트 관리: /clear, /compact, 서브에이전트로 컨텍스트를 신선하게 유지"
       },
       "teamStrategies": {
-        "title": "팀별 활용 전략",
-        "development": "개발팀: 코드 리뷰 자동화와 페어 프로그래밍 세션",
-        "design": "디자인팀: 디자인 시스템 구축과 컴포넌트 라이브러리 생성",
-        "data": "데이터팀: 복잡한 쿼리 최적화와 데이터 파이프라인 자동화",
-        "qa": "QA팀: 테스트 시나리오 생성과 자동화 스크립트 작성",
-        "individual": "개인 개발자: 학습 가속화와 포트폴리오 프로젝트 구축"
+        "title": "팀별 전략",
+        "development": "개발팀: 코드 리뷰를 위한 커스텀 서브에이전트, 표준을 위한 공유 스킬",
+        "design": "디자인팀: 스크린샷-코드 워크플로우, 시각적 검증을 위한 /chrome",
+        "data": "데이터팀: 데이터베이스를 위한 MCP 서버, 커스텀 데이터 분석 스킬",
+        "qa": "QA팀: 반복 테스트를 위한 /loop 스킬, CI/CD 통합을 위한 훅",
+        "individual": "개인 개발자: 커스텀 별칭, ~/.claude/skills/에 개인 스킬"
       }
     },
     "cta": {
       "title": "지금 바로 Claude Code로 생산성을 높이세요",
-      "description": "팀의 개발 속도를 2배로 높이고, 코드 품질을 향상시키며, 더 창의적인 문제 해결에 집중하세요.",
+      "description": "기능을 더 빠르게 구현하고, 버그를 더 빨리 수정하고, PR부터 배포까지 모든 것을 자동화하세요.",
       "getStarted": "시작하기",
       "usageGuide": "사용법 가이드 보기"
     }
   },
   "common": {
     "learnMore": "더 알아보기",
-    "readMore": "더 보기", 
+    "readMore": "더 보기",
     "getStarted": "시작하기",
     "documentation": "문서",
     "examples": "예제",
@@ -1293,7 +1952,7 @@
     "error": "오류",
     "retry": "다시 시도",
     "close": "닫기",
-    "open": "열기", 
+    "open": "열기",
     "save": "저장",
     "cancel": "취소",
     "confirm": "확인",
@@ -1307,12 +1966,13 @@
     "copyError": "클립보드 복사 실패:",
     "copied": "복사됨!",
     "bannerAlt": "Claude Code 배너",
-    "copyright": "© 2026 Claude Code 사용 가이드. MIT License.",
+    "copyright": "\u00a9 2026 Claude Code 사용 가이드. MIT License.",
     "email": "gyupro89@gmail.com",
     "keyTip": "핵심 팁",
     "switchToDarkMode": "다크 모드로 전환",
     "switchToLightMode": "라이트 모드로 전환",
-    "toggleTheme": "테마 전환"
+    "toggleTheme": "테마 전환",
+    "experimental": "실험적"
   },
   "footer": {
     "about": {
@@ -1330,6 +1990,6 @@
       "title": "문의",
       "email": "이메일"
     },
-    "copyright": "© 2026 Claude Code 사용 가이드. All rights reserved."
+    "copyright": "\u00a9 2026 Claude Code 사용 가이드. All rights reserved."
   }
 }
